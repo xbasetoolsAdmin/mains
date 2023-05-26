@@ -8,19 +8,16 @@
 	    exit();
 	}
 	$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-	?>
-<html>
- 
-<head>
-<body class="them" style="them">
-    <header>
- 
- 
-        <!DOCTYPE html>
+	?>        <!DOCTYPE html>
         <html>
  
         <head>
             <header>
+<body class="them" style="them">
+    <header>
+ 
+ 
+
                 <meta charset="UTF-8" />
                 <meta name="viewport" content="width=device-width, initial-scale=1">
                 <meta name="alfacoins-site-verification" content="5ef8c2279aa605ef8c2279aa965ef8c2279aacb_ALFAcoins">
