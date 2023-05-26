@@ -238,8 +238,8 @@ RewriteRule ^divPage14$        divPage14.php
 
 
 
-RewriteRule ^premium.html$       premium.php
-RewriteRule ^premium$            premium.php
+RewriteRule ^orders.html$        orders.php
+RewriteRule ^orders$            orders.php
 
 RewriteRule ^divPage15.php$    divPage15.php
 RewriteRule ^divPage15.html$   divPage15.php
