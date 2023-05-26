@@ -47,59 +47,57 @@
      echo "
  <tr>
  
-<td> </td>';
- echo '
+<td> </td>
  
  <td>
  
  ".($row['id'])."
  
-</td>';
+</td>
      
-echo'    
+
 <td id='country'>
 <i class='flag-icon flag-icon-$countrycode'>
     
-</td>';
+</td>
 
 
 
-echo'<td> </i>&nbsp;
+<td> </i>&nbsp;
 
 ".($row['country'])." 
     
 
     
-</td>';
+</td>
 		    
-echo'	    
+
 <td id='tld'>
 
 .".$tld."
 
- </td>';
+ </td>
 		    
 
 		    
-echo'		
+
     
  <td id='hosting'>
  
   ".($row['infos'])." 
      
-</td>';
+</td>
 
-echo'
 
  <td id='seller'>
  
  ".($SellerNick)."
  
-</td>";
+</td>
 	 
 
 	 
-echo '	 <td>
+echo ' <td>
 	 
 <span id="shop'.$row["id"].'" type="cpanel">	 
 <a onclick="javascript:check('.$row["id"].');" class="btn btn-info btn-xs">
@@ -112,13 +110,11 @@ echo '	 <td>
 echo "
     
 
-<td> ".($row['price'])."</td>';
-echo '
+<td> ".($row['price'])."</td>
+
  <td> ".($row['date'])."</td>";
 
 echo '<td>
-	
-
 	
 <span id="cpanel'.$row['id'].'" title="buy" type="cpanel">	
 <a onclick="javascript:buythistool('.$row['id'].')" class="btn btn-primary btn-xs">	
