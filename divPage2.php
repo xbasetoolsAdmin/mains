@@ -41,7 +41,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 									<?php
 $query = mysqli_query($dbcon, "SELECT DISTINCT(`country`) FROM `cpanels` WHERE `sold` = '0' ORDER BY country ASC");
 	while($row = mysqli_fetch_assoc($query)){
-	echo '<option value="'.$row['country'].'"'.$row['country'].''; 	} ?&gt;
+	echo '<option value="'.$row['country'].'"'.$row['country'].''; 	};
 								</select>
 							</td>
 							<td>
@@ -75,7 +75,7 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE
 		</div>
 		<div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 			<div class="col-sm-12 table-responsive">
-				"; 	 echo ''; echo "          ";      echo '           ';  }   ?&gt;
+				"; 	 echo ''; echo "          ";      echo '           ';  } ?'
 				<table id="mainDiv" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" "="">
 					<thead>
 						<tr>
@@ -185,7 +185,7 @@ function check(id){
 	$.ajax({
 	type: 		'GET',
 	url: 		'CheckCpanel'+id+'.html',
-	success:	function(data)
+	success:	function(data) of 
 	{
 		$("#shop"+id).html(data).show();
 		xcheck--;
