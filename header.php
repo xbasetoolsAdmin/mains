@@ -75,3 +75,27 @@ table.floatThead-table {
     
 
 </style>
+
+
+    <nav class="navbar navbar-expand-xl navbar  navbar-light " style="
+                                                          position:fixed;
+                                                          background-color: var(--color-nav);
+                                                          z-index:1;
+                                                          top:0;
+                                                          left:0;
+                                                          right:0;
+                                                          line-height: 1.5;
+                                                          font-family: 'Lato', sans-serif;
+                                                          font-size: 15px;
+                                                          padding-top: 0.5rem;
+                                                          padding-right: 1rem;
+                                                          padding-bottom: 0.5rem;
+                                                          padding-left: 1rem;
+                                                        ">
+        <a class="navbar-brand" href="main" style="color: var(--font-color);"><img width="40px" src="layout/images/logo.png"> Odin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="navbar-toggler-icon"></i>
+        </button>
+        <div class="collapse navbar-collapse order-1" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+ 
