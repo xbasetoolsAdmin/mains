@@ -74,11 +74,10 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE
 			</div>
 		</div>
 		<div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
-			<div class="col-sm-12 table-responsive">
-				"; 	 echo ''; echo "          ";      echo '           ';  } ?'
-				<table id="mainDiv" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" "="">
+			<div class="col-sm-12 table-responsive">"; 
+				<table id="mainDiv" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" "="">';
 					<thead>
-						<tr>
+			echo "	<tr>     
 							<th scope="col">Country</th>
 							<th scope="col">TLD</th>
 							<th scope="col">Detect Hosting</th>
@@ -88,9 +87,11 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE
 							<th scope="col">Added on
 							</th>
 							<th scope="col">Buy</th>
-						</tr>
-					</thead>
-					<tbody>
+						</tr>";
+						
+					   echo '  </thead>';  
+} ?>
+			     		        <tbody>
 						
 						<?php
 		include("cr.php");
@@ -117,7 +118,7 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE
 		   while($rpw = mysqli_fetch_assoc($qer))
 			 $SellerNick = "seller".$rpw["id"]."";
      echo "
- <tr-->
+ <tr>
 						<tr>
 							<td id="cpanel_country">
 								<i class="flag-icon flag-icon-$countrycode"></i>&nbsp;".htmlspecialchars($row['country'])."
