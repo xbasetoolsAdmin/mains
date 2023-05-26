@@ -135,12 +135,12 @@ RewriteRule ^divPage6$        divPage6.php
 
 
 
-RewriteRule ^shell.html$      shell.php
-RewriteRule ^shells$          shell.php
+RewriteRule ^premium.html$       premium.php
+RewriteRule ^premium$            premium.php
 
-RewriteRule ^divPage3.php$    divPage3.php
-RewriteRule ^divPage3.html$   divPage3.php
-RewriteRule ^divPage3$        divPage3.php
+RewriteRule ^divPage7.php$    divPage7.php
+RewriteRule ^divPage7.html$   divPage7.php
+RewriteRule ^divPage7$        divPage7.php
 
 
 
