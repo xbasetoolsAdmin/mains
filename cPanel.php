@@ -58,7 +58,7 @@
 			<tbody>
 				<tr>
 					<td>
-						<select class='filterselect form-control input-sm' name="cpanel_country">
+						<select class='filterselect form-control input-sm' name="country">
 							<option value="">ALL</option>
 							<?php
 								$query = mysqli_query($dbcon, "SELECT DISTINCT(`country`) FROM `cpanels` WHERE `sold` = '0' ORDER BY country ASC");
@@ -68,10 +68,10 @@
 								?>
 						</select>
 					</td>
-					<td><input class='filterinput form-control input-sm' name="cpanel_tld" size='3'></td>
-					<td><input class='filterinput form-control input-sm' name="cpanel_hosting" size='3'></td>
+					<td><input class='filterinput form-control input-sm' name="tld" size='5'></td>
+					<td><input class='filterinput form-control input-sm' name="hosting" size='5'></td>
 					<td>
-						<select class='filterselect form-control input-sm' name="cpanel_seller">
+						<select class='filterselect form-control input-sm' name="seller">
 							<option value="">ALL</option>
 							<?php
 								$query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE `sold` = '0' ORDER BY resseller ASC");
