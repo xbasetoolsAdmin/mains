@@ -27,16 +27,16 @@
 	background-color: var(--color-backinfo);
 	border-color: var(--color-borderinfo);
 	}
-	#cpanel_table_filter {
+	#leads_table_filter {
 	color: var(--font-color);
 	}
-	#cpanel_table_length {
+	#leads_table_length {
 	color: var(--font-color);
 	}
-	#cpanel_table_paginate {
+	#leads_table_paginate {
 	color: var(--font-color);
 	}
-	#cpanel_table_info {
+	#leads_table_info {
 	color: var(--font-color);
 	}
 </style>
