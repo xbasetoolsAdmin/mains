@@ -524,7 +524,7 @@ $(window).on("popstate", function(e) {
 
 $(window).on('load', function() {
 $('.dropdown').hover(function(){ $('.dropdown-toggle', this).trigger('click'); });
-                        pageDiv(2, 'Cpanels - XbaseTools', 'main', 1);
+                        pageDiv(2, 'Cpanels - XbaseTools', 'cPanels.html', 1);
                         var clipboard = new Clipboard('.copyit');
                         clipboard.on('success', function(e) {
                             setTooltip(e.trigger, 'Copied!');
