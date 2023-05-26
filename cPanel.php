@@ -497,7 +497,6 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE
       <th scope="col">Buy</th>
     </tr>
 </thead>
-  <tbody>
  </table>
 </div>
         <!--<span><a href=" addBalance.php?do=balance" class="btn btn-primary" style="color:#fff; font-size: 12 px">Add Balance</a></span>--->
