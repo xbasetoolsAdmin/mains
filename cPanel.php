@@ -1,9 +1,9 @@
 <?php require "header.php";?>
 
-
+<div id="mainDiv">
 <?php
 require"contollers/cpanelController.php";?>
-
+</div>
 
 
 
