@@ -32,7 +32,7 @@
 		return $item2;
 		} 
 
- while($row = mysqli_fetch_assoc($q)){
+        while($row = mysqli_fetch_assoc($q)){
 	 	 $countryfullname = $row['country'];
 	  $code = array_search("$countryfullname", $countrycodes);
 	 $countrycode = strtolower($code);
