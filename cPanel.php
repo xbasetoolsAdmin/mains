@@ -418,7 +418,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         </div>
             <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
                 <div class="col-sm-12 table-responsive">
-                    <table id="mainDiv" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
+                    <table id="cpanel_table" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
  
  
         <!--<span><a href=" addBalance.php?do=balance" class="btn btn-primary" style="color:#fff; font-size: 12 px">Add Balance</a></span>--->
@@ -542,7 +542,7 @@ function pageDiv(n,t,u,x){
 
     	}
       document.title = obj.Title;
-    $("#mainDiv").html('<div id="mydiv"><img src="files/img/load2.gif" class="ajax-loader"></div>').show();
+    $("#cPanel_table./").html('<div id="mydiv"><img src="files/img/load2.gif" class="ajax-loader"></div>').show();
     $.ajax({
     type:       'GET',
     url:        'divPage'+n+'.html',
@@ -568,7 +568,7 @@ $(window).on("popstate", function(e) {
 
 $(window).on('load', function() {
 $('.dropdown').hover(function(){ $('.dropdown-toggle', this).trigger('click'); });
-                        pageDiv(2, 'Cpanels - XbaseTools', 'cPanels.html', 1);
+                        pageDiv(2, 'Cpanels - XbaseTools', 'cPanel.html', 1);
                         var clipboard = new Clipboard('.copyit');
                         clipboard.on('success', function(e) {
                             setTooltip(e.trigger, 'Copied!');
