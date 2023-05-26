@@ -307,6 +307,11 @@ RewriteRule ^reports$  reports.php
 
 
 RewriteRule ^payment.html$  payment.php
+RewriteRule ^payment.html$  payment.php
+
+
+
+
 
 RewriteRule ^Rules.html$  shoprules.php
 RewriteRule ^account.html$  profile.php
@@ -327,7 +332,7 @@ RewriteRule ^addReportReply(.*).html$ addReportReply.php?id=$1
 
 
 
-RewriteRule ^divPagepayment(.*).html$ divPagepayment.php?p_data=$1
+RewriteRule ^ addBalance.php?p_data=$1 divPagepayment.php?p_data=$1
 
 
 
@@ -342,7 +347,7 @@ RewriteRule ^PMCheck.html$ PMcheck.php
 RewriteRule ^PMCheck$      PMcheck.php
 
 
-RewriteRule ^Payment.html$ payment.php
+RewriteRule ^addBalance.php?p_data=$ payment.php
 RewriteRule ^Payment$      payment.php
 
 
