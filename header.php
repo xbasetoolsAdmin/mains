@@ -257,7 +257,7 @@
                                                           padding-bottom: 0.5rem;
                                                           padding-left: 1rem;
                                                         ">
-        <a class="navbar-brand" href="main" style="color: var(--font-color);"><img width="40px" src="buyer/layout/images/logo.png">xbasetools</a>
+        <a class="navbar-brand" href="homepage" style="color: var(--font-color);"><img width="40px" src="buyer/layout/images/logo.png">xbasetools</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="navbar-toggler-icon"></i>
         </button>
