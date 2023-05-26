@@ -25,7 +25,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         <link rel="shortcut icon" href="../../favicon.ico" />
         <title>AddBalance</title>
         <link rel="stylesheet" href="buyer/layout/css/bootstrap.min.css">
-        <script src="buyer/buyer/layout/js/jquery-3.4.1.min.js"></script>
+        <script src="buyer/layout/js/jquery-3.4.1.min.js"></script>
         <script src="buyer/layout/js/clipboard.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="buyer/layout/js/bootstrap.min.js"></script>
@@ -43,7 +43,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
  
-        <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+        <!--/<script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>--->
  
  
         <script async src="//www.googletagmanager.com/gtag/js?id=UA-177092549-1"></script>
