@@ -57,7 +57,7 @@
     <td id='hosting'> ".htmlspecialchars($row['infos'])." </td>
     <td id='seller'> ".htmlspecialchars($SellerNick)."</td>
 ";
-	 echo '<td><span id="shop'.$row["id"].'" type="cpanel"><a onclick="javascript:check('.$row["id"].');" class="btn btn-info btn-xs"><font color=white>Check</font></a></span><center></td>';
+	 echo '<td><span id="shop'.$row["id"].'" type="lead"><a onclick="javascript:check('.$row["id"].');" class="btn btn-info btn-xs"><font color=white>Check</font></a></span><center></td>';
 echo "
     <td> ".htmlspecialchars($row['price'])."</td>
 	    <td> ".htmlspecialchars($row['date'])."</td>
@@ -65,7 +65,7 @@ echo "
 
     echo '
     <td>
-	<span id="cpanel'.$row['id'].'" title="buy" type="cpanel"><a onclick="javascript:buythistool('.$row['id'].')" class="btn btn-primary btn-xs"><font color=white>Buy</font></a></span><center>
+	<span id="lead'.$row['id'].'" title="buy" type="lead"><a onclick="javascript:buythistool('.$row['id'].')" class="btn btn-primary btn-xs"><font color=white>Buy</font></a></span><center>
     </td>
             </tr>
      ';
@@ -90,7 +90,7 @@ function buythistool(id){
      dataType:"text",
      success:function(data){
          if(data.match(/<button/)){
-		 $("#cpanel"+id).html(data).show();
+		 $("#lead"+id).html(data).show();
          }else{
             bootbox.alert('<center><img src="files/img/balance.png"><h2><b>No enough balance !</b></h2><h4>Please refill your balance <a class="btn btn-primary btn-xs"  href="addBalance.html" onclick="window.open(this.href);return false;" >Add Balance <span class="glyphicon glyphicon-plus"></span></a></h4></center>')
          }
@@ -109,7 +109,7 @@ function check(id){
 	$("#shop"+id).html('Checking...').show();
 	$.ajax({
 	type: 		'GET',
-	url: 		'CheckCpanel'+id+'.html',
+	url: 		'Checklead'+id+'.html',
 	success:	function(data)
 	{
 		$("#shop"+id).html(data).show();
