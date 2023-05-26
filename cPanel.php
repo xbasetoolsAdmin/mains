@@ -559,9 +559,13 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE
                     </div>
                 
                 <script type="text/javascript">
-                    $(document).ready(function() {
-                        $('#cpanel_table').DataTable({
-                            "lengthMenu": [
+		    $('#cpanel_table').DataTable({
+		    paging: false 
+            } );
+	    $('#cpanel_table').DataTable({
+		   destroy: true,
+                   searching: false
+                   "lengthMenu": [
                                 [10, 25, 100, 500, -1],
                                 [10, 25, 100, 500, "All"]
                             ],
@@ -569,6 +573,8 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE
                             "aaSorting": []
                         });
                     });
+				       
+                    $(document).ready(function() {
              function ajaxinfo() {
                 $.ajax({
                     type: 'GET',
