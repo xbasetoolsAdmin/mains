@@ -428,7 +428,6 @@ document.getElementById('slider').checked = true;
         <span><a href="addBalance.php?do=balance" class="btn btn-primary waves-effect waves-light" style="color:#fff; font-size: 12 px">Add Balance</a></span>
         <span><a href="addBalance.php?do=details" class="btn btn-primary waves-effect waves-light" style="color:#fff; font-size: 12 px">Balance Info</a></span>
     </div>
-    <div id="mainDiv">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="alfacoins-site-verification" content="5ef8c2279aa605ef8c2279aa965ef8c2279aacb_ALFAcoins">
