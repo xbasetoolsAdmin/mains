@@ -44,9 +44,10 @@ RewriteRule ^function$       ajax.php
 
 RewriteRule ^mailer.html$     mailer.php
 RewriteRule ^mailer$          mailer.php
+
 RewriteRule ^divPage4.php$    divPage4.php
 RewriteRule ^divPage4.html$   divPage4.php
-
+RewriteRule ^divPage4$        divPage4.php
 
 
 
