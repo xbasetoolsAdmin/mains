@@ -184,6 +184,7 @@ function hideTooltip(btn) {
 
 
 </div>
+	<?php include"footer.php">
 </body>
 </html>
 
