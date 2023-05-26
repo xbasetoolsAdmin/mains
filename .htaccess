@@ -246,13 +246,78 @@ RewriteRule ^divPage14$        divPage14.php
 
 
 
-RewriteRule ^orders.html$        orders.php
+RewriteRule ^orders.html$       orders.php
 RewriteRule ^orders$            orders.php
 
 RewriteRule ^divPage15.php$    divPage15.php
 RewriteRule ^divPage15.html$   divPage15.php
 RewriteRule ^divPage15$        divPage15.php
 
+
+
+
+
+RewriteRule ^settingEdit.html$  settingEdit.php
+RewriteRule ^CreateTicket.html$  tticket.php
+RewriteRule ^CreateReport.html$  treport.php
+RewriteRule ^addBalance.html$  funds.php
+RewriteRule ^addBalanceAction.html$  addBalanceAction.php
+RewriteRule ^rdp.html$  rdp.php
+RewriteRule ^tutorial.html$  tutorial.php
+RewriteRule ^MakePayment.html$  pay.php
+RewriteRule ^BitcoinPayment.html$  btc3.php
+RewriteRule ^banks.html$  banks.php
+RewriteRule ^PerfectMoneyPayment.html$  pm3.php
+RewriteRule ^tickets.html$  tickets.php
+RewriteRule ^seller.html$  becomeseller.php
+RewriteRule ^scampage.html$  scampage.php
+RewriteRule ^logout.html$  logout.php
+RewriteRule ^active.html$  active.php
+RewriteRule ^orders.html$  orders.php
+RewriteRule ^setting.html$  setting.php
+RewriteRule ^static.html$  static.php
+RewriteRule ^seller.html$  rindex.php
+RewriteRule ^smtp.html$  smtp.php
+RewriteRule ^AddSingleTool.html$  addt.php
+RewriteRule ^cPanel.html$  cPanel.php
+RewriteRule ^checkEmailChange.html$  checkEmailChange.php
+RewriteRule ^reports.html$  reports.php
+RewriteRule ^Rules.html$  shoprules.php
+RewriteRule ^account.html$  profile.php
+RewriteRule ^AddCards.html$  addc.php
+RewriteRule ^vt-(.*).html$ vt.php?id=$1
+RewriteRule ^vr-(.*).html$ vr.php?id=$1
+RewriteRule ^divPageticket(.*).html$ divPageticket.php?id=$1
+RewriteRule ^divPagereport(.*).html$ divPagereport.php?id=$1
+RewriteRule ^showTicket(.*).html$ showTicket.php?id=$1
+RewriteRule ^CheckShell(.*).html$ check2shell.php?id=$1
+RewriteRule ^CheckSMTP(.*).html$ check2smtp.php?id=$1
+RewriteRule ^CheckCpanel(.*).html$ check2cp.php?id=$1
+RewriteRule ^CheckMailer(.*).html$ check2mailer.php?id=$1
+RewriteRule ^showOrder(.*).html$ openorder.php?id=$1
+RewriteRule ^addReply(.*).html$ addReply.php?id=$1
+RewriteRule ^addReportReply(.*).html$ addReportReply.php?id=$1
+
+
+
+
+RewriteRule ^divPagepayment(.*).html$ divPagepayment.php?p_data=$1
+
+
+
+
+RewriteRule ^Check.html$ check.php
+RewriteRule ^Check$      check.php
+
+
+
+
+RewriteRule ^PMCheck.html$ PMcheck.php
+RewriteRule ^PMCheck$      PMcheck.php
+
+
+RewriteRule ^Payment.html$ payment.php
+RewriteRule ^Payment$      payment.php
 
 
 
