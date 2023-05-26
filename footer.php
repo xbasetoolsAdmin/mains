@@ -67,7 +67,7 @@
       </div>
     </div>
   </div>
-</div>
+</div><script>
              function ajaxinfo() {
                 $.ajax({
                     type: 'GET',
