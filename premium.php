@@ -9,11 +9,12 @@ header("location: ../");
 exit(); }
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
 
+<ul>
+            
+            
+ </ul>
+</div>
 <style>.display td{background:var(--color-card);color:var(--font-color)}.dataTables_wrapper .dataTables_paginate .paginate_button{color:var(--font-color)}#accounts_data_paginate .paginate_button{color:var(--font-color)}.alert-info{color:var(--color-info);background-color:var(--color-backinfo);border-color:var(--color-borderinfo)}#accounts_data_filter{color:var(--font-color)}#accounts_data_length{color:var(--font-color)}#accounts_data_paginate{color:var(--font-color)}#accounts_data_info{color:var(--font-color)}</style>
-
-<div class="alert alert-info text-center" role="alert" style="margin: 15px;">
-
- </div>
 
 <div style="padding-center:20px; display:inline-block; margin-bottom:10px">
 
