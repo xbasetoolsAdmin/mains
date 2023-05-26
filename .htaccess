@@ -212,8 +212,8 @@ RewriteRule ^divPage12$        divPage12.php
 
 
 
-RewriteRule ^smtp.html$      smtp.php
-RewriteRule ^smtp$           smtp.php
+RewriteRule ^add-balance.html$      addBalance.php
+RewriteRule ^add-balance$           addBalance.php
 
 RewriteRule ^divPage13.php$    divPage13.php
 RewriteRule ^divPage13.html$   divPage13.php
