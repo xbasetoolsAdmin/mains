@@ -20,9 +20,10 @@
                                 <th scope="col">Buy</th>
                              </tr>
                           </thead>
-                       </thody><?php
+                       </thody>
+<?php
 		include("cr.php");
-	    $q = mysqli_query($dbcon, "SELECT * FROM accounts WHERE sold='0' ORDER BY RAND()")or die(mysql_error());
+	    $q = mysqli_query($dbcon, "SELECT * FROM cpanels WHERE sold='0' ORDER BY RAND()")or die(mysql_error());
 	   	function srl($item)
 		{
 		$item0 = $item;
@@ -45,94 +46,29 @@
 		   while($rpw = mysqli_fetch_assoc($qer))
 			 $SellerNick = "seller".$rpw["id"]."";
      echo "
- <tr>
- 
-<td> </td>
- 
- <td>
- 
- ".($row['id'])."
- 
-</td>
-     
-
-<td id='country'>
-<i class='flag-icon flag-icon-$countrycode'>
-    
-</td>
-
-
-
-<td> </i>&nbsp;
-
-".($row['country'])." 
-    
-
-    
-</td>
-		    
-
-<td id='tld'>
-
-.".$tld."
-
- </td>
-		    
-
-		    
-
-    
- <td id='hosting'>
- 
-  ".($row['infos'])." 
-     
-</td>
-
-
- <td id='seller'>
- 
- ".($SellerNick)."
- 
-</td>
-	 
-
-	 
-echo ' <td>
-	 
-<span id="shop'.$row["id"].'" type="cpanel">	 
-<a onclick="javascript:check('.$row["id"].');" class="btn btn-info btn-xs">
-<font color=white>Check</font>	 
-</a>	 
-</span> 	 
-<center>
-	 
-</td>';
+ <tr>    
+    <td id='cpanel_country'><i class='flag-icon flag-icon-$countrycode'></i>&nbsp;".htmlspecialchars($row['country'])." </td>
+		    <td id='cpanel_tld'> .".$tld." </td>
+    <td id='cpanel_hosting'> ".htmlspecialchars($row['infos'])." </td>
+    <td id='cpanel_seller'> ".htmlspecialchars($SellerNick)."</td>
+";
+	 echo '<td><span id="shop'.$row["id"].'" type="cpanel"><a onclick="javascript:check('.$row["id"].');" class="btn btn-info btn-xs"><font color=white>Check</font></a></span><center></td>';
 echo "
-    
+    <td> ".htmlspecialchars($row['price'])."</td>
+	    <td> ".htmlspecialchars($row['date'])."</td>
+    ";
 
-<td> ".($row['price'])."</td>
-
- <td> ".($row['date'])."</td>";
-
-echo '<td>
-	
-<span id="cpanel'.$row['id'].'" title="buy" type="cpanel">	
-<a onclick="javascript:buythistool('.$row['id'].')" class="btn btn-primary btn-xs">	
-<font color=white>Buy</font>
-	</a>
-</span>	
-<center>
-   </td>
-            
-
-            
-</tr>';
+    echo '
+    <td>
+	<span id="cpanel'.$row['id'].'" title="buy" type="cpanel"><a onclick="javascript:buythistool('.$row['id'].')" class="btn btn-primary btn-xs"><font color=white>Buy</font></a></span><center>
+    </td>
+            </tr>
+     ';
  }
 
  ?>
 
  </tbody>
-
  </table>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
