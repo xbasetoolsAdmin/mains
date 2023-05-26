@@ -306,7 +306,7 @@ RewriteRule ^checkEmailChange$       checkEmailChange.php
 RewriteRule ^reports$  reports.php
 
 
-
+RewriteRule ^payment.html$  payment.php
 
 RewriteRule ^Rules.html$  shoprules.php
 RewriteRule ^account.html$  profile.php
