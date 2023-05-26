@@ -60,7 +60,11 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         }
         </style>
     </head>
-    
+    <style>
+      #hidden_div {
+         display: none;
+      }
+   </style>
 
 <body class="them">
     <style>
