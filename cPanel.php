@@ -559,22 +559,14 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE
                     </div>
                 
                 <script type="text/javascript">
-		    $('#cpanel_table').DataTable({
-		    paging: false 
-            } );
-	    $('#cpanel_table').DataTable({
-		   destroy: true,
-                   searching: false
-                   "lengthMenu": [
-                                [10, 25, 100, 500, -1],
-                                [10, 25, 100, 500, "All"]
-                            ],
-                            'iDisplayLength': 1000,
-                            "aaSorting": []
-                        });
-                    });
-				       
-                    $(document).ready(function() {
+		    $('#cpanel_table').DataTable({ 
+    paging: false
+} );
+ 
+$('#cpanel_table').DataTable( {
+    destroy: true,
+    searching: false
+} );
              function ajaxinfo() {
                 $.ajax({
                     type: 'GET',
