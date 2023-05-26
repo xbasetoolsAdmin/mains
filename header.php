@@ -18,7 +18,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
         <link rel="shortcut icon" href="../../favicon.ico" />
-        <title>AddBalance</title>
+                    <title>XbaseTools</title>
         <link rel="stylesheet" href="buyer/layout/css/bootstrap.min.css">
         <script src="buyer/layout/js/jquery-3.4.1.min.js"></script>
         <script src="buyer/layout/js/clipboard.min.js"></script>
