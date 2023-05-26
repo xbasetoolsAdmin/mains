@@ -224,8 +224,8 @@ RewriteRule ^divPage13$        divPage13.php
 
 
 
-RewriteRule ^leads.html$      leads.php
-RewriteRule ^leads$           leads.php
+RewriteRule ^settings.html$      settings.php
+RewriteRule ^settings$           settings.php
 
 RewriteRule ^divPage14.php$    divPage14.php
 RewriteRule ^divPage14.html$   divPage14.php
