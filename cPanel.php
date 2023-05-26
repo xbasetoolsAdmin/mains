@@ -449,7 +449,6 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                             "aaSorting": []
                         });
                     });
-<script type="text/javascript">
              function ajaxinfo() {
                 $.ajax({
                     type: 'GET',
