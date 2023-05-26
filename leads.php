@@ -92,7 +92,7 @@
 </div>
 <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 	<div class="col-sm-12 table-responsive">
-		<table id="cpanel_table" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
+		<table id="Leads_table" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
 			<thead>
 				<tr>
 					<th scope="col" >Country</th>
@@ -114,7 +114,7 @@
 <script type="text/javascript">
 $(document).ready((function ()
 {
-  $("#cpanel_table").DataTable(
+  $("#leads_table").DataTable(
   {
     lengthMenu: [
       [10, 25, 100, 500, -1],
@@ -138,7 +138,7 @@ $(window).on("popstate", (function (t)
   $(".dropdown").hover((function ()
   {
     $(".dropdown-toggle", this).trigger("click")
-  })), pageDiv(2, "Cpanels - XbaseTools", "cpanels", 1), new Clipboard(".copyit").on("success", (function (t)
+  })), pageDiv(6, "Cpanels - XbaseTools", "leads", 1), new Clipboard(".copyit").on("success", (function (t)
   {
     ! function setTooltip(t, e)
     {
