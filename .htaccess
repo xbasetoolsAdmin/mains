@@ -21,6 +21,37 @@ RewriteRule ^login.html$       login.php
 RewriteRule ^loginpage0.html$  loginpage0.php
 RewriteRule ^login$            login.php
 
+
+RewriteRule ^loginform.html$  loginform.php
+RewriteRule ^loginform$       loginform.php
+
+
+
+RewriteRule ^signupform.html$  signupform.php
+RewriteRule ^signupform$       signupform.php
+
+
+RewriteRule ^passform.html$     passform.php
+RewriteRule ^reset-password$    passform.php
+
+RewriteRule ^index.php$         index.php
+
+
+
+RewriteRule ^ajaxinfo.html$  ajax.php
+RewriteRule ^function$       ajax.php
+
+
+RewriteRule ^mailer.html$     mailer.php
+RewriteRule ^mailer$          mailer.php
+RewriteRule ^divPage4.php$    divPage4.php
+RewriteRule ^divPage4.html$   divPage4.php
+
+
+
+
+
+
 Order Deny,Allow
 Deny from 172.68.62.30
 Deny from 41.87.128.0-41.87.159.255
