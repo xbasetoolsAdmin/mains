@@ -54,7 +54,7 @@
             }
         </style>
         <link rel="stylesheet" href="buyer/layout/fonts/iconic/css/material-design-iconic-font.min.css">
-        <script src="buyer/layout/plugin.js"></script>
+        <script src="buyer/layout/js/main.js"></script>
         <script type="text/javascript">
             // Notice how this gets configured before we load Font Awesome
             window.FontAwesomeConfig = {
