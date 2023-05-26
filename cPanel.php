@@ -26,13 +26,13 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
         <link rel="shortcut icon" href="../../favicon.ico" />
         <title>AddBalance</title>
-        <link rel="stylesheet" href="buyer/lauout/css/bootstrap.min.css">
-        <script src="buyer/lauout/js/jquery-3.4.1.min.js"></script>
-        <script src="buyer/lauout/js/clipboard.min.js"></script>
+        <link rel="stylesheet" href="buyer/layout/css/bootstrap.min.css">
+        <script src="buyer/layout/js/jquery-3.4.1.min.js"></script>
+        <script src="buyer/layout/js/clipboard.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-        <script src="buyer/lauout/js/bootstrap.min.js"></script>
-        <script src="buyer/lauout/js/bootbox.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="buyer/lauout/css/flags.css" />
+        <script src="buyer/layout/js/bootstrap.min.js"></script>
+        <script src="buyer/layout/js/bootbox.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="buyer/layout/css/flags.css" />
  
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
@@ -61,16 +61,16 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             }); // Set the user ID using signed-in user_id.
             gtag('config', 'UA-177092549-1');
         </script>
-        <link rel="stylesheet" href="buyer/lauout/css/all.min.css" />
-        <link rel="stylesheet" href="buyer/lauout/css/main.css?v=12.9" />
-        <link rel="stylesheet" href="buyer/lauout/css/util.css" />
+        <link rel="stylesheet" href="buyer/layout/css/all.min.css" />
+        <link rel="stylesheet" href="buyer/layout/css/main.css?v=12.9" />
+        <link rel="stylesheet" href="buyer/layout/css/util.css" />
         <style>
             body {
                 padding-top: 80px
             }
         </style>
-        <link rel="stylesheet" href="buyer/lauout/fonts/iconic/css/material-design-iconic-font.min.css">
-        <script src="buyer/lauout/plugin.js"></script>
+        <link rel="stylesheet" href="buyer/layout/fonts/iconic/css/material-design-iconic-font.min.css">
+        <script src="buyer/layout/plugin.js"></script>
         <script type="text/javascript">
             // Notice how this gets configured before we load Font Awesome
             window.FontAwesomeConfig = {
@@ -264,7 +264,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                                                           padding-bottom: 0.5rem;
                                                           padding-left: 1rem;
                                                         ">
-        <a class="navbar-brand" href="main" style="color: var(--font-color);"><img width="40px" src="buyer/lauout/images/logo.png"> Odin</a>
+        <a class="navbar-brand" href="main" style="color: var(--font-color);"><img width="40px" src="buyer/layout/images/logo.png"> Odin</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <i class="navbar-toggler-icon"></i>
         </button>
