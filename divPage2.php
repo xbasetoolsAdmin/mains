@@ -40,8 +40,12 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE
 </div>
 
 
-<table width="100%"  class="table table-striped table-bordered table-condensed sticky-header" id="table">
-<thead>
+
+ 
+<div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
+ <div class="col-sm-12 table-responsive">
+ <table id="mainDiv" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
+                    <thead>
     <tr>
       <th scope="col" >Country</th>
       <th scope="col">TLD</th>
