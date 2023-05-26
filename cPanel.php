@@ -112,7 +112,68 @@
 </div>
 <?php require"footer.php";?>
 <script type="text/javascript">
-$(document).ready((function(){$("#cpanel_table").DataTable({lengthMenu:[[10,25,100,500,-1],[10,25,100,500,"All"]],iDisplayLength:1e3,aaSorting:[]})})),$(document).keydown((function(event){"17"==event.which&&(cntrlIsPressed=!0)})),$(document).keyup((function(){cntrlIsPressed=!1}));var cntrlIsPressed=!1;function setTooltip(btn,message){$(btn).tooltip("hide").attr("data-original-title",message).tooltip("show")}function hideTooltip(btn){setTimeout((function(){$(btn).tooltip("hide")}),1e3)}function buythistool(id){bootbox.confirm("Are you sure?",(function(result){1==result&&$.ajax({method:"GET",url:"buytool.php?id="+id+"&t=cpanels",dataType:"text",success:function(data){data.match(/<button/)?$("#cpanel"+id).html(data).show():bootbox.alert('<center><img src="files/img/balance.png"><h2><b>No enough balance !</b></h2><h4>Please refill your balance <a class="btn btn-primary btn-xs"  href="addBalance.html" onclick="window.open(this.href);return false;" >Add Balance <span class="glyphicon glyphicon-plus"></span></a></h4></center>')}})}))}function check(id){if(xcheck>1)bootbox.alert("<b>Wait</b> - Other checking operation is executed!");else{xcheck++;$("#shop"+id).attr("type");$("#shop"+id).html("Checking...").show(),$.ajax({type:"GET",url:"CheckCpanel"+id+".html",success:function(data){$("#shop"+id).html(data).show(),xcheck--}})}}function openitem(order){$("#myModalLabel").text("Order #"+order),$("#myModal").modal("show"),$.ajax({type:"GET",url:"showOrder"+order+".html",success:function(data){$("#modelbody").html(data).show()}})}$(window).on("popstate",(function(e){location.replace(document.location)})),$(window).on("load",(function(){$(".dropdown").hover((function(){$(".dropdown-toggle",this).trigger("click")})),pageDiv(2,"Cpanels - XbaseTools","cpanels",1),new Clipboard(".copyit").on("success",(function(e){setTooltip(e.trigger,"Copied!"),hideTooltip(e.trigger),e.clearSelection()}))})),$("#filterbutton").click((function(){$("#table tbody tr").each((function(){var ck1=$.trim($(this).find("#cpanel_country").text().toLowerCase()),ck2=$.trim($(this).find("#cpanel_tld").text().toLowerCase()),ck3=$.trim($(this).find("#cpanel_hosting").text().toLowerCase()),ck4=$.trim($(this).find("#cpanel_seller").text().toLowerCase()),val1=$.trim($('select[name="cpanel_country"]').val().toLowerCase()),val2=$.trim($('input[name="cpanel_tld"]').val().toLowerCase()),val3=$.trim($('input[name="cpanel_hosting"]').val().toLowerCase()),val4=$.trim($('select[name="cpanel_seller"]').val().toLowerCase());ck1!=val1&&""!=val1||-1==ck2.indexOf(val2)||-1==ck3.indexOf(val3)||ck4!=val4&&""!=val4?$(this).hide():$(this).show()})),$("#filterbutton").prop("disabled",!0)})),$(".filterselect").change((function(){$("#filterbutton").prop("disabled",!1)})),$(".filterinput").keyup((function(){$("#filterbutton").prop("disabled",!1)})),xcheck=0;
+$(document).ready((function ()
+{
+  $("#cpanel_table").DataTable(
+  {
+    lengthMenu: [
+      [10, 25, 100, 500, -1],
+      [10, 25, 100, 500, "All"]
+    ],
+    iDisplayLength: 1e3,
+    aaSorting: []
+  })
+})), $(document).keydown((function (t)
+{
+  "17" == t.which && !0
+})), $(document).keyup((function ()
+{
+  !1
+}));
+$(window).on("popstate", (function (t)
+{
+  location.replace(document.location)
+})), $(window).on("load", (function ()
+{
+  $(".dropdown").hover((function ()
+  {
+    $(".dropdown-toggle", this).trigger("click")
+  })), pageDiv(2, "Cpanels - XbaseTools", "cpanels", 1), new Clipboard(".copyit").on("success", (function (t)
+  {
+    ! function setTooltip(t, e)
+    {
+      $(t).tooltip("hide").attr("data-original-title", e).tooltip("show")
+    }(t.trigger, "Copied!"),
+    function hideTooltip(t)
+    {
+      setTimeout((function ()
+      {
+        $(t).tooltip("hide")
+      }), 1e3)
+    }(t.trigger), t.clearSelection()
+  }))
+})), $("#filterbutton").click((function ()
+{
+  $("#table tbody tr").each((function ()
+  {
+    var t = $.trim($(this).find("#cpanel_country").text().toLowerCase()),
+      e = $.trim($(this).find("#cpanel_tld").text().toLowerCase()),
+      o = $.trim($(this).find("#cpanel_hosting").text().toLowerCase()),
+      n = $.trim($(this).find("#cpanel_seller").text().toLowerCase()),
+						
+      i = $.trim($('select[name="cpanel_country"]').val().toLowerCase()),
+      l = $.trim($('input[name="cpanel_tld"]').val().toLowerCase()),
+      a = $.trim($('input[name="cpanel_hosting"]').val().toLowerCase()),
+      c = $.trim($('select[name="cpanel_seller"]').val().toLowerCase());
+    t != i && "" != i || -1 == e.indexOf(l) || -1 == o.indexOf(a) || n != c && "" != c ? $(this).hide() : $(this).show()
+  })), $("#filterbutton").prop("disabled", !0)
+})), $(".filterselect").change((function ()
+{
+  $("#filterbutton").prop("disabled", !1)
+})), $(".filterinput").keyup((function ()
+{
+  $("#filterbutton").prop("disabled", !1)
+})), xcheck = 0;
 </script>
 </body>
 </html>
