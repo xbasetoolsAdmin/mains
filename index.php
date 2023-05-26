@@ -9,7 +9,6 @@
 	}
 	$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 	?>
-    <div class="container-fluid" id="mainDiv">
 <style>
     .scroll-area-lg {
         height: 400px;
@@ -43,8 +42,8 @@
 </style>
  
 <body class="them loading">
-    <link rel="stylesheet" href="/layout/css/flexslider5.css" type="text/css">
-    <script src="/layout/js/jquery.flexslider-min.js"></script>
+    <link rel="stylesheet" href="/buyer/layout/css/flexslider5.css" type="text/css">
+    <script src="/buyer/layout/js/jquery.flexslider-min.js"></script>
     <style>
         #tour {
             font-family: 'Raleway', sans-serif;
@@ -187,13 +186,13 @@
  
         </div>
     </div>
-    <script defer src="/layout/js/jquery.flexslider.js"></script>
+    <script defer src="/buyer/layout/js/jquery.flexslider.js"></script>
     <div class="header">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-12" style="text-align:center;"><a href="shell"><img style="border: 3px solid;" src="layout/images/shells.gif"></a></div>
-                <div class="col-lg-3 col-md-6 col-sm-12" style="text-align:center;"><a href="smtp"><img style="border: 3px solid;" src="layout/images/smtps.gif"></a></div>
-                <div class="col-lg-3 col-md-6 col-sm-12" style="text-align:center;"><a href="accounts-7"><img style="border: 3px solid;" src="layout/images/accs.gif"></a></div>
+                <div class="col-lg-3 col-md-6 col-sm-12" style="text-align:center;"><a href="shell"><img style="border: 3px solid;" src="buyer/layout/images/shells.gif"></a></div>
+                <div class="col-lg-3 col-md-6 col-sm-12" style="text-align:center;"><a href="smtp"><img style="border: 3px solid;" src="buyer/layout/images/smtps.gif"></a></div>
+                <div class="col-lg-3 col-md-6 col-sm-12" style="text-align:center;"><a href="accounts-7"><img style="border: 3px solid;" src="buyer/layout/images/accs.gif"></a></div>
             </div><br>
             <div class="header-body">
  
@@ -660,16 +659,16 @@
                                 <br><br>
                                 Available Payment Methods
                                 <br>
-                                <a href="addBalance"><img src="layout/images/pmlogo2.png" height="48" width="49" title="PerfectMoney" /></a>
-                                <a href="addBalance"><img src="layout/images/btclogo.png" height="48" width="49" title="Bitcoin" /></a>
-                                <a href="addBalance"><img src="layout/images/ltclogo.png" height="48" width="49" title="Litecoin" /></a>
-                                <a href="addBalance"><img src="layout/images/bnb.png" height="48" width="49" title="Binance Token" /></a>
-                                <a href="addBalance"><img src="layout/images/ethereum.png" height="48" width="49" title="Etherum" /></a>
-                                <a href="addBalance"><img src="layout/images/trc.png" height="48" width="49" title="Tether [USDT/TRC20]" /></a>
-                                <a href="addBalance"><img src="layout/images/bch.png" height="48" width="49" title="Bitcoin Cash" /></a>
-                                <a href="addBalance"><img src="layout/images/dgc.jpg" height="48" width="49" title="Dogecoin" /></a>
-                                <a href="addBalance"><img src="layout/images/monero.png" height="48" width="49" title="Monero" /></a>
-                                <a href="addBalance"><img src="layout/images/erc20.png" height="58" width="59" title="USDT.ERC20" /></a>
+                                <a href="addBalance"><img src="buyer/layout/images/pmlogo2.png" height="48" width="49" title="PerfectMoney" /></a>
+                                <a href="addBalance"><img src="buyer/layout/images/btclogo.png" height="48" width="49" title="Bitcoin" /></a>
+                                <a href="addBalance"><img src="buyer/layout/images/ltclogo.png" height="48" width="49" title="Litecoin" /></a>
+                                <a href="addBalance"><img src="buyer/layout/images/bnb.png" height="48" width="49" title="Binance Token" /></a>
+                                <a href="addBalance"><img src="buyer/layout/images/ethereum.png" height="48" width="49" title="Etherum" /></a>
+                                <a href="addBalance"><img src="buyer/layout/images/trc.png" height="48" width="49" title="Tether [USDT/TRC20]" /></a>
+                                <a href="addBalance"><img src="buyer/layout/images/bch.png" height="48" width="49" title="Bitcoin Cash" /></a>
+                                <a href="addBalance"><img src="buyer/layout/images/dgc.jpg" height="48" width="49" title="Dogecoin" /></a>
+                                <a href="addBalance"><img src="buyer/layout/images/monero.png" height="48" width="49" title="Monero" /></a>
+                                <a href="addBalance"><img src="buyer/layout/images/erc20.png" height="58" width="59" title="USDT.ERC20" /></a>
                             </div>
                         </div>
                         <div class="card mb-3" style="color: var(--font-color); background-color: var(--color-card);">
@@ -700,7 +699,7 @@
 
             </script>
  
-            <script type="text/javascript" src="layout/js/Chart.min.js"></script>
+            <script type="text/javascript" src="buyer/layout/js/Chart.min.js"></script>
             <script>
                 var clipboard = new Clipboard('.copydiv');
             </script>
