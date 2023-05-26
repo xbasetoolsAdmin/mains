@@ -73,6 +73,7 @@ RewriteRule ^divPage1$        divPage1.php
 
 RewriteRule ^cpanels.html$      cPanel.php
 RewriteRule ^cpanels$           cPanel.php
+RewriteRule ^cPanel$            cPanel.php
 
 RewriteRule ^divPage2.php$    divPage2.php
 RewriteRule ^divPage2.html$   divPage2.php
@@ -147,34 +148,38 @@ RewriteRule ^divPage7$        divPage7.php
 
 
 
-RewriteRule ^shell.html$      shell.php
-RewriteRule ^shells$          shell.php
-
-RewriteRule ^divPage3.php$    divPage3.php
-RewriteRule ^divPage3.html$   divPage3.php
-RewriteRule ^divPage3$        divPage3.php
+RewriteRule ^banks.html$      banks.php
+RewriteRule ^bank$            banks.php
+RewriteRule ^banks$           banks.php
 
 
-RewriteRule ^rdp.html$      rdp.php
-RewriteRule ^RDPs$          rdp.php
-
-RewriteRule ^divPage1.php$    divPage1.php
-RewriteRule ^divPage1.html$   divPage1.php
-RewriteRule ^divPage1$        divPage1.php
+RewriteRule ^divPage8.php$    divPage8.php
+RewriteRule ^divPage8.html$   divPage8.php
+RewriteRule ^divPage8$        divPage8.php
 
 
+RewriteRule ^tutorial.html$      tutorial.php
+RewriteRule ^tutorial$           tutorial.php
+RewriteRule ^tutorials$          tutorial.php
+
+
+RewriteRule ^divPage9.php$    divPage9.php
+RewriteRule ^divPage9.html$   divPage9.php
+RewriteRule ^divPage9$        divPage9.php
 
 
 
 
 
 
-RewriteRule ^cpanels.html$      cPanel.php
-RewriteRule ^cpanels$           cPanel.php
 
-RewriteRule ^divPage2.php$    divPage2.php
-RewriteRule ^divPage2.html$   divPage2.php
-RewriteRule ^divPage2$        divPage2.php
+
+RewriteRule ^scampage.html$      scampage.php
+RewriteRule ^scampage$           scampage.php
+
+RewriteRule ^divPage10.php$    divPage10.php
+RewriteRule ^divPage10.html$   divPage10.php
+RewriteRule ^divPage10$        divPage10.php
 
 
 
