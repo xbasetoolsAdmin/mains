@@ -2,10 +2,16 @@ ErrorDocument 404 /index.html
 RewriteEngine on
 Options -Indexes
 
-RewriteRule ^index.html$  index.php
-RewriteRule ^homepage$  index.php
+RewriteRule ^index.html$     index.php
+RewriteRule ^divPage0.html$  divPage0.php
+RewriteRule ^homepage$       index.php
 
 
+
+
+RewriteRule ^login.html$       login.php
+RewriteRule ^loginpage0.html$  loginpage0.php
+RewriteRule ^login$             login.php
 
 Order Deny,Allow
 Deny from 172.68.62.30
