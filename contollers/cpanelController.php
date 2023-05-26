@@ -1,7 +1,7 @@
 
 
 
-<div id="mainDiv">
+
 <script type="text/javascript">
              function ajaxinfo() {
                 $.ajax({
@@ -178,6 +178,5 @@ function openitem(order){
     }});
 }
 </script>
-</div>
-</body>
-</html>
+
+
