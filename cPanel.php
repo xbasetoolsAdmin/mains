@@ -5,7 +5,7 @@
 
 
 
-<div id="mainDiv"></div>
+<div id="mainDiv">
 <script type="text/javascript">
              function ajaxinfo() {
                 $.ajax({
@@ -112,6 +112,7 @@ function hideTooltip(btn) {
         </style>
 
 <?php require"footer.php"; ?>
+</div>
 
 </body>
 </html>
