@@ -1,6 +1,5 @@
-<?php 
-include "header.php";
-?>
+<?php require"header.php";?>
+
 
 
 
@@ -111,9 +110,9 @@ function hideTooltip(btn) {
         </style>
 
 <div id="mainDiv">
+<?php require"footer.php"; ?>
 
 
-</div>
 	<?php include "controllers/cpanelController.php">
 </body>
 </html>
