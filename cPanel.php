@@ -110,52 +110,7 @@
 	<!--<span><a href=" addBalance.php?do=balance" class="btn btn-primary" style="color:#fff; font-size: 12 px">Add Balance</a></span>--->
 	<!--<span><a href="addBalance.php?do=details" class="btn btn-primary" style="color:#fff; font-size: 12 px">Balance Info</a></span>--->
 </div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-				<h4 class="modal-title" id="myModalLabel"></h4>
-			</div>
-			<div class="modal-body" id="modelbody">
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-				<h4 class="modal-title" id="myModalLabel"></h4>
-			</div>
-			<div class="modal-body" id="modelbody">
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-<div class="modal-dialog" role="document">
-	<div class="modal-content">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-			<h4 class="modal-title" id="myModalLabel"></h4>
-		</div>
-		<div class="modal-body" id="modelbody">
-		</div>
-		<div class="modal-footer">
-			<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-		</div>
-	</div>
-</div>
+<?php require"footer.php";?>
 <script type="text/javascript">
 	$(document).ready(function() {
 	    $('#cpanel_table').DataTable({
@@ -189,7 +144,7 @@
 	    $('.dropdown').hover(function() {
 	        $('.dropdown-toggle', this).trigger('click');
 	    });
-	    pageDiv(2, 'Cpanels - XbaseTools', 'main', 1);
+	    pageDiv(2, 'Cpanels - XbaseTools', 'cpanels', 1);
 	    var clipboard = new Clipboard('.copyit');
 	    clipboard.on('success', function(e) {
 	        setTooltip(e.trigger, 'Copied!');
@@ -213,10 +168,7 @@
 	        $(btn).tooltip('hide'); /*console.log("hide-2");*/
 	    }, 1000);
 	}
-</script>
-</body>
-</html>
-<script type="text/javascript">
+    
 	$('#filterbutton').click(function() {
 	    $("#table tbody tr").each(function() {
 	        var ck1 = $.trim($(this).find("#cpanel_country").text().toLowerCase());
