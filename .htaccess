@@ -85,7 +85,7 @@ RewriteRule ^divPage2$        divPage2.php
 
 
 RewriteRule ^shell.html$      shell.php
-RewriteRule ^shells$          shell.php
+RewriteRule ^shell$          shell.php
 
 RewriteRule ^divPage3.php$    divPage3.php
 RewriteRule ^divPage3.html$   divPage3.php
