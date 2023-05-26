@@ -42,7 +42,7 @@
 </style>
 
 		 
-<div id="mainDiv">
+<div id="mainDiv"></div>
 <script type="text/javascript">
              function ajaxinfo() {
                 $.ajax({
@@ -141,7 +141,7 @@ function hideTooltip(btn) {
   setTimeout(function() {$(btn).tooltip('hide'); console.log("hide-2");}, 1000);
 }
 </script>
-</div>
+
 
 
 
