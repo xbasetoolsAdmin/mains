@@ -20,7 +20,7 @@
                                 <th scope="col">Buy</th>
                              </tr>
                           </thead>
-                       </thody>
+                       <thody>
 <?php
 		include("cr.php");
 	    $q = mysqli_query($dbcon, "SELECT * FROM cpanels WHERE sold='0' ORDER BY RAND()")or die(mysql_error());
