@@ -254,34 +254,60 @@ RewriteRule ^divPage15.html$   divPage15.php
 RewriteRule ^divPage15$        divPage15.php
 
 
-
-
-
-RewriteRule ^settingEdit.html$  settingEdit.php
 RewriteRule ^CreateTicket.html$  tticket.php
-RewriteRule ^CreateReport.html$  treport.php
-RewriteRule ^addBalance.html$  funds.php
-RewriteRule ^addBalanceAction.html$  addBalanceAction.php
-RewriteRule ^rdp.html$  rdp.php
-RewriteRule ^tutorial.html$  tutorial.php
-RewriteRule ^MakePayment.html$  pay.php
-RewriteRule ^BitcoinPayment.html$  btc3.php
-RewriteRule ^banks.html$  banks.php
-RewriteRule ^PerfectMoneyPayment.html$  pm3.php
-RewriteRule ^tickets.html$  tickets.php
-RewriteRule ^seller.html$  becomeseller.php
-RewriteRule ^scampage.html$  scampage.php
-RewriteRule ^logout.html$  logout.php
-RewriteRule ^active.html$  active.php
-RewriteRule ^orders.html$  orders.php
-RewriteRule ^setting.html$  setting.php
-RewriteRule ^static.html$  static.php
-RewriteRule ^seller.html$  rindex.php
-RewriteRule ^smtp.html$  smtp.php
-RewriteRule ^AddSingleTool.html$  addt.php
-RewriteRule ^cPanel.html$  cPanel.php
+
+
+RewriteRule ^CreateReport.html$   treport.php
+RewriteRule ^CreateReport$        treport.php
+
+
+
+RewriteRule ^settingEdit$          settingEdit.php
+RewriteRule ^settingEdit.html$     settingEdit.php
+
+
+RewriteRule ^pay.html$  pay.php
+RewriteRule ^pay$        pay.php
+
+RewriteRule ^btc3$              btc3.php
+RewriteRule ^btc3.html$          btc3.php
+
+
+
+
+RewriteRule ^pm3.html$  pm3.php
+RewriteRule ^pm3$       pm3.php
+
+
+
+RewriteRule ^become-seller$  becomeseller.php
+
+
+
+
+
+RewriteRule ^logout$  logout.php
+
+
+
+
+RewriteRule ^active$  active.php
+
+
+RewriteRule ^static$  static.php
+
+
+
 RewriteRule ^checkEmailChange.html$  checkEmailChange.php
-RewriteRule ^reports.html$  reports.php
+RewriteRule ^checkEmailChange$       checkEmailChange.php
+
+
+
+RewriteRule ^reports$  reports.php
+
+
+
+
 RewriteRule ^Rules.html$  shoprules.php
 RewriteRule ^account.html$  profile.php
 RewriteRule ^AddCards.html$  addc.php
