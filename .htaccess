@@ -190,9 +190,9 @@ RewriteRule ^divPage10$        divPage10.php
 RewriteRule ^shell.html$      shell.php
 RewriteRule ^shell$          shell.php
 
-RewriteRule ^divPage3.php$    divPage3.php
-RewriteRule ^divPage3.html$   divPage3.php
-RewriteRule ^divPage3$        divPage3.php
+RewriteRule ^divPage11.php$    divPage11.php
+RewriteRule ^divPage11.html$   divPage11.php
+RewriteRule ^divPage11$        divPage11.php
 
 
 
@@ -204,9 +204,9 @@ RewriteRule ^divPage3$        divPage3.php
 RewriteRule ^mailer.html$     mailer.php
 RewriteRule ^mailer$          mailer.php
 
-RewriteRule ^divPage4.php$    divPage4.php
-RewriteRule ^divPage4.html$   divPage4.php
-RewriteRule ^divPage4$        divPage4.php
+RewriteRule ^divPage12.php$    divPage12.php
+RewriteRule ^divPage12.html$   divPage12.php
+RewriteRule ^divPage12$        divPage12.php
 
 
 
@@ -215,9 +215,9 @@ RewriteRule ^divPage4$        divPage4.php
 RewriteRule ^smtp.html$      smtp.php
 RewriteRule ^smtp$           smtp.php
 
-RewriteRule ^divPage5.php$    divPage5.php
-RewriteRule ^divPage5.html$   divPage5.php
-RewriteRule ^divPage5$        divPage5.php
+RewriteRule ^divPage13.php$    divPage13.php
+RewriteRule ^divPage13.html$   divPage13.php
+RewriteRule ^divPage13$        divPage13.php
 
 
 
@@ -227,9 +227,9 @@ RewriteRule ^divPage5$        divPage5.php
 RewriteRule ^leads.html$      leads.php
 RewriteRule ^leads$           leads.php
 
-RewriteRule ^divPage6.php$    divPage6.php
-RewriteRule ^divPage6.html$   divPage6.php
-RewriteRule ^divPage6$        divPage6.php
+RewriteRule ^divPage14.php$    divPage14.php
+RewriteRule ^divPage14.html$   divPage14.php
+RewriteRule ^divPage14$        divPage14.php
 
 
 
@@ -241,9 +241,9 @@ RewriteRule ^divPage6$        divPage6.php
 RewriteRule ^premium.html$       premium.php
 RewriteRule ^premium$            premium.php
 
-RewriteRule ^divPage7.php$    divPage7.php
-RewriteRule ^divPage7.html$   divPage7.php
-RewriteRule ^divPage7$        divPage7.php
+RewriteRule ^divPage15.php$    divPage15.php
+RewriteRule ^divPage15.html$   divPage15.php
+RewriteRule ^divPage15$        divPage15.php
 
 
 
