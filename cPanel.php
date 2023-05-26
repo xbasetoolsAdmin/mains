@@ -479,7 +479,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                 
                 <script type="text/javascript">
                     $(document).ready(function() {
-                        $('#mainDiv').DataTable({
+                        $('#cpanel_table').DataTable({
                             "lengthMenu": [
                                 [10, 25, 100, 500, -1],
                                 [10, 25, 100, 500, "All"]
@@ -537,13 +537,13 @@ function pageDiv(n,t,u,x){
 
     	}
       document.title = obj.Title;
-    $("#cPanel_table./").html('<div id="mydiv"><img src="files/img/load2.gif" class="ajax-loader"></div>').show();
+    $("#cPanel_table").html('<div id="mydiv"><img src="files/img/load2.gif" class="ajax-loader"></div>').show();
     $.ajax({
     type:       'GET',
     url:        'divPage'+n+'.html',
     success:    function(data)
     {
-        $("#mainDiv").html(data).show();
+        $("#cpanel_table").html(data).show();
         newTableObject = document.getElementById('table');
         sorttable.makeSortable(newTableObject);
         $(".sticky-header").floatThead({top:60});
