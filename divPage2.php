@@ -1,7 +1,7 @@
 <?php ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes/config.php";  if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {    header("location: ../");    exit(); } $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
 
 
-<table width="100%"  class="table table-striped table-bordered table-condensed sticky-header" id="table">
+<table width="100%"  class="table table-striped table-bordered table-condensed sticky-header" id="cpanel_table">
 <thead>
     <tr>       
     <th scope="col" ></th>  
