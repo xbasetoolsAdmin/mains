@@ -24,40 +24,63 @@
       <th scope="col">Added on </th>
       <th scope="col">Buy</th>
    </tr>
-</thead>
-<tbody>
- <?php
-include("cr.php");
-$q = mysqli_query($dbcon, "SELECT * FROM leads WHERE sold='0' ORDER BY RAND()")or die(mysqli_error());
+   </thead>
+   <thody>
+<?php
+		include("cr.php");
+	    $q = mysqli_query($dbcon, "SELECT * FROM leads WHERE sold='0' ORDER BY RAND()")or die(mysql_error());
+	   	function srl($item)
+		{
+		$item0 = $item;
+		$item1 = rtrim($item0);
+		$item2 = ltrim($item1);
+		return $item2;
+		} 
+
  while($row = mysqli_fetch_assoc($q)){
-	 
 	 	 $countryfullname = $row['country'];
 	  $code = array_search("$countryfullname", $countrycodes);
 	 $countrycode = strtolower($code);
-	    $qer = mysqli_query($dbcon, "SELECT * FROM resseller WHERE username='".$row['resseller']."'")or die(mysql_error());
+
+	 $url = $row['url'];
+	 	$d = explode("|", $url);
+		$urled = srl($d[0]);
+
+	 	  $tld = end(explode(".", parse_url($urled, PHP_URL_HOST))); 
+    $qer = mysqli_query($dbcon, "SELECT * FROM resseller WHERE username='".$row['resseller']."'")or die(mysql_error());
 		   while($rpw = mysqli_fetch_assoc($qer))
 			 $SellerNick = "seller".$rpw["id"]."";
      echo "
- <tr>     
-    <td id='leads_country'><i class='flag-icon flag-icon-$countrycode'></i>&nbsp;".htmlspecialchars($row['country'])." </td>
-    <td id='leads_about'> ".htmlspecialchars($row['infos'])." </td> 
-	<td> ".htmlspecialchars($row['number'])." </td>
-    <td id='leads_seller'> ".htmlspecialchars($SellerNick)."</td>
+ <tr>    
+    <td id='country'><i class='flag-icon flag-icon-$countrycode'></i>&nbsp;".htmlspecialchars($row['country'])." </td>
+		    <td id='tld'> .".$tld." </td>
+    <td id='hosting'> ".htmlspecialchars($row['infos'])." </td>
+    <td id='seller'> ".htmlspecialchars($SellerNick)."</td>
+";
+	 echo '<td><span id="shop'.$row["id"].'" type="cpanel"><a onclick="javascript:check('.$row["id"].');" class="btn btn-info btn-xs"><font color=white>Check</font></a></span><center></td>';
+echo "
     <td> ".htmlspecialchars($row['price'])."</td>
-	    <td> ".$row['date']."</td>";
+	    <td> ".htmlspecialchars($row['date'])."</td>
+    ";
+
     echo '
     <td>
-	<span id="leads'.$row['id'].'" title="buy" type="leads"><a onclick="javascript:buythistool('.$row['id'].')" class="btn btn-primary btn-xs"><font color=white>Buy</font></a></span><center>
+	<span id="cpanel'.$row['id'].'" title="buy" type="cpanel"><a onclick="javascript:buythistool('.$row['id'].')" class="btn btn-primary btn-xs"><font color=white>Buy</font></a></span><center>
     </td>
             </tr>
      ';
  }
 
  ?>
-</tbody>
-</table>
+
+ </tbody>
+ </table>
+
 <script type="text/javascript">
-$('#filterbutton').click(function () {$("#table tbody tr").each(function() {var ck1 = $.trim( $(this).find("#leads_country").text().toLowerCase() );var ck2 = $.trim( $(this).find("#leads_about").text().toLowerCase() );var ck3 = $.trim( $(this).find("#leads_seller").text().toLowerCase() ); var val1 = $.trim( $('select[name="leads_country"]').val().toLowerCase() );var val2 = $.trim( $('input[name="leads_about"]').val().toLowerCase() );var val3 = $.trim( $('select[name="leads_seller"]').val().toLowerCase() ); if((ck1 != val1 && val1 != '' ) || ck2.indexOf(val2)==-1 || (ck3 != val3 && val3 != '' )){ $(this).hide();  }else{ $(this).show(); } });$('#filterbutton').prop('disabled', true);});$('.filterselect').change(function () {$('#filterbutton').prop('disabled', false);});$('.filterinput').keyup(function () {$('#filterbutton').prop('disabled', false);});
+let table = new DataTable('#table', {
+    responsive: true
+});
+$('#filterbutton').click(function () {$("#table tbody tr").each(function() {var ck1 = $.trim( $(this).find("#country").text().toLowerCase() );var ck2 = $.trim( $(this).find("#tld").text().toLowerCase() );var ck3 = $.trim( $(this).find("#hosting").text().toLowerCase() );var ck4 = $.trim( $(this).find("#seller").text().toLowerCase() ); var val1 = $.trim( $('select[name="country"]').val().toLowerCase() );var val2 = $.trim( $('input[name="tld"]').val().toLowerCase() );var val3 = $.trim( $('input[name="hosting"]').val().toLowerCase() );var val4 = $.trim( $('select[name="seller"]').val().toLowerCase() ); if((ck1 != val1 && val1 != '' ) || ck2.indexOf(val2)==-1 || ck3.indexOf(val3)==-1 || (ck4 != val4 && val4 != '' )){ $(this).hide();  }else{ $(this).show(); } });$('#filterbutton').prop('disabled', true);});$('.filterselect').change(function () {$('#filterbutton').prop('disabled', false);});$('.filterinput').keyup(function () {$('#filterbutton').prop('disabled', false);});
 function buythistool(id){
   bootbox.confirm("Are you sure?", function(result) {
         if(result ==true){
@@ -67,7 +90,7 @@ function buythistool(id){
      dataType:"text",
      success:function(data){
          if(data.match(/<button/)){
-		 $("#leads"+id).html(data).show();
+		 $("#cpanel"+id).html(data).show();
          }else{
             bootbox.alert('<center><img src="files/img/balance.png"><h2><b>No enough balance !</b></h2><h4>Please refill your balance <a class="btn btn-primary btn-xs"  href="addBalance.html" onclick="window.open(this.href);return false;" >Add Balance <span class="glyphicon glyphicon-plus"></span></a></h4></center>')
          }
@@ -76,6 +99,24 @@ function buythistool(id){
        ;}
   });
 }
+g:xcheck=0;
+function check(id){   
+     if(xcheck > 1){
+    bootbox.alert("<b>Wait</b> - Other checking operation is executed!");
+  } else {
+    xcheck++;
+    var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('Checking...').show();
+	$.ajax({
+	type: 		'GET',
+	url: 		'CheckCpanel'+id+'.html',
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+		xcheck--;
+	}});
+} }
+
 function openitem(order){
   $("#myModalLabel").text('Order #'+order);
   $('#myModal').modal('show');
@@ -106,4 +147,5 @@ function openitem(order){
       </div>
     </div>
   </div>
+</div>
 </div>
