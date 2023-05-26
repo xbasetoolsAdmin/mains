@@ -40,7 +40,7 @@ $(window).on("popstate", (function (t)
   $(".dropdown").hover((function ()
   {
     $(".dropdown-toggle", this).trigger("click")
-  })), pageDiv(0, "Cpanels - XbaseTools", "main", 1), 
+  })), pageDiv(0, "main - XbaseTools", "main", 1), 
 new Clipboard(".copyit").on("success", (function (t)
   {
     ! function setTooltip(t, e)
