@@ -215,6 +215,12 @@ RewriteRule ^divPage12$        divPage12.php
 RewriteRule ^add-balance.html$      addBalance.php
 RewriteRule ^add-balance$           addBalance.php
 RewriteRule  ^addBalance$           addBalance.php
+RewriteRule ^addBalance.html$       funds.php
+RewriteRule ^addBalanceAction.html$  addBalanceAction.php
+RewriteRule ^addBalanceAction$       addBalanceAction.php
+
+
+
 
 
 RewriteRule ^divPage13.php$    divPage13.php
