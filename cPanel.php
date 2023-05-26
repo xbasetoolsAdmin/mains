@@ -559,14 +559,9 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE
                     </div>
                 
                 <script type="text/javascript">
-		    $('#cpanel_table').DataTable({ 
-    paging: false
-} );
- 
-$('#cpanel_table').DataTable( {
-    destroy: true,
-    searching: false
-} );
+		 let table = new DataTable('#cpanel_table', {
+    responsive: true
+});
              function ajaxinfo() {
                 $.ajax({
                     type: 'GET',
