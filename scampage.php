@@ -1,17 +1,13 @@
-<?php
+<?php 
 ob_start();
 session_start();
-date_default_timezone_set( 'UTC' );
+date_default_timezone_set('UTC');
 require "header.php";
 include "includes/config.php";
-if ( !isset( $_SESSION['sname'] ) and !isset( $_SESSION['spass'] ) ) {
-										header( "location: ../" );
-										exit( );
-} //
-!isset( $_SESSION['sname'] ) and !isset( $_SESSION['spass'] )
-
-$usrid = mysqli_real_escape_string( $dbcon, $_SESSION['sname'] );
-?>
+if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
+header("location: ../");
+exit(); }
+$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
 
 <ul>
             
@@ -37,11 +33,9 @@ $usrid = mysqli_real_escape_string( $dbcon, $_SESSION['sname'] );
           </div>
      </div>
 
-<?php
-require "footer.php";
-?>
+<?php require"footer.php";?>
 <script type="text/javascript">
-$(document).keydown((function(event){"17"==event.which&&(cntrlIsPressed=!0)})),$(document).keyup((function(){cntrlIsPressed=!1}));var cntrlIsPressed=!1;function setTooltip(btn,message){$(btn).tooltip("hide").attr("data-original-title",message).tooltip("show")}function hideTooltip(btn){setTimeout((function(){$(btn).tooltip("hide")}),1e3)}$(window).on("popstate",(function(e){location.replace(document.location)})),$(window).on("load",(function(){$(".dropdown").hover((function(){$(".dropdown-toggle",this).trigger("click")})),pageDiv(9,"Scampage - xBaseTools","scampage",1),new Clipboard(".copyit").on("success",(function(e){setTooltip(e.trigger,"Copied!"),hideTooltip(e.trigger),e.clearSelection()}))}));
+$(document).keydown((function(event){"17"==event.which&&(cntrlIsPressed=!0)})),$(document).keyup((function(){cntrlIsPressed=!1}));var cntrlIsPressed=!1;function setTooltip(btn,message){$(btn).tooltip("hide").attr("data-original-title",message).tooltip("show")}function hideTooltip(btn){setTimeout((function(){$(btn).tooltip("hide")}),1e3)}$(window).on("popstate",(function(e){location.replace(document.location)})),$(window).on("load",(function(){$(".dropdown").hover((function(){$(".dropdown-toggle",this).trigger("click")})),pageDiv(7,"Accounts - xBaseTools","premium",1),new Clipboard(".copyit").on("success",(function(e){setTooltip(e.trigger,"Copied!"),hideTooltip(e.trigger),e.clearSelection()}))}));
  </script>
 </body>
 </html>
