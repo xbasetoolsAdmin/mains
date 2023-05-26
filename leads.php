@@ -19,7 +19,7 @@
 	.dataTables_wrapper .dataTables_paginate .paginate_button {
 	color: var(--font-color);
 	}
-	#cpanel_table_paginate .paginate_button {
+	#leads_table_paginate .paginate_button {
 	color: var(--font-color);
 	}
 	.alert-info {
