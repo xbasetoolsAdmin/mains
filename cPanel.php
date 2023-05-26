@@ -414,12 +414,26 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
                 <div class="col-sm-12 table-responsive">
                     <table id="cpanel_table" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
- 
- 
+                         <thead>
+                             <tr>       
+                                 <th scope="col" ></th>  
+                                <th scope="col" >ID</th>     
+                                <th scope="col" >CF</th>
+                                <th scope="col" >Country</th>
+                                 <th scope="col">TLD</th>
+                                <th scope="col">Hosting</th>
+                                 <th scope="col">Seller</th>
+                                 <th scope="col">Check</th>
+                                <th scope="col">Price</th>
+                                 <th scope="col">Added on </th>
+                                <th scope="col">Buy</th>
+                             </tr>
+                          </thead>
+                       </table>
+                    </div>
         <!--<span><a href=" addBalance.php?do=balance" class="btn btn-primary" style="color:#fff; font-size: 12 px">Add Balance</a></span>--->
                         <!--<span><a href="addBalance.php?do=details" class="btn btn-primary" style="color:#fff; font-size: 12 px">Balance Info</a></span>--->
                 </div>
- 
                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
