@@ -20,7 +20,6 @@
         <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
         <link rel="shortcut icon" href="../../favicon.ico" /><html>
 	<?php ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes/config.php"; if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {     header("location: ../");     exit(); } $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
-		<header>
           <title>XbaseTools</title>
         <link rel="stylesheet" href="buyer/layout/css/bootstrap.min.css">
         <script src="buyer/layout/js/jquery-3.4.1.min.js"></script>
