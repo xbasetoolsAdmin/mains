@@ -156,16 +156,18 @@ $(window).on("popstate", (function (t)
 {
   $("#table tbody tr").each((function ()
   {
-    var t = $.trim($(this).find("#cpanel_country").text().toLowerCase()),
-      e = $.trim($(this).find("#cpanel_tld").text().toLowerCase()),
-      o = $.trim($(this).find("#cpanel_hosting").text().toLowerCase()),
-      n = $.trim($(this).find("#cpanel_seller").text().toLowerCase()),
+    var t = $.trim($(this).find("#country").text().toLowerCase()),
+      e = $.trim($(this).find("#tld").text().toLowerCase()),
+      o = $.trim($(this).find("#hosting").text().toLowerCase()),
+      n = $.trim($(this).find("#seller").text().toLowerCase()),
 						
-      i = $.trim($('select[name="cpanel_country"]').val().toLowerCase()),
-      l = $.trim($('input[name="cpanel_tld"]').val().toLowerCase()),
-      a = $.trim($('input[name="cpanel_hosting"]').val().toLowerCase()),
-      c = $.trim($('select[name="cpanel_seller"]').val().toLowerCase());
+      i = $.trim($('select[name="country"]').val().toLowerCase()),
+      l = $.trim($('input[name="tld"]').val().toLowerCase()),
+      a = $.trim($('input[name="hosting"]').val().toLowerCase()),
+      c = $.trim($('select[name="seller"]').val().toLowerCase());
+						
     t != i && "" != i || -1 == e.indexOf(l) || -1 == o.indexOf(a) || n != c && "" != c ? $(this).hide() : $(this).show()
+				
   })), $("#filterbutton").prop("disabled", !0)
 })), $(".filterselect").change((function ()
 {
