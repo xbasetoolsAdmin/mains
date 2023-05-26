@@ -1,5 +1,5 @@
 
-<!--?php
+<?php
 ob_start();
 session_start();
 date_default_timezone_set('UTC');
@@ -10,8 +10,10 @@ if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
     exit();
 }
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-?--><html>
-	<head></head>
+?>
+<html>
+	<head>
+	</head>
 	<body>
 		<ul class="nav nav-tabs">
 			<li class="active">
@@ -36,10 +38,10 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 								<select class="filterselect form-control input-sm" name="cpanel_country">
 									<option value="">ALL</option>
 									
-									<!--?php
+									<?php
 $query = mysqli_query($dbcon, "SELECT DISTINCT(`country`) FROM `cpanels` WHERE `sold` = '0' ORDER BY country ASC");
 	while($row = mysqli_fetch_assoc($query)){
-	echo '<option value="'.$row['country'].'"-->'.$row['country'].''; 	} ?&gt;
+	echo '<option value="'.$row['country'].'"'.$row['country'].''; 	} ?&gt;
 								</select>
 							</td>
 							<td>
@@ -52,13 +54,13 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`country`) FROM `cpanels` WHERE `
 								<select class="filterselect form-control input-sm" name="cpanel_seller">
 									<option value="">ALL</option>
 									
-									<!--?php
+									<?php
 $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE `sold` = '0' ORDER BY resseller ASC");
 	while($row = mysqli_fetch_assoc($query)){
 		 $qer = mysqli_query($dbcon, "SELECT DISTINCT(`id`) FROM resseller WHERE username='".$row['resseller']."' ORDER BY id ASC")or die(mysql_error());
 		   while($rpw = mysqli_fetch_assoc($qer))
 			 $SellerNick = "seller".$rpw["id"]."";
-	echo '<option value="'.$SellerNick.'"-->'.$SellerNick.''; 	} ?&gt;
+	echo '<option value="'.$SellerNick.'"'.$SellerNick.''; 	} ?;
 								</select>
 							</td>
 							<td>
@@ -90,7 +92,7 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `cpanels` WHERE
 					</thead>
 					<tbody>
 						
-						<!--?php
+						<?php
 		include("cr.php");
 	    $q = mysqli_query($dbcon, "SELECT * FROM cpanels WHERE sold='0' ORDER BY RAND()")or die(mysql_error());
 	   	function srl($item)
