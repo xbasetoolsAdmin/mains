@@ -187,8 +187,8 @@ RewriteRule ^divPage10$        divPage10.php
 
 
 
-RewriteRule ^shell.html$      shell.php
-RewriteRule ^shell$          shell.php
+RewriteRule ^tickets.html$      tickets.php
+RewriteRule ^tickets$           tickets.php
 
 RewriteRule ^divPage11.php$    divPage11.php
 RewriteRule ^divPage11.html$   divPage11.php
