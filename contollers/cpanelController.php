@@ -1,5 +1,5 @@
 
-<?php require"footer.php"; ?>
+
 <script type="text/javascript">
 $(document).ready(function() {
 $('#mainDiv').DataTable( {
