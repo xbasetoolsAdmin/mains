@@ -47,6 +47,29 @@ RewriteRule ^function$       ajax.php
 
 
 
+
+
+
+
+
+
+
+
+
+RewriteRule ^rdp.html$      rdp.php
+RewriteRule ^RDPs$          rdp.php
+
+RewriteRule ^divPage1.php$    divPage1.php
+RewriteRule ^divPage1.html$   divPage1.php
+RewriteRule ^divPage1$        divPage1.php
+
+
+
+
+
+
+
+
 RewriteRule ^cpanels.html$      cPanel.php
 RewriteRule ^cpanels$           cPanel.php
 
@@ -81,6 +104,54 @@ RewriteRule ^mailer$          mailer.php
 RewriteRule ^divPage4.php$    divPage4.php
 RewriteRule ^divPage4.html$   divPage4.php
 RewriteRule ^divPage4$        divPage4.php
+
+
+
+
+
+RewriteRule ^smtp.html$      smtp.php
+RewriteRule ^smtp$           smtp.php
+
+RewriteRule ^divPage5.php$    divPage5.php
+RewriteRule ^divPage5.html$   divPage5.php
+RewriteRule ^divPage5$        divPage5.php
+
+
+
+
+
+
+RewriteRule ^shell.html$      shell.php
+RewriteRule ^shells$          shell.php
+
+RewriteRule ^divPage3.php$    divPage3.php
+RewriteRule ^divPage3.html$   divPage3.php
+RewriteRule ^divPage3$        divPage3.php
+
+
+
+
+
+
+
+
+RewriteRule ^shell.html$      shell.php
+RewriteRule ^shells$          shell.php
+
+RewriteRule ^divPage3.php$    divPage3.php
+RewriteRule ^divPage3.html$   divPage3.php
+RewriteRule ^divPage3$        divPage3.php
+
+
+
+
+
+RewriteRule ^shell.html$      shell.php
+RewriteRule ^shells$          shell.php
+
+RewriteRule ^divPage3.php$    divPage3.php
+RewriteRule ^divPage3.html$   divPage3.php
+RewriteRule ^divPage3$        divPage3.php
 
 
 
