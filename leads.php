@@ -89,21 +89,19 @@
 			</tbody>
 		</table>
 	</div>
-</div>
-<div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
-	<div class="col-sm-12 table-responsive">
-		<table id="Leads_table" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
-			<thead>
-				<tr>
-					<th scope="col" >Country</th>
-					<th scope="col">TLD</th>
-					<th scope="col">Detect Hosting</th>
-					<th scope="col">Seller</th>
-					<th scope="col">Check</th>
-					<th scope="col">Price</th>
-					<th scope="col">Added on </th>
-					<th scope="col">Buy</th>
-				</tr>
+</div><div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
+<div class="col-sm-12 table-responsive">
+<table id="Leads_table" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
+<thead>
+   <tr>
+      <th scope="col" >Country</th>
+      <th scope="col">Description</th>
+      <th scope="col">Email N</th>
+      <th scope="col">Seller</th>
+      <th scope="col">Price</th>
+      <th scope="col">Added on </th>
+      <th scope="col">Buy</th>
+   </tr>
 			</thead>
 		</table>
 	</div>
