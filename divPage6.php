@@ -1,4 +1,4 @@
-<?php
+I'm <?php
    ob_start();
    session_start();
    date_default_timezone_set('UTC');
@@ -28,7 +28,7 @@
    <thody>
 <?php
 		include("cr.php");
-	    $q = mysqli_query($dbcon, "SELECT * FROM leads WHERE sold='0' ORDER BY RAND()")or die(mysql_error());
+	    $q = mysqli_query($dbcon, "SELECT * FROM accounts WHERE sold='0' ORDER BY RAND()")or die(mysql_error());
 	   	function srl($item)
 		{
 		$item0 = $item;
