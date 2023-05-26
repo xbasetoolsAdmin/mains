@@ -1,25 +1,14 @@
 <html>
 	<head>
-	</head>
-	<body class="them" style="them">
-	<?php ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes/config.php"; if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {     header("location: login");     exit(); } $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
-		<header>
-
-
-<!DOCTYPE html>
-<html>
- 
-<head>
-    <header>
-    	<body class="them" style="them">
+	   <body class="them" style="them">
+	    <?php ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes/config.php"; if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {     header("location: login");     exit(); } $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="alfacoins-site-verification" content="5ef8c2279aa605ef8c2279aa965ef8c2279aacb_ALFAcoins">
         <meta name="revisit-after" content="2 days">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
-        <link rel="shortcut icon" href="../../favicon.ico" /><html>
-	<?php ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes/config.php"; if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {     header("location: ../");     exit(); } $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
+        <link rel="shortcut icon" href="../../favicon.ico" />
           <title>XbaseTools</title>
         <link rel="stylesheet" href="buyer/layout/css/bootstrap.min.css">
         <script src="buyer/layout/js/jquery-3.4.1.min.js"></script>
