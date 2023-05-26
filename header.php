@@ -1,10 +1,9 @@
-<html>
+ <?php ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes/config.php"; if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {     header("location: login");     exit(); } $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
+ <html>
 	<head>
-	   <body class="them" style="them">
-	    <?php ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes/config.php"; if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {     header("location: login");     exit(); } $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
-        <meta charset="UTF-8" />
+	   <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="alfacoins-site-verification" content="5ef8c2279aa605ef8c2279aa965ef8c2279aacb_ALFAcoins">
+        <meta name="alfacoins-site-verification" content="xbasetools">
         <meta name="revisit-after" content="2 days">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
@@ -17,7 +16,8 @@
         <script src="buyer/layout/js/bootstrap.min.js"></script>
         <script src="buyer/layout/js/bootbox.min.js"></script>
         <link rel="stylesheet" type="text/css" href="buyer/layout/css/flags.css" />
- 
+ 	   <body class="them" style="them">
+
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
