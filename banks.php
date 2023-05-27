@@ -25,15 +25,17 @@ color:var(--font-color)
     
 <table id="banks_data" class="display" style="width:100%">
         <thead>
-            <tr>
-
-    <th class="all">          ID</th>
-    <th data-priority="1">Country</th>
-    <th data-priority="2">Balance</th>
-    <th data-priority="3">Details</th>
-    <th data-priority="4">Seller</th>
-    <th data-priority="5">Created Date</th>
-    <th data-priority="6">Buy</th>
+       <tr>
+  <th>ID</th>
+  <th>Type</th>
+  <th>Country</th>
+  <th>Bank Name</th>
+  <th>Balance</th>
+  <th>Information</th>
+  <th>Open</th>
+  <th>Date added</th>
+  <th>Price</th>
+  <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -50,6 +52,9 @@ color:var(--font-color)
                 <th>4.</th>
                 <th>5</th>
                 <th>6</th>
+                <th>7</th>
+                <th>8</th>
+                <th>9</th>
             </tr>
         </tfoot>
     </table>
@@ -69,6 +74,9 @@ $('#banks_data').DataTable({
             { data: '4' },
             { data: '5' },
             { data: '6' },
+            { data: '7' },
+            { data: '8' },
+            { data: '9' },
         ],
     });
 });
