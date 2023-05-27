@@ -90,6 +90,10 @@ $('#banks_data').DataTable ({
             { data: '8' },
             { data: '9' },
         ],
+
+                    "pageLength": 1
+                });
+     
     });
 });
        
