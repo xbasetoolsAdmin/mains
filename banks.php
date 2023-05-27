@@ -22,33 +22,16 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 								
 								
 		   <div class="alert alert-info text-center" role="alert" style="margin: 15px;">
-<ul class="nav nav-tabs">
-		<li class="active"><a href="#static" data-toggle="tab" aria-expanded="true">Static</a></li>
-		
-		
-		
+						<h2>Banks</h2>
+      <h4>Static</h4>
 
-
-	<h2>Banks</h2>
-		
-		<li class=""><a href="#all" data-toggle="tab" aria-expanded="false" onclick="TabDiv('all','banksTab1.php')">All</a></li>
-		
-		
-		
-<div id="myTabContent" class="tab-content">
-   
-				
-					 <div class="tab-pane fade active in" id="static"> 
+<ul class="user-info">
 		<ul>
 <li><b>Do not insert a bank account without SCREENSHOT of it (USE : prntscr.com)</b></li>
 <li><b>ONLY INSERT WORKING ACCOUNT</b></li>
 <li>If you have mistaken or need to edit a tool just remove it and add it again</li>
 <li><b>Deleted</b> mean that the tools is not working !</li>
 </ul>
-
-<h4>Static</h4>
-
-<ul class="user-info">
 
 <li>Number of Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
  echo $r11;?></b></li>
