@@ -2,27 +2,9 @@
 
 
 
-<script>
-$('#dataTable').dataTable( {
-  "lengthChange": false
-});
-function delet(id)
-{   var type = $("#shop"+id).attr('type')
-	$("#shop"+id).html('processing ..').show();
-	$.ajax({
-	METHOD: 		'GET',
-     url:"./ajax/dbanks.php?id="+id,
-	success:	function(data)
-	{
-		$("#shop"+id).html(data).show();
-	}});
-}
 
 
 
-</script>
-
-	<h2>Banks</h2>
 <?php
 
 date_default_timezone_set('UTC');
@@ -35,7 +17,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 ?> 
         
-								
+										
 								
 								
 								
@@ -45,7 +27,9 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 		
 		
 		
-		
+
+
+	<h2>Banks</h2>
 		
 		<li class=""><a href="#all" data-toggle="tab" aria-expanded="false" onclick="TabDiv('all','banksTab1.php')">All</a></li>
 		
@@ -118,3 +102,19 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 
 
  <?php require "footer.php"; ?>
+<script>
+$('#dataTable').dataTable( {
+  "lengthChange": false
+});
+function delet(id)
+{   var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('processing ..').show();
+	$.ajax({
+	METHOD: 		'GET',
+     url:"./ajax/dbanks.php?id="+id,
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+	}});
+}
+		</script>
