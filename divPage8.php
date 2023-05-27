@@ -16,25 +16,25 @@
 
 <table id="banks_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
         <thead>
-
-            <tr>
+         <tr>
                  <th>ID </th>
                 <th>Country</th>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Salary</th>
-             <th>Start date</th>
-            <th>Start date</th>
+                <th>BankName</th>
+                <th>Balance</th>
+                <th>Details</th>
+                <th>Seller</th>
+                <th>Price</th>
+             <th>spammed date</th>
+                <th>Buy</th>
             </tr>
-        </thead>
-        <tbody>
+               </thead>
 
  <?php
 include("cr.php");
 $q = mysqli_query($dbcon, "SELECT * FROM accounts WHERE sold='0' ORDER BY RAND()")or die(mysqli_error());
- while($row = mysqli_fetch_assoc($q)){
+ while($row = mysqli_fetch_assoc($q))
+
+{ 
 	 
 	 	 $countryfullname = $row['country'];
 	  $code = array_search("$countryfullname", $countrycodes);
