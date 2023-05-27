@@ -60,6 +60,8 @@ $q = mysqli_query($dbcon, "SELECT * FROM accounts WHERE sold='0' ORDER BY RAND()
  }
 
  ?>
+</tbody>
+    </table>
 <script type="text/javascript"> 
 $(document).ready((function () 
 { $("#accounts_data").DataTable( {
