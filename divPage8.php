@@ -19,58 +19,32 @@
 <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 <div class="col-sm-12 table-responsive" id="mainDiv">
 <table id="banks_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
-<thead>
-<tr>
-<th data-priority="1"></th>
-<th class="all">ID</th>
-<th data-priority="3">Country</th>
-<th data-priority="8">Type</th>
-<th data-priority="15">Balance</th>
-<th class="all" style="width:9% !important;">Ip Blacklist</th>
- <th data-priority="10">Seller</th>
-<th class="all">Price</th>
-<th data-priority="13">Added on </th>
-<th class="all">Buy</th>
-</tr>
-</thead>  <tbody>
-    <?php
-                    include("cr.php");
-                    $q = mysqli_query($dbcon, "SELECT * FROM banks WHERE sold='0' ORDER BY RAND()")or die(mysqli_error());
-                    while($row = mysqli_fetch_assoc($q))
-                    {
-                    
-                    $countryfullname = $row['country'];
-                    $code = array_search("$countryfullname", $countrycodes);
-                    $countrycode = strtolower($code);
-                    $qer = mysqli_query($dbcon, "SELECT * FROM resseller WHERE username='".$row['resseller']."'")or die(mysql_error());
-                    while($rpw = mysqli_fetch_assoc($qer))
-                    $SellerNick = "seller".$rpw["id"]."";
-                    echo "
-                    <tr>
-                         <td>".($row['id'])." </td>
-                        <td id='country'>
-                            <i class='flag-icon flag-icon-$countrycode'>
-                                
-                            </i>&nbsp;".($row['country'])." </td>
-                        <td id='sitename'> ".($row['bankname'])." </td>
-                        <td> ".($row['balance'])." </td>
-                        <td> ".($row['infos'])." </td>
-                        <td id='seller'> ".($SellerNick)."</td>
-                        <td> ".($row['price'])."</td>
-                        <td> ".$row['date']."</td>";
-                        echo '
-                        <td>
-                            <span id="bank'.$row['id'].'" title="buy" type="bank">
-                                <a onclick="javascript:buythistool('.$row['id'].')" class="btn btn-primary btn-xs"><font color=white>Buy</font></a></span>
-                        <center>
-                        </td>
-                    </tr>
-                    ';
-                    }
-                    ?>
-                </center>
-            </td>
-        </tr>
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+             <th>Start date</th>
+            <th>Start date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>."id".</td>
+                <td>Name</td>
+                <td>Position</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+            </tr>
     </tbody>
 </table>
 </div>
