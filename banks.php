@@ -25,40 +25,7 @@ $r11=mysqli_num_rows($s11);;?></b></li>
 l
         </ul>
     </div>
-    <input type=hidden id="type" name="type" value="8" />
-    <div class="row m-3 pt-1" style="color: var(--font-color);">
-        <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-            <label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
-            <input type="search" class="form-control" id="infos" style="color: var(--font-color); background-color: var(--color-card);">
-        </div>
-        
-        <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-            <label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
-            <select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
-                <option value="">All Countries</option><?php
-                $query = mysqli_query($dbcon, "SELECT DISTINCT(`country`) FROM `banks` WHERE `sold` = '0' ORDER BY country ASC");
-                while($row = mysqli_fetch_assoc($query)){
-                echo '<option value="'.$row['country'].'">'.$row['country'].'</option>';
-                }
-            ?> 
-         </select>
-        </div>
-        <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-            <label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
-            <select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
-                <option value="">All</option><?php
-                $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `banks` WHERE `sold` = '0' ORDER BY resseller ASC");
-                while($row = mysqli_fetch_assoc($query)){
-                $qer = mysqli_query($dbcon, "SELECT DISTINCT(`id`) FROM resseller WHERE username='".$row['resseller']."' ORDER BY id ASC")or die(mysql_error());
-                while($rpw = mysqli_fetch_assoc($qer))
-                $SellerNick = "seller".$rpw["id"]."";
-                echo '<option value="'.$SellerNick.'">'.$SellerNick.'</option>';
-                }
-                ?>
-            </select>
-        </div>
-    </div>
-    
+l
 <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 <div class="col-sm-12 table-responsive" id="mainDiv">
 <table id="banks_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
