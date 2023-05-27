@@ -39,7 +39,7 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 								
 								
 								
-		
+		   <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
 <ul class="nav nav-tabs">
 		<li class="active"><a href="#static" data-toggle="tab" aria-expanded="true">Static</a></li>
 		<li class=""><a href="#all" data-toggle="tab" aria-expanded="false" onclick="TabDiv('all','banksTab1.php')">All</a></li>
@@ -47,6 +47,7 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 		
 	<!--	<li class=""><a href="#mass" data-toggle="tab" aria-expanded="false" onclick="TabDiv('mass','banksTab3.php')">Mass Add</a></li> -->
 	</ul>
+	
 <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade active in" id="static"> 
 <div class="well well-sm">
