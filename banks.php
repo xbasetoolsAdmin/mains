@@ -35,6 +35,22 @@ color:var(--font-color)
                 <th>Created_Date</th>
             </tr>
         </thead>
+        <tbody>
+            <tr>
+                
+            </tr>
+        </tbody>
+         <tfoot>
+            <tr>
+                <th>0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4.</th>
+                <th>5</th>
+                <th>6</th>
+            </tr>
+        </tfoot>
     </table>
 <script  src="controllers/0fgdgfddffkjhgdfxd.js">
 
