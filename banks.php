@@ -93,7 +93,7 @@ $('#banks_data').DataTable ({
 
                     "pageLength": 1
                 });
-     
+  }
     });
 });
        
