@@ -19,8 +19,13 @@ color:var(--font-color)
         <ul>
 <h4>Static</h4>
 <ul class="user-info">
-<li>Number of Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
+<li>Number of Bank Accounts : <b><?php
+$s11 = mysqli_query($dbcon, "SELECT * FROM banks WHERE sold='0'");
+
+$r11=mysqli_num_rows($s10);
  echo $r11;?></b></li>
+
+$s11 = mysqli_query($dbcon, "SELECT * FROM banks WHERE sold='0'");
         </ul>
     </div>
     <input type=hidden id="type" name="type" value="8" />
