@@ -23,7 +23,7 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 								
    <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
         <ul>
-            <li>We Have Fresh E-mails Lists for Diffrents Countries ( You Can Use it for Spam ). </li>
+            <li>We Have Fresh  Banks Logs With Fullz info + E-mails access  of  Diffrents Countries ( You Can Use it for Spam ). </li>
             <li>Our E-mails Lists Guarante for you Good results because most of them are from Shops and Big Sites .</li>
             <li>Combo use for cracking (Brute forcing attack) not use for login to email.</li>
         <li>There is <b> <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
