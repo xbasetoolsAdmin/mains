@@ -77,9 +77,9 @@ $('#banks_data').DataTable ({
           "visible": false
                   }
                   ], 
-            ajax: 'data/objects.json',
-    
-           columns: [
+           "ajax": { url:"data/objects.json",
+                 columns: [
+                  
             { data: '0' },
             { data: '1' },
             { data: '2' },
