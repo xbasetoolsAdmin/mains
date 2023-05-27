@@ -55,13 +55,13 @@ function delet(id)
 </ul>
 <h4>Static</h4>
 <ul class="user-info">
-<li>Number of Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
+<li>Number of Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$usrid'");$r11=mysqli_num_rows($s12);
  echo $r11;?></b></li>
-<li>Unsold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='0'");$r11=mysqli_num_rows($s12);
+<li>Unsold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$usrid' and sold='0'");$r11=mysqli_num_rows($s12);
  echo $r11;?></b></li>
-<li>Sold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='1'");$r11=mysqli_num_rows($s12);
+<li>Sold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$usrid' and sold='1'");$r11=mysqli_num_rows($s12);
  echo $r11;?></b></li>
-<li>Deleted Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='deleted'");$r11=mysqli_num_rows($s12);
+<li>Deleted Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$usrid' and sold='deleted'");$r11=mysqli_num_rows($s12);
  echo $r11;?></b></li>
 </ul>
       </div>
