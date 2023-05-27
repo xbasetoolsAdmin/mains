@@ -45,27 +45,19 @@ color:var(--font-color)
             </tr>
         </thead>
     </table>
-</div>
-<script type="text/javascript">
+</div> 
+<script  src="controllers/0fgdgfddffkjhgdfxd.js">
+
+</script>                                                                                                                                                
+<?php require"footer.php";?>
+<script  type="text/javascript">
 $(document).ready(function () {
 $('#banks_data').DataTable({
- lengthMenu: [
-       [10, 25, 50, -1],
-     [10, 25, 50, 'All'],
-        ],
-    });
-    </script>
-<?php require"footer.php";?>
-<script type="text/javascript">
-$(document).ready((function ()
-{ $("#banks_data").DataTable( {
-lengthMenu: [ [10, 25, 100, 500, -1],
-[10, 25, 100, 500, "All"] ],
-iDisplayLength: 1e3,
-aaSorting: []
-})
-})),
-$(document).keydown((function(event){"17"==event.which&&(cntrlIsPressed=!0)})),$(document).keyup((function(){cntrlIsPressed=!1}));var cntrlIsPressed=!1;function setTooltip(btn,message){$(btn).tooltip("hide").attr("data-original-title",message).tooltip("show")}function hideTooltip(btn){setTimeout((function(){$(btn).tooltip("hide")}),1e3)}$(window).on("popstate",(function(e){location.replace(document.location)})),$(window).on("load",(function(){$(".dropdown").hover((function(){$(".dropdown-toggle",this).trigger("click")})),pageDiv(8,"bank-logs - xBaseTools","banks",1),new Clipboard(".copyit").on("success",(function(e){setTooltip(e.trigger,"Copied!"),hideTooltip(e.trigger),e.clearSelection()}))}));
+lengthMenu: [ [10, 25, 50, -1],
+[10, 25, 50, 'All'],],
+                               });
+load_data(8,"bank-logs - xBaseTools","banks",1),
+new Clipboard(".copyit").on("success",(function(e){setTooltip(e.trigger,"Copied!"),hideTooltip(e.trigger),e.clearSelection()}))}));
 </script>
 </div>
 </body>
