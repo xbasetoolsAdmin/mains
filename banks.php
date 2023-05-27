@@ -65,11 +65,12 @@ color:var(--font-color)
                  <th>ID </th>
                 <th>Country</th>
                 <th>BankName</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Age</th>
-                <th>Salary</th>
-             <th>Start date</th>
+                <th>Balance</th>
+                <th>Details</th>
+                <th>Seller</th>
+                <th>Price</th>
+             <th>spammed date</th>
+                <th>Buy</th>
             </tr>
         </thead>
 </table>
