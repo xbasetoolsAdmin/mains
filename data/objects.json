@@ -2,22 +2,22 @@
 {
   "data": [
     {
-      "id": "1",
-      "name": "Tiger Nixon",
-      "position": "System Architect",
-      "salary": "$320,800",
-      "start_date": "2011/04/25",
-      "office": "Edinburgh",
-      "extn": "5421"
+      "0": "1",
+      "1": "Tiger Nixon",
+      "2": "System Architect",
+      "3": "$320,800",
+      "4": "2011/04/25",
+      "5": "Edinburgh",
+      "6": "5421"
     },
     {
-      "id": "2",
-      "name": "Garrett Winters",
-      "position": "Accountant",
-      "salary": "$170,750",
-      "start_date": "2011/07/25",
-      "office": "Tokyo",
-      "extn": "8422"
+      "0": "2",
+      "1": "Garrett Winters",
+      "2": "Accountant",
+      "3": "$170,750",
+      "4": "2011/07/25",
+      "5": "Tokyo",
+      "6": "8422"
     }
   ]
 }
