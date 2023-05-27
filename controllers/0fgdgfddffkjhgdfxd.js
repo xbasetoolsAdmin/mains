@@ -93,3 +93,12 @@ function sendReview(id) {
         }
     });
 }
+$(document).keydown((
+              function(event)
+ {"17"==event.which&&(cntrlIsPressed=!0)}
+  )),
+ $(document).keyup((function()
+      {cntrlIsPressed=!1}
+   ));
+    var cntrlIsPressed=!1;function setTooltip(btn,message){$(btn).tooltip("hide").attr("data-original-title",message).tooltip("show")}function hideTooltip(btn){setTimeout((function(){$(btn).tooltip("hide")}),1e3)}$(window).on("popstate",(function(e){location.replace(document.location)})),$(window).on("load",(function(){$(".dropdown").hover((function(){
+    $(".dropdown-toggle",this).trigger("click")})), 
