@@ -48,6 +48,53 @@ color:var(--font-color)
         </tr>
      </thead>
      <tbody>
+      <?php include"cr";
+        $q = "SELECT acctype, country, infos, url,   sold, sto, dateofsold, date, reported, bankname, balance, resseller 
+            from banks
+            INNER JOIN classes
+                ON resseller.st_id = classes.st_id";
+  if($qer = mysqli_query($dbcon, "SELECT * FROM resseller WHERE username='".$row['resseller']."'")or die(mysql_error());
+		   while($rpw = mysqli_fetch_array($qer))  $SellerNick = "seller".$rpw["id"].""; ?>
+        
+      <tr>
+        <td><?php echo htmlentities($row['acctype']) ?></td>
+        <td><?php echo htmlentities($row['country']) ?></td>
+        <td><?php echo htmlentities($row['infos']) ?></td>
+        <td><?php echo htmlentities($row['url']) ?></td>
+        <td><?php echo htmlentities($row['sold']) ?></td>
+        <td><?php echo htmlentities($row['sto']) ?></td>
+        <td><?php echo htmlentities($row['dateofsold'])?></td>
+        <td><?php echo htmlentities($row['date'])?></td>
+        <td><?php echo htmlentities($row['resseller'])?></td>
+
+        <td align="center"><span " href="edit_student.php?student=<?php echo urlencode($row['student_id']); ?>">Edit</a></td> 
+
+        <td align="center"><a class="page_anchor" href="create_grades.php?student=<?php echo urlencode($row['student_id']); ?>">Grades</a></td> 
+
+        <td align="center"><a class="page_anchor" href="student_details.php?student=<?php echo urlencode($row['student_id']); ?>">Details</a></td> 
+       </tr>
+
+
+            <!-- closing the while loop --> 
+            <?php }?>
+          </tbody>
+           <!-- closing the if mysqli_num_rows if statement -->    
+            <?php } else { echo "No record found"; }?>
+      <!-- closing the if $result = mysqli_query($connection, sql) if statement --
+    >   
+     <?php } else {
+         die("Database query failed. ". mysqli_error($connection));
+     } ?>
+    </table>
+
+    
+    
+    
+    
+    
+    
+    
+    
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
