@@ -18,30 +18,24 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
                        <title>xbasetools</title>
         <link rel="stylesheet" href="buyer/layout/css/bootstrap.min.css">
-        <script src="buyer/layout/js/jquery-3.4.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="buyer/layout/js/clipboard.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="buyer/layout/js/bootstrap.min.js"></script>
         <script src="buyer/layout/js/bootbox.min.js"></script>
         <link rel="stylesheet" type="text/css" href="files/css/flags.css" />
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
-        <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
         <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
         <script src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
         <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.colVis.min.js"></script>
         <script src="js/jquery.dataTables.min.js"></script>
         <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-        <script async src="//www.googletagmanager.com/gtag/js?id=UA-177092549-1"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('set', {'$usrid': 'USER_ID'}); // Set the user ID using signed-in user_id.
-        gtag('config', 'UA-177092549-1');
-        </script>
+
+
         <link rel="stylesheet" href="buyer/layout/css/all.min.css" />
         <link rel="stylesheet" href="buyer/layout/css/main.css" />
         <link rel="stylesheet" href="buyer/layout/css/util.css" />
