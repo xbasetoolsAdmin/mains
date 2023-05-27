@@ -14,17 +14,12 @@ background:var(--color-card);
 color:var(--font-color)
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button{color:var(--font-color)}#bank_data_paginate .paginate_button{color:var(--font-color)}.alert-info{color:var(--color-info);background-color:var(--color-backinfo);border-color:var(--color-borderinfo)}#banks_data_filter{color:var(--font-color)}#banks_data_length{color:var(--font-color)}#banks_data_paginate{color:var(--font-color)}#banks_data_info{color:var(--font-color)}</style>
-<ul class="nav nav-tabs">
-    <div class="alert alert-info text-center" role="alert" style="margin: 15px;">
-
  `<!-- DataTables CSS -->
      <link href="vendor/datatables-plugins/dataTables.bootstrap.css" 
      rel="stylesheet">
-
      <!-- DataTables Responsive CSS -->
      <link href="vendor/datatables-responsive/dataTables.responsive.css" 
      rel="stylesheet">
-
 
 <script>
 $('#banks_data').dataTable( {
@@ -44,14 +39,9 @@ function delet(id)
 }
 
 </script>
-
-	<h2><center>Banks</h2></center>
-		
+    <div class="alert alert-info text-center" role="alert" style="margin: 15px;">
 <ul class="nav nav-tabs">
-		<li class="active"><a href="#static" data-toggle="tab" aria-expanded="true">Static</a></li>
-		<li class=""><a href="#all" data-toggle="tab" aria-expanded="false" onclick="TabDiv('all','banksTab1.php')">All</a></li>
-		<li class=""><a href="#add" data-toggle="tab" aria-expanded="false" onclick="TabDiv('add','banksTab2.php')">Add</a></li>
-	<!--	<li class=""><a href="#mass" data-toggle="tab" aria-expanded="false" onclick="TabDiv('mass','banksTab3.php')">Mass Add</a></li> -->
+	<h2><center>Banks</h2></center>
 	</ul>
 <div id="myTabContent" class="tab-content">
     <div class="tab-pane fade active in" id="static"> 
