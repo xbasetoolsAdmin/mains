@@ -26,7 +26,7 @@ color:var(--font-color)
      rel="stylesheet">
 
 
-     <table class="table table-striped table-bordered table-hover" id="example">
+     <table class="table table-striped table-bordered table-hover" id="banks_data">
         <thead>
             <tr>
             <th>First Name</th>
@@ -59,7 +59,7 @@ color:var(--font-color)
 
     <script>
     $(document).ready(function() {
-     $('#example').DataTable({
+     $('#banks_data').DataTable({
          responsive: true
      });
     });
