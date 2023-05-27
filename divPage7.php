@@ -16,8 +16,8 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <thead>
    <tr>
       <th data-priority="1">     </th>
-      <th data-priority="all"> ID</th>
-      <th class="8">    Country</th>
+        <th class="all">  ID</th>
+     <th data-pririty="8"> Country</th>
       <th data-pririty=“4”>Website</th>
       <th data-priority=“3”>Details</th>
       <th data-priority="5">Seller</th>
