@@ -27,8 +27,6 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                          </tr>
                      </thead>
                  <tbody>
-</thead>
-  <tbody>
 <?php
 		include("cr.php");
 	    $q = mysqli_query($dbcon, "SELECT * FROM cpanels WHERE sold='0' ORDER BY RAND()")or die(mysql_error());
