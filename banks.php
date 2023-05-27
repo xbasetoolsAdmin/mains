@@ -77,9 +77,8 @@ $('#banks_data').DataTable ({
           "visible": false
                   }
                   ], 
-           "ajax": { url:"data/objects.json",
-                 columns: [
-                  
+          ajax: 'data/objects.json',
+        columns: [
             { data: '0' },
             { data: '1' },
             { data: '2' },
@@ -93,6 +92,7 @@ $('#banks_data').DataTable ({
         ],
     });
 });
+       
 </script>
 </div>
 </body>
