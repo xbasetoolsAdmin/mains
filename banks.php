@@ -64,9 +64,11 @@ color:var(--font-color)
 <?php require"footer.php";?>
 <script  type="text/javascript">
 $(document).ready(function () {
-$('#banks_data').DataTable({
-       ajax: 'data/objects.json',
-        columns: [
+$('#banks_data').DataTable
+         ({
+          ajax: 'data/objects.json',
+    
+           columns: [
             { data: '0' },
             { data: '1' },
             { data: '2' },
