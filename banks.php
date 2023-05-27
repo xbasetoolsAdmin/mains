@@ -17,10 +17,10 @@ color:var(--font-color)
 <ul class="nav nav-tabs">
     <div class="alert alert-info text-center" role="alert" style="margin: 15px;">
         <ul>
-            <li>  . </li>
-            <li>Our E-mails Lists Guarante for you Good results because most of them are from Shops and Big Sites .</li>
-            <li>Combo use for cracking (Brute forcing attack) not use for login to email.</li>
-            <li>There is <b> 0 </b> Available.</li>
+<h4>Static</h4>
+<ul class="user-info">
+<li>Number of Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
+ echo $r11;?></b></li>
         </ul>
     </div>
     <input type=hidden id="type" name="type" value="8" />
