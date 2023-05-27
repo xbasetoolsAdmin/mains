@@ -27,27 +27,78 @@ color:var(--font-color)
 
 
 
-    <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
-        <div class="col-sm-12 table-responsive">
-            <table id="banks_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
-        <thead>
-            <tr>
-            <th>First Name</th>
-            <th>Surname</th>
-            <th>Gender</th>
-            <th>Birth Date</th>
-            <th>Address</th>
-            <th>Nationality</th>
-            <th>County</th>
-            <th>Student Type</th>
-            <th>Class</th>
-            <th>Operations</th>
- // DONT USE COLSPAN WHILE USING DATATABLES
-            <th></th>
-            <th></th>
-        </tr>
-     </thead>
-     <tbody>
+<table width="100%" id="banks_data" class="table table-striped table-bordered table-condensed sticky-header dataTable no-footer" role="grid" aria-describedby="dataTable_info" style="width: 100%;">        <thead>
+  <thead>
+  <tr>
+  <th>ID</th>
+  <th>Type</th>
+  <th>Country</th>
+  <th>Bank Name</th>
+  <th>Balance</th>
+  <th>Information</th>
+  <th>Open</th>
+  <th>Date added</th>
+  <th>Price</th>
+  <th>Action</th>
+  </tr>
+        </thead>
+		 <tbody id='tbody2'>
+ <?php
+$uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+$qu = mysqli_query($dbcon, "SELECT * FROM banks WHERE acctype='banks' AND resseller='$uid' and sold='0' ORDER BY id DESC")or die(mysqli_error());
+
+ while($row = mysqli_fetch_assoc($qu)){
+	 
+    echo "<tr class='banks-tabel'>
+    <td> ".htmlspecialchars($row['id'])." </td>
+    <td> ".strtoupper(htmlspecialchars($row['acctype']))." </td>
+    <td> ".htmlspecialchars($row['country'])." </td>
+    <td> ".htmlspecialchars($row['bankname'])." </td>
+	<td> ".htmlspecialchars($row['balance'])." </td>
+    <td> ".htmlspecialchars($row['infos'])." </td>
+	<td>  "; ?>
+<?php
+  echo '
+ 
+<div class="modal fade" id="myModald' . $row['id'] . '" >
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">
+                                           <font color="black"> Banks #' . $row['id'] . ' </font>
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+					<font color="black">			'.htmlspecialchars($row['url']).' </font>
+					</div>								
+					<div class="modal-footer">
+<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+</div>';?>
+<?php
+echo "
+</td>
+    <td> ".htmlspecialchars($row['date'])." </td>
+    <td> ".htmlspecialchars($row['price'])."</td>
+    <td> ";
+if ($row['sold'] == "0") {
+ echo '<div id="shop'.$row["id"].'" type="delete"><a onclick="javascript:delet('.$row["id"].');" class="btn btn-danger btn-xs">remove</a></div>';
+ }elseif ($row['sold'] == "deleted") {
+	echo "<font color=gray>Deleted</font>"; } else {
+echo "<font color=green>[Sold]</font>";	    
+	}
+    echo "</td>
+    </tr>";
+ }
+
+ 
+
+ ?>
+
+ 	<a data-toggle="modal" class="btn btn-primary btn-xs" data-target="#myModald<?php echo  $row['id']; ?>" >
+<font color=white>Open #<? echo htmlspecialchars($row['id']); ?> </a></center> 
+
+ </tbody>
+ </table>
     
     
     
