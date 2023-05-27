@@ -27,37 +27,47 @@ color:var(--font-color)
     
 
 <div class="table-row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
-
-<div class="col-sm-12 table-responsive" id="banks_data">
-
-<table class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" Id="banks_data">
-             <thead>
-                 <tr>
-                 <th>ID </th>
-                <th>Country</th>
-                <th>BankName</th>
-                <th>Balance</th>
-                <th>Details</th>
-                <th>Seller</th>
-                <th>Price</th>
-             <th>spammed date</th>
-                <th>Buy</th>
+<div class="col-sm-12 table-responsive">
+<table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
             </tr>
         </thead>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Extn.</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
     </table>
-</div> 
 <script  src="controllers/0fgdgfddffkjhgdfxd.js">
 
-</script>                                                                                                                                                
+</script>             
 <?php require"footer.php";?>
 <script  type="text/javascript">
 $(document).ready(function () {
-$('#banks_data').DataTable({
-lengthMenu: [ [10, 25, 50, -1],
-[10, 25, 50, 'All'],],
-                               });
-load_data(8,"bank-logs - xBaseTools","banks",1),
-new Clipboard(".copyit").on("success",(function(e){setTooltip(e.trigger,"Copied!"),hideTooltip(e.trigger),e.clearSelection()}))}));
+$('#example').DataTable({
+       ajax: 'data/objects.txt',
+        columns: [
+            { data: 'name' },
+            { data: 'position' },
+            { data: 'office' },
+            { data: 'extn' },
+            { data: 'start_date' },
+            { data: 'salary' },
+        ],
+    });
+});
 </script>
 </div>
 </body>
