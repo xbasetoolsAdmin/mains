@@ -12,7 +12,7 @@
             ?>
 <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 <div class="col-sm-12 table-responsive" id="mainDiv">
-<table id="bank_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
+<table id="banks_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
         <thead>
             <tr>
                 <th></th>
@@ -63,7 +63,7 @@ $q = mysqli_query($dbcon, "SELECT * FROM accounts WHERE sold='0' ORDER BY RAND()
 </table>
 <script type="text/javascript">
  $(document).ready(function () {
-$('#bank_data').DataTable({
+$('#banks_data').DataTable({
  lengthMenu: [
             [10, 25, 50, -1],
             [10, 25, 50, 'All'],
