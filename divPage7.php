@@ -13,23 +13,29 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 
 
 
-    <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
-        <div class="col-sm-12 table-responsive">
-            <table id="accounts_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
-                <thead>
-                    <tr>
-                        <th data-priority="1"></th>
-                        <th class="all">ID</th>
-                        <th data-priority="3">Country</th>
-                        <th data-priority="8">Website</th>
-                        <th data-priority="6">Details</th>
-                        <th data-priority="7">Seller</th>
-                        <th data-priority="9">Price</th>
-                        <th data-priority="10">Added on </th>
-                        <th class="all">Buy</th>
-                    </tr>
-                </thead>
-               <tbody>
+            <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
+                <div class="col-sm-12 table-responsive">
+                    <table id="accounts_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
+                        <thead>
+                            <tr>
+                                <th data-priority="1"></th>
+                                <th class="all">ID</th>
+                                <th data-priority="3">Country</th>
+                                <th data-priority="8">Website</th>
+                                <th data-priority="6">Details</th>
+                                <th data-priority="7">Seller</th>
+                                <th data-priority="9">Price</th>
+                                <th data-priority="10">Added on </th>
+                                <th class="all">Buy</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+ 
+            </div>
+ 
+ 
  <?php
 include("cr.php");
 $q = mysqli_query($dbcon, "SELECT * FROM accounts WHERE sold='0' ORDER BY RAND()")or die(mysqli_error());
