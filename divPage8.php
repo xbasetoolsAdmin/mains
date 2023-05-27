@@ -17,7 +17,8 @@
 <table id="banks_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
         <thead>
             <tr>
-                <th>     </th>
+                <th>   </th>
+                 <th> ID </th>
                 <th>Name</th>
                 <th>Position</th>
                 <th>Office</th>
