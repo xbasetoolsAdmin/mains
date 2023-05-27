@@ -36,36 +36,25 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 		
 		
 <div id="myTabContent" class="tab-content">
-    <div class="tab-pane fade active in" id="static"> 
+   
 				
-				
-<div class="well well-sm">
-<h4>Rules</h4>
-
-<ul class="user-info">
-	
-	
+					 <div class="tab-pane fade active in" id="static"> 
+		<ul>
 <li><b>Do not insert a bank account without SCREENSHOT of it (USE : prntscr.com)</b></li>
 <li><b>ONLY INSERT WORKING ACCOUNT</b></li>
 <li>If you have mistaken or need to edit a tool just remove it and add it again</li>
 <li><b>Deleted</b> mean that the tools is not working !</li>
 </ul>
+
 <h4>Static</h4>
+
 <ul class="user-info">
+
 <li>Number of Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
- echo $r11;?></b></li>
-<li>Unsold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='0'");$r11=mysqli_num_rows($s12);
- echo $r11;?></b></li>
-<li>Sold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='1'");$r11=mysqli_num_rows($s12);
- echo $r11;?></b></li>
-<li>Deleted Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='deleted'");$r11=mysqli_num_rows($s12);
  echo $r11;?></b></li>
 </ul>
       </div>
       </div>
-	  
-	<div class="tab-pane fade" id="all"></div>
-    <div class="tab-pane fade" id="add"></div>
 
 </div>
 </div></div>
