@@ -307,7 +307,7 @@ RewriteRule ^reports$  reports.php
 
 
 RewriteRule ^payment.html$  payment.php
-RewriteRule ^payment.html$  payment.php
+RewriteRule ^payment.php$  payment.php
 
 
 
