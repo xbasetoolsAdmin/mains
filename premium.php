@@ -23,16 +23,26 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
 
  
  
-            <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
-                <div class="col-sm-12 table-responsive">
-                        </div>
-                   <table id="mainDiv" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
-               
+<div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
+<div class="col-sm-12 table-responsive" id="mainDiv">
+ <table id="account_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
+                        <thead>
+                            <tr>
+      <th data-priority="1">     </th>
+      <th class="all">          TLD</th>
+      <th data-priority=“4”>Country</th>
+      <th data-priority=“3”>Hosting</th>
+      <th data-priority="5">Seller  </th>
+      <th data-priority=“7”>Check   </th>
+      <th data-priority="5">Price   </th>
+      <th data-priority=“6”>Added on </th>
+               <th class=“all”>Buy</th>
+                         </tr>
+                     </thead>
                 </table>
-                </div>
+              </div>
           </div>
      </div>
-
 <?php require"footer.php";?>
 <script type="text/javascript">
 $(document).keydown((function(event){"17"==event.which&&(cntrlIsPressed=!0)})),$(document).keyup((function(){cntrlIsPressed=!1}));var cntrlIsPressed=!1;function setTooltip(btn,message){$(btn).tooltip("hide").attr("data-original-title",message).tooltip("show")}function hideTooltip(btn){setTimeout((function(){$(btn).tooltip("hide")}),1e3)}$(window).on("popstate",(function(e){location.replace(document.location)})),$(window).on("load",(function(){$(".dropdown").hover((function(){$(".dropdown-toggle",this).trigger("click")})),pageDiv(7,"Accounts - xBaseTools","premium",1),new Clipboard(".copyit").on("success",(function(e){setTooltip(e.trigger,"Copied!"),hideTooltip(e.trigger),e.clearSelection()}))}));
