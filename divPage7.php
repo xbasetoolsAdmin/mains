@@ -42,9 +42,7 @@ $q = mysqli_query($dbcon, "SELECT * FROM accounts WHERE sold='0' ORDER BY RAND()
 		   while($rpw = mysqli_fetch_assoc($qer))
 			 $SellerNick = "seller".$rpw["id"]."";
      echo "
- <tr>    
-	               
-	        <td> ".$row['id']."</td>
+ <tr>  
     <td id='account_country'><i class='flag-icon flag-icon-$countrycode'></i>&nbsp;".htmlspecialchars($row['country'])." </td>
     <td id='account_sitename'> ".htmlspecialchars($row['sitename'])." </td> 
 	<td> ".htmlspecialchars($row['infos'])." </td>
