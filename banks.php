@@ -92,10 +92,11 @@ $('#banks_data').DataTable ({
         ],
 
                     "pageLength": 1
+              }
                 });
-  }
-    });
-});
+
+
+        });
        
 </script>
 </div>
