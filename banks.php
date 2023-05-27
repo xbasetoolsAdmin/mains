@@ -2,16 +2,16 @@
 
 
 
-		
+
+
+<center>	<h2>Banks</h2></center>
 <ul class="nav nav-tabs">
 		<li class="active"><a href="#static" data-toggle="tab" aria-expanded="true">Static</a></li>
-		<li class=""><a href="#all" data-toggle="tab" aria-expanded="false" onclick="TabDiv('all','banksTab1.php')">All</a></li>
-		<li class=""><a href="#add" data-toggle="tab" aria-expanded="false" onclick="TabDiv('add','banksTab2.php')">Add</a></li>
-	<!--	<li class=""><a href="#mass" data-toggle="tab" aria-expanded="false" onclick="TabDiv('mass','banksTab3.php')">Mass Add</a></li> -->
-    
+		<li class=""><a href="#all" data-toggle="tab" aria-expanded="false" onclick="pageDiv('all','divPage8.php')">All</a></li>
+		<li class=""><a href="#add" data-toggle="tab" aria-expanded="false" onclick="PageDiv('add','divPage8.php')">Add</a></li>
 	</ul>
 <div id="myTabContent" class="tab-content">
-    <div class="tab-pane fade active in" id="static"> 
+ <div class="tab-pane fade active in" id="static"> 
 <div class="well well-sm">
 <h4>Rules</h4>
 <ul class="user-info">
