@@ -27,7 +27,8 @@ color:var(--font-color)
 
 
 <script>
-$('#dataTable').dataTable( {
+$('#banks_data').dataTable( {
+    
   "lengthChange": false
 });
 function delet(id)
@@ -35,14 +36,12 @@ function delet(id)
 	$("#shop"+id).html('processing ..').show();
 	$.ajax({
 	METHOD: 		'GET',
-     url:"./ajax/dbanks.php?id="+id,
+     url:"./data/objects.php?id="+id,
 	success:	function(data)
 	{
 		$("#shop"+id).html(data).show();
 	}});
 }
-
-
 
 </script>
 
