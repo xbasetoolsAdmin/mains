@@ -59,28 +59,33 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 </div>
 
 
+
 <script>
 if(window.location.hash != "") {
-$("#method").val(window.location.hash.substring(1));
+  $("#method").val(window.location.hash.substring(1));
 }
+
 $("#formAddBalance").submit(function() {
 $('button').prop('disabled', true);
-$.ajax({
-type: "POST",
-url: 'addBalanceAction.php',
-data: $("#formAddBalance").serialize(), // serializes the form's elements.
-success: function(data)
-{
-if (data == 01) {
-alert('Please enter a valid amount and Minimum of $5 for bitcoin / $10 for PM');
-$('button').prop('disabled', false);
-}
-if (data != 01 ) {
-//$("#balance").html(data).show();
-pageDiv('payment'+data,'Add Balance - XBASETOOLS','Payment.php?p_data='+data,0);
-}
-}
+    $.ajax({
+           type: "POST",
+           url: 'addBalanceAction.html',
+           data: $("#formAddBalance").serialize(), // serializes the form's elements.
+           success: function(data)
+           {
+            if (data == 01) {
+              alert('Please enter a valid amount and Minimum of $5 for bitcoin / $10 for PM');
+              $('button').prop('disabled', false);
+
+             }             
+             if (data != 01 ) {
+              //$("#balance").html(data).show();
+              pageDiv('payment'+data,'Add Balance - Olux SHOP','Payment.html?p_data='+data,0);
+             }
+           }
+         });
+
+    return false; // avoid to execute the actual submit of the form.
 });
-return false; // avoid to execute the actual submit of the form.
-});
+
 </script>
