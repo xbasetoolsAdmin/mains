@@ -15,7 +15,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 
 <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 <div class="col-sm-12 table-responsive" id="mainDiv">
- <table id="accounts_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
+ <table id="table" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
                         <thead>
                             <tr>
       <th data-priority="1">     </th>
