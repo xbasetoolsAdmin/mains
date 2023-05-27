@@ -57,7 +57,7 @@ color:var(--font-color)
 <script  type="text/javascript">
 $(document).ready(function () {
 $('#banks_data').DataTable({
-       ajax: 'data/objects.txt',
+       ajax: 'data/objects.html',
         columns: [
             { data: 'name' },
             { data: 'position' },
