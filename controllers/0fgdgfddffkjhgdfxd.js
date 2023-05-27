@@ -20,19 +20,29 @@ function load_data(n, t, u, x) {
     };
     if (("/" + obj.Url) != location.pathname) {
         if (x != 1) {
-            history.pushState(obj, obj.Title, obj.Url);
+           history.pushState
+           (
+           obj, 
+           obj.Title, 
+           obj.Url
+            );
         } else {
-            history.replaceState(obj, obj.Title, obj.Url);
+        history.replaceState
+        (
+            obj, 
+            obj.Title, 
+            obj.Url
+            );
         }
     }
     document.title = obj.Title;
-    $("#rdp_data").html('<div id="mydiv"><img src="files/img/load2.gif" class="ajax-loader"></div>').show();
+    $("#banks_data").html('<div id="mydiv"><img src="files/img/load2.gif" class="ajax-loader"></div>').show();
     $.ajax({
         type: 'GET',
         url: 'divPage' + n + '.html',
         success: function(data) {
-            $("#rdp_data").html(data).show();
-        }
+            $("#banks_data").html(data).show();
+       }
     });
     if (typeof stopCheckBTC === 'function') {
         var a = stopCheckBTC();
@@ -93,12 +103,3 @@ function sendReview(id) {
         }
     });
 }
-$(document).keydown((
-              function(event)
- {"17"==event.which&&(cntrlIsPressed=!0)}
-  )),
- $(document).keyup((function()
-      {cntrlIsPressed=!1}
-   ));
-    var cntrlIsPressed=!1;function setTooltip(btn,message){$(btn).tooltip("hide").attr("data-original-title",message).tooltip("show")}function hideTooltip(btn){setTimeout((function(){$(btn).tooltip("hide")}),1e3)}$(window).on("popstate",(function(e){location.replace(document.location)})),$(window).on("load",(function(){$(".dropdown").hover((function(){
-    $(".dropdown-toggle",this).trigger("click")})), 
