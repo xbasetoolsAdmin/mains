@@ -21,7 +21,6 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
       <th data-priority=“4”>Website</th>
       <th data-priority=“3”>Details</th>
       <th data-priority="5">Seller</th>
-   <!--<th data-priority=“7”>checker </th>-->
       <th data-priority="5">Price   </th>
       <th data-priority=“6”>Added on </th>
                <th class=“all”>Buy</th>
