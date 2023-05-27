@@ -23,7 +23,7 @@ color:var(--font-color)
 
     
     
-<table id="example" class="display" style="width:100%">
+<table id="banks_data" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>Name</th>
