@@ -62,7 +62,6 @@ color:var(--font-color)
 <table id="banks_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
         <thead>
             <tr>
-                 <th> </th>
                  <th>ID </th>
                 <th>Country</th>
                 <th>Name</th>
@@ -71,7 +70,6 @@ color:var(--font-color)
                 <th>Age</th>
                 <th>Salary</th>
              <th>Start date</th>
-            <th>Start date</th>
             </tr>
         </thead>
 </table>
