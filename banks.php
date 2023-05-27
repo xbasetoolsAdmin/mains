@@ -1,7 +1,7 @@
  <?php require "header.php"; ?>
 
 
-?>
+
 <script>
 $('#dataTable').dataTable( {
   "lengthChange": false
