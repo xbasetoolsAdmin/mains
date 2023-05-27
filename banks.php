@@ -54,12 +54,12 @@ $(document).ready(function () {
 $('#banks_data').DataTable({
        ajax: 'data/objects.json',
         columns: [
-            { data: 'name' },
-            { data: 'position' },
-            { data: 'office' },
-            { data: 'extn' },
-            { data: 'start_date' },
-            { data: 'salary' },
+            { data: '0' },
+            { data: '1' },
+            { data: '2' },
+            { data: '3' },
+            { data: '4' },
+            { data: '5' },
         ],
     });
 });
