@@ -23,38 +23,25 @@ color:var(--font-color)
 
     
     
-<table id="banks_data" class="display" style="width:100%">
+<table id="example" class="display" style="width:100%">
         <thead>
-       <tr>
-  <th>ID</th>
-  <th>Type</th>
-  <th>Country</th>
-  <th>Bank Name</th>
-  <th>Balance</th>
-  <th>Information</th>
-  <th>Open</th>
-  <th>Date added</th>
-  <th>Price</th>
-  <th>Action</th>
+            <tr>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Start date</th>
+                <th>Salary</th>
             </tr>
         </thead>
-        <tbody>
+        <tfoot>
             <tr>
-                
-            </tr>
-        </tbody>
-         <tfoot>
-            <tr>
-                <th>0</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4.</th>
-                <th>5</th>
-                <th>6</th>
-                <th>7</th>
-                <th>8</th>
-                <th>9</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Start date</th>
+                <th>Salary</th>
             </tr>
         </tfoot>
     </table>
@@ -63,38 +50,16 @@ color:var(--font-color)
 </script>             
 <?php require"footer.php";?>
 <script  type="text/javascript">
-  $(document).ready(function(){
-$('#banks_data').DataTable ({
-       "processing": true,
-        "serverSide": true,
-        "responsive": true,
-        "scrollX": true,
-        "order": [],
-        "lengthMenu": [[10, 25, 50, 100, 500, 10000], [10, 25, 50, 100, 500, "All"]],
-        "columnDefs": [
-             {
-         "targets": [ 0 ],
-          "visible": false
-                  }
-                  ], 
-          ajax:{
-               url: 'data/objects.json',
-        columns: [
-            { data: '0' },
-            { data: '1' },
-            { data: '2' },
-            { data: '3' },
-            { data: '4' },
-            { data: '5' },
-            { data: '6' },
-            { data: '7' },
-            { data: '8' },
-            { data: '9' },
-        ],
+$(document).ready(function () {
+    $('#example').DataTable({
+        processing: true,
+        serverSide: true,
+        ajax: 'data/objects.txt
+        ',
     });
-        });
-       
+});
 </script>
+
 </div>
 </body>
 </html>
