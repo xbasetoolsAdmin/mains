@@ -42,7 +42,7 @@ color:var(--font-color)
   <th>Action</th>
   </tr>
         </thead>
-		 <tbody id='tbody2'>
+		 <tbody id='banks_data'>
  <?php
 $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 $qu = mysqli_query($dbcon, "SELECT * FROM banks WHERE acctype='banks' AND resseller='$uid' and sold='0' ORDER BY id DESC")or die(mysqli_error());
