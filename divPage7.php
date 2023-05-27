@@ -10,23 +10,23 @@ if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
 }
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 ?>
-
 <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 <div class="col-sm-12 table-responsive" id="mainDiv">
- <table id="account_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
-                        <thead>
-                            <tr>
+<table id="account_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
+<thead>
+   <tr>
       <th data-priority="1">     </th>
-      <th class="all">    Country</th>
-      <th data-priority=“4”>Website</th>
+      <th data-priority="all"> ID</th>
+      <th class="8">    Country</th>
+      <th data-pririty=“4”>Website</th>
       <th data-priority=“3”>Details</th>
       <th data-priority="5">Seller</th>
       <th data-priority="5">Price   </th>
       <th data-priority=“6”>Added on </th>
-               <th class=“all”>Buy</th>
-                         </tr>
-                     </thead>
-                 <tbody>
+      <th class=“all”>Buy</th>
+   </tr>
+</thead>
+<tbody>
  <?php
 include("cr.php");
 $q = mysqli_query($dbcon, "SELECT * FROM accounts WHERE sold='0' ORDER BY RAND()")or die(mysqli_error());
@@ -41,6 +41,7 @@ $q = mysqli_query($dbcon, "SELECT * FROM accounts WHERE sold='0' ORDER BY RAND()
      echo "
  <tr>     
                       <td></td> 
+            <td> ".$row['id']."</td>";
     <td id='account_country'><i class='flag-icon flag-icon-$countrycode'></i>&nbsp;".htmlspecialchars($row['country'])." </td>
     <td id='account_sitename'> ".htmlspecialchars($row['sitename'])." </td> 
 	<td> ".htmlspecialchars($row['infos'])." </td>
