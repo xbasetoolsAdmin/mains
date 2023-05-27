@@ -19,23 +19,17 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         
 										
 								
+					<center>				<h2>Banks</h2> </center>
 								
-								
-		   <div class="alert alert-info text-center" role="alert" style="margin: 15px;">
-						<h2>Banks</h2>
-      <h4>Static</h4>
-
-<ul class="user-info">
-		<ul>
-<li><b>Do not insert a bank account without SCREENSHOT of it (USE : prntscr.com)</b></li>
-<li><b>ONLY INSERT WORKING ACCOUNT</b></li>
-<li>If you have mistaken or need to edit a tool just remove it and add it again</li>
-<li><b>Deleted</b> mean that the tools is not working !</li>
-</ul>
-
-<li>Number of Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
- echo $r11;?></b></li>
-</ul>
+   <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
+        <ul>
+            <li>We Have Fresh E-mails Lists for Diffrents Countries ( You Can Use it for Spam ). </li>
+            <li>Our E-mails Lists Guarante for you Good results because most of them are from Shops and Big Sites .</li>
+            <li>Combo use for cracking (Brute forcing attack) not use for login to email.</li>
+        <li>There is <b> <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
+ echo $r11;?></b> </b> Available.</li>
+        </ul>
+    </div>
       </div>
       </div>
 
