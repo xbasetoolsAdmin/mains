@@ -306,11 +306,9 @@ RewriteRule ^checkEmailChange$       checkEmailChange.php
 RewriteRule ^reports$  reports.php
 
 
-RewriteRule ^payment.html$  payment.php
-RewriteRule ^payment.php$  payment.php
-
-
-
+RewriteRule ^Payment$          Payment.php
+RewriteRule ^Payment.php$      Payment.php
+RewriteRule ^Payment.html$     Payment.php
 
 
 RewriteRule ^Rules.html$  shoprules.php
@@ -347,8 +345,8 @@ RewriteRule ^PMCheck.html$ PMcheck.php
 RewriteRule ^PMCheck$      PMcheck.php
 
 
-RewriteRule ^addBalance.php?p_data=$ payment.php
-RewriteRule ^Payment$      payment.php
+
+
 
 
 
