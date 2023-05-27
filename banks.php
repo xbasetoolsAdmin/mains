@@ -26,13 +26,13 @@ color:var(--font-color)
     
     
 
-<div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
+<div class="row m-2 pt-3" id="mainDiv" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
+
 <div class="col-sm-12 table-responsive">
 
-<div table id="banks_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" id="mainDiv">
-    
-        <thead>
-            <tr>
+<div table id="banks_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
+             <thead>
+                 <tr>
                  <th>ID </th>
                 <th>Country</th>
                 <th>BankName</th>
@@ -44,8 +44,8 @@ color:var(--font-color)
                 <th>Buy</th>
             </tr>
         </thead>
-        </div>
-</table>
+    </table>
+</div>
 <script type="text/javascript">
 $(document).ready(function () {
 $('#banks_data').DataTable({
@@ -67,5 +67,6 @@ aaSorting: []
 })),
 $(document).keydown((function(event){"17"==event.which&&(cntrlIsPressed=!0)})),$(document).keyup((function(){cntrlIsPressed=!1}));var cntrlIsPressed=!1;function setTooltip(btn,message){$(btn).tooltip("hide").attr("data-original-title",message).tooltip("show")}function hideTooltip(btn){setTimeout((function(){$(btn).tooltip("hide")}),1e3)}$(window).on("popstate",(function(e){location.replace(document.location)})),$(window).on("load",(function(){$(".dropdown").hover((function(){$(".dropdown-toggle",this).trigger("click")})),pageDiv(8,"bank-logs - xBaseTools","banks",1),new Clipboard(".copyit").on("success",(function(e){setTooltip(e.trigger,"Copied!"),hideTooltip(e.trigger),e.clearSelection()}))}));
 </script>
+</div>
 </body>
 </html>
