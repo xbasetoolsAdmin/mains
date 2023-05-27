@@ -23,7 +23,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="buyer/layout/js/bootstrap.min.js"></script>
         <script src="buyer/layout/js/bootbox.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="buyer/layout/css/flags.css" />
+        <link rel="stylesheet" type="text/css" href="files/css/flags.css" />
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
