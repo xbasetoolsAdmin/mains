@@ -38,7 +38,8 @@ color:var(--font-color)
                 while($row = mysqli_fetch_assoc($query)){
                 echo '<option value="'.$row['country'].'">'.$row['country'].'</option>';
                 }
-            ?>   </select>
+            ?> 
+         </select>
         </div>
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
             <label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
@@ -57,19 +58,22 @@ color:var(--font-color)
     </div>
     <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
         <div class="col-sm-12 table-responsive">
-            <table id=" " class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>ID</th>
-                        <th>Country</th>
-                        <th>Balance</th>
-                        <th>Description</th>
-                        <th>Seller</th>
-                        <th>Added on</th>
-                        <th>Buy</th>
-                    </tr>
-                </thead>
+      <table id="banks_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
+<thead>
+<tr>
+<th data-priority="1"></th>
+<th class="all">ID</th>
+<th data-priority="3">Country</th>
+<th data-priority="8">Type</th>
+<th data-priority="15">Balance</th>
+<th class="all" style="width:9% !important;">Ip Blacklist</th>
+ <th data-priority="10">Seller</th>
+<th class="all">Price</th>
+<th data-priority="13">Added on </th>
+<th class="all">Buy</th>
+</tr>
+</thead> 
+               <tbody>
             </table>
         </div>
     </div>
