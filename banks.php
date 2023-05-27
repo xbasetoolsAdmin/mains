@@ -13,9 +13,9 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
 background:var(--color-card);
 color:var(--font-color)
 }
-.dataTables_wrapper .dataTables_paginate .paginate_button{color:var(--font-color)}#accounts_data_paginate .paginate_button{color:var(--font-color)}.alert-info{color:var(--color-info);background-color:var(--color-backinfo);border-color:var(--color-borderinfo)}#accounts_data_filter{color:var(--font-color)}#accounts_data_length{color:var(--font-color)}#accounts_data_paginate{color:var(--font-color)}#accounts_data_info{color:var(--font-color)}</style>
+.dataTables_wrapper .dataTables_paginate .paginate_button{color:var(--font-color)}#banks_data_paginate .paginate_button{color:var(--font-color)}.alert-info{color:var(--color-info);background-color:var(--color-backinfo);border-color:var(--color-borderinfo)}#banks_data_filter{color:var(--font-color)}#banks_data_length{color:var(--font-color)}#banks_data_paginate{color:var(--font-color)}#banks_data_info{color:var(--font-color)}</style>
 <ul class="nav nav-tabs">
-    <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
+    <div class="alert alert-info text-center" role="alert" style="margin: 15px;">
         <ul>
             <li>  . </li>
             <li>Our E-mails Lists Guarante for you Good results because most of them are from Shops and Big Sites .</li>
@@ -34,7 +34,7 @@ color:var(--font-color)
             <label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
             <select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
                 <option value="">All Countries</option><?php
-                $query = mysqli_query($dbcon, "SELECT DISTINCT(`country`) FROM `accounts` WHERE `sold` = '0' ORDER BY country ASC");
+                $query = mysqli_query($dbcon, "SELECT DISTINCT(`country`) FROM `banks` WHERE `sold` = '0' ORDER BY country ASC");
                 while($row = mysqli_fetch_assoc($query)){
                 echo '<option value="'.$row['country'].'">'.$row['country'].'</option>';
                 }
@@ -44,7 +44,7 @@ color:var(--font-color)
             <label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
             <select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
                 <option value="">All</option><?php
-                $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `accounts` WHERE `sold` = '0' ORDER BY resseller ASC");
+                $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `banks` WHERE `sold` = '0' ORDER BY resseller ASC");
                 while($row = mysqli_fetch_assoc($query)){
                 $qer = mysqli_query($dbcon, "SELECT DISTINCT(`id`) FROM resseller WHERE username='".$row['resseller']."' ORDER BY id ASC")or die(mysql_error());
                 while($rpw = mysqli_fetch_assoc($qer))
@@ -78,7 +78,7 @@ color:var(--font-color)
 <?php require"footer.php";?>
 <script type="text/javascript">
 $(document).ready((function ()
-{ $("#accounts_data").DataTable( {
+{ $("#banks_data").DataTable( {
 lengthMenu: [ [10, 25, 100, 500, -1],
 [10, 25, 100, 500, "All"] ],
 iDisplayLength: 1e3,
