@@ -1,17 +1,54 @@
  <?php require "header.php"; ?>
 
 
+?>
+<script>
+$('#dataTable').dataTable( {
+  "lengthChange": false
+});
+function delet(id)
+{   var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('processing ..').show();
+	$.ajax({
+	METHOD: 		'GET',
+     url:"./ajax/dbanks.php?id="+id,
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+	}});
+}
 
 
 
-<center>	<h2>Banks</h2></center>
+</script>
+
+	<h2>Banks</h2>
+<?php
+
+date_default_timezone_set('UTC');
+
+if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
+   header("location: ../");
+   exit();
+}
+$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+$uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+?> 
+        
+								
+								
+								
+								
+		
 <ul class="nav nav-tabs">
 		<li class="active"><a href="#static" data-toggle="tab" aria-expanded="true">Static</a></li>
-		<li class=""><a href="#all" data-toggle="tab" aria-expanded="false" onclick="pageDiv('all','divPage8.php')">All</a></li>
-		<li class=""><a href="#add" data-toggle="tab" aria-expanded="false" onclick="PageDiv('add','divPage8.php')">Add</a></li>
+		<li class=""><a href="#all" data-toggle="tab" aria-expanded="false" onclick="TabDiv('all','banksTab1.php')">All</a></li>
+		<li class=""><a href="#add" data-toggle="tab" aria-expanded="false" onclick="TabDiv('add','banksTab2.php')">Add</a></li>
+		
+	<!--	<li class=""><a href="#mass" data-toggle="tab" aria-expanded="false" onclick="TabDiv('mass','banksTab3.php')">Mass Add</a></li> -->
 	</ul>
 <div id="myTabContent" class="tab-content">
- <div class="tab-pane fade active in" id="static"> 
+    <div class="tab-pane fade active in" id="static"> 
 <div class="well well-sm">
 <h4>Rules</h4>
 <ul class="user-info">
@@ -22,13 +59,26 @@
 </ul>
 <h4>Static</h4>
 <ul class="user-info">
+<li>Number of Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
+ echo $r11;?></b></li>
+<li>Unsold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='0'");$r11=mysqli_num_rows($s12);
+ echo $r11;?></b></li>
+<li>Sold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='1'");$r11=mysqli_num_rows($s12);
+ echo $r11;?></b></li>
+<li>Deleted Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='deleted'");$r11=mysqli_num_rows($s12);
+ echo $r11;?></b></li>
+</ul>
+      </div>
+      </div>
+	  
+	<div class="tab-pane fade" id="all"></div>
+    <div class="tab-pane fade" id="add"></div>
 
-
-
-
-
-
-
+</div>
+</div></div>
+            </div>
+            </div>
+        </div>
 
 
 
