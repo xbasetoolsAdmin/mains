@@ -71,17 +71,19 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `accounts` WHER
                         <th class="all">Buy</th>
                     </tr>
                 </thead>
-               <tbody>
-
-
+                </table>
+                </div>               
+                 </div>
+                
+         </div>
+                
+                
 <?php require"footer.php";?>
 <script type="text/javascript">
-
-<script type="text/javascript"> 
 $(document).ready((function () 
 { $("#accounts_data").DataTable( {
-     lengthMenu: [ [10, 25, 100, 500, -1],
-         [10, 25, 100, 500, "All"] ],
+lengthMenu: [ [10, 25, 100, 500, -1],
+  [10, 25, 100, 500, "All"] ],
          iDisplayLength: 1e3, 
         aaSorting: [] 
 }) 
