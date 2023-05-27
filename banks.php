@@ -26,22 +26,24 @@ color:var(--font-color)
 <table id="banks_data" class="display" style="width:100%">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Extn.</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                 <th>0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4.</th>
+                <th>5</th>
+                <th>6</th>
             </tr>
         </thead>
         <tfoot>
             <tr>
-                <th>Name</th>
-                <th>Position</th>
-                <th>Office</th>
-                <th>Extn.</th>
-                <th>Start date</th>
-                <th>Salary</th>
+                <th>0</th>
+                <th>1</th>
+                <th>2</th>
+                <th>3</th>
+                <th>4.</th>
+                <th>5</th>
+                <th>6</th>
             </tr>
         </tfoot>
     </table>
@@ -60,6 +62,7 @@ $('#banks_data').DataTable({
             { data: '3' },
             { data: '4' },
             { data: '5' },
+            { data: '6' },
         ],
     });
 });
