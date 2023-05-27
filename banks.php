@@ -28,7 +28,7 @@ color:var(--font-color)
 
 <div class="table-row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 <div class="col-sm-12 table-responsive">
-<table id="example" class="display" style="width:100%">
+<table id="banks_data" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>Name</th>
