@@ -10,16 +10,9 @@
             }
             $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             ?>
-            
-            </div>
-          <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
-    <div class="col-sm-12 table-responsive">
-        <table id=" " class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);"></div>
-</div>
 <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 <div class="col-sm-12 table-responsive" id="mainDiv">
-<table id="banks_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
-<table id="example" class="display" style="width:100%">
+<table id="bank_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
         <thead>
             <tr>
                 <th></th>
@@ -47,11 +40,15 @@
             </tr>
     </tbody>
 </table>
-</div>
-</div>
-</table>
-    </div></div>
-                    <script type="text/javascript">
+<script type="text/javascript">
+ $(document).ready(function () {
+$('#bank_data').DataTable({
+ lengthMenu: [
+            [10, 25, 50, -1],
+            [10, 25, 50, 'All'],
+        ],
+    });
+});
                     $('#filterbutton').click(function () {$("#table tbody tr").each(function() {var ck1 = $.trim( $(this).find("#country").text().toLowerCase() );var ck2 = $.trim( $(this).find("#sitename").text().toLowerCase() );var ck3 = $.trim( $(this).find("#seller").text().toLowerCase() ); var val1 = $.trim( $('select[name="country"]').val().toLowerCase() );var val2 = $.trim( $('input[name="sitename"]').val().toLowerCase() );var val3 = $.trim( $('select[name="seller"]').val().toLowerCase() ); if((ck1 != val1 && val1 != '' ) || ck2.indexOf(val2)==-1 || (ck3 != val3 && val3 != '' )){ $(this).hide();  }else{ $(this).show(); } });$('#filterbutton').prop('disabled', true);});$('.filterselect').change(function () {$('#filterbutton').prop('disabled', false);});$('.filterinput').keyup(function () {$('#filterbutton').prop('disabled', false);});
                     function buythistool(id){
                     bootbox.confirm("Are you sure?", function(result) {
