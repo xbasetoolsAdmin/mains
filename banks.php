@@ -26,7 +26,7 @@ color:var(--font-color)
 <table id="banks_data" class="display" style="width:100%">
         <thead>
             <tr>
-                 <th>ID</th>
+                <th data-priority="0">ID</th>
                 <th>Name</th>
                 <th>Country</th>
                 <th>Salary</th>
