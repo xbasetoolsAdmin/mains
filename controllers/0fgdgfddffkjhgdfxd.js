@@ -1,3 +1,4 @@
+ 
  $(function() {
     'use strict';
     $('.navbar-nav li.dropdown').hover(function() {
