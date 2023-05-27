@@ -64,7 +64,7 @@ color:var(--font-color)
             <tr>
                  <th>ID </th>
                 <th>Country</th>
-                <th>Name</th>
+                <th>BankName</th>
                 <th>Position</th>
                 <th>Office</th>
                 <th>Age</th>
