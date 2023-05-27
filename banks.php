@@ -45,19 +45,7 @@ function delet(id)
 
 </script>
 
-	<h2>Banks</h2>
-<?php
-
-date_default_timezone_set('UTC');
-
-if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
-   header("location: ../");
-   exit();
-}
-$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-$uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-?> 
-        
+	<h2><center>Banks</h2></center>
 		
 <ul class="nav nav-tabs">
 		<li class="active"><a href="#static" data-toggle="tab" aria-expanded="true">Static</a></li>
