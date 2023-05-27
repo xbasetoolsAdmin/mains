@@ -1,5 +1,4 @@
-
-$(function() {
+ $(function() {
     'use strict';
     $('.navbar-nav li.dropdown').hover(function() {
         $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeIn(300);
@@ -9,7 +8,7 @@ $(function() {
 });
 var cntrlIsPressed = false;
 
-function pageDiv(n, t, u, x) {
+function load_data(n, t, u, x) {
     if (cntrlIsPressed) {
         window.open(u, '_blank');
         return false;
@@ -26,12 +25,12 @@ function pageDiv(n, t, u, x) {
         }
     }
     document.title = obj.Title;
-    $("#mainDiv").html('<div id="mydiv"><img src="files/img/load2.gif" class="ajax-loader"></div>').show();
+    $("#rdp_data").html('<div id="mydiv"><img src="files/img/load2.gif" class="ajax-loader"></div>').show();
     $.ajax({
         type: 'GET',
         url: 'divPage' + n + '.html',
         success: function(data) {
-            $("#mainDiv").html(data).show();
+            $("#rdp_data").html(data).show();
         }
     });
     if (typeof stopCheckBTC === 'function') {
