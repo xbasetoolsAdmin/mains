@@ -21,10 +21,9 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                         <th data-priority="1"></th>
                         <th class="all">ID</th>
                         <th data-priority="3">Country</th>
-                        <th data-priority="6">Description</th>
-                        <th data-priority="7">Email N</th>
-                        <th data-priority="8">Seller</th>
-
+                        <th data-priority="8">Website</th>
+                        <th data-priority="6">Details</th>
+                        <th data-priority="7">Seller</th>
                         <th data-priority="9">Price</th>
                         <th data-priority="10">Added on </th>
                         <th class="all">Buy</th>
@@ -43,7 +42,9 @@ $q = mysqli_query($dbcon, "SELECT * FROM accounts WHERE sold='0' ORDER BY RAND()
 		   while($rpw = mysqli_fetch_assoc($qer))
 			 $SellerNick = "seller".$rpw["id"]."";
      echo "
- <tr>     
+ <tr>    
+	                 <td></td>
+	        <td> ".$row['id']."</td>
     <td id='account_country'><i class='flag-icon flag-icon-$countrycode'></i>&nbsp;".htmlspecialchars($row['country'])." </td>
     <td id='account_sitename'> ".htmlspecialchars($row['sitename'])." </td> 
 	<td> ".htmlspecialchars($row['infos'])." </td>
