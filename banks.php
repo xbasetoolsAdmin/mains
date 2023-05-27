@@ -63,7 +63,10 @@ color:var(--font-color)
 </script>             
 <?php require"footer.php";?>
 <script  type="text/javascript">
-$(document).ready(function () {
+  $(document).ready(function(){
+            var webID;
+            load_data();
+ function load_data(myobjects) {
 $('#banks_data').DataTable
          ({
           ajax: 'data/objects.json',
