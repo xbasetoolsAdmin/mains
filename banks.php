@@ -26,13 +26,13 @@ color:var(--font-color)
 <table id="banks_data" class="display" style="width:100%">
         <thead>
             <tr>
-                 <th>0</th>
-                <th>1</th>
-                <th>2</th>
-                <th>3</th>
-                <th>4.</th>
-                <th>5</th>
-                <th>6</th>
+                 <th>ID</th>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Salary</th>
+                <th>InFo.</th>
+                <th>Seller</th>
+                <th>Created_Date</th>
             </tr>
         </thead>
         <tfoot>
