@@ -2,15 +2,27 @@
 ob_start();
 session_start();
 date_default_timezone_set('UTC');
-
+require "header.php";
 include "includes/config.php";
 if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
 header("location: ../");
 exit();
 }
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-?>
+?> 
 
+<div class="d-flex flex-row-reverse mt-0">
+            <div class="p-2">
+                <label id="switch" class="switch">
+                    <input type="checkbox" onchange="toggleTheme()" id="slider">
+                    <span class="slider round">
+                    </span>
+                </label>
+            </div>
+        </div>
+  <div class="alert alert-info text-center" role="alert" style="margin: 15px;">
+ 
+  </div>
 <<div id="myTabContent" class="tab-content p-5">
 <div id="addBalance">
 <div id="balance">
