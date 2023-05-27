@@ -24,7 +24,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                         <th data-priority="6">Description</th>
                         <th data-priority="7">Email N</th>
                         <th data-priority="8">Seller</th>
-                        <th data-priority="2">Proof</th>
+
                         <th data-priority="9">Price</th>
                         <th data-priority="10">Added on </th>
                         <th class="all">Buy</th>
