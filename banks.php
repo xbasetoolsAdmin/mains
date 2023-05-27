@@ -28,9 +28,9 @@ color:var(--font-color)
 
 <div class="table-row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 
-<div class="col-sm-12 table-responsive">
+<div class="col-sm-12 table-responsive" id="banks_data">
 
-<table id="banks_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
+<table class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" Id="banks_data">
              <thead>
                  <tr>
                  <th>ID </th>
