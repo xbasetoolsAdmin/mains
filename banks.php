@@ -13,7 +13,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
 background:var(--color-card);
 color:var(--font-color)
 }
-.dataTables_wrapper .dataTables_paginate .paginate_button{color:var(--font-color)}#banks_data_paginate .paginate_button{color:var(--font-color)}.alert-info{color:var(--color-info);background-color:var(--color-backinfo);border-color:var(--color-borderinfo)}#banks_data_filter{color:var(--font-color)}#banks_data_length{color:var(--font-color)}#banks_data_paginate{color:var(--font-color)}#banks_data_info{color:var(--font-color)}</style>
+.dataTables_wrapper .dataTables_paginate .paginate_button{color:var(--font-color)}#bank_data_paginate .paginate_button{color:var(--font-color)}.alert-info{color:var(--color-info);background-color:var(--color-backinfo);border-color:var(--color-borderinfo)}#banks_data_filter{color:var(--font-color)}#banks_data_length{color:var(--font-color)}#banks_data_paginate{color:var(--font-color)}#banks_data_info{color:var(--font-color)}</style>
 <ul class="nav nav-tabs">
     <div class="alert alert-info text-center" role="alert" style="margin: 15px;">
         <ul>
@@ -56,29 +56,46 @@ color:var(--font-color)
             </select>
         </div>
     </div>
-    <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
-        <div class="col-sm-12 table-responsive">
-      <table id="banks_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
-<thead>
-<tr>
-<th data-priority="1"></th>
-<th class="all">ID</th>
-<th data-priority="3">Country</th>
-<th data-priority="8">Type</th>
-<th data-priority="15">Balance</th>
-<th class="all" style="width:9% !important;">Ip Blacklist</th>
- <th data-priority="10">Seller</th>
-<th class="all">Price</th>
-<th data-priority="13">Added on </th>
-<th class="all">Buy</th>
-</tr>
-</thead> 
-               <tbody>
-            </table>
-        </div>
-    </div>
     
-</div>
+<div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
+<div class="col-sm-12 table-responsive" id="mainDiv">
+<table id="bank_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+             <th>Start date</th>
+            <th>Start date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>."id".</td>
+                <td>Name</td>
+                <td>Position</td>
+                <td>Tiger Nixon</td>
+                <td>System Architect</td>
+                <td>Edinburgh</td>
+                <td>61</td>
+                <td>2011-04-25</td>
+                <td>$320,800</td>
+            </tr>
+    </tbody>
+</table>
+<script type="text/javascript">
+$(document).ready(function () {
+$('#banks_data').DataTable({
+ lengthMenu: [
+       [10, 25, 50, -1],
+     [10, 25, 50, 'All'],
+        ],
+    });
+    </script>
 <?php require"footer.php";?>
 <script type="text/javascript">
 $(document).ready((function ()
