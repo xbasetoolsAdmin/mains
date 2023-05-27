@@ -14,11 +14,19 @@ function load_data(n, t, u, x) {
         window.open(u, '_blank');
         return false;
     }
-    var obj = {
+     var obj = 
+    {
         Title: t,
         Url: u
     };
-    if (("/" + obj.Url) != location.pathname) {
+    if 
+    (
+    (
+          "/" + obj.Url
+      )
+          != location.pathname
+        ) 
+        {
         if (x != 1) {
            history.pushState
            (
@@ -41,10 +49,13 @@ function load_data(n, t, u, x) {
         type: 'GET',
         url: 'divPage' + n + '.html',
         success: function(data) {
-            $("#banks_data").html(data).show();
+         $("#banks_data").html(data).show();
        }
     });
-    if (typeof stopCheckBTC === 'function') {
+    if 
+    (
+        typeof stopCheckBTC === 'function'
+    ) {
         var a = stopCheckBTC();
     }
 }
