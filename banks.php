@@ -100,7 +100,6 @@
  <?php require "footer.php"; ?>
 <script>
 $('#dataTable').dataTable( {
-    "responsive": true
   "lengthChange": true
 });
 function delet(id)
