@@ -100,9 +100,9 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                    <div id="page-content-wrapper">
             <div class="container-fluid">
       <div id="divPage">
-<table>
-    <thead>
-        <tr>
+<table id="lead_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
+<thead>
+<tr>
             <th>ID</th>
             <th>COUNTRY</th>
             <th>DESCRIPTION</th>
