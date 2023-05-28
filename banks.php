@@ -98,7 +98,7 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     
     </div>		
 
-    <div class="divTable">
+    div class="divTable">
     <div class="thead">
         <div class="row">
             <div class="header">ID</div>
@@ -112,6 +112,7 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             <div class="header">ACTION</div>
         </div>
     </div>
+  </div class="thead">		       
     <div class="tbody">
         <div class="row">
             <div class="header">0</div>
@@ -124,7 +125,7 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             <div class="cell">7</div>
             <div class="cell">8</div>
         </div>
-     <div class="tfoot">
+      </div class="tbody">
         <div class="row">
             <div class="header">0</div>
             <div class="cell">1</div>
@@ -138,7 +139,7 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         </div>
     </div>
 </div>    
-        
+   </div class="divtable">
         
         
         
