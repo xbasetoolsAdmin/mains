@@ -97,49 +97,35 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 		</div>		
     
     </div>		
-
-    div class="divTable">
-    <div class="thead">
-        <div class="row">
-            <div class="header">ID</div>
-            <div class="header">COUNTRY</div>
-            <div class="header">DESCRIPTION</div>
-            <div class="header">EMAIL N</div>
-            <div class="header">SELLER</div>
-            <div class="header">PROOF</div>
-            <div class="header">ADDED ON</div>
-            <div class="header">PRICE</div>
-            <div class="header">ACTION</div>
-        </div>
-    </div>
-  </div class="thead">		       
-    <div class="tbody">
-        <div class="row">
-            <div class="header">0</div>
-            <div class="cell">1</div>
-            <div class="cell">2</div>
-            <div class="cell">3</div>
-            <div class="cell">4</div>
-            <div class="cell">5</div>
-            <div class="cell">6</div>
-            <div class="cell">7</div>
-            <div class="cell">8</div>
-        </div>
-      </div class="tbody">
-        <div class="row">
-            <div class="header">0</div>
-            <div class="cell">1</div>
-            <div class="cell">2</div>
-            <div class="cell">3</div>
-            <div class="cell">4</div>
-            <div class="cell">5</div>
-            <div class="cell">6</div>
-            <div class="cell">7</div>
-            <div class="cell">8</div>
-        </div>
-    </div>
-</div>    
-   </div class="divtable">
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>COUNTRY</th>
+            <th>DESCRIPTION</th>
+            <th>EMAIL N</th>
+            <th>SELLER</th>
+            <th>PROOF</th>
+            <th>ADDED ON</th>
+            <th>PRICE</th>
+            <th>ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>0</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+        </tr>
+    </tbody>
+</table>
+ 
         
         
         
