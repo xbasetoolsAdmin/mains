@@ -1,25 +1,7 @@
  <?php require "header.php"; ?>
-
-
-
-
-
-
-<?php
-
-date_default_timezone_set('UTC');
-
-if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
-   header("location: ../");
-   exit();
-}
-$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-$uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-?> 
-        
-										
-								
-					<center>				<h2>Banks</h2> </center>
+          <center>			
+               <h2>Banks</h2> 
+          </center>
 								
    <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
         <ul>
@@ -29,151 +11,36 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
        <center>				<h5><li>There is <b> <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
  echo $r11;?></b> </b> Available.</li></h5><center>
         </ul>
-    </div>
-      </div>
-      </div>
-
-</div>
-</div></div>
+      
+      
+      
+      
+      
+                                    </div>
+                               </div>
+                         </div> 
+                     </div>
+                </div>       
             </div>
-            </div>
-        </div>
-
-<?php
-ob_start();
-session_start();
-
-date_default_timezone_set('UTC');
-include "../includes/config.php";
-
-if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
-   header("location: ../");
-   exit();
-}
-$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-$uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-?> 
-<?php
-function curl_get_contents($url)
-{
-  $curl = curl_init($url);
-  curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-  curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
-  curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-  curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-  $data = curl_exec($curl);
-  curl_close($curl);
-  return $data;
-}
-function ambilKata($param, $kata1, $kata2)
-{
-    
-if(strpos($param, $kata1) === FALSE) return FALSE;
-    
-if(strpos($param, $kata2) === FALSE) return FALSE;
-    
-$start = strpos($param, $kata1) + strlen($kata1);
-    
-$end = strpos($param, $kata2, $start);
-    
-
-    
-$return = substr($param, $start, $end - $start);
-    
-return $return;
-}
-  $website = mysqli_real_escape_string($dbcon, $_POST['sitename']);
-  
-
-     $balance = mysqli_real_escape_string($dbcon, $_POST['balance']);
-     
-   $country = mysqli_real_escape_string($dbcon, $_POST['country']);
-   
-
-
-$infos = mysqli_real_escape_string($dbcon, $_POST['infos']);
-    
-$infos = mysqli_real_escape_string($dbcon, $_POST['inputs']);
-  
-$price = mysqli_real_escape_string($dbcon, $_POST['price']);
-   $date = date("d/m/Y h:i:s a");
-   $link = "$website | $url ";
-  if(isset($_POST['start']) and $_POST['start'] == "work"){
-      if ($price == 0)
-{
-	echo "<tr>
-	
-<td>".htmlspecialchars($website)."</td> .... <b>Price not valid!</b>
-<br>";
-} 
-      else if (empty($website))
-{
-	echo "Complete all fields <br>";
-} 
- else if (preg_match('/[^0-9]/', $price)) {
-	echo "Price not valid!</b> <br>";
-} else {
-$check="SELECT * FROM banks WHERE url = '$link'";
-$rs = mysqli_query($dbcon,$check);
-$data = mysqli_fetch_array($rs, MYSQLI_NUM);
-if($data[0] > 1) {
-	echo "<br><b>".htmlspecialchars($website)."</b> .... <b>Already Added</b> <br>";
-} else { 
-    $query = mysqli_query($dbcon, "
-  INSERT INTO banks
-  (
-acctype,
-        country,
-        
-infos,
-
-price,
-
-
-url,
-
-sold,
-
-sto,
-
-dateofsold,
-
-date,
-
-resseller,
-
-reported,
-
-bankname,
-
-balance
-
-)
-  VALUES
-  ('banks',
-  '$country',
-  '$infos',
-  '$price',
-  '$link',
-  '0',
-  '',
-  '',
-  '$date',
-  '$uid',
-  '',
-  '$website',
-  '$balance'
-  )
-  ")or die(mysqli_error($dbcon));
-
-  if($query){
-    echo "<b>".htmlspecialchars($website)."</b> ........ <b><font color=green>Added!</b></font>";
-
-  }else{
-    echo '<div class="alert alert-danger" role="alert">Not Added Contact Support</div>';
-  } }  }
-  } 
-  ?>
+          </div>
+     </div>
+ </div>
+<table width="100%" id="dataTable" class="table table-striped table-bordered table-condensed sticky-header dataTable no-footer" role="grid" aria-describedby="dataTable_info" style="width: 100%;">        <thead>
+  <thead>
+  <tr>
+  <th>ID</th>
+  <th>Type</th>
+  <th>Country</th>
+  <th>Bank Name</th>
+  <th>Balance</th>
+  <th>Information</th>
+  <th>Open</th>
+  <th>Date added</th>
+  <th>Price</th>
+  <th>Action</th>
+  </tr>
+        </thead>
+		 <tbody id='tbody2'>
 
 
 
