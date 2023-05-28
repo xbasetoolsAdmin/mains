@@ -1,4 +1,3 @@
-
 	$(document).keydown(function(event){
 	if(event.which=="17")
 	cntrlIsPressed = true;
