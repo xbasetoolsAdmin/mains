@@ -95,7 +95,7 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 			</select>
 		</div>		
     
-        
+    </</</div>		
 
         
         
