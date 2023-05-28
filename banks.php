@@ -89,13 +89,13 @@ echo "row";
 <script>
 $(document).ready(function () {
     // Setup - add a text input to each footer cell
-    $('#example tfoot th').each(function () {
+    $('#accounts_data tfoot th').each(function () {
         var title = $(this).text();
         $(this).html('<input type="text" placeholder="Search ' + title + '" />');
     });
  
     // DataTable
-    var table = $('#example').DataTable({
+    var table = $('#accounts_data').DataTable({
         initComplete: function () {
             // Apply the search
             this.api()
@@ -103,7 +103,7 @@ $(document).ready(function () {
                 .every(function () {
                     var that = this;
  
-                    $('input', this.footer()).on('keyup change clear', function () {
+                    $('input', this.header()).on('keyup change clear', function () {
                         if (that.search() !== this.value) {
                             that.search(this.value).draw();
                         }
@@ -119,9 +119,9 @@ $(document).ready(function () {
                         <input type='text' id='search' placeholder='Enter name'>
                     </td>
                     <td>
-                        <select id='searchByGender'>
+                        <select id='search'>
                             <option value=''>-- Select Gender--</option>
-                            <option value='male'>Male</option>
+                            <option value='Age'>Male</option>
                             <option value='female'>Female</option>
                         </select>
                     </td>
