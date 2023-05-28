@@ -99,9 +99,8 @@
 
  <?php require "footer.php"; ?>
 <script>
- $(document).ready(function() {
 $('#dataTable').dataTable( {
-    responsive": true
+    "responsive": true
   "lengthChange": true
 });
 function delet(id)
