@@ -89,7 +89,7 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 			<select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
 				<option value="all">All</option>
 				<option value="1">All1</option>
-                <option value="2">All2</option>
+        <option value="2">All2</option>
 				<option value="3">All3</option>
 				<option value="4">All4</option>
                 <option value="5">All6</option>
@@ -97,6 +97,9 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 		</div>		
     
     </div>		
+                   <div id="page-content-wrapper">
+            <div class="container-fluid">
+      <div id="divPage">
 <table>
     <thead>
         <tr>
@@ -129,8 +132,56 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         
         
         
+      
+ <script>
+    var v_aa =0;
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        if (v_aa == 1) {
+          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-right"></span>').show();
+          v_aa =0;
+        }
+        else {
+          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-left"></span>').show();
+          v_aa =1;     
+        }
         
-        
+    });
+
+    </script>
+<div class="row">
+<script>
+	$(function() {
+		$(".preload").fadeOut(900, function() {
+			$(".content").fadeIn(0);
+		});
+	});
+	function TabDiv(n,u){
+    $("#all").html('').show();
+    $("#add").html('').show();
+    $("#massadd").html('').show();
+    $("#unsold").html('').show();
+
+    $("#"+n).html('<div id="mydiv"><img  src="../img/loadTab.gif" class="ajax-loader"></div>').show();
+    $.ajax({
+    type:       'GET',
+    url:        u,
+    success:    function(data)
+    {
+    $("#"+n).html(data).show();
+    newTableObject = document.getElementById('table');sorttable.makeSortable(newTableObject);
+    }
+});  
+}
+</script>  
+     <div class="preload">
+<div id="mydiv"><img src="img/wait.gif" class="ajax-loader"></div>  
+
+  </div>
+     <div class="content">
+
+
         
         <script type="text/javascript">
 $("#banksAdd").submit(function() {
