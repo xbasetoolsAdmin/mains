@@ -25,22 +25,25 @@
             <label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
             <select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
                 <option value="">All Countries</option>
-                <option value="Belarus">Belarus</option>
-                <option value="Russia">Russia</option>
-                <option value="Ukraine">Ukraine</option>
+
+
+
+               
             </select>
         </div>
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-            <label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
+      
+         
+      <label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
             <select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
                 <option value="">All</option>
-                <option value="Seller467">Seller467</option>
+
             </select>
         </div>
     </div>
     <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
         <div class="col-sm-12 table-responsive">
-            <table id="lead_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
+            <table id="dataTablw" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
                 <thead>
                     <tr>
                         <th data-priority="1"></th>
