@@ -1,49 +1,5 @@
 <?php require"header.php";?>
-
-        <!-- Datatable CSS -->
-        <link href='DataTables/datatables.min.css' rel='stylesheet' type='text/css'>
-
-        <!-- jQuery Library -->
-
-        
-        <!-- Datatable JS -->
-
-        
-
-
-            <!-- Custom Filter -->
-           
-                        <input type='text' id='search' placeholder='Enter name'>
-                    </td>
-                    <td>
-                        <select id='searchByGender'>
-                            <option value=''>-- Select Gender--</option>
-                            <option value='male'>Male</option>
-                            <option value='female'>Female</option>
-                        </select>
-                    </td>
-                </tr>
-            </table>
-            
-            <!-- Table -->
-            <table id='empTable' class='display dataTable'>
-                <thead>
-                <tr>
-                    <th>Employee name</th>
-                    <th>Email</th>
-                    <th>Gender</th>
-                    <th>Salary</th>
-                    <th>City</th>
-                </tr>
-                </thead>
-                
-            </table>
-        </div>
-        
-        <!-- Script -->
-
-            
-            <!doctype html>
+<!doctype html>
 
 <html lang="en">
 <head>
@@ -631,6 +587,9 @@ $(document).ready(function () {
 </script>
 <script src="scripts.js">
 </script>
+
+
+
 <script>
 $(document).ready(function() {
     $('#example').DataTable();
@@ -646,6 +605,9 @@ $(document).ready(function() {
 });
 </script>
 
+
+
+<script>
 
 
 // Get the table element and initialize it
@@ -668,6 +630,8 @@ let tableId = table.attr('id'),
         'aria-controls': tableId,
       });
         </script>
+
+
         <script>
         let query = undefined;
 ourInput.on('keyup', () => {
@@ -710,8 +674,3 @@ $.fn.dataTable.ext.search.push(filterDataTable);
         
 </body>
 </html>
-        
-        
-    </body>
-
-</html>qq
