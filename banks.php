@@ -49,13 +49,13 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 </center>
     </div>
 
-		<input type="hidden" id="type" name="type" value="7">
-		<div class="row m-3 pt-1" style="color: var(--font-color);">
+
+
 			
 
       <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
         	<label for="infos">Description 1</label>
-              <input type="hidden" Iid=“start” name="start" value="7">
+	<input type="search" class="form-control" id="infos" style="color: var(--font-color); background-color: var(--color-card);">
 			</div>
       
       
