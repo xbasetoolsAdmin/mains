@@ -96,39 +96,20 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 			</select>
 		</div>		
     
-    </div>		
-<table>
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>COUNTRY</th>
-            <th>DESCRIPTION</th>
-            <th>EMAIL N</th>
-            <th>SELLER</th>
-            <th>PROOF</th>
-            <th>ADDED ON</th>
-            <th>PRICE</th>
-            <th>ACTION</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>0</th>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
+   <tr>
+            <td>&nbsp;".htmlspecialchars($row['country'])." </td>
+            <td> ".htmlspecialchars($row['bankname'])." </td>
+            <td> ".htmlspecialchars($row['balance'])." </td>
+            <td> ".htmlspecialchars($row['infos'])." </td>
+            <td> ".htmlspecialchars($SellerNick)."</td>
+            <td> ".htmlspecialchars($row['price'])."</td>
+            <td> ".$row['date']."</td>
+            <td>
+	Buy
+    </td>
         </tr>
     </tbody>
 </table>
- 
-        
-        
-        
         
         
         
