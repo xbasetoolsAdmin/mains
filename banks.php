@@ -48,7 +48,11 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         </ul>
 </center>
     </div>
+        <input type="text" name="site" id="site" class="form-control input-sm" placeholder="Bank of America" required="">
     <input type=hidden id="type" name="type" value="7" />
+    
+
+    
     <div class="row m-3 pt-1" style="color: var(--font-color);">
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
             <label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
@@ -81,14 +85,7 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         </div>
     </div>
     
-    
-      </div>
-      </div>
-	<div class="form-group col-lg-3 ">
-    
-		<label for="site">Bankname</label>
-    
-  <input type="text" name="site" id="site" class="form-control input-sm" placeholder="Bank of America" required="">
+
 	</div>
   </div>
 		<div class="form-group col-lg-3 ">
