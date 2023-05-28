@@ -57,7 +57,7 @@
                 'serverMethod': 'post',
                 //'searching': false, // Remove default Search Control
                 'ajax': {
-                    'url':'ajaxfile.php',
+                    'url':'divPage8.php',
                     'data': function(data){
                         // Read values
                         var gender = $('#searchByGender').val();
