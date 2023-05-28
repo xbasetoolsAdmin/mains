@@ -48,10 +48,7 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         </ul>
 </center>
     </div>
-<html>
-	<head></head>
-	<body>
-		<input type="text" name="site" id="site" class="form-control input-sm" placeholder="Bank of America" required="">
+    <input type="hidden" Iid=“start” name="start" value="7">
 		<input type="hidden" id="type" name="type" value="7">
 		<div class="row m-3 pt-1" style="color: var(--font-color);">
 			<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
@@ -62,14 +59,16 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 				<label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
 				<input type="search" class="form-control" id="infos" style="color: var(--font-color); background-color: var(--color-card);">
 			</div>
+            
 			<label for="country">Country</label>
-			<select name="country" class="form-control input-sm" required="">
+			<select name="country" Id=“country”class="form-control”>
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
 				<option value="4">4</option>
 			</select>
 		</div>
+        
 		<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
 			<label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
 			<select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
@@ -79,28 +78,20 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 				<option value="4">4</option>
 			</select>
 		</div>
+        
 		<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
 			<label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
 			<select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
-				<option value="">All</option>
-				<option value="Seller467">Seller467</option>
+				<option value="all">All</option>
+				<option value="1">All1</option>
+                <option value="2">All2</option>
+				<option value="3">All3</option>
+				<option value="4">All4</option>
+                <option value="5">All6</option>
 			</select>
-		</div>
-		<label for="text">ALL ACCOUNT INFO HERE</label>
-		<textarea name="inputs" class="form-control " rows="3" placeholder="User : XXXXXXX | Pass : XXXXXXX" required=""></textarea>
-		<div class="col-md-3">
-			<label for="price">Price</label>
-			<input placeholder="5" type="text" name="price" class="form-control input-sm" required="">
-			<br>
-		</div>
-		<div class="form-group col-lg-10">
-			<button type="submit" name="submit" class="btn btn-primary btn-md">Add
-				<span class="glyphicon glyphicon-indent-left"></span>
-			</button>
-			<input type="hidden" name="start" value="work">
-		</div>
-	</body>
-</html>
+		</div>		
+    
+        
 
         
         
