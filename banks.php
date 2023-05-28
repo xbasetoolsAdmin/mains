@@ -29,17 +29,19 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 ?> 
         
         
-<div class="well well-sm">
 
-<center><h4>Static</h4></center>
+
+ <center> <h4> Banks Logs(Fullz Info)</h4></center>
+
 <ul class="user-info">
+
 <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
-        <ul>
+        <center><ul>
             <li>We Have Fresh E-mails Lists for Diffrents Countries ( You Can Use it for Spam ). </li>
             <li>Our E-mails Lists Guarante for you Good results because most of them are from Shops and Big Sites .</li>
             <li>Combo use for cracking (Brute forcing attack) not use for login to email.</li>
             <li>There is <b> 3 </b> Available.</li>
-        </ul>
+        </ul></center>
     </div>
     <input type=hidden id="type" name="type" value="7" />
     <div class="row m-3 pt-1" style="color: var(--font-color);">
