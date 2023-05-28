@@ -165,18 +165,7 @@
 <!--end::Datatable-->
 <script>
 
-$(document).ready(function(){
-    $('#dataList').DataTable({
-        "processing": true,
-        "serverSide": true,
-        "ajax": "data/objects.php",
 
-        "columnDefs": [
-            { "orderable": false, "targets": 7 }
-        ]
-    });
-});    
-</script>
 <script>
 $(document).ready(function () {
     // Setup - add a text input to each footer cell
