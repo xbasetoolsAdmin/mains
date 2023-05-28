@@ -40,9 +40,10 @@
                 <th>Action</th>
                 </tr>
                 </thead>
-		    
-         <tbody id='tbody2'>
-
+                <tbody id='tbody2'>
+                    </table>
+                </div>
+         </div>
 
 
 
