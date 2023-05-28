@@ -51,16 +51,20 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     <input type="hidden" Iid=“start” name="start" value="7">
 		<input type="hidden" id="type" name="type" value="7">
 		<div class="row m-3 pt-1" style="color: var(--font-color);">
-			<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-				<label for="infos">Search</label>
-				<input type="text" name="infos" id="infos" class="form-control input-sm" placeholder="SSN/DOB/BILLING/IP/User Agent..." required="">
+			
+
+      <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+				<label for="infos">Description 1</label>
 			</div>
+      
+      
 			<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-				<label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
+				<label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description: 2</label>
 				<input type="search" class="form-control" id="infos" style="color: var(--font-color); background-color: var(--color-card);">
 			</div>
             
-			<label for="country">Country</label>
+      <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+			<label for="country">Country 1</label>
 			<select name="country" Id=“country”class="form-control”>
 				<option value="1">1</option>
 				<option value="2">2</option>
@@ -70,7 +74,7 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 		</div>
         
 		<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-			<label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
+			<label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country 2 :</label>
 			<select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
 				<option value="1">1</option>
 				<option value="2">2</option>
