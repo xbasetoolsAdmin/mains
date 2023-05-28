@@ -99,18 +99,132 @@
 
  <?php require "footer.php"; ?>
 <script>
-$('#dataTable').dataTable( {
-  "lengthChange": true
-});
-function delet(id)
-{   var type = $("#shop"+id).attr('type')
-	$("#shop"+id).html('processing ..').show();
-	$.ajax({
-	METHOD: 		'GET',
-     url:"./ajax/dbanks.php?id="+id,
-	success:	function(data)
-	{
-		$("#shop"+id).html(data).show();
-	}});
-}
-		</script>
+
+ 
+    <script>
+        $(document).ready(function() {
+            var webID;
+            load_data();
+ 
+            function load_data(myarray) {
+                $('#dataTable').DataTable({
+                    "processing": true,
+                    "serverSide": true,
+                    "responsive": true,
+                    "scrollX": true,
+                    "order": [],
+                    "lengthMenu": [
+                        [10, 25, 50, 100, 500, 10000],
+                        [10, 25, 50, 100, 500, "All"]
+                    ],
+                    "columnDefs": [{
+                        "targets": [0],
+                        "visible": false
+                    }],
+ 
+                    "ajax": {
+                        url: "divPage8.html",
+                        type: "POST",
+                        data: {
+                            data_filter: myarray,
+                            type: document.getElementById('type').value,
+                            draw: 'draw',
+                            row: 'start',
+                            rowperpage: 'length',
+                            columnIndex: 'order',
+                            columnName: 'columns',
+                            columnSortOrder: 'order',
+                            searchValue: 'search'
+                        }
+                    },
+                    "columns": [{
+                            "data": 0
+                        },
+                        {
+                            "data": 1
+                        },
+                        {
+                            "data": 2
+                        },
+                        {
+                            "data": 3
+                        },
+                        {
+                            "data": 4
+                        },
+                        {
+                            "data": 5
+                        },
+                        {
+                            "data": 6
+                        },
+                        {
+                            "data": 7
+                        },
+                        {
+                            "data": 8
+                        },
+                        {
+                            "data": 9
+                        }
+                    ],
+ 
+                    "pageLength": 500
+                });
+            }
+ 
+            $(document).on('change', '.form-control', function() {
+                $('#lead_data').DataTable().destroy();
+                var country = $('#country').val();
+                var description = $('#infos').val();
+                var seller1 = $('#seller').val();
+                $idseller = seller1.split("Seller");
+                var seller = $idseller[1];
+                var myarray = {};
+ 
+                myarray[0] = country;
+                myarray[1] = description;
+                myarray[2] = seller;
+ 
+                if (country != '' || description != '' || seller != '') {
+ 
+                    load_data(myarray);
+                } else {
+                    load_data();
+                }
+            });
+ 
+ 
+        });
+ 
+        function buythistool(id) {
+            $('#modalConfirmBuy').modal('show');
+            webID = id;
+        }
+ 
+        function confirmbye(id) {
+            id = webID;
+            $.ajax({
+                method: "GET",
+                url: "buytool.php?id=" + id + "&t=leads",
+                dataType: "text",
+                success: function(data) {
+                    if (data.match("buy")) {
+                        let lastid = data.split("buy,")[1];
+                        $("#lead" + id).html(`<button onclick=openitem(${lastid}) class="btn btn-success btn-sm">Order ${'#'+lastid}</button>`).show();
+ 
+                    } else {
+                        if (data.match("deleted")) {
+ 
+                            $("#lead" + id).html('Already sold / Deleted').show();
+ 
+                        } else {
+                            $('#modalCoupon').modal('show');
+                        }
+ 
+ 
+                    }
+                },
+            });
+        }
+ </script>
