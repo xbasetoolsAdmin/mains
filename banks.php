@@ -36,12 +36,17 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <ul class="user-info">
 
 <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
-        <center><ul>
+<center>
+        <ul>
             <li>We Have Fresh E-mails Lists for Diffrents Countries ( You Can Use it for Spam ). </li>
             <li>Our E-mails Lists Guarante for you Good results because most of them are from Shops and Big Sites .</li>
             <li>Combo use for cracking (Brute forcing attack) not use for login to email.</li>
-            <li>There is <b> 3 </b> Available.</li>
-        </ul></center>
+            <li>Number of Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12); echo $r11;?></b></li>
+            <li>Unsold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='0'");$r11=mysqli_num_rows($s12); echo $r11;?></b></li>
+            <li>Sold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='1'");$r11=mysqli_num_rows($s12); echo $r11;?></b></li>
+            <li>Deleted Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='deleted'");$r11=mysqli_num_rows($s12); echo $r11;?></b></li>
+        </ul>
+</center>
     </div>
     <input type=hidden id="type" name="type" value="7" />
     <div class="row m-3 pt-1" style="color: var(--font-color);">
@@ -75,15 +80,8 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             </select>
         </div>
     </div>
-<li>Number of Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
- echo $r11;?></b></li>
-<li>Unsold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='0'");$r11=mysqli_num_rows($s12);
- echo $r11;?></b></li>
-<li>Sold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='1'");$r11=mysqli_num_rows($s12);
- echo $r11;?></b></li>
-<li>Deleted Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='deleted'");$r11=mysqli_num_rows($s12);
- echo $r11;?></b></li>
-</ul>
+    
+    
       </div>
       </div>
 	<div class="form-group col-lg-3 ">
