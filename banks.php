@@ -98,8 +98,8 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                    <div id="page-content-wrapper">
             <div class="container-fluid">
       <div id="divPage">
-<table id="lead_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
-<table id="dataList" class="display" style="width:100%">
+<table id="dataList" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
+
     <thead>
         <tr>
             <th>First name</th>
@@ -125,6 +125,20 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         </tr>
     </tfoot>
 </table>
+<script>
+$(document).ready(function(){
+    $('#dataList').DataTable({
+        "processing": true,
+        "serverSide": true,
+        "ajax": "divPage8.php",
+
+        "columnDefs": [
+            { "orderable": false, "targets": 7 }
+        ]
+    });
+});    
+</script>
+
  <script>
     var v_aa =0;
     $("#menu-toggle").click(function(e) {
