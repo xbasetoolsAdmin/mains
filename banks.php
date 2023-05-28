@@ -13,8 +13,6 @@ if($r['resseller'] != "1"){
 
 ?>
 
-
-
 	<h2>Banks</h2>
 <?php
 
@@ -101,23 +99,32 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             <div class="container-fluid">
       <div id="divPage">
 <table id="lead_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
-<thead>
-<tr>
-            <th>ID</th>
-            <th>COUNTRY</th>
-            <th>DESCRIPTION</th>
-            <th>EMAIL N</th>
-            <th>SELLER</th>
-            <th>PROOF</th>
-            <th>ADDED ON</th>
-            <th>PRICE</th>
-            <th>ACTION</th>
+<table id="dataList" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Country</th>
+            <th>Created</th>
+            <th>Status</th>
+            <th>Action</th>
         </tr>
     </thead>
-    <tbody>
-
-
-      
+    <tfoot>
+        <tr>
+            <th>First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Country</th>
+            <th>Created</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+    </tfoot>
+</table>
  <script>
     var v_aa =0;
     $("#menu-toggle").click(function(e) {
