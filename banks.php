@@ -198,17 +198,31 @@
                 <input class="form-check-input" type="checkbox" data-kt-check="true" data-kt-check-target="#kt_datatable_example_1 .form-check-input" value="1"/>
             </div>
         </th>
-        <th>Customer Name</th>
-        <th>Email</th>
-        <th>Company</th>
-        <th>Payment Method</th>
-        <th>Created Date</th>
-        <th class="text-end min-w-100px">Actions</th>
-    </tr>
-    </thead>
-    <tbody class="text-gray-600 fw-semibold">
-    </tbody>
-</table>
+        <th>Customer Name</th>                                                                                                                             <table id="example" class="display" style="width:100%">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+        </tfoot>
+    </table>
 <!--end::Datatable-->
 <script>
 
@@ -259,7 +273,7 @@ $(document).ready(function(){
     $('#dataList').DataTable({
         "processing": true,
         "serverSide": true,
-        "ajax": "divPage8.php",
+        "ajax": "data/pbjects.php",
 
         "columnDefs": [
             { "orderable": false, "targets": 7 }
