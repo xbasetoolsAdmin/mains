@@ -33,6 +33,46 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 
 <center><h4>Static</h4></center>
 <ul class="user-info">
+<div class="alert alert-info text-left" role="alert" style="margin: 15px;">
+        <ul>
+            <li>We Have Fresh E-mails Lists for Diffrents Countries ( You Can Use it for Spam ). </li>
+            <li>Our E-mails Lists Guarante for you Good results because most of them are from Shops and Big Sites .</li>
+            <li>Combo use for cracking (Brute forcing attack) not use for login to email.</li>
+            <li>There is <b> 3 </b> Available.</li>
+        </ul>
+    </div>
+    <input type=hidden id="type" name="type" value="7" />
+    <div class="row m-3 pt-1" style="color: var(--font-color);">
+        <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+            <label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
+            <input type="search" class="form-control" id="infos" style="color: var(--font-color); background-color: var(--color-card);">
+        </div>
+        <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+            <label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
+            
+            
+<select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
+              
+               
+  <option value="">All Countries</option>
+
+  <option value="Belarus">Belarus</option>
+  
+   <option value="Russia">Russia</option>
+  
+  <option value="Ukraine">Ukraine</option>
+            </select>
+        </div>
+        
+          
+        <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+            <label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
+            <select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
+                <option value="">All</option>
+                <option value="Seller467">Seller467</option>
+            </select>
+        </div>
+    </div>
 <li>Number of Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
  echo $r11;?></b></li>
 <li>Unsold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='0'");$r11=mysqli_num_rows($s12);
@@ -45,9 +85,12 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
       </div>
       </div>
 	<div class="form-group col-lg-3 ">
-		<label for="site">Bank name</label>
-		<input type="text" name="site" id="site" class="form-control input-sm" placeholder="Bank of America" required="">
+    
+		<label for="site">Bankname</label>
+    
+  <input type="text" name="site" id="site" class="form-control input-sm" placeholder="Bank of America" required="">
 	</div>
+  </div>
 		<div class="form-group col-lg-3 ">
 		<label for="balance">Balance</label>
 		<input type="text" name="balance" id="balance" class="form-control input-sm" placeholder="5000$" required="">
