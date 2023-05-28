@@ -115,22 +115,47 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         </tr>
     </thead>
     <tbody>
-        <tr>
-            <th>0</th>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
-            <td>4</td>
-            <td>5</td>
-            <td>6</td>
-            <td>7</td>
-            <td>8</td>
-        </tr>
-    </tbody>
-</table>
- 
-        
-        
+
+ <?php
+include("cr.php");
+$q = mysqli_query($dbcon, "SELECT * FROM banks WHERE sold='0' ORDER BY RAND()")or die(mysqli_error());
+ while($row = mysqli_fetch_assoc($q)){
+	 
+	 	 $countryfullname = $row['country'];
+	  $code = array_search("$countryfullname", $countrycodes);
+	 $countrycode = strtolower($code);
+	    $qer = mysqli_query($dbcon, "SELECT * FROM resseller WHERE username='".$row['resseller']."'")or die(mysql_error());
+		   while($rpw = mysqli_fetch_assoc($qer))
+			 $SellerNick = "seller".$rpw["id"]."";
+     echo "
+array
+("
+val0"=>"Country","
+val1"=>"Bank Name","
+val2"=>"Balance","
+val3"=>"Available Information","
+val4"=>"Seller","
+val5"=>"Price","
+val6"=>"Added on ","
+val7"=>"Buy"
+)
+    array
+("
+val0"=>"&nbsp;".htmlspecialchars($row['country'])." ","
+val1"=>" ".htmlspecialchars($row['bankname'])." ","
+val2"=>" ".htmlspecialchars($row['balance'])." ","
+val3"=>" ".htmlspecialchars($row['infos'])." ","
+val4"=>" ".htmlspecialchars($SellerNick)."","
+val5"=>" ".htmlspecialchars($row['price'])."","
+val6"=>" ".$row['date']."","
+val7"=>"
+	Buy
+    ")
+);
+     ';
+ }
+
+ ?>
         
       
  <script>
