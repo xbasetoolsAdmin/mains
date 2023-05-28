@@ -26,24 +26,30 @@
      </div>
  </div>
 <table width="100%" id="dataTable" class="display table-responsive table-hover dataTable no-footer" role="" aria-describedby="dataTable_info" style="width: 100%;">        
-              <thead>
-                <tr> 
-                   <th>ID</th>
-                  <th>Type</th>
-                  <th>Country</th>
-                   <th>Bank Name</th>
-                  <th>Balance</th>
-                  <th>Information</th>
-                  <th>Seller</th>
-                 <th>Date added</th>
-                 <th>Price</th>
-                <th>Action</th>
-                </tr>
-                </thead>
-                <tbody id='tbody2'>
-                    </table>
-                </div>
-         </div>
+                                      <thead>
+                                        <tr> 
+                                     <th>ID</th>
+                                   <th>Type</th>
+                                  <th>Country</th>
+                               <th>Bank Name</th>
+                                <th>Balance</th>
+                              <th>Information</th>
+                                <th>Seller</th>
+                                 <th>Date added</th>
+                                  <th>Price</th>
+                                  <th>Action</th>
+                                      </tr>
+                                   </thead>
+                            <tbody id='tbody2'>
+                                 </table>
+                               </div>
+                         </div> 
+                     </div>
+                </div>       
+            </div>
+          </div>
+     </div>
+ </div>
 
 
 
