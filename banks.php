@@ -51,11 +51,14 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         <input type="text" name="site" id="site" class="form-control input-sm" placeholder="Bank of America" required="">
     <input type=hidden id="type" name="type" value="7" />
     
-
-    
     <div class="row m-3 pt-1" style="color: var(--font-color);">
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-            <label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
+          		<label for="infos">Available Information</label>
+	       	<input type="text" name="infos" id="infos" class="form-control input-sm" placeholder="SSN/DOB/BILLING/IP/User Agent..." required="">
+	        </div>
+            <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+            
+                <label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
             <input type="search" class="form-control" id="infos" style="color: var(--font-color); background-color: var(--color-card);">
         </div>
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
@@ -86,18 +89,8 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     </div>
     
 
-	</div>
-  </div>
-		<div class="form-group col-lg-3 ">
-		<label for="balance">Balance</label>
-		<input type="text" name="balance" id="balance" class="form-control input-sm" placeholder="5000$" required="">
-	</div>
-</div>
-<div class="row">
-	<div class="form-group col-lg-3 ">
-		<label for="infos">Available Information</label>
-		<input type="text" name="infos" id="infos" class="form-control input-sm" placeholder="SSN/DOB/BILLING/IP/User Agent..." required="">
-	</div>
+	<
+
 	<div class="form-group col-lg-3 ">
 		<label for="country">Country</label>
 <select name="country" class="form-control input-sm" required="">
