@@ -10,78 +10,27 @@ if (!isset($_SESSION['sname']) and !isset($_SESSION['spass']))
 } //!isset($_SESSION['sname']) and !isset($_SESSION['spass'])
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 $uid   = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-?> 
-<?php
-function curl_get_contents($url)
-{
-				$curl = curl_init($url);
-				curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
-				curl_setopt($curl, CURLOPT_FOLLOWLOCATION, 1);
-				curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, 0);
-				curl_setopt($curl, CURLOPT_SSL_VERIFYHOST, 0);
-				$data = curl_exec($curl);
-				curl_close($curl);
-				return $data;
-}
-function ambilKata($param, $kata1, $kata2)
-{
-				if (strpos($param, $kata1) === FALSE)
-								return FALSE;
-				if (strpos($param, $kata2) === FALSE)
-								return FALSE;
-				$start  = strpos($param, $kata1) + strlen($kata1);
-				$end    = strpos($param, $kata2, $start);
-				$return = substr($param, $start, $end - $start);
-				return $return;
-}
-$website = mysqli_real_escape_string($dbcon, $_POST['site']);
-$balance = mysqli_real_escape_string($dbcon, $_POST['balance']);
-$country = mysqli_real_escape_string($dbcon, $_POST['country']);
-$infos   = mysqli_real_escape_string($dbcon, $_POST['infos']);
-$url     = mysqli_real_escape_string($dbcon, $_POST['inputs']);
-$price   = mysqli_real_escape_string($dbcon, $_POST['price']);
-$date    = date("d/m/Y h:i:s a");
-$link    = "$website | $url ";
-if (isset($_POST['start']) and $_POST['start'] == "work")
-{
-				if ($price == 0)
-				{
-								echo "<br><b>" . htmlspecialchars($website) . "</b> .... <b>Price not valid!</b> <br>";
-				} //$price == 0
-				else if (empty($website))
-				{
-								echo "Complete all fields <br>";
-				} //empty($website)
-				else if (preg_match('/[^0-9]/', $price))
-				{
-								echo "Price not valid!</b> <br>";
-				} //preg_match('/[^0-9]/', $price)
-				else
-				{
-								$check = "SELECT * FROM banks WHERE url = '$link'";
-								$rs    = mysqli_query($dbcon, $check);
-								$data  = mysqli_fetch_array($rs, MYSQLI_NUM);
-								if ($data[0] > 1)
-								{
-												echo "<br><b>" . htmlspecialchars($website) . "</b> .... <b>Already Added</b> <br>";
-								} //$data[0] > 1
-								else
-								{
-												$query = mysqli_query($dbcon, "
-  INSERT INTO banks
-  (acctype,country,infos,price,url,sold,sto,dateofsold,date,resseller,reported,bankname,balance)
-  VALUES
-  ('banks','$country','$infos','$price','$link','0','','','$date','$uid','','$website','$balance')
-  ") or die(mysqli_error($dbcon));
-												if ($query)
-												{
-																echo "<b>" . htmlspecialchars($website) . "</b> ........ <b><font color=green>Added!</b></font>";
-												} //$query
-												else
-												{
-																echo '<div class="alert alert-danger" role="alert">Not Added Contact Support</div>';
-												}
-								}
-				}
-} //isset($_POST['start']) and $_POST['start'] == "work"
-?>
+
+
+$sql = "CREATE TABLE `members` (\n"
+
+    . " `id` int(11) NOT NULL AUTO_INCREMENT,\n"
+
+    . " `first_name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,\n"
+
+    . " `last_name` varchar(25) COLLATE utf8_unicode_ci NOT NULL,\n"
+
+    . " `email` varchar(50) COLLATE utf8_unicode_ci NOT NULL,\n"
+
+    . " `gender` enum(\'Male\',\'Female\') COLLATE utf8_unicode_ci NOT NULL,\n"
+
+    . " `country` varchar(20) COLLATE utf8_unicode_ci NOT NULL,\n"
+
+    . " `created` datetime NOT NULL,\n"
+
+    . " `status` tinyint(1) NOT NULL DEFAULT 1 COMMENT \'1=Active | 0=Inactive\',\n"
+
+    . " PRIMARY KEY (`id`)\n"
+
+    . ") ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci";
+[ Without PHP code ] [ Submit query ]
