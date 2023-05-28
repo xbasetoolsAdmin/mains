@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<!DOCTYPE html>
+<html>
+	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="alfacoins-site-verification" content="5ef8c2279aa605ef8c2279aa965ef8c2279aacb_ALFAcoins">
@@ -8,13 +11,13 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script><link rel="shortcut icon" href="../../favicon.ico" />
 		<title>AddBalance</title>
-		<link rel="stylesheet" href="layout/css/bootstrap.min.css">
-		<script src="layout/js/jquery-3.4.1.min.js"></script>
-		<script src="layout/js/clipboard.min.js"></script>
+		<link rel="stylesheet" href="buyer/layout/css/bootstrap.min.css">
+		<script src="buyer/layout/js/jquery-3.4.1.min.js"></script>
+		<script src="buyer/layout/js/clipboard.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-		<script src="layout/js/bootstrap.min.js"></script>
-		<script src="layout/js/bootbox.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="layout/css/flags.css" />
+		<script src="buyer/layout/js/bootstrap.min.js"></script>
+		<script src="buyer/layout/js/bootbox.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="buyer/layout/css/flags.css" />
 		<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 		<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
 		<link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
@@ -33,12 +36,12 @@
 		gtag('set', {'$usrid': 'USER_ID'}); // Set the user ID using signed-in user_id.
 		gtag('config', 'UA-177092549-1');
 		</script>
-		<link rel="stylesheet" href="layout/css/all.min.css" />
-		<link rel="stylesheet" href="layout/css/main.css?v=12.9" />
-		<link rel="stylesheet" href="layout/css/util.css" />
+		<link rel="stylesheet" href="buyer/layout/css/all.min.css" />
+		<link rel="stylesheet" href="buyer/layout/css/main.css?v=12.9" />
+		<link rel="stylesheet" href="buyer/layout/css/util.css" />
 		<style>body{padding-top:80px}</style>
-		<link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
-		<script src="layout/js/main.js"></script>
+		<link rel="stylesheet" href="buyer/layout/fonts/iconic/css/material-design-iconic-font.min.css">
+		<script src="buyer/layout/js/main.js"></script>
 		<script type="text/javascript">
 		// Notice how this gets configured before we load Font Awesome
 		window.FontAwesomeConfig = { autoReplaceSvg: false }
@@ -288,7 +291,7 @@
 			padding-bottom: 0.5rem;
 			padding-left: 1rem;
 			">
-			<a class="navbar-brand" href="main" style="color: var(--font-color);"><img width="40px" src="layout/images/logo.png"> Odin</a>
+			<a class="navbar-brand" href="main" style="color: var(--font-color);"><img width="40px" src="buyer/layout/images/logo.png"> Odin</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<i class="navbar-toggler-icon"></i>
 			</button>
@@ -316,7 +319,7 @@
 					<li class="nav-item dropdown mr-auto">
 						<a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fab fa-google-play fa-sm text-success"></i>
 							Send
-						</a>
+						</a>X
 						<div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item" href="mailer" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Mailers <span class="badge badge-primary">405</span></span></a>
 							<a class="dropdown-item" href="smtp" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-envelope fa-fw"></i> SMTPs <span class="badge badge-primary">2629</span></span></a>
@@ -415,8 +418,21 @@
 				<span class="slider round">
 				</span>
 			</label>
-		</div>
-	</div>
+		</div
+		});
+	});
+	function setTooltip(btn, message) {
+	//console.log("hide-1");
+	$(btn).tooltip('hide')
+	.attr('data-original-title', message)
+	.tooltip('show');
+	//console.log("show");
+	}
+	function hideTooltip(btn) {
+	setTimeout(function() {$(btn).tooltip('hide'); /*console.log("hide-2");*/}, 1000);
+	}
+	</script>
+]
 	<div style="padding-left:20px; display:inline-block; margin-bottom:10px">
 		<span><a href="addBalance.php?do=balance" class="btn btn-primary" style="color:#fff; font-size: 12 px">Add Balance</a></span>
 		<span><a href="addBalance.php?do=details" class="btn btn-primary" style="color:#fff; font-size: 12 px">Balance Info</a></span>
@@ -436,7 +452,7 @@
 	});
 	$(window).on('load', function() {
 			$('.dropdown').hover(function(){ $('.dropdown-toggle', this).trigger('click'); });
-			pageDiv(13,'Add Balance - OdinShop','addBalance',1);
+			pageDiv(1,'Add Balance - OdinShop','rdp',1);
 		var clipboard = new Clipboard('.copyit');
 		clipboard.on('success', function(e) {
 		setTooltip(e.trigger, 'Copied!');
