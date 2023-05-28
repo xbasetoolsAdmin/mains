@@ -67,8 +67,7 @@
                         <th class="all">Action</th>
                     </tr>
                 </thead>
-               <thody>
-                  <?php
+               <thody> <?php
 $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 $qu = mysqli_query($dbcon, "SELECT * FROM banks WHERE acctype='banks' AND resseller='$uid' and sold='0' ORDER BY id DESC")or die(mysqli_error());
 
@@ -82,12 +81,46 @@ $qu = mysqli_query($dbcon, "SELECT * FROM banks WHERE acctype='banks' AND ressel
 	<td> ".htmlspecialchars($row['balance'])." </td>
     <td> ".htmlspecialchars($row['infos'])." </td>
 	<td>  "; ?>
-   
-                  </tbody>
-            </table>
-        </div>
-    </div>
+	<a data-toggle="modal" class="btn btn-primary btn-xs" data-target="#myModald<?php echo  $row['id']; ?>" >
+<font color=white>Open #<? echo htmlspecialchars($row['id']); ?> </a></center> 
+<?php
+  echo '
+ 
+<div class="modal fade" id="myModald' . $row['id'] . '" >
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">
+                                           <font color="black"> Banks #' . $row['id'] . ' </font>
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+					<font color="black">			'.htmlspecialchars($row['url']).' </font>
+					</div>								
+					<div class="modal-footer">
+<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+</div>';
+echo "
+</td>
+    <td> ".htmlspecialchars($row['date'])." </td>
+    <td> ".htmlspecialchars($row['price'])."</td>
+    <td> ";
+if ($row['sold'] == "0") {
+ echo '<div id="shop'.$row["id"].'" type="delete"><a onclick="javascript:delet('.$row["id"].');" class="btn btn-danger btn-xs">remove</a></div>';
+ }elseif ($row['sold'] == "deleted") {
+	echo "<font color=gray>Deleted</font>"; } else {
+echo "<font color=green>[Sold]</font>";	    
+	}
+    echo "</td>
+    </tr>";
+ }
 
+ 
+
+ ?>
+
+ </tbody>
+ </table>   
 
 
 
