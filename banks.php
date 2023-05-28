@@ -120,29 +120,117 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
         <div class="col-sm-12 table-responsive">
             <table id="dataTable" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
-                <thead>
-                    <tr>
-       <th data-priority="1"></th>
-      
-      <th class="all">ID</th>
-      
-<th data-priority="3">Type</th>
+              <?php
+include "./header.php";
 
- <th data-priority="6">Country</th>
+$uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+$q = mysqli_query($dbcon, "SELECT * FROM users WHERE username='$uid'")or die();
+$r = mysqli_fetch_assoc($q);
 
- <th data-priority="7">Bank Name</th>
+if($r['resseller'] != "1"){
+  header("location: ../");
+  exit ();
+}
 
- <th data-priority="8">Balance</th>
 
- <th data-priority="2">Information</th>
+?>
+<script>
+$('#dataTable').dataTable( {
+  "lengthChange": false
+});
+function delet(id)
+{   var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('processing ..').show();
+	$.ajax({
+	METHOD: 		'GET',
+     url:"./ajax/dbanks.php?id="+id,
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+	}});
+}
 
- <th data-priority="9"> Seller </th>
-                                             <th data-priority="10">Date added </th>
-               
-   <th data-priority="11">Price </th>  
-                        <th class="all">Action</th>
-                    </tr>
-                </thead>
+
+
+</script>
+
+	<h2>Banks</h2>
+<?php
+
+date_default_timezone_set('UTC');
+
+if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
+   header("location: ../");
+   exit();
+}
+$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+$uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+?> 
+        
+		
+<ul class="nav nav-tabs">
+		<li class="active"><a href="#static" data-toggle="tab" aria-expanded="true">Static</a></li>
+		<li class=""><a href="#all" data-toggle="tab" aria-expanded="false" onclick="TabDiv('all','banksTab1.php')">All</a></li>
+		<li class=""><a href="#add" data-toggle="tab" aria-expanded="false" onclick="TabDiv('add','banksTab2.php')">Add</a></li>
+	<!--	<li class=""><a href="#mass" data-toggle="tab" aria-expanded="false" onclick="TabDiv('mass','banksTab3.php')">Mass Add</a></li> -->
+	</ul>
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade active in" id="static"> 
+<div class="well well-sm">
+<h4>Rules</h4>
+<ul class="user-info">
+<li><b>Do not insert a bank account without SCREENSHOT of it (USE : prntscr.com)</b></li>
+<li><b>ONLY INSERT WORKING ACCOUNT</b></li>
+<li>If you have mistaken or need to edit a tool just remove it and add it again</li>
+<li><b>Deleted</b> mean that the tools is not working !</li>
+</ul>
+<h4>Static</h4>
+<ul class="user-info">
+<li>Number of Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
+ echo $r11;?></b></li>
+<li>Unsold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='0'");$r11=mysqli_num_rows($s12);
+ echo $r11;?></b></li>
+<li>Sold Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='1'");$r11=mysqli_num_rows($s12);
+ echo $r11;?></b></li>
+<li>Deleted Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid' and sold='deleted'");$r11=mysqli_num_rows($s12);
+ echo $r11;?></b></li>
+</ul>
+      </div>
+      </div>
+	  
+	<div class="tab-pane fade" id="all"></div>
+    <div class="tab-pane fade" id="add"></div>
+
+</div>
+</div></div>
+            </div>
+            </div>
+        </div>          </div>
+                               </div>
+                         </div> 
+                     </div>
+                </div>       
+            </div>
+          </div>
+     </div>
+ </div>
+<table width="100%" id="dataTable" class="display table-responsive table-hover dataTable no-footer" role="" aria-describedby="dataTable_info" style="width: 100%;">        
+                                      <thead>
+                                        <tr> 
+                                     <th>ID</th>
+                                   <th>Type</th>
+                                  <th>Country</th>
+                               <th>Bank Name</th>
+                                <th>Balance</th>
+                              <th>Information</th>
+                                <th>Seller</th>
+                                 <th>Date added</th>
+                                  <th>Price</th>
+                                  <th>Action</th>
+                                      </tr>
+                                   </thead>
+                  <tbody id='tbody2'>
+
                <thody> <?php
 $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 $qu = mysqli_query($dbcon, "SELECT * FROM banks WHERE acctype='banks' AND resseller='$uid' and sold='0' ORDER BY id DESC")or die(mysqli_error());
@@ -196,8 +284,16 @@ echo "<font color=green>[Sold]</font>";
  ?>
 
  </tbody>
- </table>   
 
+
+                                 </table>
+                               </div>
+                         </div> 
+                     </div>
+                </div>       
+            </div>
+          </div>
+     </div>
 
 
 
