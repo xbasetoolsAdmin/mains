@@ -67,7 +67,22 @@
                         <th class="all">Action</th>
                     </tr>
                 </thead>
-               <thody
+               <thody>
+                  <?php
+$uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+$qu = mysqli_query($dbcon, "SELECT * FROM banks WHERE acctype='banks' AND resseller='$uid' and sold='0' ORDER BY id DESC")or die(mysqli_error());
+
+ while($row = mysqli_fetch_assoc($qu)){
+	 
+    echo "<tr class='banks-tabel'>
+    <td> ".htmlspecialchars($row['id'])." </td>
+    <td> ".strtoupper(htmlspecialchars($row['acctype']))." </td>
+    <td> ".htmlspecialchars($row['country'])." </td>
+    <td> ".htmlspecialchars($row['bankname'])." </td>
+	<td> ".htmlspecialchars($row['balance'])." </td>
+    <td> ".htmlspecialchars($row['infos'])." </td>
+	<td>  "; ?>
+   
                   </tbody>
             </table>
         </div>
