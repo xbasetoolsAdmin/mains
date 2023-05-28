@@ -34,15 +34,37 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         <script src="js/jquery.dataTables.min.js"></script>
         <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+        <script type="text/javascript">
+             function ajaxinfo() {
+                $.ajax({
+                    type: 'GET',
+                    url: 'ajaxinfo.html',
+                    timeout: 10000,
 
+                    success: function(data) {
+                        if (data != '01') {
+                            var data = JSON.parse(data);
+                            for (var prop in data) {
+                                $("#" + prop).html(data[prop]).show();
+                            }
+                        } else {
+                            window.location = "logout.html";
+                        }
+                    }
+                });
 
+            }
+            setInterval(function() {
+                ajaxinfo()
+            }, 3000);
+
+            ajaxinfo();
+          </script>
         <link rel="stylesheet" href="buyer/layout/css/all.min.css" />
         <link rel="stylesheet" href="buyer/layout/css/main.css" />
         <link rel="stylesheet" href="buyer/layout/css/util.css" />
         <style>body{padding-top:80px}</style>
         <link rel="stylesheet" href="buyer/layout/fonts/iconic/css/material-design-iconic-font.min.css">
-            
-            
         <script type="text/javascript">
         // Notice how this gets configured before we load Font Awesome
         window.FontAwesomeConfig = { autoReplaceSvg: false }
