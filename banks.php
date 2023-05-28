@@ -1,30 +1,15 @@
-<?php
-include "./header.php";
+<html>
+<head>
+</body>
 
-$uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-$q = mysqli_query($dbcon, "SELECT * FROM users WHERE username='$uid'")or die();
-$r = mysqli_fetch_assoc($q);
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-if($r['resseller'] != "1"){
-  header("location: ../");
-  exit ();
-}
-
-
-?>
+<!-- DataTables CSS and JS library -->
+<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/>
+<script type="text/javascript" src="DataTables/datatables.min.js"></script>
 
 	<h2>Banks</h2>
-<?php
-
-date_default_timezone_set('UTC');
-
-if(!isset($_SESSION['sname']) and !isset($_SESSION['spass'])){
-   header("location: ../");
-   exit();
-}
-$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-$uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-?> 
         
         
 
