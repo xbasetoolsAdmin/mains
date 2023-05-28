@@ -98,15 +98,10 @@
 
 
  <?php require "footer.php"; ?>
-<script>
+
 
  
     <script>
-        $(document).ready(function() {
-            var webID;
-            load_data();
- 
-            function load_data(myarray) {
                 $('#dataTable').DataTable({
                     "processing": true,
                     "serverSide": true,
