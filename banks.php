@@ -163,10 +163,21 @@
         </tfoot>
     </table>
 <!--end::Datatable-->
-<script>
 
 
 <script>
+    $(document).ready(function(){
+    $('#dataList').DataTable({
+        "processing": false,
+        "serverSide": false,
+        "ajax": "data/objects.php",
+
+        "columnDefs": [
+            { "orderable": false, "targets": 3 }
+        ]
+    });
+});    
+
 $(document).ready(function () {
     // Setup - add a text input to each footer cell
     $('#dataList tfoot th').each(function () {
