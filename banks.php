@@ -60,7 +60,7 @@
 
  <th data-priority="2">Information</th>
 
- <th data-priority="9"><span title="button" class="btn btn-primary btn-sm">Seller</a></th>
+ <th data-priority="9"<tr><td><span title="button" class="btn btn-primary btn-sm">Seller</a></td></tr></th>
                                              <th data-priority="10">Date added </th>
                
    <th data-priority="11">Price </th>  
