@@ -139,7 +139,7 @@
     </div>		
       <table id="dataList" class="display" style="width:100%">
         <thead>
-            <tr>tr>
+            <tr>
                 <th>Name</th>
                 <th>Position</th>
                 <th>Office</th>
