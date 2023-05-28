@@ -53,7 +53,7 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     
     <div class="row m-3 pt-1" style="color: var(--font-color);">
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-          		<label for="infos">Available Information</label>
+          		<label for="infos">Search</label>
 	       	<input type="text" name="infos" id="infos" class="form-control input-sm" placeholder="SSN/DOB/BILLING/IP/User Agent..." required="">
 	        </div>
             <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
@@ -61,19 +61,25 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                 <label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
             <input type="search" class="form-control" id="infos" style="color: var(--font-color); background-color: var(--color-card);">
         </div>
+    
+      <label for="country">Country</label>
+      <select name="country" class="form-control input-sm" required="">
+	       <option value="1">1</option>
+           <option value="2">2</option>
+    	      <option value="3">3</option>
+               <option value="4">4</option>
+      </select>
+		</div>
+</div> 
+        
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-            <label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
-            
-            
-<select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
-              
+            <label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label> 
+                 <select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
+                  
                
   <option value="">All Countries</option>
-
   <option value="Belarus">Belarus</option>
-  
    <option value="Russia">Russia</option>
-  
   <option value="Ukraine">Ukraine</option>
             </select>
         </div>
@@ -89,16 +95,8 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     </div>
     
 
-	<
 
-	<div class="form-group col-lg-3 ">
-		<label for="country">Country</label>
-<select name="country" class="form-control input-sm" required="">
-	<option value="Afghanistan">Afghanistan</option>
-    <option value="Albania">Albania</option>
-</select>
-		</div>
-</div>
+
 
 <label for="text">ALL ACCOUNT INFO HERE</label>
 <textarea name="inputs" class="form-control " rows="3" placeholder="User : XXXXXXX | Pass : XXXXXXX" required></textarea>
