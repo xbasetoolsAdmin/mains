@@ -30,6 +30,42 @@
  <link rel="stylesheet" href="css/jquery.dt.css">
  <link rel="stylesheet" href="./style.css">
 </head>
+        <style>
+            .display td {
+                background: var(--color-card);
+                color: var(--font-color)
+            }
+ 
+            .dataTables_wrapper .dataTables_paginate .paginate_button {
+                color: var(--font-color)
+            }
+ 
+            #accounts_data_paginate .paginate_button {
+                color: var(--font-color)
+            }
+ 
+            .alert-info {
+                color: var(--color-info);
+                background-color: var(--color-backinfo);
+                border-color: var(--color-borderinfo)
+            }
+ 
+            #accounts_data_filter {
+                color: var(--font-color)
+            }
+ 
+            #accounts_data_length {
+                color: var(--font-color)
+            }
+ 
+            #accounts_data_paginate {
+                color: var(--font-color)
+            }
+ 
+            #accounts_data_info {
+                color: var(--font-color)
+            }
+        </style>
 
 <body>
 
@@ -93,7 +129,7 @@ $(document).ready(function () {
             </table>
             
 
-<table id="example" class="display" style="width:100%">
+<table id="account_data" class="display" style="width:100%">
         <thead>
             <tr>
                 <th>Name</th>
@@ -592,12 +628,12 @@ $(document).ready(function () {
 
 <script>
 $(document).ready(function() {
-    $('#example').DataTable();
+    $('#account_data').DataTable();
  
-    $('#example_filter').hide(); // Hide default search datatables where example is the ID of table
+    $('#account_data_filter').hide(); // Hide default search datatables where example is the ID of table
  
     $('#txtSearch').on('keyup', function() {
-        $('#example')
+        $('#account_data')
             .DataTable()
             .search($('#txtSearch').val(), false, true)
             .draw();
