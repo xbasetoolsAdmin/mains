@@ -100,7 +100,7 @@
  <?php require "footer.php"; ?>
 <script>
 $('#dataTable').dataTable( {
-  "lengthChange": false
+  "lengthChange": true
 });
 function delet(id)
 {   var type = $("#shop"+id).attr('type')
