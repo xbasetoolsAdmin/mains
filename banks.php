@@ -46,16 +46,25 @@
             <table id="dataTablw" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
                 <thead>
                     <tr>
-                        <th data-priority="1"></th>
-                        <th class="all">ID</th>
-                        <th data-priority="3">Country</th>
-                        <th data-priority="6">Description</th>
-                        <th data-priority="7">Email N</th>
-                        <th data-priority="8">Seller</th>
-                        <th data-priority="2">Proof</th>
-                        <th data-priority="9">Price</th>
-                        <th data-priority="10">Added on </th>
-                        <th class="all">Buy</th>
+       <th data-priority="1"></th>
+      
+      <th class="all">ID</th>
+      
+<th data-priority="3">Type</th>
+
+ <th data-priority="6">Country</th>
+
+ <th data-priority="7">Bank Name</th>
+
+ <th data-priority="8">Balance</th>
+
+ <th data-priority="2">Information</th>
+                       
+ <th data-priority="9">Seller</th>
+                                             <th data-priority="10">Date added </th>
+               
+   <th data-priority="11">Price </th>  
+                        <th class="all">Action</th>
                     </tr>
                 </thead>
             </table>
