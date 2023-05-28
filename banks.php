@@ -96,9 +96,48 @@ $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 			</select>
 		</div>		
     
-    </</</div>		
+    </div>		
 
-        
+    <div class="divTable">
+    <div class="thead">
+        <div class="row">
+            <div class="header">ID</div>
+            <div class="header">COUNTRY</div>
+            <div class="header">DESCRIPTION</div>
+            <div class="header">EMAIL N</div>
+            <div class="header">SELLER</div>
+            <div class="header">PROOF</div>
+            <div class="header">ADDED ON</div>
+            <div class="header">PRICE</div>
+            <div class="header">ACTION</div>
+        </div>
+    </div>
+    <div class="tbody">
+        <div class="row">
+            <div class="header">0</div>
+            <div class="cell">1</div>
+            <div class="cell">2</div>
+            <div class="cell">3</div>
+            <div class="cell">4</div>
+            <div class="cell">5</div>
+            <div class="cell">6</div>
+            <div class="cell">7</div>
+            <div class="cell">8</div>
+        </div>
+     <div class="tfoot">
+        <div class="row">
+            <div class="header">0</div>
+            <div class="cell">1</div>
+            <div class="cell">2</div>
+            <div class="cell">3</div>
+            <div class="cell">4</div>
+            <div class="cell">5</div>
+            <div class="cell">6</div>
+            <div class="cell">7</div>
+            <div class="cell">8</div>
+        </div>
+    </div>
+</div>    
         
         
         
