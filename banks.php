@@ -514,10 +514,6 @@ let tableId = table.attr('id'),
         'class': 'form-control form-control-sm',
         'aria-controls': tableId,
       });
-        </script>
-
-
-        <script>
         let query = undefined;
 ourInput.on('keyup', () => {
   // Store the value of our INPUT in a higher scope so the filter function below
