@@ -28,19 +28,10 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 ?> 
         
-		
-<ul class="nav nav-tabs">
-		<li class="active"><a href="#static" data-toggle="tab" aria-expanded="true">Static</a></li>
-	</ul>
+        
 <div class="well well-sm">
-<h4>Rules</h4>
-<ul class="user-info">
-<li><b>Do not insert a bank account without SCREENSHOT of it (USE : prntscr.com)</b></li>
-<li><b>ONLY INSERT WORKING ACCOUNT</b></li>
-<li>If you have mistaken or need to edit a tool just remove it and add it again</li>
-<li><b>Deleted</b> mean that the tools is not working !</li>
-</ul>
-<h4>Static</h4>
+
+<center><h4>Static</h4></center>
 <ul class="user-info">
 <li>Number of Bank Accounts : <b><?php $s12 = mysqli_query($dbcon, "SELECT * FROM banks where resseller='$uid'");$r11=mysqli_num_rows($s12);
  echo $r11;?></b></li>
