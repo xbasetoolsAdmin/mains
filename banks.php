@@ -141,6 +141,12 @@
         <thead>
             <tr>
                 <th>Name</th>
+                 <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
                 <th>Position</th>
                 <th>Office</th>
                 <th>Age</th>
@@ -153,12 +159,21 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Name</th>
+l
+
                 <th>Position</th>
                 <th>Office</th>
                 <th>Age</th>
                 <th>Start date</th>
                 <th>Salary</th>
+                    <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+   
+
+
             </tr>
         </tfoot>
     </table>
@@ -168,8 +183,8 @@
 <script>
     $(document).ready(function(){
     $('#dataList').DataTable({
-        "processing": false,
-        "serverSide": false,
+        "processing": true,
+        "serverSide": objects.html,
         "ajax": "data/objects.php",
 
         "columnDefs": [
