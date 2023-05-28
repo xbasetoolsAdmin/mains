@@ -8,15 +8,11 @@ if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
 header("location: ../");
 exit(); }
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
-   .display td{background:var(--color-card);color:var(--font-color)}.dataTables_wrapper .dataTables_paginate .paginate_button{color:var(--font-color)}#accounts_data_paginate .paginate_button{color:var(--font-color)}.alert-info{color:var(--color-info);background-color:var(--color-backinfo);border-color:var(--color-borderinfo)}#accounts_data_filter{color:var(--font-color)}#accounts_data_length{color:var(--font-color)}#accounts_data_paginate{color:var(--font-color)}#accounts_data_info{color:var(--font-color)}
+]
 
-<div style="padding-left:20px; display:inline-block; margin-bottom:10px">
-<span><a href="addBalance.php?do=balance" class="btn btn-primary" style="color:#fff; font-size: 12 px">Add Balance</a></span>
-<span><a href="addBalance.php?do=details" class="btn btn-primary" style="color:#fff; font-size: 12 px">Balance Info</a></span>
-</div>
+
 <div id="mainDiv"></div>
 <script type="text/javascript" src="function_cuntructors/8xfcglkjfsfdfghjjklk.js">
-
 </script>
 <script type="text/javascript">
     $(document).keydown(function(event){
