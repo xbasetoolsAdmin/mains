@@ -59,8 +59,8 @@
  <th data-priority="8">Balance</th>
 
  <th data-priority="2">Information</th>
-                       
- <th data-priority="9">Seller</th>
+
+ <th data-priority="9"><span title="button" class="btn btn-primary btn-sm">Seller</a></th>
                                              <th data-priority="10">Date added </th>
                
    <th data-priority="11">Price </th>  
