@@ -30,7 +30,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 	    <tbody>
 		    <?php
 include("cr.php");
-$q = mysqli_query($dbcon,"SELECT * FROM rdps WHERE sold='0' ORDER BY RAND()")or die(mysql_error());					
+$q = mysqli_query($dbcon,"SELECT * FROM accounts WHERE sold='0' ORDER BY RAND()")or die(mysql_error());					
 	while($row = mysqli_fetch_assoc($q)){
 	 	 $countryfullname = $row['country'];
 		 $code = array_search("$countryfullname", $countrycodes);
