@@ -14,9 +14,8 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
 
 
 <div style="padding-left:20px; display:inline-block; margin-bottom:10px">
-<table id="table" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" "="">
-</div>
-					<thead>
+<div class="divtable" id="mainDiv" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" "="">
+<thead>
 						<tr>
 							<th data-priority="1"></th>
 							<th class="all">ID</th>
@@ -41,7 +40,8 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']); ?>
 							<th class="all">Buy</th>
 						</tr>
 					</thead>
-
+     </table>
+</div></div>
 								       
 <script type="text/javascript">
 
