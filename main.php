@@ -521,18 +521,18 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
 
 <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 <div class="col-sm-12 table-responsive">
-<table id="cpanel_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
+<table id="accounts_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
     <thead>
       <tr>
-<th data-priority="1"> </th>
+<th data-priority="0"> </th>
 <th class="all">ID</th>
-<th data-priority="3">Country</th>
-<th data-priority="4">sitename</th>
-<th data-priority="5">infos</th>
-<th data-priority="6">Seller</th>
-<th data-priority="7">Added on</th>
-<th data-priority="8">Price</th>
-<th data-priority="9">Action</th>
+<th data-priority="2">Country</th>
+<th data-priority="3">sitename</th>
+<th data-priority="4">infos</th>
+<th data-priority="5">Seller</th>
+<th data-priority="6">Added on</th>
+<th data-priority="7">Price</th>
+<th data-priority="8">Action</th>
 					</tr>
 				</thead>
 				<tfoot>
