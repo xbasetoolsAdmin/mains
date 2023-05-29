@@ -1,4 +1,10 @@
-<?php require"header.php";?>
+
+
+
+
+
+
+
           <style>
  
 .display  td {
@@ -11,7 +17,7 @@
     color: var(--font-color);
 
 }
-#balance_data_paginate .paginate_button {
+#accounts_data_paginate .paginate_button {
 color: var(--font-color);
 
 }
@@ -23,16 +29,16 @@ color: var(--font-color);
 
 }
 
-#balance_data_filter{
+#accounts_data_filter{
   color: var(--font-color);
 }
-#balance_data_length{
+#accounts_data_length{
   color: var(--font-color);
 }
-#balance_data_paginate{
+#accounts_data_paginate{
   color: var(--font-color);
 }
-#balance_data_info{
+#accounts_data_info{
   color: var(--font-color);
 }
 
@@ -512,75 +518,34 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
 <option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="3">3</option><option value="30">30</option><option value="31">31</option><option value="32">32</option><option value="33">33</option><option value="34">34</option><option value="35">35</option><option value="36">36</option><option value="37">37</option><option value="38">38</option><option value="39">39</option><option value="4">4</option><option value="40">40</option><option value="41">41</option><option value="42">42</option><option value="43">43</option><option value="44">44</option><option value="5">5</option><option value="50">50</option><option value="51">51</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option> </select>
 </div>
 </div>
+
 <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 <div class="col-sm-12 table-responsive">
 <table id="cpanel_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
     <thead>
-        <tr>
-            <th>ID</th>
-            <th>Country</th>
-            <th>Type</th>
-            <th>TLD</th>
-            <th>Domain</th>
-            <th>Hosting</th>
-            <th>CMS</th>
-            <th>Ip Blacklist</th>
-            <th>Seo Info</th>
-            <th>Source</th>
-            <th>Technologies</th>
-            <th>Seller</th>
-            <th>Check</th>
-            <th>Price</th>
-            <th>Added on </th>
-            <th>Send Test</th>
-            <th>DA</th>
-            <th>PA</th>
-            <th>Buy</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th>ID</th>
-            <td>Country</td>
-            <td>Type</td>
-            <td>TLD</td>
-            <td>Domain</td>
-            <td>Hosting</td>
-            <td>CMS</td>
-            <td>Ip Blacklist</td>
-            <td>Source</td>
-            <td>Technologies</td>
-            <td>Seller</td>
-            <td>Check</td>
-            <td>Price</td>
-            <td>Added on </td>
-            <td>Send Test</td>
-            <td>PA</td>
-            <td>Buy</td>
-        </tr>
-    </tbody>
-<tfoot>
-<tr>
-            <th>ID</th>
-            <th>Country</th>
-            <th>Type</th>
-            <th>TLD</th>
-            <th>Domain</th>
-            <th>Hosting</th>
-            <th>CMS</th>
-            <th>Ip Blacklist</th>
-            <th>Seo Info</th>
-            <th>Source</th>
-            <th>Technologies</th>
-            <th>Seller</th>
-            <th>Check</th>
-            <th>Price</th>
-            <th>Added on </th>
-            <th>Send Test</th>
-            <th>DA</th>
-            <th>PA</th>
-            <th>Buy</th>
-        </tr>
+      <tr>
+                                             
+                    	<th> </th>
+                    	<th>ID</th>
+      						<th>country </th>
+			     			<th>sitename</th>
+				          	<th>infos</th>
+					          	<th>Seller</th>
+					            	<th>Added on</th>
+                        <th>price</th>
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>                                  
+                    	<th> </th>
+                    	<th>ID</th>
+					        	<th>country </th>
+					        	<th>sitename</th>
+						        <th>infos</th>
+						        <th>Seller</th>
+						       <th>Added on</th>
+                    <th>price</th>
+					</tr>
 </tfoot>
 </table>
 </div>
@@ -734,7 +699,7 @@ $(document).ready(function(){
  
  
                     "ajax":{
-                        url:"data/objects.txt",
+                        url:"data/objects.html",
                         type:"POST",
                         data: {data_filter:myarray,
                              draw : 'draw',
@@ -754,18 +719,7 @@ $(document).ready(function(){
                                 { "data": 4 ,"visible": true},
                                 { "data": 5 ,"visible": true},
                                 { "data": 6 ,"visible": true},
-                                { "data": 7 ,"visible": true},
-                                { "data": 8 ,"visible": true},
-                                { "data": 9 ,"visible": true},
-                                { "data": 10 ,"visible": true},
-                                { "data": 11 ,"visible": true},
-                                { "data": 12 ,"visible": true},
-                                { "data": 13 ,"visible": true},
-                                { "data": 14 ,"visible": true},
-                                { "data": 15 ,"visible": true},
-                                { "data": 16 ,"visible": true},
-                                { "data": 17 ,"visible": true},
-                                { "data": 18 ,"visible": true},
+                                { "data": 7 ,"visible": true},               
                                 { "data": 19 ,"visible": true}],
  
                     "pageLength": 100
