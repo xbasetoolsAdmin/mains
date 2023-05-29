@@ -89,14 +89,15 @@ $(document).ready(function() {
 	$(‘#example’).DataTable( {
 		“processing”: true,
 		“serverSide”: true,
-		“ajax”: “scripts/objects.php”,
+		“ajax”: “data/objects.html”,
 		“columns”: [
-			{ “data”: “first_name” },
-			{ “data”: “last_name” },
-			{ “data”: “position” },
-			{ “data”: “office” },
-			{ “data”: “start_date” },
-			{ “data”: “salary” }
+			{ “data: “id” },
+			{ “data”: “country” },
+			{ “data”: “sitename” },
+			{ “data”: “infos” },
+			{ “data”: “SellerNick” },
+			{ “data”: “price” },
+			{ “data”: “date” }}
 		]
 	} );
 } );
