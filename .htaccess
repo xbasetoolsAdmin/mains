@@ -2,9 +2,10 @@ ErrorDocument 404 /index.html
 RewriteEngine on
 Options -Indexes
 
-RewriteRule ^index.html$     index.php
-RewriteRule ^divPage0.html$  divPage0.php
-RewriteRule ^homepage$       index.php
+RewriteRule ^index.html$      index.php
+RewriteRule ^divPage0.html$   divPage0.php
+RewriteRule ^main$           index.php
+RewriteRule ^main$           main.php
 
 
 
