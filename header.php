@@ -15,7 +15,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <meta name="alfacoins-site-verification" content=" ">
 <meta name="revisit-after" content="2 days">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-          <title>AddBalance</title>
+          <title>XbaseTools</title>
 <link rel="stylesheet" href="buyer/layout/css/all.min.css" />
 <link rel="stylesheet" href="buyer/buyer/layout/css/main.css?v=12.9" />
 <link rel="stylesheet" href="buyer/layout/css/util.css" />
@@ -26,7 +26,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <script src="buyer/layout/js/bootstrap.min.js"></script>
 <script src="buyer/layout/js/bootbox.min.js"></script>
 <link rel="stylesheet" href="buyer/layout/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="buyer/layout/css/flags.css" />
+<link rel="stylesheet" type="text/css" href="files/css/flags.css" />
 <body class="them">
 <style>
     .navbar-nav .dropdown-menu
