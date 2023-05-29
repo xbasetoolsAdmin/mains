@@ -49,24 +49,23 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `rdps` WHERE `s
 </div>
 
 
-<table width="100%"  class="table table-striped table-bordered table-condensed sticky-header" id="table">
-<thead>
-    <tr>
-      <th scope="col" >Country</th>
-      <th scope="col" >State</th>
-      <th scope="col" >Windows</th>
-      <th scope="col" >Ram</th>
-      <th scope="col">Access</th>
-      <th scope="col">Detect Hosting</th>
-      <th scope="col">Seller</th>
-      <th scope="col">Price</th>
-      <th scope="col">Added on </th>
-
-      <th scope="col">Buy</th>
-    </tr>
-</thead>
-  <tbody>
- <?php
+   <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
+                <div class="col-sm-12 table-responsive">
+                    <table id="rdp_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
+                        <thead>
+				<tr>
+				                	<th data-priority="1"></th>
+							<th class="all">ID</th>
+							<th data-priority="3">Country</th>
+							<th data-priority="8">Type</th>
+							<th data-priority="15">TLD</th>
+							<th data-priority="14">Domain</th>
+							<th data-priority="11">Hosting</th>
+							<th data-priority="12">CMS</th>
+					<th class="all" style="width:9% !important;">Ip Blacklist</th>
+							<th class="all">Buy</th>
+						</tr>
+					</thead> <?php
 include("cr.php");
 $q = mysqli_query($dbcon,"SELECT * FROM rdps WHERE sold='0' ORDER BY RAND()")or die(mysql_error());					
 	while($row = mysqli_fetch_assoc($q)){
@@ -97,7 +96,20 @@ $q = mysqli_query($dbcon,"SELECT * FROM rdps WHERE sold='0' ORDER BY RAND()")or 
  }
 
  ?>
-      </tbody>
+      <tfoot>
+			    <tr>
+                                                	<th data-priority="1"></th>
+							<th class="all">ID</th>
+							<th data-priority="3">Country</th>
+							<th data-priority="8">Type</th>
+							<th data-priority="15">TLD</th>
+							<th data-priority="14">Domain</th>
+							<th data-priority="11">Hosting</th>
+							<th data-priority="12">CMS</th>
+					<th class="all" style="width:9% !important;">Ip Blacklist</th>
+							<th class="all">Buy</th>
+                            </tr>
+	       </tfoot>
 </table>
 <script type="text/javascript">
 $('#filterbutton').click(function () {$("#table tbody tr").each(function() {var ck1 = $.trim( $(this).find("#rdp_country").text().toLowerCase() );var ck2 = $.trim( $(this).find("#rdp_windows").text().toLowerCase() );var ck3 = $.trim( $(this).find("#rdp_access").text().toLowerCase() );var ck4 = $.trim( $(this).find("#rdp_hosting").text().toLowerCase() );var ck5 = $.trim( $(this).find("#rdp_seller").text().toLowerCase() ); var val1 = $.trim( $('select[name="rdp_country"]').val().toLowerCase() );var val2 = $.trim( $('select[name="rdp_windows"]').val().toLowerCase() );var val3 = $.trim( $('select[name="rdp_access"]').val().toLowerCase() );var val4 = $.trim( $('input[name="rdp_hosting"]').val().toLowerCase() );var val5 = $.trim( $('select[name="rdp_seller"]').val().toLowerCase() ); if((ck1 != val1 && val1 != '' ) || (ck2 != val2 && val2 != '' ) || (ck3 != val3 && val3 != '' ) || ck4.indexOf(val4)==-1 || (ck5 != val5 && val5 != '' )){ $(this).hide();  }else{ $(this).show(); } });$('#filterbutton').prop('disabled', true);});$('.filterselect').change(function () {$('#filterbutton').prop('disabled', false);});$('.filterinput').keyup(function () {$('#filterbutton').prop('disabled', false);});
