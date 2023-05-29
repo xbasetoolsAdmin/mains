@@ -97,7 +97,7 @@ $(document).ready(function() {
 			{ “data”: “infos” },
 			{ “data”: “SellerNick” },
 			{ “data”: “price” },
-			{ “data”: “date” }}
+			{ “data”: “date” }
 		]
 	} );
 } );
