@@ -1,7 +1,4 @@
 <?php require"header.php";?>
-
-
-<body class="them">
           <style>
  
 .display  td {
@@ -40,6 +37,11 @@ color: var(--font-color);
 }
 
     </style>
+    
+    
+    <body class="them">
+
+    
 <script>
 
         function setTheme(themeName) {
@@ -68,6 +70,11 @@ color: var(--font-color);
         })();
 
   </script>
+
+
+<body class="them">
+
+
 <nav class="navbar navbar-expand-xl navbar  navbar-light " style="
                                                           position:fixed;
                                                           background-color: var(--color-nav);
