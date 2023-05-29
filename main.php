@@ -2068,7 +2068,7 @@ $('.dropdown').hover(     function()
 {           $(  '.dropdown-toggle',
  this).trigger('click');          });
  pageDiv(1,'Add Balance - OdinShop',
-'RDPs',1); var clipboard = new
+'',1); var clipboard = new
  Clipboard(      '.copyit'        ); 
  clipboard.on('success', function(e) 
  { setTooltip(e.trigger, 'Copied!');
