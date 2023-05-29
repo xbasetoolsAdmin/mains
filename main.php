@@ -561,27 +561,26 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
     </tbody>
 <tfoot>
 <tr>
-<th data-priority="1"></th>
-<th class="all">ID</th>
-<th data-priority="3">Country</th>
-<th data-priority="8">Type</th>
-<th data-priority="15">TLD</th>
-<th data-priority="14">Domain</th>
-<th data-priority="11">Hosting</th>
-<th data-priority="12">CMS</th>
-<th class="all" style="width:9% !important;">Ip Blacklist</th>
-<th class="all">Seo Info</th>
-<th data-priority="9">Source</th>
-<th class="all">Technologies</th>
-<th data-priority="10">Seller</th>
-<th class="all">Check</th>
-<th class="all">Price</th>
-<th data-priority="13">Added on </th>
-<th class="all">Send Test</th>
-<th data-priority="4">DA</th>
-<th data-priority="5">PA</th>
-<th class="all">Buy</th>
-</tr>
+            <th>ID</th>
+            <th>Country</th>
+            <th>Type</th>
+            <th>TLD</th>
+            <th>Domain</th>
+            <th>Hosting</th>
+            <th>CMS</th>
+            <th>Ip Blacklist</th>
+            <th>Seo Info</th>
+            <th>Source</th>
+            <th>Technologies</th>
+            <th>Seller</th>
+            <th>Check</th>
+            <th>Price</th>
+            <th>Added on </th>
+            <th>Send Test</th>
+            <th>DA</th>
+            <th>PA</th>
+            <th>Buy</th>
+        </tr>
 </tfoot>
 </table>
 </div>
