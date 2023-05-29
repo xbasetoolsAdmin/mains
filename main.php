@@ -1947,7 +1947,7 @@ Bamks Logs
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> <div id="mainDiv"></div>
 		<div class="modal fade" id="showmagseyesorno" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-dialog-centered modal-sm modal-notify modal-info" role="document">
 				<div class="modal-content text-center">
@@ -2053,7 +2053,8 @@ Bamks Logs
 				</div>
 			</div>
 		</div>
-        <div id="mainDiv"></div>
+   
+			 
 <script type="text/javascript">
 $(document).keydown(function(event){
 if(event.which=="17") cntrlIsPressed 
