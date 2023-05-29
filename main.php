@@ -662,10 +662,10 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
 </div>
 </div>
  
-<script>
+<script type="text/javascript">
  
-        $(document).ready(function(){
-            var webID;
+$(document).ready(function(){
+        var shopID;
  
             load_data();
              function load_data(myarray) {
@@ -1030,11 +1030,6 @@ $("#showmagseyesorno").modal();
  
         }
  
-    </script>
-</body>
-</html>
- 
-<script type="text/javascript">
 $(document).keydown(function(event){
 if(event.which=="17") cntrlIsPressed 
 = true;                           });
