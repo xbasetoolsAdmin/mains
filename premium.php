@@ -55,9 +55,7 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `accounts` WHER
 	echo '<option value="'.$SellerNick.'">'.$SellerNick.'</option>';
 	}
 ?>
-</select>
-        </div>
-    </div>
+
 
 
 
@@ -81,21 +79,31 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `accounts` WHER
                     </table>
                 </div>
             </div>
- 
-            </div>
- 
+
  
                 
 <?php require"footer.php";?>
 <script type="text/javascript">
-$(document).ready((function () 
-{ $("#accounts_data").DataTable( {
-lengthMenu: [ [10, 25, 100, 500, -1],
-  [10, 25, 100, 500, "All"] ],
-         iDisplayLength: 1e3, 
-        aaSorting: [] 
-}) 
-})),
+	
+$(document).ready(function() {
+	$(‘#example’).DataTable( {
+		“processing”: true,
+		“serverSide”: true,
+		“ajax”: “scripts/objects.php”,
+		“columns”: [
+			{ “data”: “first_name” },
+			{ “data”: “last_name” },
+			{ “data”: “position” },
+			{ “data”: “office” },
+			{ “data”: “start_date” },
+			{ “data”: “salary” }
+		]
+	} );
+} );
+
+	</script>
+    
+    <script>
 $(document).keydown((function(event){"17"==event.which&&(cntrlIsPressed=!0)})),$(document).keyup((function(){cntrlIsPressed=!1}));var cntrlIsPressed=!1;function setTooltip(btn,message){$(btn).tooltip("hide").attr("data-original-title",message).tooltip("show")}function hideTooltip(btn){setTimeout((function(){$(btn).tooltip("hide")}),1e3)}$(window).on("popstate",(function(e){location.replace(document.location)})),$(window).on("load",(function(){$(".dropdown").hover((function(){$(".dropdown-toggle",this).trigger("click")})),pageDiv(7,"Accounts - xBaseTools","premium",1),new Clipboard(".copyit").on("success",(function(e){setTooltip(e.trigger,"Copied!"),hideTooltip(e.trigger),e.clearSelection()}))}));
  </script>
 </body>
