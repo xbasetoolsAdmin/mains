@@ -684,7 +684,7 @@ $(document).ready(function(){
  
             load_data();
              function load_data(myarray) {
-              $('#cpanel_data').DataTable({
+              $('#accounts_data').DataTable({
                      "processing": true,
                     "serverSide": true,
                     "responsive": true,
