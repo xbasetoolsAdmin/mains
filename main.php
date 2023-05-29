@@ -684,7 +684,7 @@ $(document).ready(function(){
  
  
                     "ajax":{
-                        url:"divPage2.html",
+                        url:"data/objects.txt",
                         type:"POST",
                         data: {data_filter:myarray,
                              draw : 'draw',
