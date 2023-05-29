@@ -532,6 +532,52 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
 <th class="all">Buy</th>
 </tr>
 </thead>
+<tbody>
+<tr>
+<td data-priority="1"></td>
+<td class="all">ID</td>
+<td data-priority="3">Country</td>
+<td data-priority="8">Type</td>
+<td data-priority="15">TLD</td>
+<td data-priority="14">Domain</td>
+<td data-priority="11">Hosting</td>
+<td data-priority="12">CMS</td>
+<td class="all" style="width:9% !important;">Ip Blacklist</td>
+<th class="all">Seo Info</td>
+<td data-priority="9">Source</td>
+<td class="all">Technologies</td>
+<td data-priority="10">Seller</td>
+<td class="all">Check</td>
+<td class="all">Price</td>
+<td data-priority="13">Added on </td>
+<td class="all">Send Test</td>
+<th data-priority="4">DA</td>
+<td data-priority="5">PA</td>
+<td class="all">Buy</td>
+</tr>
+<tfoot>
+<tr>
+<th data-priority="1"></th>
+<th class="all">ID</th>
+<th data-priority="3">Country</th>
+<th data-priority="8">Type</th>
+<th data-priority="15">TLD</th>
+<th data-priority="14">Domain</th>
+<th data-priority="11">Hosting</th>
+<th data-priority="12">CMS</th>
+<th class="all" style="width:9% !important;">Ip Blacklist</th>
+<th class="all">Seo Info</th>
+<th data-priority="9">Source</th>
+<th class="all">Technologies</th>
+<th data-priority="10">Seller</th>
+<th class="all">Check</th>
+<th class="all">Price</th>
+<th data-priority="13">Added on </th>
+<th class="all">Send Test</th>
+<th data-priority="4">DA</th>
+<th data-priority="5">PA</th>
+<th class="all">Buy</th>
+</tr>
 </table>
 </div>
 </div>
