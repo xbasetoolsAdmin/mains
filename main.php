@@ -160,34 +160,7 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
 </thead>
 </table>
 </div>
-</div>
-<div id=""></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div id="mainDiv"></div>
-
-
+</div> 
 
 
 
