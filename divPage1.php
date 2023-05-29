@@ -46,11 +46,11 @@ $q = mysqli_query($dbcon,"SELECT * FROM accounts WHERE sold='0' ORDER BY RAND()"
     <th data-priority='1'>                                                                                           </th> 
     <th data-priority='1'>                                                                                           </th>
     <td id='rdp_country'><i class='flag-icon flag-icon-$countrycode'></i>&nbsp;".htmlspecialchars($row['country'])." </td>
-    <td>				 ".htmlspecialchars($row['city'])."					    </td>
-    <td id='rdp_windows'>		 ".htmlspecialchars($row['windows'])."					    </td>
-    <td>				 ".htmlspecialchars($row['ram'])." 					    </td>
-    <td id='rdp_access'>		 ".htmlspecialchars($row['access'])."					    </td>
-    <td id='rdp_hosting'>		 ".htmlspecialchars($row['hosting'])."			   		    </td>
+    <td>				 ".htmlspecialchars($row['city']).					    "</td>
+    <td id='rdp_windows'>		 ".htmlspecialchars($row['windows']).					   "</td>
+    <td>				 ".htmlspecialchars($row['ram']).					   "</td>
+    <td id='rdp_access'>		 ".htmlspecialchars($row['access']).                                       "</td>
+    <td id='rdp_hosting'>		 ".htmlspecialchars($row['hosting']).			   		   "</td>
     <td id='rdp_seller'>		 ".htmlspecialchars($SellerNick).			    		   "</td>
     <td> " 				.htmlspecialchars($row['price']).    			     	           "</td>
     <td> "				.htmlspecialchars($row['date']). 					  " </td>
