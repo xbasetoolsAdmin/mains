@@ -84,9 +84,8 @@ $query = mysqli_query($dbcon, "SELECT DISTINCT(`resseller`) FROM `accounts` WHER
                 
 <?php require"footer.php";?>
 <script type="text/javascript">
-	
 $(document).ready(function() {
-	$(‘#example’).DataTable( {
+	$(‘#accounts_data’).DataTable( {
 		“processing”: true,
 		“serverSide”: true,
 		“ajax”: “data/objects.html”,
@@ -101,7 +100,6 @@ $(document).ready(function() {
 		]
 	} );
 } );
-
 	</script>
     
     <script>
