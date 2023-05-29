@@ -720,7 +720,7 @@ $(document).ready(function(){
                                 { "data": 5 ,"visible": true},
                                 { "data": 6 ,"visible": true},
                                 { "data": 7 ,"visible": true},               
-                                { "data": 19 ,"visible": true}],
+                                { "data": 8 ,"visible": true}],
  
                     "pageLength": 100
                 });
