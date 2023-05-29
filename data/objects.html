@@ -1,57 +1,38 @@
 {
-    "data": [      
-      {
+    "data": [
+        {
             "0": [
-                ".$row['id'].",
-                "ID"
+                "ID",
+                "Country",
+                "Site Name",
+                "Available Information",
+                "Seller",
+                "Price",
+                "Added on ",
+                "Buy"
             ]
         },
-    
         {
             "1": [
                 ".$row['id'].",
-                "ID"
+                "&nbsp;\".htmlspecialchars($row['country']).\" ",
+                ".htmlspecialchars($row['sitename']).",
+                ".htmlspecialchars($row['infos']).",
+                ".htmlspecialchars($SellerNick).",
+                ".htmlspecialchars($row['price']).",
+                ".$row['date'].",
+                "\n\tBuy\n    "
             ]
         },
         {
             "2": [
-                "&nbsp;\".htmlspecialchars($row['country']).\" ",
-                "Country"
-            ]
-        },
-        {
-            "3": [
-                ".htmlspecialchars($row['sitename']).",
-                "Site Name"
-            ]
-        },
-        {
-            "4": [
-                ".htmlspecialchars($row['infos']).",
-                "Available Information"
-            ]
-        },
-        {
-            "5": [
-                ".htmlspecialchars($SellerNick).",
-                "Seller"
-            ]
-        },
-        {
-            "6": [
-                ".htmlspecialchars($row['price']).",
-                "Price"
-            ]
-        },
-        {
-            "7": [
-                ".$row['date'].",
-                "Added on "
-            ]
-        },
-        {
-            "8": [
-                "\n\tBuy\n    ",
+                "ID",
+                "Country",
+                "Site Name",
+                "Available Information",
+                "Seller",
+                "Price",
+                "Added on ",
                 "Buy"
             ]
         }
