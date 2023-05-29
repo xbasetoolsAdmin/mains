@@ -514,54 +514,51 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
 </div>
 <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 <div class="col-sm-12 table-responsive">
-<table id="cpanel_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
-<thead>
-<tr>
-<th data-priority="1"></th>
-<th class="all">ID</th>
-<th data-priority="3">Country</th>
-<th data-priority="8">Type</th>
-<th data-priority="15">TLD</th>
-<th data-priority="14">Domain</th>
-<th data-priority="11">Hosting</th>
-<th data-priority="12">CMS</th>
-<th class="all" style="width:9% !important;">Ip Blacklist</th>
-<th class="all">Seo Info</th>
-<th data-priority="9">Source</th>
-<th class="all">Technologies</th>
-<th data-priority="10">Seller</th>
-<th class="all">Check</th>
-<th class="all">Price</th>
-<th data-priority="13">Added on </th>
-<th class="all">Send Test</th>
-<th data-priority="4">DA</th>
-<th data-priority="5">PA</th>
-<th class="all">Buy</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td data-priority="1"></td>
-<td class="all">ID</td>
-<td data-priority="3">Country</td>
-<td data-priority="8">Type</td>
-<td data-priority="15">TLD</td>
-<td data-priority="14">Domain</td>
-<td data-priority="11">Hosting</td>
-<td data-priority="12">CMS</td>
-<td class="all" style="width:9% !important;">Ip Blacklist</td>
-<th class="all">Seo Info</td>
-<td data-priority="9">Source</td>
-<td class="all">Technologies</td>
-<td data-priority="10">Seller</td>
-<td class="all">Check</td>
-<td class="all">Price</td>
-<td data-priority="13">Added on </td>
-<td class="all">Send Test</td>
-<th data-priority="4">DA</td>
-<td data-priority="5">PA</td>
-<td class="all">Buy</td>
-</tr>
+<table id="cpanel_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" "><table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Country</th>
+            <th>Type</th>
+            <th>TLD</th>
+            <th>Domain</th>
+            <th>Hosting</th>
+            <th>CMS</th>
+            <th>Ip Blacklist</th>
+            <th>Seo Info</th>
+            <th>Source</th>
+            <th>Technologies</th>
+            <th>Seller</th>
+            <th>Check</th>
+            <th>Price</th>
+            <th>Added on </th>
+            <th>Send Test</th>
+            <th>DA</th>
+            <th>PA</th>
+            <th>Buy</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>ID</th>
+            <td>Country</td>
+            <td>Type</td>
+            <td>TLD</td>
+            <td>Domain</td>
+            <td>Hosting</td>
+            <td>CMS</td>
+            <td>Ip Blacklist</td>
+            <td>Source</td>
+            <td>Technologies</td>
+            <td>Seller</td>
+            <td>Check</td>
+            <td>Price</td>
+            <td>Added on </td>
+            <td>Send Test</td>
+            <td>PA</td>
+            <td>Buy</td>
+        </tr>
+    </tbody>
 <tfoot>
 <tr>
 <th data-priority="1"></th>
@@ -585,6 +582,7 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
 <th data-priority="5">PA</th>
 <th class="all">Buy</th>
 </tr>
+</tfoot>
 </table>
 </div>
 </div>
