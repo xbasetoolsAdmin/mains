@@ -59,6 +59,8 @@
                         <input type='text' id='searchByName' placeholder='Enter name'>
                     </td>
                     </tr>
+                    <tr>
+                        <td>
                         <select id='searchByGender'>
                             <option value=''>-- Select Gender--</option>
                             <option value='male'>Male</option>
