@@ -637,7 +637,7 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
             var webID;
             load_data();
              function load_data(myarray) {
-              $('#cpanel_data').DataTable({
+              $('#lead_data').DataTable({
                      "processing": true,
                     "serverSide": true,
                     "responsive": true,
