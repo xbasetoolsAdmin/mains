@@ -700,7 +700,7 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
                     ],
 
                     "ajax":{
-                        url:"divPage32.html",
+                        url:"divPage7.html",
                         type:"POST",
                         data:{
                             data_filter:myarray,
