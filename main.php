@@ -445,13 +445,14 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
   </tr>
         </thead>
 		 <tbody id='tbody2'>
+    <tr class='accounts-tabel'>
  <?php
 $uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 $qu = mysqli_query($dbcon, "SELECT * FROM accounts WHERE acctype='account' AND resseller='$uid' ORDER BY id DESC")or die(mysqli_error());
 
  while($row = mysqli_fetch_assoc($qu)){
 	 
-    echo "<tr class='accounts-tabel'>
+    echo "
     <td> ".htmlspecialchars($row['id'])." </td>
     <td> ".strtoupper(htmlspecialchars($row['acctype']))." </td>
     <td> ".htmlspecialchars($row['country'])." </td>
