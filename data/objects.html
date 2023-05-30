@@ -1,17 +1,52 @@
+ <?php
+   ob_start();
+   session_start();
+   date_default_timezone_set('UTC');
+   include "includes/config.php";
+   
+   if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
+       header("location: ../");
+       exit();
+   }
+   $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+ 
 {
     "data": [
         {
-            "0": [
-                ".$row['id'].",
-                "&nbsp;\".htmlspecialchars($row['country']).\" ",
-                ".htmlspecialchars($row['sitename']).",
-                ".htmlspecialchars($row['infos']).",
-                ".htmlspecialchars($SellerNick).",
-                ".htmlspecialchars($row['price']).",
-                ".$row['date'].",
+            "Country": [
+                "&nbsp;\".htmlspecialchars($row['country']).\" "
+            ]
+        },
+        {
+            "Description": [
+                " \".htmlspecialchars($row['infos']).\" "
+            ]
+        },
+        {
+            "Email N": [
+                " \".htmlspecialchars($row['number']).\" "
+            ]
+        },
+        {
+            "Seller": [
+                " \".htmlspecialchars($SellerNick).\""
+            ]
+        },
+        {
+            "Price": [
+                " \".htmlspecialchars($row['price']).\""
+            ]
+        },
+        {
+            "Added on ": [
+                " \".$row['date'].\""
+            ]
+        },
+        {
+            "Buy": [
                 "\n\tBuy\n    "
-      
             ]
         }
     ]
 }
+ ?>
