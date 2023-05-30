@@ -430,34 +430,74 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
 </div>
 <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 <div class="col-sm-12 table-responsive">
-<table id="cpanel_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Country</th>
-            <th>Type</th>
-            <th>TLD</th>
-            <th>Domain</th>
-            <th>Hosting</th>
-            <th>CMS</th>
-            <th>Ip Blacklist</th>
-            <th>Buy</th>
-        </tr>
-    </thead>
-    <tfoot>
-        <tr>
-            <th>ID</th>
-            <th>Country</th>
-            <th>Type</th>
-            <th>TLD</th>
-            <th>Domain</th>
-            <th>Hosting</th>
-            <th>CMS</th>
-            <th>Ip Blacklist</th>
-            <th>Buy</th>
-        </tr>
-</tfoot>
-</table>
+<table id="cpanel_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" "> <thead>
+  <thead>
+  <tr>
+  <th>ID</th>
+  <th>Type</th>
+  <th>Country</th>
+  <th>Site Name</th>
+  <th>Information</th>
+  <th>Open</th>
+  <th>Date added</th>
+  <th>Price</th>
+  <th>Action</th>
+  </tr>
+        </thead>
+		 <tbody id='tbody2'>
+ <?php
+$uid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+$qu = mysqli_query($dbcon, "SELECT * FROM accounts WHERE acctype='account' AND resseller='$uid' ORDER BY id DESC")or die(mysqli_error());
+
+ while($row = mysqli_fetch_assoc($qu)){
+	 
+    echo "<tr class='accounts-tabel'>
+    <td> ".htmlspecialchars($row['id'])." </td>
+    <td> ".strtoupper(htmlspecialchars($row['acctype']))." </td>
+    <td> ".htmlspecialchars($row['country'])." </td>
+    <td> ".htmlspecialchars($row['sitename'])." </td>
+    <td> ".htmlspecialchars($row['infos'])." </td>
+	<td>  "; ?>
+	<a data-toggle="modal" class="btn btn-primary btn-xs" data-target="#myModald<?php echo  $row['id']; ?>" >
+<font color=white>Open #<? echo htmlspecialchars($row['id']); ?> </a></center> 
+<?php
+  echo '
+ 
+<div class="modal fade" id="myModald' . $row['id'] . '" >
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">
+                                           <font color="black"> Premium/Shop/Dating #' . $row['id'] . ' </font>
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+					<font color="black">			'.htmlspecialchars($row['url']).' </font>
+					</div>								
+					<div class="modal-footer">
+<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+</div>';
+echo "
+</td>
+    <td> ".htmlspecialchars($row['date'])." </td>
+    <td> ".htmlspecialchars($row['price'])."</td>
+    <td> ";
+if ($row['sold'] == "0") {
+ echo '<div id="shop'.$row["id"].'" type="delete"><a onclick="javascript:buythistools('.$row["id"].');" class="btn btn-danger btn-xs">Buy</a></div>';
+ }elseif ($row['sold'] == "deleted") {
+	echo "<font color=gray>Topup</font>"; } else {
+echo "<font color=green>[Sold]</font>";	    
+	}
+    echo "</td>
+    </tr>";
+ }
+
+ 
+
+ ?>
+
+ </tbody>
+ </table>
 </div>
 </div>
 <div class="modal fade" id="TrafficInfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
