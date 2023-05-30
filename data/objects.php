@@ -35,14 +35,14 @@ $columns = array(
 	array( ‘db’ => ‘infos’,   ‘dt’ => 2 ),
 	array( ‘db’ => ‘price’,     ‘dt’ => 3 ),
 	array(
-		‘db’        => ‘start_date’,
+		‘db’        => ‘infos’,
 		‘dt’        => 4,
 		‘formatter’ => function( $d, $row ) {
 			return date( ‘jS M y’, strtotime($d));
 		}
 	),
 	array(
-		‘db’        => ‘salary’,
+		‘db’        => ‘price’,
 		‘dt’        => 5,
 		‘formatter’ => function( $d, $row ) {
 			return ‘$’.number_format($d);
