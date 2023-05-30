@@ -659,123 +659,434 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
                              columnSortOrder : 'order',
                              searchValue : 'search'}
                     },
-                  "data": [
-        {
-            "Country": [
-                "&nbsp;\".htmlspecialchars($row['country']).\" "
-            ]
-        },
-        {
-            "Description": [
-                " \".htmlspecialchars($row['infos']).\" "
-            ]
-        },
-        {
-            "Email N": [
-                " \".htmlspecialchars($row['number']).\" "
-            ]
-        },
-        {
-            "Seller": [
-                " \".htmlspecialchars($SellerNick).\""
-            ]
-        },
-        {
-            "Price": [
-                " \".htmlspecialchars($row['price']).\""
-            ]
-        },
-        {
-            "Added on ": [
-                " \".$row['date'].\""
-            ]
-        },
-        {
-            "Buy": [
-                "\n\tBuy\n    "
-            ],
-                        "pageLength": 500
+                    "columns": [
+                                { "data": 0 ,"visible": false},
+                                { "data": 1 ,"visible": true },
+                                { "data": 2 ,"visible": true},
+                                { "data": 3 ,"visible": true},
+                                { "data": 4 ,"visible": true},
+                                { "data": 5 ,"visible": true},
+                                { "data": 6 ,"visible": true},
+                                { "data": 7 ,"visible": true},
+                                { "data": 8 ,"visible": true},
+                                { "data": 9 ,"visible": true},
+                                { "data": 10 ,"visible": true},
+                                { "data": 11 ,"visible": true},
+                                { "data": 12 ,"visible": true},
+                                { "data": 13 ,"visible": true},
+                                { "data": 14 ,"visible": true},
+                                { "data": 15 ,"visible": true},
+                                { "data": 16 ,"visible": true},
+                                { "data": 17 ,"visible": true},
+                                { "data": 18 ,"visible": true},
+                                { "data": 19 ,"visible": true}],
+                    "pageLength": 100
                 });
             }
-
-            $(document).on('change', '.form-control', function(){
-                $('#lead_data').DataTable().destroy();
-                 var country = $('#country').val();
-                var description = $('#infos').val();
+              $(document).on('change', '.form-control', function(){
+                 $('#cpanel_data').DataTable().destroy();
+                var country = $('#country').val();
+                var detectHosting = $('#detect_hosting').val();
+                var typehosting = $('#hosting_type').val();
+                var source = $('#source').val();
+                var domaine = $('#domaine').val();
+                 var da= $('#da').val();
+                var pa= $('#pa').val();
                  var seller1 = $('#seller').val();
                 $idseller = seller1.split("Seller");
                  var seller= $idseller[1];
+                 var cms = $('#cms').val();
                  var myarray = {};
-
                  myarray[0] = country;
-                 myarray[1] = description;
-                 myarray[2] = seller;
-
-              if(country != '' || description != '' || seller != '')
+                 myarray[1] = detectHosting;
+                 myarray[2] = typehosting;
+                 myarray[3] = source;
+                 myarray[4] = domaine;
+                 myarray[5] = seller;
+                 myarray[6] = da;
+                 myarray[7] = pa;
+                  myarray[8] = cms;
+              if(country != '' || detectHosting != '' || typehosting != '' || source != '' || domaine != '' || seller != '' || da != '' || pa != '' || cms != '')
                 {
-
                    load_data(myarray);
                 }
                 else
                 {
                     load_data();
                 }
-                });
-
-
+            });
         });
-
+        function Trafficinfo(typer,id){
+                $("#trafi"+id).html('<b><span class="indigo-text" align="center"> <i class="fas fa-spinner indigo-text fa-pulse fa-3x mx-4"></i></span></b> ').show();
+                $.ajax({
+                    type:       'GET',
+                    url:        'CheckCpanel'+id,
+                    success:    function(data)
+                    {
+                        if (data.match("Success")) {
+                $.ajax({
+                    type:       'GET',
+                    url:        'gettraffic?typer='+typer+'&id='+id,
+                    success:    function(data){
+            if(data.match("showmessage")){
+$("#showmagseyesorno .modal-footer.flex-center").html('<a onclick="javascript:Trafficinfoyes(\''+typer+'\','+id+')"  class="btn btn-outline-info waves-effect" data-dismiss="modal">Yes</a><a type="button" class="btn btn-info" data-dismiss="modal">No</a>');
+$("#trafi"+id).html('<a onclick="javascript:Trafficinfo(\''+typer+'\','+id+')" class="btn btn-primary text-white btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-info mr-1"></i>Traffic</a>').show();
+$("#showmagseyesorno").modal();
+            }else{
+                                $("#Trafficinfobody").html(data);
+                                $("#trafi"+id).html('<a onclick="javascript:Trafficinfo(\''+typer+'\','+id+')" class="btn btn-primary text-white btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-info mr-1"></i>Traffic</a>').show();
+                                $("#TrafficInfoModal").modal();
+                }
+                    }
+                });
+                          }else{
+                            var ide= 'bad-cpanel'+id;
+                                $("#trafi"+id).html('<span id=' + ide + ' class="btn btn-danger btn-sm" style="font-size: 12px">Bad!</span>').show();
+                            var tr = $("#trafi"+id).parents('tr');
+                                 setTimeout(function(){
+                                 $('#cpanel_data').DataTable().row(tr).child.hide();
+                                 }, 2000);
+                            $("#"+ide).parent().parent().parent().delay(3000).hide('slow');
+                             }
+                    }
+                });
+        }
+        function Trafficinfoyes(typer,id){
+                $.ajax({
+                    type:       'GET',
+                    url:        'gettraffic?typer='+typer+'&yes&id='+id,
+                    success:    function(data)
+                    {
+                                $("#Trafficinfobody").html(data);
+                                $("#TrafficInfoModal").modal();
+                    }
+                });
+        }
        function buythistool(id){
          $('#modalConfirmBuy').modal('show');
          webID= id;
                         }
-
-        function confirmbye(id){
-              id= webID;
-            $.ajax({
-                        method:"GET",
-                        url:"buytool.php?id="+id+"&t=leads",
-                        dataType:"text",
-                        success:function(data){
-                                if(data.match("buy")){
+        function confirmbye(){
+               id= webID;
+                $.ajax({
+                            method:"GET",
+                            url:"buytool.php?id="+id+"&t=cpanels",
+                            dataType:"text",
+                            success:function(data){
+                            if(data.match("buy")){
                                 let lastid = data.split("buy,")[1];
-                                $("#lead"+id).html(`<button onclick=openitem(${lastid}) class="btn btn-success btn-sm">Order ${'#'+lastid}</button>`).show();
-
+                                ide= "cpanel"+id;
+                                 $("#cpanel"+id).html('<span id='+ide+' title="buy" type="cpanel"><a onclick=openitem('+lastid+') class="btn btn-success btn-sm" style="font-size: 11px; cursor:pointer">Order #'+lastid+' </a></span>').show();
                             }
                             else{
                                 if(data.match("deleted")){
-
-                                $("#lead"+id).html('Already sold / Deleted').show();
-
+                                $("#cpanel"+id).html('Already sold / Deleted').show();
                                   }else{
-                                   $('#modalCoupon').modal('show');
+                                      $('#modalCoupon').modal('show');
                                 }
-
-
                             }
-                        },
-                    });
+                            },
+<script>
+        $(document).ready(function(){
+            var webID;
+            load_data();
+             function load_data(myarray) {
+              $('#cpanel_data').DataTable({
+                     "processing": true,
+                    "serverSide": true,
+                    "responsive": true,
+                    "order": [],
+                    "columnDefs": [ {
+                             targets: [ 0 ],
+                             visible: false }
+                             ],
+                    "lengthMenu": [[10, 25, 50, 100, 500, 1000000], [10, 25, 50, 100, 500, "All"]],
+                    "ajax":{
+                        url:"divPage2.html",
+                        type:"POST",
+                        data: {data_filter:myarray,
+                             draw : 'draw',
+                             row : 'start',
+                             rowperpage : 'length',
+                             columnIndex : 'order',
+                             columnName : 'columns',
+                             columnSortOrder : 'order',
+                             searchValue : 'search'}
+                    },
+                    "columns": [
+                                { "data": 0 ,"visible": false},
+                                { "data": 1 ,"visible": true },
+                                { "data": 2 ,"visible": true},
+                                { "data": 3 ,"visible": true},
+                                { "data": 4 ,"visible": true},
+                                { "data": 5 ,"visible": true},
+                                { "data": 6 ,"visible": true},
+                                { "data": 7 ,"visible": true},
+                                { "data": 8 ,"visible": true},
+                                { "data": 9 ,"visible": true},
+                                { "data": 10 ,"visible": true},
+                                { "data": 11 ,"visible": true},
+                                { "data": 12 ,"visible": true},
+                                { "data": 13 ,"visible": true},
+                                { "data": 14 ,"visible": true},
+                                { "data": 15 ,"visible": true},
+                                { "data": 16 ,"visible": true},
+                                { "data": 17 ,"visible": true},
+                                { "data": 18 ,"visible": true},
+                                { "data": 19 ,"visible": true}],
+                    "pageLength": 100
+                });
+            }
+              $(document).on('change', '.form-control', function(){
+                 $('#cpanel_data').DataTable().destroy();
+                var country = $('#country').val();
+                var detectHosting = $('#detect_hosting').val();
+                var typehosting = $('#hosting_type').val();
+                var source = $('#source').val();
+                var domaine = $('#domaine').val();
+                 var da= $('#da').val();
+                var pa= $('#pa').val();
+                 var seller1 = $('#seller').val();
+                $idseller = seller1.split("Seller");
+                 var seller= $idseller[1];
+                 var cms = $('#cms').val();
+                 var myarray = {};
+                 myarray[0] = country;
+                 myarray[1] = detectHosting;
+                 myarray[2] = typehosting;
+                 myarray[3] = source;
+                 myarray[4] = domaine;
+                 myarray[5] = seller;
+                 myarray[6] = da;
+                 myarray[7] = pa;
+                  myarray[8] = cms;
+              if(country != '' || detectHosting != '' || typehosting != '' || source != '' || domaine != '' || seller != '' || da != '' || pa != '' || cms != '')
+                {
+                   load_data(myarray);
+                }
+                else
+                {
+                    load_data();
+                }
+            });
+        });
+        function Trafficinfo(typer,id){
+                $("#trafi"+id).html('<b><span class="indigo-text" align="center"> <i class="fas fa-spinner indigo-text fa-pulse fa-3x mx-4"></i></span></b> ').show();
+                $.ajax({
+                    type:       'GET',
+                    url:        'CheckCpanel'+id,
+                    success:    function(data)
+                    {
+                        if (data.match("Success")) {
+                $.ajax({
+                    type:       'GET',
+                    url:        'gettraffic?typer='+typer+'&id='+id,
+                    success:    function(data){
+            if(data.match("showmessage")){
+$("#showmagseyesorno .modal-footer.flex-center").html('<a onclick="javascript:Trafficinfoyes(\''+typer+'\','+id+')"  class="btn btn-outline-info waves-effect" data-dismiss="modal">Yes</a><a type="button" class="btn btn-info" data-dismiss="modal">No</a>');
+$("#trafi"+id).html('<a onclick="javascript:Trafficinfo(\''+typer+'\','+id+')" class="btn btn-primary text-white btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-info mr-1"></i>Traffic</a>').show();
+$("#showmagseyesorno").modal();
+            }else{
+                                $("#Trafficinfobody").html(data);
+                                $("#trafi"+id).html('<a onclick="javascript:Trafficinfo(\''+typer+'\','+id+')" class="btn btn-primary text-white btn-sm" style="font-size: 11px; cursor:pointer"><i class="fas fa-info mr-1"></i>Traffic</a>').show();
+                                $("#TrafficInfoModal").modal();
+                }
+                    }
+                });
+                          }else{
+                            var ide= 'bad-cpanel'+id;
+                                $("#trafi"+id).html('<span id=' + ide + ' class="btn btn-danger btn-sm" style="font-size: 12px">Bad!</span>').show();
+                            var tr = $("#trafi"+id).parents('tr');
+                                 setTimeout(function(){
+                                 $('#cpanel_data').DataTable().row(tr).child.hide();
+                                 }, 2000);
+                            $("#"+ide).parent().parent().parent().delay(3000).hide('slow');
+                             }
+                    }
+                });
         }
-    function openitem(order){
-
-
+        function Trafficinfoyes(typer,id){
+                $.ajax({
+                    type:       'GET',
+                    url:        'gettraffic?typer='+typer+'&yes&id='+id,
+                    success:    function(data)
+                    {
+                                $("#Trafficinfobody").html(data);
+                                $("#TrafficInfoModal").modal();
+                    }
+                });
+        }
+       function buythistool(id){
+         $('#modalConfirmBuy').modal('show');
+         webID= id;
+                        }
+        function confirmbye(){
+               id= webID;
+                $.ajax({
+                            method:"GET",
+                            url:"buytool.php?id="+id+"&t=cpanels",
+                            dataType:"text",
+                            success:function(data){
+                            if(data.match("buy")){
+                                let lastid = data.split("buy,")[1];
+                                ide= "cpanel"+id;
+                                 $("#cpanel"+id).html('<span id='+ide+' title="buy" type="cpanel"><a onclick=openitem('+lastid+') class="btn btn-success btn-sm" style="font-size: 11px; cursor:pointer">Order #'+lastid+' </a></span>').show();
+                            }
+                            else{
+                                if(data.match("deleted")){
+                                $("#cpanel"+id).html('Already sold / Deleted').show();
+                                  }else{
+                                      $('#modalCoupon').modal('show');
+                                }
+                            }
+                            },
+                            });
+                   }
+        g:xcheck=0;
+        function check(id){
+            if(xcheck > 4){
+                bootbox.alert("<b><i class='fas fa-stroopwafel fa-spin'></i> Wait</b> - Other checking operation is executed!");
+            } else {
+                xcheck++;
+                var type = $("#shop"+id).attr('type')
+                 $("#shop"+id).html('<b><span class="indigo-text" align="center"> <i class="fas fa-spinner indigo-text fa-pulse fa-3x mx-4"></i></span></b> ').show();
+                $.ajax({
+                    type:       'GET',
+                    url:        'CheckCpanel'+id,
+                    success:    function(data)
+                    {
+                        if (data.match("Success")) {
+                             $("#shop"+id).html(`<span class='btn btn-success btn-sm' style='font-size: 12px'>Working</span>`).show();
+                          }
+                        else{
+                            var ide= 'bad-cpanel'+id;
+                            $("#shop"+id).html('<span id=' + ide + ' class="btn btn-danger btn-sm" style="font-size: 12px">Bad!</span>').show();
+                            var tr = $("#shop"+id).parents('tr');
+                                 setTimeout(function(){
+                                 $('#cpanel_data').DataTable().row(tr).child.hide();
+                                 }, 2000);
+                            $("#"+ide).parent().parent().parent().delay(3000).hide('slow');
+                             }
+                         xcheck--;
+                    }
+                });
+            }
+        }
+           g:xcheck2=0;
+        function check2(id){
+            if(xcheck2 > 4){
+                bootbox.alert("<b><i class='fas fa-stroopwafel fa-spin'></i> Wait</b> - Other checking operation is executed!");
+            } else {
+                xcheck2++;
+                var type = $("#shop2"+id).attr('type')
+                 $("#shop2"+id).html('<b><span class="indigo-text" align="center"> <i class="fas fa-spinner indigo-text fa-pulse fa-3x mx-4"></i></span></b> ').show();
+                $.ajax({
+                    type:       'GET',
+                    url:        'CheckCpanelTest'+id,
+                    success:    function(data)
+                    {
+                        if (data.match("Success")) {
+                             $("#shop2"+id).html(`<span class='btn btn-success btn-sm' style='font-size: 12px'>Working</span>`).show();
+                          }
+                        else{
+                            var ide= 'bad-cpanel'+id;
+                            $("#shop2"+id).html('<span id=' + ide + ' class="btn btn-danger btn-sm" style="font-size: 12px">Bad!</span>').show();
+                             }
+                         xcheck2--;
+                    }
+                });
+            }
+        }
+        g:xcheckbl=0;
+        function checkblacklist(id){
+            if(xcheckbl > 4){
+            bootbox.alert("<b><i class='fas fa-stroopwafel fa-spin'></i> Wait</b> - Other checking operation is executed!");
+            } else {
+                xcheckbl++;
+                $("#blacklistoutput"+id).html('<b><span class="indigo-text" align="center"> <i class="fas fa-spinner indigo-text fa-pulse fa-3x mx-4"></i></span></b> ').show();
+                $.ajax({
+                    type:       'GET',
+                    url:        'check2blacklist.php?id='+id,
+                    success: function(data)
+                    {
+                         if (data.match("working")) {
+                            $("#blacklistoutput"+id).html(`<span class='btn btn-sm btn-success'>Clean</span>`).show();
+                          }
+                        else{
+                            var ide= 'bad-cpanel'+id;
+                            $("#blacklistoutput"+id).html(`<span class='btn btn-sm btn-danger' id=' + ide  + '>Reported!</span>`).show();
+                                  var tr = $("#shop"+id).parents('tr');
+                                 setTimeout(function(){
+                                 $('#cpanel_data').DataTable().row(tr).child.hide();
+                                 }, 2000);
+                                 $("#"+ide).parent().parent().parent().delay(2000).hide('slow');
+                             }
+                        xcheckbl--;
+                    }
+                });
+            }
+        }
+        function techInfo(id){
+            $.ajax({
+                type:       'GET',
+                url:        'CpanelTechInfo'+id,
+                success:    function(data)
+                {
+                    $("#techInfoBody").html('');
+                      $("#techInfoBody").append(`
+                                <li class="list-group-item d-flex justify-content-between align-items-center" style="font-size: bold;">
+                                   <span style="font-size: bold;"> categories </span> <span style="font-size: bold;"> name </span>
+                                </li>
+                        `   );
+                    let json = JSON.parse(data);
+                    for(var i = 0; i < json.length; i++) {
+                          var name = json[i].name;
+                          var categories = json[i].categories;
+                            $("#techInfoBody").append(`
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    ${categories} <span class="badge badge-pill badge-info"> ${name} </span>
+                                </li>
+                        `   );
+                        }
+                    $("#techInfoModal").modal();
+                }
+            });
+        }
+          function seoInfo(id){
+            $.ajax({
+                type:       'GET',
+                url:        'CpanelSeoInfo'+id,
+                success:    function(data)
+                {
+                    $("#seoInfoBody").html('');
+                    let obj = JSON.parse(data);
+                    Object.keys(obj).forEach(key => {
+                        if(key != 'sr_domain'){
+                            $("#seoInfoBody").append(`
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    ${key} <span class="badge badge-pill badge-info"> ${obj[key]} </span>
+                                </li>
+                        `   );
+                        }
+                    });
+                    $("#seoInfoModal").modal();
+                }
+            });
+        }
+        function openitem(order){
         $.ajax({
         type:       'GET',
         url:        'showOrder'+order,
         success:    function(data)
         {
-        $("#myModalHeader").text('Order #'+order);
+          $("#myModalHeader").text('Order #'+order);
         $("#modelbody").append(data);
         $('#myModal').modal();
-
-
         }});
-
         }
-
-
- 
- $(document).keydown(function(event){
+    </script>  
+<script type="text/javascript">
+$(document).keydown(function(event){
 if(event.which=="17") cntrlIsPressed 
 = true;                           });
 $(document).keyup(  function     (){
