@@ -47,7 +47,6 @@
 
 
         <!-- Datatable JS -->
-        <script src="DataTables/datatables.min.js"></script>
     <body >
 
         <div >
@@ -68,6 +67,7 @@
                     </td>
                 </tr>
             </table>
+            </div >
             
 
 
