@@ -17,7 +17,7 @@
     color: var(--font-color);
 
 }
-#accounts_data_paginate .paginate_button {
+#lead_data_paginate .paginate_button {
 color: var(--font-color);
 
 }
@@ -29,16 +29,16 @@ color: var(--font-color);
 
 }
 
-#accounts_data_filter{
+#lead_data_filter{
   color: var(--font-color);
 }
-#accounts_data_length{
+#lead_data_length{
   color: var(--font-color);
 }
-#accounts_data_paginate{
+#lead_data_paginate{
   color: var(--font-color);
 }
-#accounts_data_info{
+#lead_data_info{
   color: var(--font-color);
 }
 
