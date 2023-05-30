@@ -539,13 +539,14 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
 					<tr>                                  
                     	<th> </th>
                     	<th>ID</th>
-					        	<th>country </th>
-					        	<th>sitename</th>
-						        <th>infos</th>
-						        <th>Seller</th>
-						       <th>Added on</th>
-                    <th>price</th>
-					</tr>
+			<th>country </th>
+			<th>sitename</th>
+			 <th>infos</th>
+			 <th>Seller</th>
+			 <th>Added on</th>
+                        <th>price</th>
+		      <th>Action</th>
+			</tr>
 </tfoot>
 </table>
 </div>
@@ -731,7 +732,7 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
             }
 
             $(document).on('change', '.form-control', function(){
-                $('#lead_data').DataTable().destroy();
+                $('#accounts_data').DataTable().destroy();
                  var country = $('#country').val();
                 var description = $('#infos').val();
                  var seller1 = $('#seller').val();
