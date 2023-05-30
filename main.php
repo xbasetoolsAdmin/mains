@@ -1,7 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-<head><?php include "header.php";?>
+<?php include "header.php";?>
 
 <body class="them"><style>
  
@@ -15,7 +12,7 @@
     color: var(--font-color);
 
 }
-#balance_data_paginate .paginate_button {
+#lead_data_paginate .paginate_button {
 color: var(--font-color);
 
 }
@@ -27,16 +24,16 @@ color: var(--font-color);
 
 }
 
-#balance_data_filter{
+#lead_data_filter{
   color: var(--font-color);
 }
-#balance_data_length{
+#lead_data_length{
   color: var(--font-color);
 }
-#balance_data_paginate{
+#lead_data_paginate{
   color: var(--font-color);
 }
-#balance_data_info{
+#lead_data_info{
   color: var(--font-color);
 }
 
@@ -321,31 +318,18 @@ a.closearb {
 <div class="p-2"><label id="switch" class="switch">
 <input type="checkbox" onchange="toggleTheme()" id="slider">
 <span class="slider round"></span>
-</label></div>
+</label>
+ </div>
 </div>
 
 
 
 
 
-
-
-<div class="row m-3 pt-1" style="color: var(--font-color);">
-
-
-
-
-
-
-
-<div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
-
-
-
-    <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
-      <div class="col-sm-12 table-responsive">
-        <table id="cpanel_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" "="">
-          <thead>
+<div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
+<div class="col-sm-12 table-responsive">
+<table id="lead_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
+<thead>
             <tr>
               <th data-priority="1"></th>
               <th class="all">ID</th>
