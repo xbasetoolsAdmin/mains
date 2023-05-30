@@ -472,31 +472,50 @@ $qu = mysqli_query($dbcon, "SELECT * FROM accounts WHERE acctype='account' AND r
                                            <font color="black"> Premium/Shop/Dating #' . $row['id'] . ' </font>
                                             </h4>
                                         </div>
-                                        <div class="modal-body">
+                                        
+<div class="modal-body">
 					<font color="black">			'.htmlspecialchars($row['url']).' </font>
-					</div>								
+					<div>				
 					<div class="modal-footer">
 <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
 </div>';
 echo "
 </td>
     <td> ".htmlspecialchars($row['date'])." </td>
-    <td> ".htmlspecialchars($row['price'])."</td>
+    <td>
+    
+     ".htmlspecialchars($row['price'])."
+    
+    </td>
+    
+    
     <td> ";
 if ($row['sold'] == "0") {
- echo '<div id="shop'.$row["id"].'" type="delete"><a onclick="javascript:buythistools('.$row["id"].');" class="btn btn-danger btn-xs">Buy</a></div>';
+ echo '
+
+<span id="shop'.$row["id"].'" type="delete"><a onclick="javascript:buythistools('.$row["id"].');" class="btn btn-danger btn-xs">Buy</a>
+</span>';
+
+
+
  }elseif ($row['sold'] == "deleted") {
 	echo "<font color=gray>Topup</font>"; } else {
 echo "<font color=green>[Sold]</font>";	    
 	}
-    echo "</td>
-    </tr>";
+    echo "
+    
+    
+    </td>
+    
+    ";
  }
 
  
 
  ?>
 
+
+    </tr>
  </tbody>
  </table>
 </div>
