@@ -48,12 +48,6 @@
 
         <!-- Datatable JS -->
         <script src="DataTables/datatables.min.js"></script>
-
-
-
-
-
-    </head>
     <body >
 
         <div >
@@ -108,8 +102,6 @@
 
 
         $(document).ready(function(){
-
-
 
 
             var dataTable = $('#empTable').DataTable({
