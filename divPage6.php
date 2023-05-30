@@ -9,72 +9,47 @@ I'm <?php
        exit();
    }
    $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-   ?>
-
-<div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
-<div class="col-sm-12 table-responsive">
-<table id="leads_table" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
-<thead>
-   <tr>
-      <th scope="col" >Country</th>
-      <th scope="col">Description</th>
-      <th scope="col">Email N</th>
-      <th scope="col">Seller</th>
-      <th scope="col">Price</th>
-      <th scope="col">Added on </th>
-      <th scope="col">Buy</th>
-   </tr>
-   </thead>
-   <thody>
-<?php
-		include("cr.php");
-	    $q = mysqli_query($dbcon, "SELECT * FROM accounts WHERE sold='0' ORDER BY RAND()")or die(mysql_error());
-	   	function srl($item)
-		{
-		$item0 = $item;
-		$item1 = rtrim($item0);
-		$item2 = ltrim($item1);
-		return $item2;
-		} 
-
- while($row = mysqli_fetch_assoc($q)){
-	 	 $countryfullname = $row['country'];
-	  $code = array_search("$countryfullname", $countrycodes);
-	 $countrycode = strtolower($code);
-
-	 $url = $row['url'];
-	 	$d = explode("|", $url);
-		$urled = srl($d[0]);
-
-	 	  $tld = end(explode(".", parse_url($urled, PHP_URL_HOST))); 
-    $qer = mysqli_query($dbcon, "SELECT * FROM resseller WHERE username='".$row['resseller']."'")or die(mysql_error());
-		   while($rpw = mysqli_fetch_assoc($qer))
-			 $SellerNick = "seller".$rpw["id"]."";
-     echo "
- <tr>    
-    <td id='country'><i class='flag-icon flag-icon-$countrycode'></i>&nbsp;".htmlspecialchars($row['country'])." </td>
-		    <td id='tld'> .".$tld." </td>
-    <td id='hosting'> ".htmlspecialchars($row['infos'])." </td>
-    <td id='seller'> ".htmlspecialchars($SellerNick)."</td>
-";
-	 echo '<td><span id="shop'.$row["id"].'" type="lead"><a onclick="javascript:check('.$row["id"].');" class="btn btn-info btn-xs"><font color=white>Check</font></a></span><center></td>';
-echo "
-    <td> ".htmlspecialchars($row['price'])."</td>
-	    <td> ".htmlspecialchars($row['date'])."</td>
-    ";
-
-    echo '
-    <td>
-	<span id="lead'.$row['id'].'" title="buy" type="lead"><a onclick="javascript:buythistool('.$row['id'].')" class="btn btn-primary btn-xs"><font color=white>Buy</font></a></span><center>
-    </td>
-            </tr>
-     ';
- }
-
- ?>
-
- </tbody>
- </table>
+ 
+{
+    "data": [
+        {
+            "Country": [
+                "&nbsp;\".htmlspecialchars($row['country']).\" "
+            ]
+        },
+        {
+            "Description": [
+                " \".htmlspecialchars($row['infos']).\" "
+            ]
+        },
+        {
+            "Email N": [
+                " \".htmlspecialchars($row['number']).\" "
+            ]
+        },
+        {
+            "Seller": [
+                " \".htmlspecialchars($SellerNick).\""
+            ]
+        },
+        {
+            "Price": [
+                " \".htmlspecialchars($row['price']).\""
+            ]
+        },
+        {
+            "Added on ": [
+                " \".$row['date'].\""
+            ]
+        },
+        {
+            "Buy": [
+                "\n\tBuy\n    "
+            ]
+        }
+    ]
+}
+  ?>
 
 <script type="text/javascript">
 let table = new DataTable('#table', {
@@ -131,6 +106,8 @@ function openitem(order){
 }
 
 </script>
+
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
