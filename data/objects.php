@@ -55,7 +55,7 @@ $sql_details = array(
 	‘user’ => ‘xbaseleets_xbaseleets’,
 	‘pass’ => ‘xbaseleets_xbaseleets',
 	‘db’   => ‘xbaseleets_xbaseleets',
-	‘host’ => ‘localhost'
+	‘host’ => ‘localhost',
 );
 
 
