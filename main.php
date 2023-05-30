@@ -431,7 +431,6 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
 <div class="row m-2 pt-3" style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
 <div class="col-sm-12 table-responsive">
 <table id="cpanel_data" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);" ">
-
     <thead>
         <tr>
             <th>ID</th>
@@ -442,20 +441,22 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
             <th>Hosting</th>
             <th>CMS</th>
             <th>Ip Blacklist</th>
-            <th>Seo Info</th>
-            <th>Source</th>
-            <th>Technologies</th>
-            <th>Seller</th>
-            <th>Check</th>
-            <th>Price</th>
-            <th>Added on </th>
-            <th>Send Test</th>
-            <th>DA</th>
-            <th>PA</th>
             <th>Buy</th>
         </tr>
     </thead>
-    </tbody>
+    <tfoot>
+        <tr>
+            <th>ID</th>
+            <th>Country</th>
+            <th>Type</th>
+            <th>TLD</th>
+            <th>Domain</th>
+            <th>Hosting</th>
+            <th>CMS</th>
+            <th>Ip Blacklist</th>
+            <th>Buy</th>
+        </tr>
+</tfoot>
 </table>
 </div>
 </div>
