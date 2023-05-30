@@ -681,31 +681,58 @@ echo "<font color=green>[Sold]</font>";
                              searchValue : 'search'}
                     },
 
-                    "columns": [
-                                { "data": 0 ,"visible": false},
-                                { "data": 1 ,"visible": true },
-                                { "data": 2 ,"visible": true},
-                                { "data": 3 ,"visible": true},
-                                { "data": 4 ,"visible": true},
-                                { "data": 5 ,"visible": true},
-                                { "data": 6 ,"visible": true},
-                                { "data": 7 ,"visible": true},
-                                { "data": 8 ,"visible": true},
-                                { "data": 9 ,"visible": true},
-                                { "data": 10 ,"visible": true},
-                                { "data": 11 ,"visible": true},
-                                { "data": 12 ,"visible": true},
-                                { "data": 13 ,"visible": true},
-                                { "data": 14 ,"visible": true},
-                                { "data": 15 ,"visible": true},
-                                { "data": 16 ,"visible": true},
-                                { "data": 17 ,"visible": true},
-                                { "data": 18 ,"visible": true},
-                                { "data": 19 ,"visible": true}],
-
-                    "pageLength": 100
-                });
-            }
+                
+  "data": [
+    {
+      "id": [
+        ".$row['1'].",
+        "ID"
+      ]
+    },
+    {
+      "Country": [
+        "&nbsp;\".htmlspecialchars($row['country']).\" ",
+        "Country"
+      ]
+    },
+    {
+      "Site Name": [
+        ".htmlspecialchars($row['sitename']).",
+        "Site Name"
+      ]
+    },
+    {
+      "Available Information": [
+        ".htmlspecialchars($row['infos']).",
+        "Available Information"
+      ]
+    },
+    {
+      "Seller": [
+        ".htmlspecialchars($SellerNick).",
+        "Seller"
+      ]
+    },
+    {
+      "Seller": [
+        ".htmlspecialchars($row['price']).",
+        "Price"
+      ]
+    },
+    {
+      "Added on ": [
+        ".$row['date'].",
+        "Added on "
+      ]
+    },
+    {
+      "Buy": [
+        "\n\tBuy\n    ",
+        "Buy"
+      ]
+    }
+  ]
+}
 
 
               $(document).on('change', '.form-control', function(){
