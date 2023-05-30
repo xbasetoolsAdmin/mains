@@ -677,99 +677,134 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
 </div>
 </div>
  
-<script type="text/javascript">
- 
-$(document).ready(function(){
-        var shopID;
- 
+<script>
+
+        $(document).ready(function(){
+            var webID;
             load_data();
-             function load_data(myarray) {
-              $('#accounts_data').DataTable({
-                     "processing": true,
+
+            function load_data(myarray) {
+                $('#lead_data').DataTable({
+                    "processing": true,
                     "serverSide": true,
                     "responsive": true,
- 
+                    "scrollX": true,
                     "order": [],
-                    "columnDefs": [ {
-                             targets: [ 0 ],
-                             visible: false }
- 
-                             ],
-                    "lengthMenu": [[10, 25, 50, 100, 500, 1000000], [10, 25, 50, 100, 500, "All"]],
- 
- 
+                    "lengthMenu": [[10, 25, 50, 100, 500, 10000], [10, 25, 50, 100, 500, "All"]],
+                    "columnDefs": [
+                        {
+                            "targets": [ 0 ],
+                            "visible": false
+                        }
+                    ],
+
                     "ajax":{
-                        url:"data/objects.html",
+                        url:"divPage32.html",
                         type:"POST",
-                        data: {data_filter:myarray,
+                        data:{
+                            data_filter:myarray,
+                            type:document.getElementById('type').value,
                              draw : 'draw',
                              row : 'start',
                              rowperpage : 'length',
                              columnIndex : 'order',
                              columnName : 'columns',
                              columnSortOrder : 'order',
-                             searchValue : 'search'}
+                             searchValue : 'search'
+                              }
                     },
- 
-                    "columns": [
-                                { "data": 0 ,"visible": false},
-                                { "data": 1 ,"visible": true },
-                                { "data": 2 ,"visible": true},
-                                { "data": 3 ,"visible": true},
-                                { "data": 4 ,"visible": true},
-                                { "data": 5 ,"visible": true},
-                                { "data": 6 ,"visible": true},
-                                { "data": 7 ,"visible": true},
-                                { "data": 8 ,"visible": true},                                                        { "data": 9 ,"visible": true}],
- 
-                    "pageLength": 100
+                 "columns": [
+                                { "data": 0 },
+                                { "data": 1 },
+                                { "data": 2 },
+                                { "data": 3 },
+                                { "data": 4 },
+                                { "data": 5 },
+                                { "data": 6 },
+                                { "data": 7 },
+                                { "data": 8 },
+                                { "data": 9 }
+                            ],
+
+                    "pageLength": 500
                 });
             }
- 
- 
-              $(document).on('change', '.form-control', function(){
-                 $('#cpanel_data').DataTable().destroy();
- 
-                var country = $('#country').val();
-                var detectHosting = $('#detect_hosting').val();
-                var typehosting = $('#hosting_type').val();
-                var source = $('#source').val();
-                var domaine = $('#domaine').val();
-                 var da= $('#da').val();
-                var pa= $('#pa').val();
+
+            $(document).on('change', '.form-control', function(){
+                $('#lead_data').DataTable().destroy();
+                 var country = $('#country').val();
+                var description = $('#infos').val();
                  var seller1 = $('#seller').val();
                 $idseller = seller1.split("Seller");
                  var seller= $idseller[1];
-                 var cms = $('#cms').val();
                  var myarray = {};
+
                  myarray[0] = country;
-                 myarray[1] = detectHosting;
-                 myarray[2] = typehosting;
-                 myarray[3] = source;
-                 myarray[4] = domaine;
-                 myarray[5] = seller;
-                 myarray[6] = da;
-                 myarray[7] = pa;
-                  myarray[8] = cms;
- 
- 
-              if(country != '' || detectHosting != '' || typehosting != '' || source != '' || domaine != '' || seller != '' || da != '' || pa != '' || cms != '')
+                 myarray[1] = sitename;
+                 myarray[2] = seller;
+
+              if(country != '' || sitename != '' || seller != '')
                 {
- 
+
                    load_data(myarray);
                 }
                 else
                 {
                     load_data();
                 }
- 
- 
-            });
- 
- 
- 
+                });
+
+
         });
- 
+
+       function buythistool(id){
+         $('#modalConfirmBuy').modal('show');
+         webID= id;
+                        }
+
+        function confirmbye(id){
+              id= webID;
+            $.ajax({
+                        method:"GET",
+                        url:"buytool.php?id="+id+"&t=leads",
+                        dataType:"text",
+                        success:function(data){
+                                if(data.match("buy")){
+                                let lastid = data.split("buy,")[1];
+                                $("#lead"+id).html(`<button onclick=openitem(${lastid}) class="btn btn-success btn-sm">Order ${'#'+lastid}</button>`).show();
+
+                            }
+                            else{
+                                if(data.match("deleted")){
+
+                                $("#lead"+id).html('Already sold / Deleted').show();
+
+                                  }else{
+                                   $('#modalCoupon').modal('show');
+                                }
+
+
+                            }
+                        },
+                    });
+        }
+    function openitem(order){
+
+
+        $.ajax({
+        type:       'GET',
+        url:        'showOrder'+order,
+        success:    function(data)
+        {
+        $("#myModalHeader").text('Order #'+order);
+        $("#modelbody").append(data);
+        $('#myModal').modal();
+
+
+        }});
+
+        }
+
         function Trafficinfo(typer,id){
                 $("#trafi"+id).html('<b><span class="indigo-text" align="center"> <i class="fas fa-spinner indigo-text fa-pulse fa-3x mx-4"></i></span></b> ').show();
                 $.ajax({
