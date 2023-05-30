@@ -554,19 +554,20 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
 <th class="all">Buy</th>
 </tr>
 </thead>
-<tfoot>
-<tr>
+	<tfoot>
+	<tr>
 <th data-priority="1"></th>
 <th class="all">ID</th>
 <th data-priority="3">Country</th>
 <th data-priority="6">Description</th>
 <th data-priority="7">Email N</th>
 <th data-priority="8">Seller</th>
+<th data-priority="2">Proof</th>
 <th data-priority="9">Price</th>
 <th data-priority="10">Added on </th>
 <th class="all">Buy</th>
 </tr>
-</tfoot>	
+	</tfoot>
 </table>
 </div>
 </div>
@@ -653,7 +654,7 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
                     ],
 
                     "ajax":{
-                        url:"divPage6.html",
+                        url:"data/objects.html",
                         type:"POST",
                         data:{
                             data_filter:myarray,
