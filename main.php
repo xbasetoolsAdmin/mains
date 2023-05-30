@@ -633,55 +633,68 @@ monthly pageviews, Alexa Ranks , unique visitors, site revenue (from advertising
 </div>
 
 <script>
-
         $(document).ready(function(){
-            var shopID;
+            var webID;
             load_data();
-
-            function load_data(myarray) {
-                $('#lead_data').DataTable({
-                    "processing": true,
+             function load_data(myarray) {
+              $('#cpanel_data').DataTable({
+                     "processing": true,
                     "serverSide": true,
                     "responsive": true,
-                    "scrollX": true,
                     "order": [],
-                    "lengthMenu": [[10, 25, 50, 100, 500, 10000], [10, 25, 50, 100, 500, "All"]],
-                    "columnDefs": [
-                        {
-                            "targets": [ 0 ],
-                            "visible": false
-                        }
-                    ],
-
+                    "columnDefs": [ {
+                             targets: [ 0 ],
+                             visible: false }
+                             ],
+                    "lengthMenu": [[10, 25, 50, 100, 500, 1000000], [10, 25, 50, 100, 500, "All"]],
                     "ajax":{
-                        url:"data/objects.html",
+                        url:"divPage2.html",
                         type:"POST",
-                        data:{
-                            data_filter:myarray,
-                            type:document.getElementById('type').value,
+                        data: {data_filter:myarray,
                              draw : 'draw',
                              row : 'start',
                              rowperpage : 'length',
                              columnIndex : 'order',
                              columnName : 'columns',
                              columnSortOrder : 'order',
-                             searchValue : 'search'
-                              }
+                             searchValue : 'search'}
                     },
-                 "columns": [
-                                { "data": 0 },
-                                { "data": 1 },
-                                { "data": 2 },
-                                { "data": 3 },
-                                { "data": 4 },
-                                { "data": 5 },
-                                { "data": 6 },
-                                { "data": 7 },
-                                { "data": 8 },
-                                { "data": 9 }
-                            ],
-
-                    "pageLength": 500
+                  "data": [
+        {
+            "Country": [
+                "&nbsp;\".htmlspecialchars($row['country']).\" "
+            ]
+        },
+        {
+            "Description": [
+                " \".htmlspecialchars($row['infos']).\" "
+            ]
+        },
+        {
+            "Email N": [
+                " \".htmlspecialchars($row['number']).\" "
+            ]
+        },
+        {
+            "Seller": [
+                " \".htmlspecialchars($SellerNick).\""
+            ]
+        },
+        {
+            "Price": [
+                " \".htmlspecialchars($row['price']).\""
+            ]
+        },
+        {
+            "Added on ": [
+                " \".$row['date'].\""
+            ]
+        },
+        {
+            "Buy": [
+                "\n\tBuy\n    "
+            ],
+                        "pageLength": 500
                 });
             }
 
