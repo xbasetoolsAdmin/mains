@@ -10,7 +10,11 @@ ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes
    <link rel="stylesheet" href="buyer/layout/css/css/login.css">
 
 
-
+   <script  src="buyer/dt/dt.responsive/dataTables.responsibe.min.js"></script>
+  
+  
+  
+  
 
 
    <script  src="buyer/layout/js/jquery-3.4.1.min.js"></script>
@@ -22,7 +26,7 @@ ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes
    <link rel="shortcut icon" href="img/favicon.ico" />
   
   
-     <link rel="stylesheet" href="buyer/dt/dt.responsive/css/jquery.dataTables.css">
+     <link rel="stylesheet" href="buyer/dt/dt.responsive/css/responsive.dataTables.min.css">
   
   
    <head>
