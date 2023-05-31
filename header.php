@@ -322,8 +322,33 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     <div id="sidebar-wrapper">
                      <ul class="sidebar-nav">
 
-                <li class="sidebar-brand"><a href="./index.php"><div class="navbar-brand" onclick="location.href=&#39;index.html&#39;"><font color="white"><b><span class="glyphicon glyphicon-fire"></span> Admin Panel</b></font></div></a></li>
-                <li><a href="https://xbasetools.xyz/" onclick="window.open(this.href);return false;"><font color="white">Back to Jerux SHOP <span class="glyphicon glyphicon-share-alt"></span></font></a></li>
+                <li class="sidebar-brand">
+                    
+                    <a href="./index.php">
+                        
+            
+            <div class="navbar-brand" onclick="location.href=&#39;index.html&#39;"><font color="white">
+                
+                <b>
+                    
+                    <span class="glyphicon glyphicon-fire">
+                        
+                        
+                    </span>main dashboard</b>
+            
+            </font>
+            
+            </div>
+                    
+                    </a>
+                
+                </li>
+                <li>
+                    
+                    <a href="https://xbasetools.xyz/" onclick="window.open(this.href);return false;">
+                        
+                        <font color="white">
+                            Back to main dashboard <span class="glyphicon glyphicon-share-alt"></span></font></a></li>
 
                 <li><font color="white"><b><span class="glyphicon glyphicon-dashboard"></span> Admin Dashboard</b></font></li>
                     <li><a href="./index.html" style="cursor: pointer;"><span class="glyphicon glyphicon-home"></span> Main</a></li>
