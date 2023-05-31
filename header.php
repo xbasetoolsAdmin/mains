@@ -15,7 +15,16 @@ ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes
 
    <script  src="buyer/layout/js/jquery-3.4.1.min.js"></script>
    <script   src="buyer/layout/js/bootstrap.min.js"></script>
+  
+  
+  
+  
    <link rel="shortcut icon" href="img/favicon.ico" />
+  
+  
+     <link rel="stylesheet" href="buyer/dt/dt.responsive/css/jquery.dataTables.css">
+  
+  
    <head>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta charset="utf-8">
