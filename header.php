@@ -9,8 +9,7 @@ exit();
 }
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 ?>
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -113,131 +112,514 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         <input type="hidden" id="tr" value="0" />
         <input type="hidden" id="ch" value="0" />
         <input type="hidden" id="sidemob" value="0" />
-<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <ul class="navbar-nav">
-                <li class="nav-item">        <li class="dropdown"><a href="./index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account  <span class="glyphicon glyphicon-user"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="./account.html">Settings<span class="glyphicon glyphicon-cog pull-right"></span></a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="./logout.html">Logout <span class="glyphicon glyphicon-off pull-right"></span></a></li>
-                                </ul>
-                            </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
-<div id="wrapper">
-    <div id="sidebar-wrapper">
-                     <ul class="sidebar-nav">
-
-                <li class="sidebar-brand"><a href="./index"><div class="navbar-brand" onclick="location.href=&#39;index.html&#39;"><font color="white"><b><span class="glyphicon glyphicon-fire"></span> Seller Panel</b></font></div></a></li>
-                <li><a href="https://jerux.to/buyer/index.html" onclick="window.open(this.href);return false;"><font color="white">Back to Jerux SHOP <span class="glyphicon glyphicon-share-alt"></span></font></a></li>
-
-                <li><font color="white"><b>Seller Dashboard</b></font></li>
-                    <li><a href="./index.html" style="cursor: pointer;">Main</a></li>
-		  <?php
-          $uid     = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-          $qerd = mysqli_query($dbcon, "SELECT * FROM resseller WHERE username='$uid'")or die(mysqli_error());
-          $rers = mysqli_fetch_assoc($qerd);
-        ?>
-                    <li><a href="./sales.html" style="cursor: pointer;">Sales <div id="sales" class="label label-info"></div></a></li>
-                    <li><a href="./withdraw.html" style="cursor: pointer;">Withdraw</a></li>
-                    <li><a href="./reports.html" style="cursor: pointer;">My Reports <?php 
-					$s1 = mysqli_query($dbcon, "SELECT * FROM reports WHERE resseller='$uid' AND status='1' OR status='2'");
-					$r1=mysqli_num_rows($s1);
-					if (strpos($r1,'0') !== false) {
-} else {
-echo '<div id="reports" class="label label-danger"></div>'; }?></a></li>			
-
-                <li><font color="white"><b>Tools Management</b></font></li>
-                    <li><a href="./rdp.html" style="cursor: pointer;">RDP <span id="rdp" class="label label-info"></span></a></li>
-                    <li><a href="./shell.html" style="cursor: pointer;">Shell <span id="shell" class="label label-info"></span></a></li>
-                    <li><a href="./cpanel.html" style="cursor: pointer;">cPanel <span id="cpanel" class="label label-info"></span></a></li>
-				<li><a href="./mailer.html">PHP Mailer <span id="mailer" class="label label-info"></span></a></li>
-	<li><a href="./smtp.html">SMTP <span id="smtp" class="label label-info"></span></a></li>
-                    <li><a href="./leads.html">Leads <span id="leads" class="label label-info"></span></a></li>
-                    <li><a href="./scampage.html">Scampage <span id="scams" class="label label-info"></span></a></li>
-                    <li><a href="./tutorial.html">Tutorial/Method <span id="tutorials" class="label label-info"></span></a></li>
-           <li><a href="./banks.html">Bank Accounts <span id="banks" class="label label-info"></span></a></li>
-	      <li><a href="./premium.html">Premium/Shop/Dating <span id="premium" class="label label-info"></span></a></li>		
-                    <li><a href="./index.html" style="cursor: pointer;"><span class="glyphicon glyphicon-home"></span> Main</a></li>
-                  pan> Support Dashboard</b></font></li>
-                    <li><a href="./index.html" style="cursor: pointer;"><span class="glyphicon glyphicon-home"></span> Main</a></li>
-                    <li><a href="./News.html" style="cursor: pointer;"><span class="glyphicon glyphicon-plus"></span> Add News</a></li>
-                    <li><a href="./Tickets.html" style="cursor: pointer;"><span class="glyphicon glyphicon-time"></span> Pending Tickets <span id="menu_tickets"><span class="label label-danger"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM ticket where status='1' OR status='2'");$r11=mysqli_num_rows($s12);
- echo $r11;?></span></span></a></li>
-                    <li><a href="./Reports.html" style="cursor: pointer;"><span class="glyphicon glyphicon-time"></span> Pending Reports <span id="menu_tickets"><span class="label label-danger"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM reports where status='1' OR status='2'");$r11=mysqli_num_rows($s12);
- echo $r11;?></span></span></a></li>                
-				<li><a href="./Users.html"><span class="glyphicon glyphicon-user"></span> Users List <span class="label label-info"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM users");$r11=mysqli_num_rows($s12);
- echo $r11;?></span></a></li>
-                   
-
-
-l
-
-        <!-- Page Content -->
-        <b><span id="menu-toggle" onmouseover="this.style.cursor=&#39;pointer&#39;"><span class="glyphicon glyphicon-indent-right"></span></span></b>
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-            <div id="divPage">
-                      <li><a href="./Status.html" style="cursor: pointer;"><span class="glyphicon glyphicon-usd"></span> Financial status</a></li>
-                    <li><a href="./Sales.html" style="cursor: pointer;"><span class="glyphicon glyphicon-shopping-cart"></span> Orders</a></li>
-                    <li><a href="./NewsBuyer.html" style="cursor: pointer;"><span class="glyphicon glyphicon-plus"></span> Add News </a></li>
-                    <li><a href="./Tools.html" style="cursor: pointer;"><span class="glyphicon glyphicon-eye-open"></span> Visualize Tools</a></li>
-                    <li><a href="./Tickets.html" style="cursor: pointer;"><span class="glyphicon glyphicon-time"></span> Pending Tickets <span id="menu_tickets"><span class="label label-danger"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM ticket where status='1' OR status='2'");$r11=mysqli_num_rows($s12);
- echo $r11;?></span></span></a></li>
-                    <li><a href="./Reports.html" style="cursor: pointer;"><span class="glyphicon glyphicon-time"></span> Pending Reports <span id="menu_tickets"><span class="label label-danger"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM reports where status='1' OR status='2'");$r11=mysqli_num_rows($s12);
- echo $r11;?></span></span></a></li>                
-				<li><a href="./Users.html"><span class="glyphicon glyphicon-user"></span> Users List <span class="label label-info"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM users");$r11=mysqli_num_rows($s12);
- echo $r11;?></span></a></li>
-                    <li><a href="./WithdrawalRequests.html"><span class="glyphicon glyphicon-credit-card"></span> Withdraw Approval <?php $s12 = mysqli_query($dbcon, "SELECT * FROM resseller where withdrawal='requested'");$r11=mysqli_num_rows($s12);
- echo '<span class="label label-danger">'.$r11.'</span>';?></a></li>
-                    <li><a href="./Sellers.html"><span class="glyphicon glyphicon-fire"></span> Sellers <span class="label label-info"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM resseller");$r11=mysqli_num_rows($s12);
- echo $r11;?></span></a></li>
-                    <li><a href="./Logout.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-					
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a href="/home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item d-none d-sm-inline-block">
+                    <a class="nav-link" href="/balance">Balance
+                        <span class="badge-pill bg-primary" id="balance">$ 0.00</span>
+                        <span class="fa fa-plus"></span>
+                    </a>
+                </li>
             </ul>
-
-
-        </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <b><span id="menu-toggle" onmouseover="this.style.cursor=&#39;pointer&#39;"><span class="glyphicon glyphicon-indent-right"></span></span></b>
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-            <div id="divPage">
-
-    <script>
-    var v_aa =0;
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-        if (v_aa == 1) {
-          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-right"></span>').show();
-          v_aa =0;
-        }
-        else {
-          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-left"></span>').show();
-          v_aa =1;     
-        }
-        
-    });
-
-    </script>
-    <script>
-	$(function() {
-		$(".preload").fadeOut(500, function() {
-			$(".content").fadeIn(0);
-		});
-	});
-</script> 
-     <div class="preload">
-<div id="mydiv"><img src="assets/wait.gif" class="ajax-loader"></div>  
-
-  </div>
- 	<div class="content">
-<br><br>
+            <form class="form-inline ml-3">
+                <div class="input-group input-group-sm">
+                    <input name="q" class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                    <div class="input-group-append">
+                        <button class="btn btn-navbar" type="submit" id="searchbtn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link ref" href="#">
+                        <i class="fas fa-redo-alt"></i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-comments"></i>
+                        <span class="badge badge-danger navbar-badge" id="m_notification"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <div id="messages">
+                        </div>
+                        <a href="messages" class="dropdown-item dropdown-footer">See All Messages</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" data-toggle="dropdown" href="#">
+                        <i class="far fa-bell"></i>
+                        <span class="badge badge-warning navbar-badge" id="notification"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                        <span class="dropdown-item dropdown-header">
+                            <span class="notifi" id="notification">0</span> Notifications</span>
+                        <div class="dropdown-divider"></div>
+                        <a href="/tickets" class="dropdown-item">
+                            <i class="fas fa-envelope mr-2"></i> Tickets
+                            <span class="float-right text-muted text-sm"><span class="badge badge-success" id="tickets_n" data-toggle="tooltip" title="You didn't reply">0</span> <span class="badge badge-danger" id="tickets_r" data-toggle="tooltip" title="You replied">0</span></span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="/reports" class="dropdown-item">
+                            <i class="fas fa-file mr-2"></i> Reports
+                            <span class="float-right text-muted text-sm"><span class="badge badge-success" id="reports_n" data-toggle="tooltip" title="You didn't reply">0</span> <span class="badge badge-danger" id="reports_r" data-toggle="tooltip" title="You replied">0</span></span>
+                        </a>
+                        <div class="p_requests" hidden="true">
+                            <div class="dropdown-divider"></div>
+                            <a href="/request-products" class="dropdown-item">
+                                <i class="fas fa-plus-circle mr-2"></i> Product Requests
+                                <span class="float-right text-muted text-sm"><span class="badge badge-success" id="p_requests">0</span></span>
+                            </a>
+                        </div>
+                        <div class="s_orders" hidden="true">
+                            <div class="dropdown-divider"></div>
+                            <a href="/service-orders" class="dropdown-item">
+                                <i class="fas fa-suitcase mr-2"></i> Service Orders
+                                <span class="float-right text-muted text-sm"><span class="badge badge-success" id="sorders_n" data-toggle="tooltip" title="You didn't reply">0</span> <span class="badge badge-danger" id="sorders_r" data-toggle="tooltip" title="You replied">0</span></span>
+                            </a>
+                        </div>
+                        <div class="dropdown-divider"></div>
+                        <a href="/notifications" class="dropdown-item dropdown-footer">See All Notifications</a>
+                    </div>
+                </li>
+                <li class="nav-item" id="side-button">
+                    <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button" id="sidebar-button">
+                        <i class="fas fa-user-circle"></i><span class="badge badge-success navbar-badge" id="orders_p"></span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <a href="/home" class="brand-link">
+                <img src="/dist/img/LuFixLogo.png" alt="luFix Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <span class="brand-text font-weight-light">LuFix Store</span>
+            </a>
+            <div class="sidebar">
+                <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                    <div class="image">
+                        <img src="/dist/img/avatar0.png" class="img-circle elevation-2" alt="User Image">
+                    </div>
+                    <div class="info">
+                        <a href="/settings" class="d-block">Skybaddes<span style="margin-left:8.6em;"></span></a>
+                    </div>
+                </div>
+ 
+ 
+                <div class="form-inline">
+                    <div class="input-group" data-widget="sidebar-search">
+                        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+                        <div class="input-group-append">
+                            <button class="btn btn-sidebar">
+                                <i class="fas fa-search fa-fw"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+ 
+                <nav class="mt-2">
+                    <ul class="nav nav-pills nav-sidebar flex-column nav-child-indent" data-widget="treeview" role="menu">
+                        <li class="nav-item has-treeview">
+                            <a href="/home" class="nav-link">
+                                <i class="nav-icon fas fa-home"></i>
+                                <p>
+                                    Home
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/request-products" class="nav-link">
+                                <i class="nav-icon fas fa-plus-circle"></i>
+                                <p>
+                                    Request Products
+                                    <span class="badge badge-danger right">New</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/lufix-services" class="nav-link">
+                                <i class="nav-icon fas fa-suitcase"></i>
+                                <p>
+                                    LuFix Services
+                                    <span class="badge badge-info right">317</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-copy"></i>
+                                <p>
+                                    Hosts
+                                    <i class="fas fa-angle-left right"></i>
+                                    <span class="badge badge-info right">42186</span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/shells" class="nav-link">
+                                        <i class="fas fa-terminal nav-icon"></i>
+                                        <p>Shells
+                                            <span class="badge badge-primary right">10669</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/cpanels" class="nav-link">
+                                        <i class="fab fa-cpanel nav-icon"></i>
+                                        <p>cPanels<span class="badge badge-primary right">26172</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/rdps" class="nav-link">
+                                        <i class="fas fa-laptop nav-icon"></i>
+                                        <p>Rdps
+                                            <span class="badge badge-primary right">1373</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/ssh" class="nav-link">
+                                        <i class="fas fa-sitemap nav-icon"></i>
+                                        <p>SSH/WHM
+                                            <span class="badge badge-primary right">3972</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-paper-plane"></i>
+                                <p>
+                                    Send
+                                    <i class="right fas fa-angle-left"></i>
+                                    <span class="badge badge-info right">85304</span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/mailers" class="nav-link">
+                                        <i class="far fa-paper-plane nav-icon"></i>
+                                        <p>Mailers
+                                            <span class="badge badge-primary right">1905</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/smtps" class="nav-link">
+                                        <i class="fas fa-reply-all nav-icon"></i>
+                                        <p>SMTPs
+                                            <span class="badge badge-primary right">83399</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-list-alt"></i>
+                                <p>
+                                    Leads
+                                    <i class="fas fa-angle-left right"></i>
+                                    <span class="badge badge-info right">121697</span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/leads" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>All Leads
+                                            <span class="badge badge-primary right">121697</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/leads?type=Checked Leads" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Checked Leads
+                                            <span class="badge badge-primary right">842</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/leads?type=Emails Only" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Emails Only
+                                            <span class="badge badge-primary right">96811</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/leads?type=Combo Email:Password" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Combo Email:Pass
+                                            <span class="badge badge-primary right">6604</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/leads?type=Combo Username:Password" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Combo User:Pass
+                                            <span class="badge badge-primary right">349</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/leads?type=Combo Email:Hash" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Combo Email:Hash
+                                            <span class="badge badge-primary right">8</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/leads?type=Combo Phone:Password" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Combo Phone:Pass
+                                            <span class="badge badge-primary right">16</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/leads?type=Email Access" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Email Access
+                                            <span class="badge badge-primary right">41</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/leads?type=Phone Numbers Only" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Phone Numbers Only
+                                            <span class="badge badge-primary right">12811</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/leads?type=Full Data" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Full Data
+                                            <span class="badge badge-primary right">110</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/leads?type=Social Media Data" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Social Media Data
+                                            <span class="badge badge-primary right">4</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/leads?type=Site List" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Site List
+                                            <span class="badge badge-primary right">4101</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/cards" class="nav-link">
+                                <i class="nav-icon fas fa-credit-card"></i>
+                                <p>
+                                    Cards
+                                    <i class="right"></i>
+                                    <span class="badge badge-info right">5488</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/webmails" class="nav-link">
+                                <i class="nav-icon fas fa-briefcase"></i>
+                                <p>
+                                    WebMails
+                                    <i class="right"></i>
+                                    <span class="badge badge-info right">167709</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon fas fa-key"></i>
+                                <p>
+                                    Accounts
+                                    <i class="fas fa-angle-left right"></i>
+                                    <span class="badge badge-info right">90832</span>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="/accounts" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>All Accounts
+                                            <span class="badge badge-primary right">90832</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/accounts?type=type1" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Marketing
+                                            <span class="badge badge-primary right">36624</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/accounts?type=type2" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Hosting/Domain
+                                            <span class="badge badge-primary right">6080</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/accounts?type=type3" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Games
+                                            <span class="badge badge-primary right">8668</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/accounts?type=type4" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>VPN/Socks/Proxy
+                                            <span class="badge badge-primary right">20406</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/accounts?type=type5" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Shopping
+                                            <span class="badge badge-primary right">362</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/accounts?type=type6" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Program
+                                            <span class="badge badge-primary right">2537</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/accounts?type=type7" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Stream
+                                            <span class="badge badge-primary right">13627</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/accounts?type=type8" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Dating
+                                            <span class="badge badge-primary right">474</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/accounts?type=type9" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Learning
+                                            <span class="badge badge-primary right">1885</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/accounts?type=type10" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Torrent/File Host
+                                            <span class="badge badge-primary right">156</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/accounts?type=type11" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Voip/Sip
+                                            <span class="badge badge-primary right">2</span>
+                                        </p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/accounts?type=type12" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Other
+                                            <span class="badge badge-primary right">11</span>
+                                        </p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-header">Others</li>
+                        <li class="nav-item">
+                            <a href="/scripts" class="nav-link">
+                                <i class="nav-icon fas fa-file-code"></i>
+                                <p>
+                                    Scripts/Programs
+                                    <span class="badge badge-info right">409</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/scams" class="nav-link">
+                                <i class="nav-icon fas fa-file-alt"></i>
+                                <p>
+                                    Scam Pages/Letters
+                                    <span class="badge badge-info right">3814</span>
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/tutorials" class="nav-link">
+                                <i class="nav-icon fas fa-suitcase"></i>
+                                <p>
+                                    Tutorials/Methods
+                                    <span class="badge badge-info right">399</span>
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <div class="content-wrapper">
+            <div style="display:none;" data-type="grabbed"></div>
+            <script src="plugins/chart.js/Chart.min.js"></script>
+            <div class="content-header">
+                <div class="container-fluid">
+                    <div class="alert alert-info alert-dismissible">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                        <h5><i class="icon fas fa-home"></i> <strong>Hello, Skybaddes!</strong></h5>
+                        Welcome back to LuFix Store.
+                    </div>
+                    <div class="row mb-2">
+                        <div class="col-sm-6">
+                            <h1 class="m-0 text-dark">Home</h1>
+                        </div>
+                        <div class="col-sm-6">
+                            <ol class="breadcrumb float-sm-right">
+                                <li class="breadcrumb-item active">Home</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </nav>
 
