@@ -259,26 +259,65 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             <div class="container-fluid">
                 <div class="navbar-header">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-  
+                   <span class="middle-navbar-toggler-icon"></span>
+    </button>
                     <div class="navbar-brand" onclick="location.href='index.html'" onmouseover="this.style.cursor='pointer'"><b> JeruxSHOP <small><span class="glyphicon glyphicon-refresh"></span></small></b></div>
                 </div>
+    
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="topFixedNavbar1">
-         
-                    <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown"><a href="./index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account  <span class="glyphicon glyphicon-user"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    <li><a href="./account.html">Settings<span class="glyphicon glyphicon-cog pull-right"></span></a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="./logout.html">Logout <span class="glyphicon glyphicon-off pull-right"></span></a></li>
-                                </ul>
-                            </li>
-                    </ul>
+              
+    <div class="collapse navbar-collapse order-1" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+
+                            <li class="dropdown">
+                                
+
+ 
+
+        <ul class="navbar-nav profile">
+ 
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell text-danger"></i> <span class="badge badge-success">0</span></a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
+                    <a class="dropdown-item" href="#" style="color: var(--font-color);">There is no new notifications</a>
                 </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-        </nav>
+            </li>
+ 
+            <li class="nav-item">
+                <a class="nav-link" href="addBalance" style="color: var(--font-color);" role="button" aria-haspopup="true" aria-expanded="false"><span class="badge badge-danger">
+                        0
+                        <span class="px-2"><i class="fa fa-plus"></i></span></span>
+                </a>
+            </li>
+ 
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Ticket <span class="badge badge-success">0</span></a>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
+                    <a class="dropdown-item" href="orders" style="color: var(--font-color);"><span class="px-2">Report Items</span></a>
+                    <a class="dropdown-item" href="tickets" style="color: var(--font-color);"><span class="px-2">My Tickets <span class="badge badge-success">0</span></span></a>
+                    <a class="dropdown-item" href="reports" style="color: var(--font-color);"><span class="px-2">My Reports <span class="badge badge-success">0</span></span></a>
+                    <a class="dropdown-item" href="OpenTicket" style="color: var(--font-color);"><span class="px-2">New Ticket</span></a>
+                </div>
+            </li>
+ 
+ 
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> hustlersfather <i class="fa fa-user-secret" style="color: var(--font-color);"></i></a>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
+                    <a class="dropdown-item" href="setting" style="color: var(--font-color);"><span class="px-2">Setting <i class="fa fa-cog"></i></span></a>
+                    <a class="dropdown-item" href="seller-profile" style="color: var(--font-color);"><span class="px-2">Profile <i class="fa fa-user"></i></span></a>
+                    <a class="dropdown-item" href="orders" style="color: var(--font-color);"><span class="px-2">My Orders <i class="fa fa-shopping-cart"></i></span></a>
+                    <a class="dropdown-item" href="addBalance" style="color: var(--font-color);"><span class="px-2">Add Balance <i class="fa fa-money-bill-alt"></i></span></a>
+                    <a class="dropdown-item" href="logout" style="color: var(--font-color);"><span class="px-2">Logout <i class="fa fa-door-open"></i></span></a>
+                </div>
+            </li>
+ 
+        </ul>
+ 
+    </div>
+    </nav>
     <div id="wrapper">
     <div id="sidebar-wrapper">
                      <ul class="sidebar-nav">
