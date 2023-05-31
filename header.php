@@ -104,16 +104,18 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 
 
 <body>
-<nav class="navbar navbar-default navbar-fixed-top ">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                    <div class="navbar-brand" onclick="location.href='index.html'" onmouseover="this.style.cursor='pointer'"><b> JeruxSHOP <small><span class="glyphicon glyphicon-refresh"></span></small></b></div>
-                </div>
 
-         
-                    <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown"><a href="./index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account  <span class="glyphicon glyphicon-user"></span></a>
+
+<body class="hold-transition sidebar-mini layout-fixed  ">
+    <div class="wrapper">
+        <input type="hidden" id="sr" value="0" c="0" />
+        <input type="hidden" id="cr" value="0" />
+        <input type="hidden" id="tr" value="0" />
+        <input type="hidden" id="ch" value="0" />
+        <input type="hidden" id="sidemob" value="0" />
+<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+            <ul class="navbar-nav">
+                <li class="nav-item">        <li class="dropdown"><a href="./index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account  <span class="glyphicon glyphicon-user"></span></a>
                                 <ul class="dropdown-menu" role="menu">
                                     <li><a href="./account.html">Settings<span class="glyphicon glyphicon-cog pull-right"></span></a></li>
                                     <li class="divider"></li>
