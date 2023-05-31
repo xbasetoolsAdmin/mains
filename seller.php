@@ -13,51 +13,7 @@
       <link rel="stylesheet" type="text/css" href="../buyer/assets/flags.css">
       <link rel="stylesheet" type="text/css" href="css/tickets.css">
       <script type="text/javascript" src="./assets/jquery.js"></script>
-      <style type="text/css" id="operaUserStyle">
-         video {
-         filter: url('data:image/svg+xml,\
-         <svg xmlns="http://www.w3.org/2000/svg">
-            \
-            <filter id="sharpen">
-               \
-               <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="1 -1 1 -1 -1 -1 1 -1 1"/>
-               \
-            </filter>
-            \
-         </svg>
-         #sharpen');
-         }
-         img {
-         filter: url('data:image/svg+xml,\
-         <svg xmlns="http://www.w3.org/2000/svg">
-            \
-            <filter id="sharpen">
-               \
-               <feConvolveMatrix order="3" preserveAlpha="true" kernelMatrix="1 -1 1 -1 -1 -1 1 -1 1"/>
-               \
-            </filter>
-            \
-         </svg>
-         #sharpen');
-         }
-      </style>
-      <script type="text/javascript" src="./assets/bootstrap.js"></script>
-      <script type="text/javascript" src="./assets/bootbox.min.js"></script>
-      <script type="text/javascript" src="./assets/sorttable.js"></script>
-      <link href="./assets/style.css" rel="stylesheet">
-      <style>
-         .sort {
-         .sortable
-         }
-         .sort th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
-         content: " \25BE" 
-         }
-      </style>
-      <style>
-         .content {
-         display:none;
-         }
-      </style>
+      
       <script type="text/javascript">
          function ajaxinfo(){
            $.ajax({
