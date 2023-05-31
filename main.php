@@ -648,10 +648,35 @@ echo "<font color=green>[Sold]</font>";
 </div>
 
 <script>
+$(document).ready(function() {
+  // Setup - add a text input to each footer cell
+  $("#example thead th").each(function() {
+    var title = $(this).text();
+    $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+  });
 
-        $(document).ready(function(){
-            var webID;
+  // DataTable
+  var table = $("#example").DataTable();
 
+  // Apply the search
+  table.columns().every(function(index) {
+    var that = this;
+
+    $("input", this.header()).on("keyup change clear", function() {
+      if (that.search() !== this.value) {
+        that.search(this.value).draw();
+        table
+          .rows()
+          .$("tr", { filter: "applied" })
+          .each(function() {
+            console.log(table.row(this).data());
+          });
+      }
+    });
+  });
+});
+</script>
+             <script>
             load_data();
              function load_data(myarray) {
               $('#cpanel_data').DataTable({
