@@ -20,7 +20,7 @@ $myObj->tickets = "$r1";
 $myObj->tickets = "$r1";
 $myObj->tickets = "$r1";
 $myObj->tickets = "$r1";
-$myObj->tickets = "$r1";
+$myObj->tickets = "$r2";
 
         $q = mysqli_query($dbcon, "SELECT resseller FROM users WHERE username='$usrid'");
           $r = mysqli_fetch_assoc($q);
