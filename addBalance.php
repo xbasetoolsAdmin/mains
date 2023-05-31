@@ -6,8 +6,12 @@
             <li>There is <b> 0 </b> Available.</li>
         </ul>
     </div>
+    
+    
+    
+    
 
-<!---------/input search ---------------->
+<!--minput search ---------------->
     <input type=hidden id="type" name="type" value="5" />
     <div class="row m-3 pt-1" style="color: var(--font-color);">
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
