@@ -241,21 +241,6 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         }
     })();
 </script>
-<nav class="navbar navbar-expand-xl navbar  navbar-light " style="
-                                                          position:fixed;
-                                                          background-color: var(--color-nav);
-                                                          z-index:1;
-                                                          top:0;
-                                                          left:0;
-                                                          right:0;
-                                                          line-height: 1.5;
-                                                          font-family: 'Lato', sans-serif;
-                                                          font-size: 15px;
-                                                          padding-top: 0.5rem;
-                                                          padding-right: 1rem;
-                                                          padding-bottom: 0.5rem;
-                                                          padding-left: 1rem;
-                                                        ">
 
 <nav class="navbar navbar-default navbar-fixed-top ">
             <div class="container-fluid">
