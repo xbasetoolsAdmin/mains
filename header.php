@@ -73,6 +73,36 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 }
 
 </style>
+    <script>
+    var v_aa =0;
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        if (v_aa == 1) {
+          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-right"></span>').show();
+          v_aa =0;
+        }
+        else {
+          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-left"></span>').show();
+          v_aa =1;     
+        }
+        
+    });
+
+    </script>
+    <script>
+	$(function() {
+		$(".preload").fadeOut(500, function() {
+			$(".content").fadeIn(0);
+		});
+	});
+</script> 
+     <div class="preload">
+<div id="mydiv"><img src="assets/wait.gif" class="ajax-loader"></div>  
+
+  </div>
+ 	<div class="content">
+<br><br>
 
 <script type="text/javascript">
     function ajaxinfo(){
