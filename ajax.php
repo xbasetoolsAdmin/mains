@@ -16,7 +16,6 @@ $r1=mysqli_num_rows($s1);
 
 $myObj =new stdClass();
 $myObj->tickets = "$r1";
-$myObj->tickets = "$r1";
 
         $q = mysqli_query($dbcon, "SELECT resseller FROM users WHERE username='$usrid'");
           $r = mysqli_fetch_assoc($q);
@@ -50,12 +49,11 @@ $r1=mysqli_num_rows($s1);
 
 
 $myObj =new stdClass();
-$myObj->tickets = "$r1";
-$myObj->tickets = "$r1";
-$myObj->tickets = "$r1";
+$myObj->premium = "$r10";
+
+
 
 $myObj->tickets = "$r1";
-
         $q = mysqli_query($dbcon, "SELECT resseller FROM users WHERE username='$usrid'");
           $r = mysqli_fetch_assoc($q);
 		  $reselerif = $r['resseller'];
