@@ -16,18 +16,7 @@ $r1=mysqli_num_rows($s1);
 
 $myObj =new stdClass();
 $myObj->tickets = "$r1";
-$myObj->reports = "$r2";
-$myObj->balance = "$r3";
-$myObj->rdp = "$r4";
-$myObj->shell = "$r5";
-$myObj->cpanel = "$r6";
-$myObj->mailer = "$r7";
-$myObj->smtp = "$r8";
-$myObj->leads = "$r9";
-$myObj->premium = "$r10";
-$myObj->banks = "$r11";
-$myObj->scams = "$r12";
-$myObj->tutorials = "$r13";
+$
         $q = mysqli_query($dbcon, "SELECT resseller FROM users WHERE username='$usrid'");
           $r = mysqli_fetch_assoc($q);
 		  $reselerif = $r['resseller'];
