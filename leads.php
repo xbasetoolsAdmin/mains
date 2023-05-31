@@ -8,16 +8,17 @@
     </div>
 
 
-<!-- -----  ------- -->
+   <!---------------1----input search ---------------->
     <input type=hidden id="type" name="type" value="5" />
     <div class="row m-3 pt-1" style="color: var(--font-color);">
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
+          
             <label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
             <input type="search" class="form-control" id="infos" style="color: var(--font-color); background-color: var(--color-card);">
         </div>
 
 
-<!-- -----  ------- -->
+          <!---------------2---select country option value ---------------->
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
             <label for="Country" style="margin-bottom: 10px; margin-top: 5px">Country :</label>
             <select name="country" id="country" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
@@ -25,9 +26,8 @@
             </select>
         </div>
 
-<!-- -----  ------- -->
 
-
+          <!---------------3---select-seller-data-value---------------->
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
             <label for="seller" style="margin-bottom: 10px; margin-top: 5px">Seller :</label>
             <select name="seller" id="seller" class="form-control" style="color: var(--font-color); background-color: var(--color-card);">
@@ -38,7 +38,7 @@
 
 
 
-
+    <!---------------4---All Seller Products---------------->
  <div class="row m-2 pt-3 " style="max-width:100%; color: var(--font-color); background-color: var(--color-card);">
         <div class="col-sm-12 table-responsive">
             <table id="dataTables" class="display responsive table-hover" style="width:100%; color: var(--font-color); background-color: var(--color-card);">
@@ -124,6 +124,7 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+</body>
+</html>
