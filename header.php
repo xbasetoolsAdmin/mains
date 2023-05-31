@@ -1,5 +1,30 @@
- <style>
-    .display td {
+<?php
+ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes/config.php"; if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) { header("location: ../"); exit(); } $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+?>
+<!doctype html>
+<html>
+   <link rel="stylesheet" href="buyer/layout/css/bootstrap.min.css">
+   <link rel="stylesheet" href="buyer/layout/css/all.min.css">
+   <link rel="stylesheet" href="buyer/layout/css/main.css">
+   <link rel="stylesheet" href="buyer/layout/css/util.css">
+   <link rel="stylesheet" href="buyer/layout/css/css/login.css">
+
+
+
+
+
+   <script  src="buyer/layout/js/jquery-3.4.1.min.js"></script>
+   <script   src="buyer/layout/js/bootstrap.min.js"></script>
+   <link rel="shortcut icon" href="img/favicon.ico" />
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="utf-8">
+      <title>XbaseTools | Shop</title>
+ </head>
+ 
+  <style>
+   
+ .display td {
         background: var(--color-card);
         color: var(--font-color);
     }
@@ -245,30 +270,22 @@
 
                 <li class="nav-item dropdown mr-auto">
                     <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fab fa-google-play fa-sm text-success"></i>Send
-
-</a>
+                 </a>
                     <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="mailer" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Mailers <span class="badge badge-primary">648</span></span></a> 
                     </div>
                 </li>
-
-
-                <li class="nav-item dropdown mr-auto">
+             <li class="nav-item dropdown mr-auto">
                     <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-mail-bulk fa-sm pink-color"></i> Leads
-
-</a>
+              </a>
                     <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="leads" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-award"></i> 100% Validated Leads <span> 
                     </div>
                 </li>
 
-
-
-
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" role="button" style="color: var(--font-color);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fab fa-drupal text-primary fa-sm"></i> Requests
-
-</a>
+                 </a>
                     <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="requests" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-user-plus"></i> Buyers Requests <span class="badge badge-primary"> 89</span></span></a>
                     </div>
