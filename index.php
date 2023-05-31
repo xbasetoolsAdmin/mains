@@ -97,12 +97,61 @@
 
 
     <style>
+    
     </style>
 
 
 </body>
 
 
+<html>
+  
+<head>
+ 
+</head>
+  
+<body>
+    <h1 style="color: green;">
+        GeeksForGeeks
+    </h1>
+    <h3>DataTables processing Option</h3>
+  
+    <!-- HTML table with student data -->
+    <table id="tableID" class="display" 
+        style="width: 100%;">
+    </table>
+  
+    <script>
+  
+        // Initialize a huge dataset to 
+        // see the effects of processing
+        let dataset = [];
+        for (let i = 0; i < 250000; i++) {
+            let newArr =
+                [i, "Random Data: " + i, Math.random()];
+            dataset.push(newArr);
+        }
+  
+        // Initialize the DataTable
+        $(document).ready(function () {
+            $('#tableID').DataTable({
+  
+                // Add the data created above
+                data: dataset,
+                columns: [
+                    { title: "Index" },
+                    { title: "String Index" },
+                    { title: "Random" },
+                ],
+  
+                // Enable the processing indicator
+                // of the DataTable
+                processing: true,
+            });
+        });
+    </script>
+</body>
+  
 
 
 
