@@ -6,7 +6,7 @@ $r1=mysqli_num_rows($s1);
 
 $myObj =new stdClass();
 $myObj->premium = "$r10";
-$myObj->premium = "$r10";
+$myObj->premium = "$r2";
 
 
 $q = mysqli_query($dbcon, "SELECT reseller FROM users WHERE username='$usrid'");$r = mysqli_fetch_assoc($q);  $reselerif = $r['resseller']; if ($reselerif == "1") {           $q = mysqli_query($dbcon, "SELECT soldb FROM resseller WHERE username='$usrid'");          $r = mysqli_fetch_assoc($q); $seller = $r['soldb']; $myObj->seller = "$$seller";		 	   } else { }
