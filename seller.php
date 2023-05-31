@@ -1,5 +1,8 @@
 <html lang="en">
-
+   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Felux-Shop Login</title>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
       <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,11 +15,9 @@
       <link rel="stylesheet" type="text/css" href="../buyer/assets/flags.css">
       <link rel="stylesheet" type="text/css" href="css/tickets.css">
       <script type="text/javascript" src="./assets/jquery.js"></script>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Felux-Shop Login</title>
+
 </head>
+<div class="them">
    <body>
 <nav class="navbar navbar-expand-xl navbar  navbar-light " style="
                                                           position:fixed;
