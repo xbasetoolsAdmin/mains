@@ -1,6 +1,6 @@
 <?php
 ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes/config.php"; if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) { header("location: ../"); exit(); } $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-?>
+?>.
 <!doctype html>
 <html>
    <link rel="stylesheet" href="buyer/layout/css/bootstrap.min.css">
@@ -372,13 +372,11 @@ ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes
         }
     </style>
 
-
     <div class="d-flex flex-row-reverse mt-0">
         <div class="p-2">
             <label id="switch" class="switch">
                 <input type="checkbox" onchange="toggleTheme()" id="slider">
                 <span class="slider round"></span>
             </label>
- <!---------------------  ------------------- -->
         </div>
     </div>
