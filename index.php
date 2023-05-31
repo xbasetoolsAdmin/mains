@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8" />
+  
+<head>
+    <!-- jQuery -->
+    <script type="text/javascript" 
+    src="https://code.jquery.com/jquery-3.5.1.js">
+    </script>
+  
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href=
+"https://cdn.datatables.net/1.10.23/css/jquery.dataTables.min.css">
+  
+    <!-- DataTables JS -->
+    <script src=
+"https://cdn.datatables.net/1.10.23/js/jquery.dataTables.min.js">
+    </script>
+  
+    <h1 style="color: green;">GeeksForGeeks</h1>
+    <h3>DataTables processing Option</h3>
 <link rel="stylesheet" href="../buyer/layout/css/all.min.css" />
 <link rel="stylesheet" href="../buyer/layout/css/main.css" />
 <link rel="stylesheet" href="../buyer/layout/css/util.css" />
@@ -92,20 +110,11 @@
             </ul>
         </div>
     </nav>
-
-
-
-
-    <style>
-    
-    </style>
-
-
-
-
-</head>
-  
-<body>
+b
+    <!-- HTML table with student data -->
+    <table id="tableID" class="display"
+        style="width: 100%;">
+    </table>
 <script type="text/javascript">
         // Initialize a huge dataset to 
         // see the effects of processing
