@@ -141,7 +141,7 @@
   
         // Initialize the DataTable
         $(document).ready(function () {
-            $('#tableID').DataTable({
+            $('#dataTables').DataTable({
   
                 // Add the data created above
                 data: dataset,
