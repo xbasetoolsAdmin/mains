@@ -17,8 +17,6 @@
     <meta charset="utf-8">
     <title>Felux-Shop Login</title>
 </head>
-
-   </head>
    <body>
 <nav class="navbar navbar-expand-xl navbar  navbar-light " style="
                                                           position:fixed;
