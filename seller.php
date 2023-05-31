@@ -11,7 +11,7 @@
 		<meta name="author" content="">
 		<title>Jerux Seller</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
-		<link rel="stylesheet" type="text/css" href="./assets/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../buyer/layout/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="../buyer/assets/flags.css">
 		<link rel="stylesheet" type="text/css" href="css/tickets.css">
 		<script type="text/javascript" src="./assets/jquery.js"></script>
@@ -484,5 +484,3 @@
                      
                   
 		</script>
-	</body>
-</html>
