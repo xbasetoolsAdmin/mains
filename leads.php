@@ -1,4 +1,7 @@
-  <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
+<?php include('header.php);?>
+  
+    
+        <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
         <ul>
             <li>We Have Fresh E-mails Lists for Diffrents Countries ( You Can Use it for Spam ). </li>
             <li>Our E-mails Lists Guarante for you Good results because most of them are from Shops and Big Sites .</li>
