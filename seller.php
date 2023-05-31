@@ -35,20 +35,25 @@ include('header.php');
       <th>infos</th>
       <th>seller</th>
       <th>price</th>
-      <th>date</th>
           </tr>
 				      </thead>
-			      	<tfoot>
+			      	<tbody>
 		        		</tr>
-										<th></th>
-						 <th>id</th>
-      <th>country</th>
-      <th>infos</th>
-      <th>seller</th>
-      <th>price</th>
-      <th>date</th>
+										
+						 <th><?php
+																														echo htmlspecialchars( $tutoname );
+?></th>
+      <th><?php
+																														echo htmlspecialchars( $description );
+?></th>
+      <th><?php
+																														echo htmlspecialchars( $site );
+?></th>
+      <th><?php
+																														echo htmlspecialchars( $information );
+?></th>
 			    </tr>
-  </tfoot>
+  </tbody>
   </table>
 		
 		
