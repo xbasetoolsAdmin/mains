@@ -111,18 +111,9 @@
 </head>
   
 <body>
-    <h1 style="color: green;">
-        GeeksForGeeks
-    </h1>
-    <h3>DataTables processing Option</h3>
-  
-    <!-- HTML table with student data -->
-    <table id="tableID" class="display" 
-        style="width: 100%;">
-    </table>
-  
-    <script>
-  
+
+
+<script type="text/javascript">
         // Initialize a huge dataset to 
         // see the effects of processing
         let dataset = [];
