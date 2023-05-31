@@ -257,76 +257,77 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                                                           padding-left: 1rem;
                                                         ">
 
-            <div class=“container-fluid”>
-                <div class=“navbar-header”>
-                    <button type=“button” class=“navbar-toggle collapsed” data-toggle=“collapse” data-target=“#topFixedNavbar1”><span class=“sr-only”>Toggle navigation</span><span class=“icon-bar”></span><span class=“icon-bar”></span><span class=“icon-bar”></span></button>
-                    <div class=“navbar-brand” onclick=“location.href=‘index.html’” onmouseover=“this.style.cursor=‘pointer’”><b> JeruxSHOP <small><span class=“glyphicon glyphicon-refresh”></span></small></b></div>
+<nav class="navbar navbar-default navbar-fixed-top ">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                    <div class="navbar-brand" onclick="location.href='index.html'" onmouseover="this.style.cursor='pointer'"><b> JeruxSHOP <small><span class="glyphicon glyphicon-refresh"></span></small></b></div>
                 </div>
-                <!— Collect the nav links, forms, and other content for toggling —>
-                <div class=“collapse navbar-collapse” id=“topFixedNavbar1”>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="topFixedNavbar1">
          
-                    <ul class=“nav navbar-nav navbar-right”>
-                            <li class=“dropdown”><a href=“./index.html” class=“dropdown-toggle” data-toggle=“dropdown” role=“button” aria-expanded=“false”>Account  <span class=“glyphicon glyphicon-user”></span></a>
-                                <ul class=“dropdown-menu” role=“menu”>
-                                    <li><a href=“./account.html”>Settings<span class=“glyphicon glyphicon-cog pull-right”></span></a></li>
-                                    <li class=“divider”></li>
-                                    <li><a href=“./logout.html”>Logout <span class=“glyphicon glyphicon-off pull-right”></span></a></li>
+                    <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown"><a href="./index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account  <span class="glyphicon glyphicon-user"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="./account.html">Settings<span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="./logout.html">Logout <span class="glyphicon glyphicon-off pull-right"></span></a></li>
                                 </ul>
                             </li>
                     </ul>
                 </div>
-                <!— /.navbar-collapse —>
+                <!-- /.navbar-collapse -->
             </div>
-            <!— /.container-fluid —>
+            <!-- /.container-fluid -->
         </nav>
-    <div id=“wrapper”>
-    <div id=“sidebar-wrapper”>
-                     <ul class=“sidebar-nav”>
+    <div id="wrapper">
+    <div id="sidebar-wrapper">
+                     <ul class="sidebar-nav">
 
-                <li class=“sidebar-brand”><a href=“./index.php”><div class=“navbar-brand” onclick=“location.href=&#39;index.html&#39;”><font color=“white”><b><span class=“glyphicon glyphicon-fire”></span> Admin Panel</b></font></div></a></li>
-                <li><a href=“https://jerux.to” onclick=“window.open(this.href);return false;”><font color=“white”>Back to Jerux SHOP <span class=“glyphicon glyphicon-share-alt”></span></font></a></li>
+                <li class="sidebar-brand"><a href="./index.php"><div class="navbar-brand" onclick="location.href=&#39;index.html&#39;"><font color="white"><b><span class="glyphicon glyphicon-fire"></span> Admin Panel</b></font></div></a></li>
+                <li><a href="https://jerux.to" onclick="window.open(this.href);return false;"><font color="white">Back to Jerux SHOP <span class="glyphicon glyphicon-share-alt"></span></font></a></li>
 
-                <li><font color=“white”><b><span class=“glyphicon glyphicon-dashboard”></span> Admin Dashboard</b></font></li>
-                    <li><a href=“./index.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-home”></span> Main</a></li>
-                    <li><a href=“./Status.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-usd”></span> Financial status</a></li>
-                    <li><a href=“./Sales.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-shopping-cart”></span> Orders</a></li>
-                    <li><a href=“./NewsBuyer.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-plus”></span> Add News </a></li>
-                    <li><a href=“./Tools.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-eye-open”></span> Visualize Tools</a></li>
-                    <li><a href=“./Tickets.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-time”></span> Pending Tickets <span id=“menu_tickets”><span class=“label label-danger”><?php $s12 = mysqli_query($dbcon, “SELECT * FROM ticket where status=‘1’ OR status=‘2’”);$r11=mysqli_num_rows($s12);
+                <li><font color="white"><b><span class="glyphicon glyphicon-dashboard"></span> Admin Dashboard</b></font></li>
+                    <li><a href="./index.html" style="cursor: pointer;"><span class="glyphicon glyphicon-home"></span> Main</a></li>
+                    <li><a href="./Status.html" style="cursor: pointer;"><span class="glyphicon glyphicon-usd"></span> Financial status</a></li>
+                    <li><a href="./Sales.html" style="cursor: pointer;"><span class="glyphicon glyphicon-shopping-cart"></span> Orders</a></li>
+                    <li><a href="./NewsBuyer.html" style="cursor: pointer;"><span class="glyphicon glyphicon-plus"></span> Add News </a></li>
+                    <li><a href="./Tools.html" style="cursor: pointer;"><span class="glyphicon glyphicon-eye-open"></span> Visualize Tools</a></li>
+                    <li><a href="./Tickets.html" style="cursor: pointer;"><span class="glyphicon glyphicon-time"></span> Pending Tickets <span id="menu_tickets"><span class="label label-danger"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM ticket where status='1' OR status='2'");$r11=mysqli_num_rows($s12);
  echo $r11;?></span></span></a></li>
-                    <li><a href=“./Reports.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-time”></span> Pending Reports <span id=“menu_tickets”><span class=“label label-danger”><?php $s12 = mysqli_query($dbcon, “SELECT * FROM reports where status=‘1’ OR status=‘2’”);$r11=mysqli_num_rows($s12);
+                    <li><a href="./Reports.html" style="cursor: pointer;"><span class="glyphicon glyphicon-time"></span> Pending Reports <span id="menu_tickets"><span class="label label-danger"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM reports where status='1' OR status='2'");$r11=mysqli_num_rows($s12);
  echo $r11;?></span></span></a></li>                
-				<li><a href=“./Users.html”><span class=“glyphicon glyphicon-user”></span> Users List <span class=“label label-info”><?php $s12 = mysqli_query($dbcon, “SELECT * FROM users”);$r11=mysqli_num_rows($s12);
+				<li><a href="./Users.html"><span class="glyphicon glyphicon-user"></span> Users List <span class="label label-info"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM users");$r11=mysqli_num_rows($s12);
  echo $r11;?></span></a></li>
-                    <li><a href=“./WithdrawalRequests.html”><span class=“glyphicon glyphicon-credit-card”></span> Withdraw Approval <?php $s12 = mysqli_query($dbcon, “SELECT * FROM resseller where withdrawal=‘requested’”);$r11=mysqli_num_rows($s12);
- echo ‘<span class=“label label-danger”>’.$r11.’</span>’;?></a></li>
-                    <li><a href=“./Sellers.html”><span class=“glyphicon glyphicon-fire”></span> Sellers <span class=“label label-info”><?php $s12 = mysqli_query($dbcon, “SELECT * FROM resseller”);$r11=mysqli_num_rows($s12);
+                    <li><a href="./WithdrawalRequests.html"><span class="glyphicon glyphicon-credit-card"></span> Withdraw Approval <?php $s12 = mysqli_query($dbcon, "SELECT * FROM resseller where withdrawal='requested'");$r11=mysqli_num_rows($s12);
+ echo '<span class="label label-danger">'.$r11.'</span>';?></a></li>
+                    <li><a href="./Sellers.html"><span class="glyphicon glyphicon-fire"></span> Sellers <span class="label label-info"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM resseller");$r11=mysqli_num_rows($s12);
  echo $r11;?></span></a></li>
-                    <li><a href=“./Logout.html”><span class=“glyphicon glyphicon-log-out”></span> Logout</a></li>
+                    <li><a href="./Logout.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 					
             </ul>
 
 
         </div>
-        <!— /#sidebar-wrapper —>
+        <!-- /#sidebar-wrapper -->
 
-        <!— Page Content —>
-        <b><span id=“menu-toggle” onmouseover=“this.style.cursor=&#39;pointer&#39;”><span class=“glyphicon glyphicon-indent-right”></span></span></b>
-        <div id=“page-content-wrapper”>
-            <div class=“container-fluid”>
-            <div id=“divPage”>
+        <!-- Page Content -->
+        <b><span id="menu-toggle" onmouseover="this.style.cursor=&#39;pointer&#39;"><span class="glyphicon glyphicon-indent-right"></span></span></b>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+            <div id="divPage">
 
     <script>
     var v_aa =0;
-    $(“#menu-toggle”).click(function(e) {
+    $("#menu-toggle").click(function(e) {
         e.preventDefault();
-        $(“#wrapper”).toggleClass(“toggled”);
+        $("#wrapper").toggleClass("toggled");
         if (v_aa == 1) {
-          $(“#menu-toggle”).html(‘<span class=“glyphicon glyphicon-indent-right”></span>’).show();
+          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-right"></span>').show();
           v_aa =0;
         }
         else {
-          $(“#menu-toggle”).html(‘<span class=“glyphicon glyphicon-indent-left”></span>’).show();
+          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-left"></span>').show();
           v_aa =1;     
         }
         
@@ -335,14 +336,15 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     </script>
     <script>
 	$(function() {
-		$(“.preload”).fadeOut(500, function() {
-			$(“.content”).fadeIn(0);
+		$(".preload").fadeOut(500, function() {
+			$(".content").fadeIn(0);
 		});
 	});
 </script> 
-     <div class=“preload”>
-<div id=“mydiv”><img src=“assets/wait.gif” class=“ajax-loader”></div>  
+     <div class="preload">
+<div id="mydiv"><img src="assets/wait.gif" class="ajax-loader"></div>  
 
   </div>
- 	<div class=“content”>
+ 	<div class="content">
+
 <br><br>
