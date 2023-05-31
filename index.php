@@ -15,6 +15,10 @@
     <div class="row m-3 pt-1" style="color: var(--font-color);">
         <div class="col-xs-6 col-sm-4 col-lg-2" style="display:inline-block">
           
+         
+         
+         
+         
             <label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
             <input type="search" class="form-control" id="infos" style="color: var(--font-color); background-color: var(--color-card);">
         </div>
@@ -129,33 +133,34 @@
         </div>
     </div>
    <script>
-  
-        // Initialize a huge dataset to 
-        // see the effects of processing
-        let dataset = [];
-        for (let i = 0; i < 250000; i++) {
-            let newArr =
-                [i, "Random Data: " + i, Math.random()];
-            dataset.push(newArr);
-        }
-  
-        // Initialize the DataTable
-        $(document).ready(function () {
-            $('#dataTables').DataTable({
-  
-                // Add the data created above
-                data: dataset,
-                columns: [
-                    { title: "Index" },
-                    { title: "String Index" },
-                    { title: "Random" },
-                ],
-  
-                // Enable the processing indicator
-                // of the DataTable
-                processing: true,
-            });
-        });
+  (document).ready(function() {
+  // Setup - add a text input to each footer cell
+  $("#dataTables tfoot th").each(function() {
+    var title = $(this).text();
+    $(this).html('<input type="text" placeholder="Search ' + title + '" />');
+  });
+
+  // DataTable
+  var table = $("#example").DataTable();
+
+  // Apply the search
+  table.columns().every(function(index) {
+    var that = this;
+
+    $("input", this.footer()).on("keyup change clear", function() {
+      if (that.search() !== this.value) {
+        that.search(this.value).draw();
+        table
+          .rows()
+          .$("tr", { filter: "applied" })
+          .each(function() {
+            console.log(table.row(this).data());
+          });
+      }
+    });
+  });
+});
+
     </script>
    
    
