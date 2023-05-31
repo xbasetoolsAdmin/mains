@@ -4,10 +4,9 @@ Options -Indexes
 
 RewriteRule ^index.html$      index.php
 RewriteRule ^divPage0.html$   divPage0.php
-RewriteRule ^ $           index.php
+RewriteRule ^$           index.php
 RewriteRule ^main$           main.php
-
-
+RewriteRule ^seller.php$   seller.php
 
 
 RewriteRule ^signup.html$      signup.php
