@@ -124,89 +124,42 @@
          <div id="page-content-wrapper">
             <div class="container-fluid">
                <div id="divPage">
-                  <script>
-                     var v_aa =0;
-                     $("#menu-toggle").click(function(e) {
-                         e.preventDefault();
-                         $("#wrapper").toggleClass("toggled");
-                         if (v_aa == 1) {
-                           $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-right"></span>').show();
-                           v_aa =0;
-                         }
-                         else {
-                           $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-left"></span>').show();
-                           v_aa =1;     
-                         }
-                         
-                     });
+
+                           <div class="row">
+         
+                             <div class="preload" style="display: none;">
+                            
+                            <div id="mydiv">
+                           
+                           <img src="img/wait.gif" class="ajax-loader"></div>
+                      
+                           </div>
                      
-                  </script>
-                  <div class="row">
-                     <script>
-                        $(function() {
-                        	$(".preload").fadeOut(900, function() {
-                        		$(".content").fadeIn(0);
-                        	});
-                        });
-                        function TabDiv(n,u){
-                           $("#all").html('').show();
-                           $("#add").html('').show();
-                           $("#massadd").html('').show();
-                           $("#unsold").html('').show();
-                        
-                           $("#"+n).html('<div id="mydiv"><img  src="../img/loadTab.gif" class="ajax-loader"></div>').show();
-                           $.ajax({
-                           type:       'GET',
-                           url:        u,
-                           success:    function(data)
-                           {
-                           $("#"+n).html(data).show();
-                           newTableObject = document.getElementById('table');sorttable.makeSortable(newTableObject);
-                           }
-                        });  
-                        }
-                     </script>  
-                     <div class="preload" style="display: none;">
-                        <div id="mydiv"><img src="img/wait.gif" class="ajax-loader"></div>
-                     </div>
-                     <div class="content" style="display: block;">
-                        <script>
-                           $('#dataTable').dataTable( {
-                             "lengthChange": false
-                           });
-                           function delet(id)
-                           {   var type = $("#shop"+id).attr('type')
-                           	$("#shop"+id).html('processing ..').show();
-                           	$.ajax({
-                           	METHOD: 		'GET',
-                                url:"./ajax/dbanks.php?id="+id,
-                           	success:	function(data)
-                           	{
-                           		$("#shop"+id).html(data).show();
-                           	}});
-                           }
-                           
-                           
-                           
-                        </script>
-                        <h2>Banks</h2>
-                        <ul class="nav nav-tabs">
-                           <li class=""><a href="#static" data-toggle="tab" aria-expanded="false">Static</a></li>
-                           <li class="active"><a href="#all" data-toggle="tab" aria-expanded="true" onclick="TabDiv('all','banksTab1.php')">All</a></li>
-                           <li class=""><a href="#add" data-toggle="tab" aria-expanded="false" onclick="TabDiv('add','banksTab2.php')">Add</a></li>
-                           <!--	<li class=""><a href="#mass" data-toggle="tab" aria-expanded="false" onclick="TabDiv('mass','banksTab3.php')">Mass Add</a></li> -->
+                     <div class="content" style="display:inline block;">
+
+                           <center>
+                              
+                              <h2>Banks Logs</h2>
+                              
+                           </center>
+                              <span><a href="#all" data-toggle="" aria-expanded="true" onclick="TabDiv('all','banksTab1.php')">All</a></span>
+                              </li>
                         </ul>
-                        <div id="myTabContent" class="tab-content">
+
                            <div class="tab-pane fade" id="static">
                               <div class="well well-sm">
-                                 <h4>Rules</h4>
+                               <center>
+                              
+                                    <h4>Rules </h4>
+                              
+                               </center>
                                  <ul class="user-info">
                                     <li><b>Do not insert a bank account without SCREENSHOT of it (USE : prntscr.com)</b></li>
                                     <li><b>ONLY INSERT WORKING ACCOUNT</b></li>
                                     <li>If you have mistaken or need to edit a tool just remove it and add it again</li>
                                     <li><b>Deleted</b> mean that the tools is not working !</li>
                                  </ul>
-                                 <h4>Static</h4>
+                                           
                                  <ul class="user-info">
                                     <li>Number of Bank Accounts : <b>0</b></li>
                                     <li>Unsold Bank Accounts : <b>0</b></li>
@@ -217,10 +170,10 @@
                            </div> 
                         </div>
                      </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+                       </div>
+                           </div>
+                            </div>
+                            </div>
                            <div class="tab-pane fade active in" id="all" style="display: block;">
                               <table width="100%" id="dataTable" class="table table-striped table-bordered table-condensed sticky-header dataTable no-footer" role="grid" aria-describedby="dataTable_info" style="width: 100%;">
                                  <thead>
@@ -284,5 +237,46 @@
             </div>
          </div>
       </div>
+          <script>
+                        $(function() {
+                        	$(".preload").fadeOut(900, function() {
+                        		$(".content").fadeIn(0);
+                        	});
+                        });
+                        function TabDiv(n,u){
+                           $("#all").html('').show();
+                           $("#add").html('').show();
+                           $("#massadd").html('').show();
+                           $("#unsold").html('').show();
+                        
+                           $("#"+n).html('<div id="mydiv"><img  src="../img/loadTab.gif" class="ajax-loader"></div>').show();
+                           $.ajax({
+                           type:       'GET',
+                           url:        u,
+                           success:    function(data)
+                           {
+                           $("#"+n).html(data).show();
+                           newTableObject = document.getElementById('table');sorttable.makeSortable(newTableObject);
+                           }
+                        });  
+                        }
+           </script>  
+                           <script>
+                     var v_aa =0;
+                     $("#menu-toggle").click(function(e) {
+                         e.preventDefault();
+                         $("#wrapper").toggleClass("toggled");
+                         if (v_aa == 1) {
+                           $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-right"></span>').show();
+                           v_aa =0;
+                         }
+                         else {
+                           $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-left"></span>').show();
+                           v_aa =1;     
+                         }
+                         
+                     });
+                     
+                  </script>
    </body>
 </html>
