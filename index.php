@@ -1,4 +1,6 @@
- <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
+
+
+<div class="alert alert-info text-center" role="alert" style="margin: 25px;">
         <ul>
             <li>We Have Fresh E-mails Lists for Diffrents Countries ( You Can Use it for Spam ). </li>
             <li>Our E-mails Lists Guarante for you Good results because most of them are from Shops and Big Sites .</li>
@@ -16,6 +18,8 @@
             <label for="infos" style="margin-bottom: 10px; margin-top: 5px">Description:</label>
             <input type="search" class="form-control" id="infos" style="color: var(--font-color); background-color: var(--color-card);">
         </div>
+  </div>
+
 
 
           <!---------------2---select country option value ---------------->
