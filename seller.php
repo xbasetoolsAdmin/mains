@@ -1,7 +1,6 @@
 <html lang="en">
-   <head>
+
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-      \
       <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,32 +12,12 @@
       <link rel="stylesheet" type="text/css" href="../buyer/assets/flags.css">
       <link rel="stylesheet" type="text/css" href="css/tickets.css">
       <script type="text/javascript" src="./assets/jquery.js"></script>
-      
-      <script type="text/javascript">
-         function ajaxinfo(){
-           $.ajax({
-           type:       'GET',
-           url:        'ajaxinfo.html',
-           timeout: 10000 ,
-         
-                success: function(data){
-                   if (data != '01'){
-                     var data = JSON.parse(data);
-                       for (var prop in data) {
-                       $("#"+prop).html(data[prop] ).show();
-                     }
-                   }
-                   else {
-                     window.location = "logout.html";
-                   }
-                }
-              });
-         
-         }
-         setInterval(function(){ajaxinfo()}, 3000);
-         
-         ajaxinfo();
-      </script>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Felux-Shop Login</title>
+</head>
+
    </head>
    <body>
 <nav class="navbar navbar-expand-xl navbar  navbar-light " style="
@@ -105,6 +84,7 @@
  
     </div>
 </nav>
+
             <li class="nav-item dropdown mr-auto">
                 <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-warehouse fa-sm orange-text"></i>
                     Hosts
@@ -288,6 +268,7 @@
             </div>
          </div>
       </div>
+      
           <script>
                         $(function() {
                         	$(".preload").fadeOut(900, function() {
