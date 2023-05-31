@@ -45,7 +45,7 @@ $myObj->cpanel = "$r6";
 $myObj->mailer = "$r7";
 $myObj->smtp = "$r8";
 $myObj->leads = "$r9";
-$myObj->premium = "$r10";
+
 $myObj->banks = "$r11";
 $myObj->scams = "$r12";
 $myObj->tutorials = "$r13";
