@@ -128,5 +128,36 @@
             </div>
         </div>
     </div>
+   <script>
+  
+        // Initialize a huge dataset to 
+        // see the effects of processing
+        let dataset = [];
+        for (let i = 0; i < 250000; i++) {
+            let newArr =
+                [i, "Random Data: " + i, Math.random()];
+            dataset.push(newArr);
+        }
+  
+        // Initialize the DataTable
+        $(document).ready(function () {
+            $('#tableID').DataTable({
+  
+                // Add the data created above
+                data: dataset,
+                columns: [
+                    { title: "Index" },
+                    { title: "String Index" },
+                    { title: "Random" },
+                ],
+  
+                // Enable the processing indicator
+                // of the DataTable
+                processing: true,
+            });
+        });
+    </script>
+   
+   
 </body>
 </html>
