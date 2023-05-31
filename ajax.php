@@ -38,6 +38,7 @@ $r13=mysqli_num_rows($s13);
 $myObj =new stdClass();
 $myObj->tickets = "$r1";
 $myObj->reports = "$r2";
+$myObj->premium = "$r10";
 $myObj->balance = "$r3";
 $myObj->rdp = "$r4";
 $myObj->shell = "$r5";
