@@ -6,6 +6,8 @@ $r1=mysqli_num_rows($s1);
 
 $myObj =new stdClass();
 $myObj->premium = "$r10";
+
+$myObj =new stdClass();
 $myObj->premium = "$r2";
 
 
