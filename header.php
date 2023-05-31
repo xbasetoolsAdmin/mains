@@ -256,141 +256,77 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                                                           padding-bottom: 0.5rem;
                                                           padding-left: 1rem;
                                                         ">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                   <span class="middle-navbar-toggler-icon"></span>
-    </button>
-                    <div class="navbar-brand" onclick="location.href='index.html'" onmouseover="this.style.cursor='pointer'"><b> JeruxSHOP <small><span class="glyphicon glyphicon-refresh"></span></small></b></div>
-                </div>
-    
-                <!-- Collect the nav links, forms, and other content for toggling -->
-              
-    <div class="collapse navbar-collapse order-1" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
 
-                            <li class="dropdown">
-                                
-
- 
-
-        <ul class="navbar-nav profile">
- 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell text-danger"></i> <span class="badge badge-success">0</span></a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
-                    <a class="dropdown-item" href="#" style="color: var(--font-color);">There is no new notifications</a>
+            <div class=“container-fluid”>
+                <div class=“navbar-header”>
+                    <button type=“button” class=“navbar-toggle collapsed” data-toggle=“collapse” data-target=“#topFixedNavbar1”><span class=“sr-only”>Toggle navigation</span><span class=“icon-bar”></span><span class=“icon-bar”></span><span class=“icon-bar”></span></button>
+                    <div class=“navbar-brand” onclick=“location.href=‘index.html’” onmouseover=“this.style.cursor=‘pointer’”><b> JeruxSHOP <small><span class=“glyphicon glyphicon-refresh”></span></small></b></div>
                 </div>
-            </li>
- 
-            <li class="nav-item">
-                <a class="nav-link" href="addBalance" style="color: var(--font-color);" role="button" aria-haspopup="true" aria-expanded="false"><span class="badge badge-danger">
-                        0
-                        <span class="px-2"><i class="fa fa-plus"></i></span></span>
-                </a>
-            </li>
- 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Ticket <span class="badge badge-success">0</span></a>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
-                    <a class="dropdown-item" href="orders" style="color: var(--font-color);"><span class="px-2">Report Items</span></a>
-                    <a class="dropdown-item" href="tickets" style="color: var(--font-color);"><span class="px-2">My Tickets <span class="badge badge-success">0</span></span></a>
-                    <a class="dropdown-item" href="reports" style="color: var(--font-color);"><span class="px-2">My Reports <span class="badge badge-success">0</span></span></a>
-                    <a class="dropdown-item" href="OpenTicket" style="color: var(--font-color);"><span class="px-2">New Ticket</span></a>
+                <!— Collect the nav links, forms, and other content for toggling —>
+                <div class=“collapse navbar-collapse” id=“topFixedNavbar1”>
+         
+                    <ul class=“nav navbar-nav navbar-right”>
+                            <li class=“dropdown”><a href=“./index.html” class=“dropdown-toggle” data-toggle=“dropdown” role=“button” aria-expanded=“false”>Account  <span class=“glyphicon glyphicon-user”></span></a>
+                                <ul class=“dropdown-menu” role=“menu”>
+                                    <li><a href=“./account.html”>Settings<span class=“glyphicon glyphicon-cog pull-right”></span></a></li>
+                                    <li class=“divider”></li>
+                                    <li><a href=“./logout.html”>Logout <span class=“glyphicon glyphicon-off pull-right”></span></a></li>
+                                </ul>
+                            </li>
+                    </ul>
                 </div>
-            </li>
- 
- 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> hustlersfather <i class="fa fa-user-secret" style="color: var(--font-color);"></i></a>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
-                    <a class="dropdown-item" href="setting" style="color: var(--font-color);"><span class="px-2">Setting <i class="fa fa-cog"></i></span></a>
-                    <a class="dropdown-item" href="seller-profile" style="color: var(--font-color);"><span class="px-2">Profile <i class="fa fa-user"></i></span></a>
-                    <a class="dropdown-item" href="orders" style="color: var(--font-color);"><span class="px-2">My Orders <i class="fa fa-shopping-cart"></i></span></a>
-                    <a class="dropdown-item" href="addBalance" style="color: var(--font-color);"><span class="px-2">Add Balance <i class="fa fa-money-bill-alt"></i></span></a>
-                    <a class="dropdown-item" href="logout" style="color: var(--font-color);"><span class="px-2">Logout <i class="fa fa-door-open"></i></span></a>
-                </div>
-            </li>
- 
-        </ul>
- 
-    </div>
-    </nav>
-    <div id="wrapper">
-    <div id="sidebar-wrapper">
-                     <ul class="sidebar-nav">
-
-                <li class="sidebar-brand">
-                    
-                    <a href="./index.php">
-                        
-            
-            <div class="navbar-brand" onclick="location.href=&#39;index.html&#39;"><font color="white">
-                
-                <b>
-                    
-                    <span class="glyphicon glyphicon-fire">
-                        
-                        
-                    </span>main dashboard</b>
-            
-            </font>
-            
+                <!— /.navbar-collapse —>
             </div>
-                    
-                    </a>
-                
-                </li>
-                <li>
-                    
-                    <a href="https://xbasetools.xyz/" onclick="window.open(this.href);return false;">
-                        
-                        <font color="white">
-                            Back to main dashboard <span class="glyphicon glyphicon-share-alt"></span></font></a></li>
+            <!— /.container-fluid —>
+        </nav>
+    <div id=“wrapper”>
+    <div id=“sidebar-wrapper”>
+                     <ul class=“sidebar-nav”>
 
-                <li><font color="white"><b><span class="glyphicon glyphicon-dashboard"></span> Admin Dashboard</b></font></li>
-                    <li><a href="./index.html" style="cursor: pointer;"><span class="glyphicon glyphicon-home"></span> Main</a></li>
-                    <li><a href="./Status.html" style="cursor: pointer;"><span class="glyphicon glyphicon-usd"></span> Financial status</a></li>
-                    <li><a href="./Sales.html" style="cursor: pointer;"><span class="glyphicon glyphicon-shopping-cart"></span> Orders</a></li>
-                    <li><a href="./NewsBuyer.html" style="cursor: pointer;"><span class="glyphicon glyphicon-plus"></span> Add News </a></li>
-                    <li><a href="./Tools.html" style="cursor: pointer;"><span class="glyphicon glyphicon-eye-open"></span> Visualize Tools</a></li>
-                    <li><a href="./Tickets.html" style="cursor: pointer;"><span class="glyphicon glyphicon-time"></span> Pending Tickets <span id="menu_tickets"><span class="label label-danger"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM ticket where status='1' OR status='2'");$r11=mysqli_num_rows($s12);
+                <li class=“sidebar-brand”><a href=“./index.php”><div class=“navbar-brand” onclick=“location.href=&#39;index.html&#39;”><font color=“white”><b><span class=“glyphicon glyphicon-fire”></span> Admin Panel</b></font></div></a></li>
+                <li><a href=“https://jerux.to” onclick=“window.open(this.href);return false;”><font color=“white”>Back to Jerux SHOP <span class=“glyphicon glyphicon-share-alt”></span></font></a></li>
+
+                <li><font color=“white”><b><span class=“glyphicon glyphicon-dashboard”></span> Admin Dashboard</b></font></li>
+                    <li><a href=“./index.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-home”></span> Main</a></li>
+                    <li><a href=“./Status.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-usd”></span> Financial status</a></li>
+                    <li><a href=“./Sales.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-shopping-cart”></span> Orders</a></li>
+                    <li><a href=“./NewsBuyer.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-plus”></span> Add News </a></li>
+                    <li><a href=“./Tools.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-eye-open”></span> Visualize Tools</a></li>
+                    <li><a href=“./Tickets.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-time”></span> Pending Tickets <span id=“menu_tickets”><span class=“label label-danger”><?php $s12 = mysqli_query($dbcon, “SELECT * FROM ticket where status=‘1’ OR status=‘2’”);$r11=mysqli_num_rows($s12);
  echo $r11;?></span></span></a></li>
-                    <li><a href="./Reports.html" style="cursor: pointer;"><span class="glyphicon glyphicon-time"></span> Pending Reports <span id="menu_tickets"><span class="label label-danger"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM reports where status='1' OR status='2'");$r11=mysqli_num_rows($s12);
+                    <li><a href=“./Reports.html” style=“cursor: pointer;”><span class=“glyphicon glyphicon-time”></span> Pending Reports <span id=“menu_tickets”><span class=“label label-danger”><?php $s12 = mysqli_query($dbcon, “SELECT * FROM reports where status=‘1’ OR status=‘2’”);$r11=mysqli_num_rows($s12);
  echo $r11;?></span></span></a></li>                
-				<li><a href="./Users.html"><span class="glyphicon glyphicon-user"></span> Users List <span class="label label-info"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM users");$r11=mysqli_num_rows($s12);
+				<li><a href=“./Users.html”><span class=“glyphicon glyphicon-user”></span> Users List <span class=“label label-info”><?php $s12 = mysqli_query($dbcon, “SELECT * FROM users”);$r11=mysqli_num_rows($s12);
  echo $r11;?></span></a></li>
-                    <li><a href="./WithdrawalRequests.html"><span class="glyphicon glyphicon-credit-card"></span> Withdraw Approval <?php $s12 = mysqli_query($dbcon, "SELECT * FROM resseller where withdrawal='requested'");$r11=mysqli_num_rows($s12);
- echo '<span class="label label-danger">'.$r11.'</span>';?></a></li>
-                    <li><a href="./Sellers.html"><span class="glyphicon glyphicon-fire"></span> Sellers <span class="label label-info"><?php $s12 = mysqli_query($dbcon, "SELECT * FROM resseller");$r11=mysqli_num_rows($s12);
+                    <li><a href=“./WithdrawalRequests.html”><span class=“glyphicon glyphicon-credit-card”></span> Withdraw Approval <?php $s12 = mysqli_query($dbcon, “SELECT * FROM resseller where withdrawal=‘requested’”);$r11=mysqli_num_rows($s12);
+ echo ‘<span class=“label label-danger”>’.$r11.’</span>’;?></a></li>
+                    <li><a href=“./Sellers.html”><span class=“glyphicon glyphicon-fire”></span> Sellers <span class=“label label-info”><?php $s12 = mysqli_query($dbcon, “SELECT * FROM resseller”);$r11=mysqli_num_rows($s12);
  echo $r11;?></span></a></li>
-                    <li><a href="./Logout.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                    <li><a href=“./Logout.html”><span class=“glyphicon glyphicon-log-out”></span> Logout</a></li>
 					
             </ul>
 
 
         </div>
-        <!-- /#sidebar-wrapper -->
+        <!— /#sidebar-wrapper —>
 
-        <!-- Page Content -->
-        <b><span id="menu-toggle" onmouseover="this.style.cursor=&#39;pointer&#39;"><span class="glyphicon glyphicon-indent-right"></span></span></b>
-        <div id="page-content-wrapper">
-            <div class="container-fluid">
-            <div id="divPage">
+        <!— Page Content —>
+        <b><span id=“menu-toggle” onmouseover=“this.style.cursor=&#39;pointer&#39;”><span class=“glyphicon glyphicon-indent-right”></span></span></b>
+        <div id=“page-content-wrapper”>
+            <div class=“container-fluid”>
+            <div id=“divPage”>
 
     <script>
     var v_aa =0;
-    $("#menu-toggle").click(function(e) {
+    $(“#menu-toggle”).click(function(e) {
         e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
+        $(“#wrapper”).toggleClass(“toggled”);
         if (v_aa == 1) {
-          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-right"></span>').show();
+          $(“#menu-toggle”).html(‘<span class=“glyphicon glyphicon-indent-right”></span>’).show();
           v_aa =0;
         }
         else {
-          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-left"></span>').show();
+          $(“#menu-toggle”).html(‘<span class=“glyphicon glyphicon-indent-left”></span>’).show();
           v_aa =1;     
         }
         
@@ -399,14 +335,14 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     </script>
     <script>
 	$(function() {
-		$(".preload").fadeOut(1500, function() {
-			$(".content").fadeIn(10);
+		$(“.preload”).fadeOut(500, function() {
+			$(“.content”).fadeIn(0);
 		});
 	});
 </script> 
-     <div class="preload">
-<div id="mydiv"><img src="assets/wait.gif" class="ajax-loader"></div>  
+     <div class=“preload”>
+<div id=“mydiv”><img src=“assets/wait.gif” class=“ajax-loader”></div>  
 
   </div>
- 	<div class="content">
+ 	<div class=“content”>
 <br><br>
