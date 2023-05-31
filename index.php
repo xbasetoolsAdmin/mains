@@ -101,18 +101,11 @@
     </style>
 
 
-</body>
 
 
-<html>
-  
-<head>
- 
 </head>
   
 <body>
-
-
 <script type="text/javascript">
         // Initialize a huge dataset to 
         // see the effects of processing
@@ -142,7 +135,7 @@
         });
     </script>
 </body>
-  
+ </html>
 
 
 
@@ -163,64 +156,6 @@
 
 
 
-
-
-
-
-
-<script src="../buyer/layout/js/jquery-3.4.1.min.js"></script>
-<script src="../buyer/layout/js/clipboard.min.js"></script>
-<script src="../buyer/layout/js/bootstrap.min.js"></script>
-<script src="../buyer/layout/js/bootbox.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
-</script>
-<script src="js/jquery.dataTables.min.js"></script>
-<!-- Script -->
-<script>
-    $(document).ready(function() {
-        var dataTable = $('#empTable').DataTable({
-            'processing': true,
-            'serverSide': true,
-            'serverMethod': 'post',
-            //'searching': false, // Remove default Search Control
-            'ajax': {
-                'url': 'ajaxfile.php',
-                'data': function(data) {
-                    // Read values
-                    var gender = $('#searchByGender').val();
-                    var name = $('#searchByName').val();
-
-                    // Append to data
-                    data.searchByGender = gender;
-                    data.searchByName = name;
-                }
-            },
-            'columns': [{
-                data: 'emp_name'
-            }, {
-                data: 'email'
-            }, {
-                data: 'gender'
-            }, {
-                data: 'salary'
-            }, {
-                data: 'city'
-            }, ]
-        });
-
-        $('#searchByName').keyup(function() {
-            dataTable.draw();
-        });
-
-        $('#searchByGender').change(function() {
-            dataTable.draw();
-        });
-    });
-</script>
-</body>
-
-</html>
 
 
 
