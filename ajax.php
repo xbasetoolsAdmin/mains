@@ -18,6 +18,9 @@ $myObj =new stdClass();
 $myObj->tickets = "$r1";
 $myObj->tickets = "$r1";
 $myObj->tickets = "$r1";
+$myObj->tickets = "$r1";
+$myObj->tickets = "$r1";
+$myObj->tickets = "$r1";
 
         $q = mysqli_query($dbcon, "SELECT resseller FROM users WHERE username='$usrid'");
           $r = mysqli_fetch_assoc($q);
