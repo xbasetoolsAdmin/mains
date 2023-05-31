@@ -74,7 +74,34 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 }
 
 </style>
+
+<script type="text/javascript">
+    function ajaxinfo(){
+      $.ajax({
+      type:       'GET',
+      url:        'ajaxinfo.html',
+      timeout: 10000 ,
+
+           success: function(data){
+              if (data != '01'){
+                var data = JSON.parse(data);
+                  for (var prop in data) {
+                  $("#"+prop).html(data[prop] ).show();
+                }
+              }
+              else {
+                window.location = "logout.html";
+              }
+           }
+         });
+
+  }
+    setInterval(function(){ajaxinfo()}, 3000);
+
+ ajaxinfo();
+	</script>
 </head>
+
 
 <body>
 <nav class="navbar navbar-default navbar-fixed-top ">
@@ -100,14 +127,40 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
             </div>
             <!-- /.container-fluid -->
         </nav>
-    <div id="wrapper">
+<div id="wrapper">
     <div id="sidebar-wrapper">
                      <ul class="sidebar-nav">
 
-                <li class="sidebar-brand"><a href="./index.php"><div class="navbar-brand" onclick="location.href=&#39;index.html&#39;"><font color="white"><b><span class="glyphicon glyphicon-fire"></span> Admin Panel</b></font></div></a></li>
-                <li><a href="https://jerux.to" onclick="window.open(this.href);return false;"><font color="white">Back to Jerux SHOP <span class="glyphicon glyphicon-share-alt"></span></font></a></li>
+                <li class="sidebar-brand"><a href="./index"><div class="navbar-brand" onclick="location.href=&#39;index.html&#39;"><font color="white"><b><span class="glyphicon glyphicon-fire"></span> Seller Panel</b></font></div></a></li>
+                <li><a href="https://jerux.to/buyer/index.html" onclick="window.open(this.href);return false;"><font color="white">Back to Jerux SHOP <span class="glyphicon glyphicon-share-alt"></span></font></a></li>
 
-                <li><font color="white"><b><span class="glyphicon glyphicon-dashboard"></span> Admin Dashboard</b></font></li>
+                <li><font color="white"><b>Seller Dashboard</b></font></li>
+                    <li><a href="./index.html" style="cursor: pointer;">Main</a></li>
+		  <?php
+          $uid     = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+          $qerd = mysqli_query($dbcon, "SELECT * FROM resseller WHERE username='$uid'")or die(mysqli_error());
+          $rers = mysqli_fetch_assoc($qerd);
+        ?>
+                    <li><a href="./sales.html" style="cursor: pointer;">Sales <div id="sales" class="label label-info"></div></a></li>
+                    <li><a href="./withdraw.html" style="cursor: pointer;">Withdraw</a></li>
+                    <li><a href="./reports.html" style="cursor: pointer;">My Reports <?php 
+					$s1 = mysqli_query($dbcon, "SELECT * FROM reports WHERE resseller='$uid' AND status='1' OR status='2'");
+					$r1=mysqli_num_rows($s1);
+					if (strpos($r1,'0') !== false) {
+} else {
+echo '<div id="reports" class="label label-danger"></div>'; }?></a></li>			
+
+                <li><font color="white"><b>Tools Management</b></font></li>
+                    <li><a href="./rdp.html" style="cursor: pointer;">RDP <span id="rdp" class="label label-info"></span></a></li>
+                    <li><a href="./shell.html" style="cursor: pointer;">Shell <span id="shell" class="label label-info"></span></a></li>
+                    <li><a href="./cpanel.html" style="cursor: pointer;">cPanel <span id="cpanel" class="label label-info"></span></a></li>
+				<li><a href="./mailer.html">PHP Mailer <span id="mailer" class="label label-info"></span></a></li>
+	<li><a href="./smtp.html">SMTP <span id="smtp" class="label label-info"></span></a></li>
+                    <li><a href="./leads.html">Leads <span id="leads" class="label label-info"></span></a></li>
+                    <li><a href="./scampage.html">Scampage <span id="scams" class="label label-info"></span></a></li>
+                    <li><a href="./tutorial.html">Tutorial/Method <span id="tutorials" class="label label-info"></span></a></li>
+           <li><a href="./banks.html">Bank Accounts <span id="banks" class="label label-info"></span></a></li>
+	      <li><a href="./premium.html">Premium/Shop/Dating <span id="premium" class="label label-info"></span></a></li>		
                     <li><a href="./index.html" style="cursor: pointer;"><span class="glyphicon glyphicon-home"></span> Main</a></li>
                     <li><a href="./Status.html" style="cursor: pointer;"><span class="glyphicon glyphicon-usd"></span> Financial status</a></li>
                     <li><a href="./Sales.html" style="cursor: pointer;"><span class="glyphicon glyphicon-shopping-cart"></span> Orders</a></li>
