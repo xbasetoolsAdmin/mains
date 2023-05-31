@@ -17,124 +17,196 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Main - home</title>
-<link rel="stylesheet" href="../buyer/layout/css/bootstrap.min.css">
-<link rel="stylesheet" href="../buyer/layout/css/all.min.css">
-<link rel="stylesheet" href="../buyer/layout/css/main.css">
-<link rel="stylesheet" href="../buyer/layout/css/util.css">
-<script type="text/javascript" src="../buyer/layout/js/jquery-3.4.1-min.js"></script>
-<script type="text/javascript" src="../buyer/layout/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../buyer/layout/js/bootbox.min.js"></script>
-<script type="text/javascript" src="../buyer/js/jquery.datatables.min.js"></script>
-<font face="Arial">
-<link rel="stylesheet" href="../buyer/layout/css/bootstrap.min.css">
-     <style>
-
-.alert.alert-info {
-    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
-    box-shadow: 0 1px 2px rgba(0,0,0,.2);
-}
-
-
-.alert {
-    margin-bottom: 20px;
-    margin-top: 0;
-    color: var(--font-color);
-    border-width: 0;
-    border-left-width: 5px;
-    padding: 10px;
-    border-radius: 0;
-}
-
-.alert.alert-danger {
-    border-color: #df5138;
-    background-color: #2196f3;
-}
-
-.teddy-text {
-  background: #f2f1ef;
-  padding: 1.2em 1em;
-  border-radius: 5px 5px 0px 0px;
-}   
-
-.teddy-follow {
-  background: #17C0FB;
-  padding: 0.7em 0em 0.7em 0em;
-}
-.teddy-followred {
-  background: #D41010;
-  padding: 0.7em 0em 0.7em 0em;
-}
-</style>
-<style>
-.content {
-	display:td :
-    th;
-}
-
-</style>
-    <script>
-    var v_aa =0;
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-        if (v_aa == 1) {
-          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-right"></span>').show();
-          v_aa =0;
+    
+    <!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="L4juOQYBnGImEttBbdNpTy6sMZLChXqGpMmOYtgI" />
+    <title>Home | LuFix</title>
+    
+    
+    <link rel="stylesheet" href="../buyer/layout/css/bootstrap.min.css">
+    <script src="../buyer/layout/js/jquery-3.4.1.min.js"></script>
+    <script src="../buyer/layout/js/clipboard.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="../buyer/layout/js/bootstrap.min.js"></script>
+    <script src="../buyer/layout/js/bootbox.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../buyer/layout/css/flags.css" />
+    <style>
+        @import url(//fonts.googleapis.com/css?family=Roboto:400);
+ 
+        .navbar-nav .dropdown-menu {
+            margin: 0 !important
         }
-        else {
-          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-left"></span>').show();
-          v_aa =1;     
-        }
-        
-    });
-
-    </script>
-    <script>
-	$(function() {
-		$(".preload").fadeOut(500, function() {
-			$(".content").fadeIn(0);
-		});
-	});
-</script> 
-     <div class="preload">
-<div id="mydiv"><img src="assets/wait.gif" class="ajax-loader"></div>  
-
-  </div>
- 	<div class="content">
-<br><br>
-
-<script type="text/javascript">
-    function ajaxinfo(){
-      $.ajax({
-      type:       'GET',
-      url:        'ajaxinfo.html',
-      timeout: 10000 ,
-
-           success: function(data){
-              if (data != '01'){
-                var data = JSON.parse(data);
-                  for (var prop in data) {
-                  $("#"+prop).html(data[prop] ).show();
-                }
-              }
-              else {
-                window.location = "logout.html";
-              }
-           }
-         });
-
-  }
-    setInterval(function(){ajaxinfo()}, 3000);
-
- ajaxinfo();
-	</script>
+    </style>
 </head>
-
-
-<body>
-
-
+<style>
+    .navbar-nav .dropdown-menu {
+        margin: 0 !important
+    }
+ 
+    .theme-light {
+        --color-primary: #0060df;
+        --color-secondary: #ffffff;
+        --color-secondary2: #ecf0f1;
+        --color-accent: #fd6f53;
+        --font-color: #000000;
+        --color-nav: #ffffff;
+        --color-dropdown: #ffffff;
+        --color-card: #ffffff;
+        --color-card2: #d1ecf1;
+        --color-info: #0c5460;
+        --color-backinfo: #d1ecf1;
+        --color-borderinfo: #bee5eb;
+ 
+    }
+ 
+    .theme-dark {
+        --color-primary: #17ed90;
+        --color-secondary: #353B50;
+        --color-secondary2: #353B50;
+        --color-accent: #12cdea;
+        --font-color: #ffffff;
+        --color-nav: #363947;
+        --color-dropdown: rgba(171, 205, 239, 0.3);
+        --color-card: #262A37;
+        --color-card2: #262A37;
+        --color-info: #4DD0E1;
+        --color-backinfo: #262A37;
+        --color-borderinfo: #262A37;
+    }
+ 
+    .them {
+ 
+        background: var(--color-secondary);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+    .them h1 {
+        color: var(--font-color);
+        font-family: sans-serif;
+    }
+ 
+    .card-body {
+        color: var(--font-color);
+    }
+ 
+    .them button {
+        color: var(--font-color);
+        background-color: #ffffff;
+        padding: 10px 20px;
+        border: 0;
+        border-radius: 5px;
+    }
+ 
+    .navbar.navbar-light .navbar-toggler {
+        color: var(--font-color);
+    }
+ 
+    /* The switch - the box around the slider */
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+ 
+    /* Hide default HTML checkbox */
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+ 
+    /* The slider */
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+    }
+ 
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 40px;
+        width: 40px;
+        left: 0px;
+        bottom: 4px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        box-shadow: 0 0px 15px #2020203d;
+        background: white url('https://i.ibb.co/FxzBYR9/night.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+ 
+    input:checked+.slider {
+        background-color: #2196f3;
+    }
+ 
+    input:focus+.slider {
+        box-shadow: 0 0 1px #2196f3;
+    }
+ 
+    input:checked+.slider:before {
+        -webkit-transform: translateX(24px);
+        -ms-transform: translateX(24px);
+        transform: translateX(24px);
+        background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+ 
+    /* Rounded sliders */
+    .slider.round {
+        border-radius: 34px;
+    }
+ 
+    .slider.round:before {
+        border-radius: 50%;
+    }
+</style>
+<script>
+    function setTheme(themeName) {
+        localStorage.setItem('theme', themeName);
+        document.documentElement.className = themeName;
+    }
+ 
+    // function to toggle between light and dark theme
+    function toggleTheme() {
+        if (localStorage.getItem('theme') === 'theme-dark') {
+            setTheme('theme-light');
+        } else {
+            setTheme('theme-dark');
+        }
+    }
+ 
+    // Immediately invoked function to set the theme on initial load
+    (function() {
+        if (localStorage.getItem('theme') === 'theme-dark') {
+            setTheme('theme-dark');
+            document.getElementById('slider').checked = false;
+        } else {
+            setTheme('theme-light');
+            document.getElementById('slider').checked = true;
+        }
+    })();
+</script>
+</head>
 <body class="hold-transition sidebar-mini layout-fixed  ">
     <div class="wrapper">
         <input type="hidden" id="sr" value="0" c="0" />
@@ -650,6 +722,652 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
                         </div>
                     </div>
                 </div>
-            </div> -->
-        </nav>
+            </div>
+            <section class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="card card-widget widget-user-2">
+                                <div class="widget-user-header bg-warning">
+                                    <div class="widget-user-image">
+                                        <img class="img-circle elevation-2" src="dist/img/avatar0-128.png" alt="User Avatar">
+                                    </div><span>
+                                        <div class="text-right"><strong>Add Funds    </strong><br>
+                                            <a href="balance">
+                                                <img data-toggle="tooltip" title="Bitcoin" width="50" height="50" src="img/btc.png">
+                                            </a>
+                                            <a href="balance">
+                                                <img data-toggle="tooltip" title="Perfect Money" width="50" height="50" src="img/pm.png">
+                                            </a>
+                                        </div>
+                                        <div class="col-md-8">
+                                            <h4 class="widget-user-desc-1">Skybaddes</h4>
+                                        </div>
+                                    </span>
+ 
+                                </div>
+                                <div class="card-footer p-0">
+                                    <ul class="nav flex-column nav-child-indent">
+                                        <li class="nav-item">
+                                            <a href="balance" class="nav-link">
+                                                Balance <span id="balance" class="float-right badge-pill bg-primary">$ 0.00</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="tickets" class="nav-link">
+                                                Pending Tickets <span id="tickets" class="float-right badge bg-info">0</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="orders" class="nav-link">
+                                                Pending Orders <span id="orders" class="float-right badge bg-success">0</span>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="reports" class="nav-link">
+                                                Pending Reports <span id="reports" class="float-right badge bg-danger">0</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="widget-user-header bg-warning">
+                                    <div class="bg-info text-center col-md-12">
+                                        <div class="d-flex flex-wrap justify-content-center">
+                                            <h5 id="twp"><span class="badge hours">03</span>:</h5>
+                                            <h5 id="twp"><span class="badge min">15</span>:</h5>
+                                            <h5><span class="badge sec">39</span> </h5>
+                                            <h5 id="mins"><span class="badge days">31</span>-</h5>
+                                            <h5 id="mins"><span class="badge months">05</span>-</h5>
+                                            <h5><span class="badge years">2023</span></h5> 
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Actions</h3>
+                                </div>
+                                <div class="card-body">
+                                    <div id="accordion">
+                                        <div class="card card-primary">
+                                            <div class="card-header">
+                                                <div class="card-tools">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" class="btn-tool collapsed">
+                                                        <i class="fas fa-angle-left"></i>
+                                                    </a>
+                                                </div>
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false">
+                                                    <h4 class="card-title">Our Domains</h4>
+                                                    <div class="card-tools">
+                                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"></button>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse in collapse">
+                                                <div class="card-body"><strong>LuFix.co</strong> || <strong>LuFix.la</strong> || <strong>LuFix.fo</strong> || <strong>LuFix.net</strong> || <strong>LuFix.to</strong>
+                                                    <br>Make sure you <strong>Save Them!</strong>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card card-danger">
+                                            <div class="card-header">
+                                                <div class="card-tools">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" class="btn-tool collapsed">
+                                                        <i class="fas fa-angle-left"></i>
+                                                    </a>
+                                                </div>
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false">
+                                                    <h4 class="card-title"> Become a Seller <i class="fab fa-btc"></i></h4>
+                                                    <div class="card-tools">
+                                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"></button>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse">
+                                                <div class="card-body">
+                                                    Interested in becoming a Seller at LuFix Store ?
+                                                    <br>Please check our Rules and apply your seller request.
+                                                    <br><a href="seller-terms"><button class="btn btn-primary">Become a Seller</button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card card-success">
+                                            <div class="card-header">
+                                                <div class="card-tools">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" class="btn-tool collapsed">
+                                                        <i class="fas fa-angle-left"></i>
+                                                    </a>
+                                                </div>
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false">
+                                                    <h4 class="card-title">Terms of Service</h4>
+                                                    <div class="card-tools">
+                                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"></button>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="collapseThree" class="panel-collapse collapse" style="">
+                                                <div class="card-body">
+                                                    <a href="terms"><button class="btn btn-info">Terms of Service</button></a>
+                                                    <br>Make sure you Read them and agree.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="card card-info">
+                                            <div class="card-header">
+                                                <div class="card-tools">
+                                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" class="btn-tool collapsed">
+                                                        <i class="fas fa-angle-left"></i>
+                                                    </a>
+                                                </div>
+                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false">
+                                                    <h4 class="card-title"> Contact Us </h4>
+                                                    <div class="card-tools">
+                                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"></button>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div id="collapseFour" class="panel-collapse collapse" style="">
+                                                <div class="card-body">
+                                                    If you have any Question, Problem, Suggestion or Request Feel Free to tell us.
+                                                    <br><a href="tickets"><button class="btn btn-success">Open Ticket <i class="fas fa-pen"></i></button></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Products Overview</h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div id="carouselProducts" class="carousel slide" data-interval="false">
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#carouselProducts" data-slide-to="0" class="active" style="background-color: #007bff;"></li>
+                                        </ol>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <div class="carousel-caption d-none d-md-block">
+                                                    <a href="#">
+                                                        <h4><span style="color: #007bff;text-shadow: 0px -1px white, 1px 0px white, 0px 1px white, -1px 0px white;opacity:0.4;">Product Info</span><br><span style="color: #000;text-shadow: 0px -1px white, 1px 0px white, 0px 1px white, -1px 0px white;opacity:0.4;">Type</span></h4>
+                                                    </a>
+                                                </div>
+                                                <svg role="img" style="max-width:100%;" width="100%" height="250" style="max-width:100%;" aria-labelledby="loading-aria" viewBox="0 0 420 250" preserveAspectRatio="none">
+                                                    <title id="loading-aria">Loading Products Overview...</title>
+                                                    <rect x="0" y="0" width="100%" height="100%" clip-path="url(#clip-path)" style='fill: url("#fill");'></rect>
+                                                    <defs>
+                                                        <clipPath id="clip-path">
+                                                            <circle cx="576" cy="532" r="15" />
+                                                            <rect x="528" y="531" rx="2" ry="2" width="140" height="10" />
+                                                            <rect x="540" y="523" rx="2" ry="2" width="140" height="10" />
+                                                            <rect x="1" y="1" rx="2" ry="2" width="432" height="320" />
+                                                        </clipPath>
+                                                        <linearGradient id="fill">
+                                                            <stop offset="0.599964" stop-color="#f3f3f3" stop-opacity="1">
+                                                                <animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate>
+                                                            </stop>
+                                                            <stop offset="1.59996" stop-color="#ecebeb" stop-opacity="1">
+                                                                <animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate>
+                                                            </stop>
+                                                            <stop offset="2.59996" stop-color="#f3f3f3" stop-opacity="1">
+                                                                <animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate>
+                                                            </stop>
+                                                        </linearGradient>
+                                                    </defs>
+                                                </svg>
+ 
+                                            </div>
+                                        </div>
+                                        <a class="carousel-control-prev" href="#carouselProducts" role="button" data-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="carousel-control-next" href="#carouselProducts" role="button" data-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <section class="col-lg-7 connectedSortable">
+                            <div class="card card-default">
+                                <div class="card-header">
+                                    <h3 class="card-title">
+                                        <i class="fas fa-bullhorn"></i>
+                                        Latest News
+                                    </h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="callout callout-info">
+                                        <h5><i class="text-info">📢</i>
+                                            Domains Update:<span class="direct-chat-timestamp float-right" style="font-size:70%">25-05-2023 12:00</span></h5>
+                                        <p>Our new only domains : <b>lufix.co</b> - <b>lufix.la</b> - <b>lufix.fo</b> - <b>lufix.net</b> - <b>lufix.to</b><br>
+                                            Make sure you save them.</p>
+                                    </div>
+                                    <div class="callout callout-success">
+                                        <h5><i class="text-success">🎉</i>
+                                            Happy New Year, everyone!<span class="direct-chat-timestamp float-right" style="font-size:70%">01-01-2023 12:00</span></h5>
+                                        <p>We're excited to continue serving you in the coming year and bringing you the best products at the best prices.<br>
+                                            We have a lot of exciting things planned for the new year, so stay tuned.<br>
+                                            Wishing you all a happy, healthy, and prosperous 2023! </p>
+                                    </div>
+                                    <div class="callout callout-success">
+                                        <h5><i class="text-success fa fa-solid fa-star"></i>
+                                            New<span class="direct-chat-timestamp float-right" style="font-size:70%">22-09-2022 10:00</span></h5>
+                                        <p>We have updated our website! Among other enhancements, improved performance and new functionalities,<br>We look forward to your enjoyment here. </p>
+                                    </div>
+                                    <div class="callout callout-success">
+                                        <h5><b><span style="color:#228B22">💰 Free Bonus</span></b><span class="direct-chat-timestamp float-right" style="font-size:70%">19-06-2021 00:14</span></h5>
+ 
+                                        <p>Every time your deposit starts from <b>$50</b> you will take a <b>10%</b> bonus for free.</p>
+                                    </div>
+                                    <div class="callout callout-success">
+                                        <h5><b><span style="color:#228B22">🎁 Gift</span></b><span class="direct-chat-timestamp float-right" style="font-size:70%">19-06-2021 00:14</span></h5>
+ 
+                                        <p>You will win <b>$5</b> bonus for your first <b>$30</b> deposit added to your balance.</p>
+                                    </div>
+                                    <div class="callout callout-success">
+                                        <h5>💻 Guaranteed RDPs<span class="direct-chat-timestamp float-right" style="font-size:70%">19-06-2021 00:14</span></h5>
+ 
+                                        <p>Now you can buy <a href="rdps" class="text-dark"><b>Guaranteed RDPs</b></a> and enjoy the full guaranteed time.</p>
+                                    </div>
+                                    <div class="callout callout-info">
+                                        <h5>🔔 Receive Test Result<span class="direct-chat-timestamp float-right" style="font-size:70%">19-06-2021 00:14</span></h5>
+ 
+                                        <p>Now you can <b>Test The Sending</b> to your email for <b>Shells & cPanels</b> before buying</b>.</p>
+                                    </div>
+                                    <div class="callout callout-info">
+                                        <h5>🕔 Time Report<span class="direct-chat-timestamp float-right" style="font-size:70%">19-06-2021 00:14</span></h5>
+ 
+                                        <p>You have <b>1h</b> for Cards, <b>24h</b> for RDPS & SSH/WHM, and <b>12h</b> for the other products to report after the purchase.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header border-transparent">
+                                    <h3 class="card-title"><i class="fas fa-shopping-cart"></i> Latest Orders</h3>
+ 
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="table-responsive">
+                                        <table class="table m-0">
+                                            <thead>
+                                                <tr>
+                                                    <th>ID</th>
+                                                    <th>Item</th>
+                                                    <th>Status</th>
+                                                    <th>Details</th>
+                                                    <th>Date</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="odd text-center">
+                                                    <td colspan="14" class="dataTables_empty" valign="top"><br>
+                                                        <div class="spinner-border text-secondary" role="status"><span class="sr-only">Loading...</span></div><br>Loading..
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="card-footer clearfix">
+                                    <a href="orders" class="btn btn-sm btn-secondary float-right">View All Orders</a>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="col-lg-5 connectedSortable">
+                            <div class="card card-primary">
+                                <div class="card-header">
+                                    <h3 class="card-title">Available Products</h3>
+ 
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <canvas id="donutChart" style="min-height: 350px; height: 350px; max-height: 350px; max-width: 100%; display: block; width: 350px;" width="350" height="350"></canvas>
+                                </div>
+                            </div>
+                            <div class="card card-info direct-chat direct-chat-info" id="ticket_chat">
+                                <div class="card-header">
+                                    <h3 class="card-title">Ticket Direct Chat <a href="tickets"><button class="btn btn-sm btn-success ml-2">View Tickets</button></a></h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="maximize" disabled>
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-toggle="tooltip" title="Show Other Tickets" data-widget="chat-pane-toggle" disabled="">
+                                            <i class="fas fa-comments"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="direct-chat-messages" id="_ticket_chat">
+                                        <svg role="img" style="max-width:100%;" width="100%" height="240" style="max-width:100%;" aria-labelledby="loading-aria_1" viewBox="0 0 436 240" preserveAspectRatio="none">
+                                            <title id="loading-aria_1">Loading Tickets Direct Chat..</title>
+                                            <rect x="0" y="0" width="100%" height="100%" clip-path="url(#clip-path_1)" style='fill: url("#fill_1");'></rect>
+                                            <defs>
+                                                <clipPath id="clip-path_1">
+                                                    <circle cx="29" cy="42" r="21" />
+                                                    <rect x="384" y="76" rx="5" ry="5" width="50" height="11" />
+                                                    <rect x="11" y="81" rx="5" ry="5" width="114" height="10" />
+                                                    <rect x="316" y="9" rx="5" ry="5" width="114" height="10" />
+                                                    <circle cx="409" cy="112" r="21" />
+                                                    <rect x="17" y="101" rx="5" ry="5" width="360" height="25" />
+                                                    <circle cx="29" cy="187" r="21" />
+                                                    <rect x="316" y="152" rx="5" ry="5" width="114" height="10" />
+                                                    <rect x="5" y="151" rx="5" ry="5" width="50" height="11" />
+                                                    <rect x="5" y="6" rx="5" ry="5" width="50" height="11" />
+                                                    <rect x="62" y="29" rx="5" ry="5" width="360" height="25" />
+                                                    <rect x="62" y="172" rx="5" ry="5" width="360" height="25" />
+                                                </clipPath>
+                                                <linearGradient id="fill_1">
+                                                    <stop offset="0.599964" stop-color="#f3f3f3" stop-opacity="1">
+                                                        <animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate>
+                                                    </stop>
+                                                    <stop offset="1.59996" stop-color="#ecebeb" stop-opacity="1">
+                                                        <animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate>
+                                                    </stop>
+                                                    <stop offset="2.59996" stop-color="#f3f3f3" stop-opacity="1">
+                                                        <animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate>
+                                                    </stop>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="direct-chat-contacts">
+                                        <ul class="contacts-list">
+                                            <li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <form action="#" method="post">
+                                        <div class="input-group">
+                                            <input type="text" name="message" placeholder="Type Message ..." class="form-control text-center" disabled="">
+                                            <span class="input-group-append">
+                                                <button type="button" class="btn btn-info" disabled="">Send</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card card-warning direct-chat direct-chat-warning" id="report_chat">
+                                <div class="card-header">
+                                    <h3 class="card-title">Report Direct Chat <a href="reports" class="btn btn-sm btn-info text-white ml-2">View Reports</a></h3>
+                                    <div class="card-tools">
+                                        <button type="button" class="btn btn-tool" data-card-widget="maximize" disabled>
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                                            <i class="fas fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-tool" data-toggle="tooltip" title="Show Other Reports" data-widget="chat-pane-toggle" disabled="">
+                                            <i class="fas fa-comments"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="card-body">
+                                    <div class="direct-chat-messages" id="_report_chat">
+                                        <svg role="img" style="max-width:100%;" width="100%" height="240" style="max-width:100%;" aria-labelledby="loading-aria_2" viewBox="0 0 436 240" preserveAspectRatio="none">
+                                            <title id="loading-aria_2">Loading Reports Direct Chat..</title>
+                                            <rect x="0" y="0" width="100%" height="100%" clip-path="url(#clip-path_2)" style='fill: url("#fill_2");'></rect>
+                                            <defs>
+                                                <clipPath id="clip-path_2">
+                                                    <circle cx="29" cy="42" r="21" />
+                                                    <rect x="384" y="76" rx="5" ry="5" width="50" height="11" />
+                                                    <rect x="11" y="81" rx="5" ry="5" width="114" height="10" />
+                                                    <rect x="316" y="9" rx="5" ry="5" width="114" height="10" />
+                                                    <circle cx="409" cy="112" r="21" />
+                                                    <rect x="17" y="101" rx="5" ry="5" width="360" height="25" />
+                                                    <circle cx="29" cy="187" r="21" />
+                                                    <rect x="316" y="152" rx="5" ry="5" width="114" height="10" />
+                                                    <rect x="5" y="151" rx="5" ry="5" width="50" height="11" />
+                                                    <rect x="5" y="6" rx="5" ry="5" width="50" height="11" />
+                                                    <rect x="62" y="29" rx="5" ry="5" width="360" height="25" />
+                                                    <rect x="62" y="172" rx="5" ry="5" width="360" height="25" />
+                                                </clipPath>
+                                                <linearGradient id="fill_2">
+                                                    <stop offset="0.599964" stop-color="#f3f3f3" stop-opacity="1">
+                                                        <animate attributeName="offset" values="-2; -2; 1" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate>
+                                                    </stop>
+                                                    <stop offset="1.59996" stop-color="#ecebeb" stop-opacity="1">
+                                                        <animate attributeName="offset" values="-1; -1; 2" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate>
+                                                    </stop>
+                                                    <stop offset="2.59996" stop-color="#f3f3f3" stop-opacity="1">
+                                                        <animate attributeName="offset" values="0; 0; 3" keyTimes="0; 0.25; 1" dur="2s" repeatCount="indefinite"></animate>
+                                                    </stop>
+                                                </linearGradient>
+                                            </defs>
+                                        </svg>
+                                    </div>
+                                    <div class="direct-chat-contacts">
+                                        <ul class="contacts-list">
+                                            <li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <form action="#" method="post">
+                                        <div class="input-group">
+                                            <input type="text" name="message" placeholder="Type Message ..." class="form-control text-center" disabled="">
+                                            <span class="input-group-append">
+                                                <button type="button" class="btn btn-warning" disabled="">Send</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="message-box animated fadeIn" data-sound="alert" id="mb-signout">
+            <div class="mb-container">
+                <div class="mb-middle">
+                    <div class="mb-title"><span class="fa fa-sign-out"></span> <strong>LogOut</strong> ?</div>
+                    <div class="mb-content">
+                        <p>Are you sure you want to logout?</p>
+                    </div>
+                    <div class="mb-footer">
+                        <div class="float-right">
+                            <a href="/logout?all=1" class="btn btn-info btn-lg">Logout from all devices</a>
+                            <a href="/logout" class="btn btn-success btn-lg">Yes</a>
+                            <button class="btn btn-default btn-lg mb-control-close">No</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span data-type="notgrabbed"></span>
+        <aside class="control-sidebar control-sidebar-dark" id="control-sidebar-b">
+            <div class="p-3 control-sidebar-content os-host os-theme-light os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-overflow os-host-overflow-y os-host-transition" style="height: 372px;">
+                <div class="os-resize-observer-host observed">
+                    <div class="os-resize-observer" style="left: 0px; right: auto;"></div>
+                </div>
+                <div class="os-size-auto-observer observed" style="height: calc(100% + 1px); float: left;">
+                    <div class="os-resize-observer"></div>
+                </div>
+                <div class="os-content-glue" style="margin: -16px; width: 249px; height: 371px;"></div>
+                <div class="os-padding">
+                    <div class="os-viewport os-viewport-native-scrollbars-invisible" style="overflow-y: scroll;">
+                        <div class="os-content" style="padding: 16px; height: 100%; width: 100%;">
+                            <h6><a href="/balance"><i class="fas fa-dollar-sign"></i> Add Balance<span class="badge-pill bg-primary text-justify" id="balance" style="margin-left:3.5em;">$ 0.00</span></a></h6>
+                            <hr class="mb-2">
+                            <h6><a href="/orders"><i class="fas fa-shopping-cart"></i> My Orders<span class="badge bg-success" id="orders" style="margin-left:8.6em;">0</span></a></h6>
+                            <hr class="mb-2">
+                            <h6><a href="/service-orders"><i class="fas fa-suitcase"></i> Service Orders<span class="badge bg-info" id="service_orders" style="margin-left:6.3em;">0</span></a></h6>
+                            <hr class="mb-2">
+                            <h6><a href="/settings"><i class="fas fa-cogs"></i> Settings<span style="margin-left:8.6em;"> </span></a></h6>
+                            <hr class="mb-2">
+                            <h6><a href="#" class="mb-control" data-box="#mb-signout"><i class="fas fa-sign-out-alt"></i> Logout<span style="margin-left:8.6em;"> </span></a></h6>
+                            <hr class="mb-2">
+                            <h6>Theme Switcher</h6>
+                            <div class="d-flex"></div>
+                            <div class="d-flex flex-wrap mb-3">
+                                <a href="#" class="switch-theme" theme="default">
+                                    <div style="width:180px;"><span class="float-right text-white"> Default Theme</span>
+                                        <div class="bg-navy elevation-2" style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;"></div>
+                                    </div>
+                                </a>
+                                <a href="#" class="switch-theme" theme="brown">
+                                    <div style="width:180px;"><span class="float-right "> Brown Theme </span>
+                                        <div class="bg-orange elevation-2" style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;"></div>
+                                    </div>
+                                </a>
+                                <a href="#" class="switch-theme" theme="dark">
+                                    <div style="width:180px;"><span class="float-right "> Dark Theme     </span>
+                                        <div class="bg-black elevation-2" style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;"></div>
+                                    </div>
+                                </a>
+                                <a href="#" class="switch-theme" theme="light">
+                                    <div style="width:180px;"><span class="float-right "> Light Theme    </span>
+                                        <div class="bg-white elevation-2" style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;"></div>
+                                    </div>
+                                </a>
+                                <a href="#" class="switch-theme" theme="blue">
+                                    <div style="width:180px;"><span class="float-right "> Blue Theme     </span>
+                                        <div class="bg-bluetheme elevation-2" style="width: 40px; height: 20px; border-radius: 25px; margin-right: 10px; margin-bottom: 10px; opacity: 0.8; cursor: pointer;"></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="os-scrollbar os-scrollbar-horizontal os-scrollbar-unusable os-scrollbar-auto-hidden">
+                    <div class="os-scrollbar-track">
+                        <div class="os-scrollbar-handle" style="transform: translate(0px); width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="os-scrollbar os-scrollbar-vertical os-scrollbar-auto-hidden">
+                    <div class="os-scrollbar-track">
+                        <div class="os-scrollbar-handle" style="transform: translate(0px); height: 28.7703%;"></div>
+                    </div>
+                </div>
+                <div class="os-scrollbar-corner"></div>
+        </aside>
+    </div>
+    
+    
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.colVis.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+ 
+    <script async src="//www.googletagmanager.com/gtag/js?id=UA-177092549-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+ 
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('set', {
+            '$usrid': 'USER_ID'
+        }); // Set the user ID using signed-in user_id.
+        gtag('config', 'UA-177092549-1');
+    </script>
+    <link rel="stylesheet" href="../buyer/layout/css/all.min.css" />
+    <link rel="stylesheet" href="../buyer/layout/css/main.css?v=12.9" />
+    <link rel="stylesheet" href="../buyer/layout/css/util.css" />
+    <style>
+        body {
+            padding-top: 80px
+        }
+    </style>
+    <link rel="stylesheet" href="../buyer/layout/fonts/iconic/css/material-design-iconic-font.min.css">
+    <script src="../buyer/layout/js/main.js"></script>
+    <script type="text/javascript">
+        // Notice how this gets configured before we load Font Awesome
+        window.FontAwesomeConfig = {
+            autoReplaceSvg: false
+        }
+    </script>
+    <script>
+    var v_aa =0;
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+        if (v_aa == 1) {
+          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-right"></span>').show();
+          v_aa =0;
+        }
+        else {
+          $("#menu-toggle").html('<span class="glyphicon glyphicon-indent-left"></span>').show();
+          v_aa =1;     
+        }
+        
+    });
 
+    </script>
+    <script>
+	$(function() {
+		$(".preload").fadeOut(500, function() {
+			$(".content").fadeIn(0);
+		});
+	});
+</script> 
+     <div class="preload">
+<div id="mydiv"><img src="assets/wait.gif" class="ajax-loader"></div>  
+
+  </div>
+ 	<div class="content">
+<br><br>
+
+<script type="text/javascript">
+    function ajaxinfo(){
+      $.ajax({
+      type:       'GET',
+      url:        'ajaxinfo.html',
+      timeout: 10000 ,
+
+           success: function(data){
+              if (data != '01'){
+                var data = JSON.parse(data);
+                  for (var prop in data) {
+                  $("#"+prop).html(data[prop] ).show();
+                }
+              }
+              else {
+                window.location = "logout.html";
+              }
+           }
+         });
+
+  }
+    setInterval(function(){ajaxinfo()}, 3000);
+
+ ajaxinfo();
+	</script>
