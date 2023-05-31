@@ -209,9 +209,6 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <ul class="navbar-nav">
                 <li class="nav-item">
-
- 
-            <li class="nav-item dropdown mr-auto">
                 <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-warehouse fa-sm orange-text"></i>
                     Hosts
                 </a>
