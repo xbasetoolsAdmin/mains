@@ -20,322 +20,6 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
     <title>Home | LuFix</title>
     
     
-    <link rel="stylesheet" href="../buyer/layout/css/bootstrap.min.css">
-    <script src="../buyer/layout/js/jquery-3.4.1.min.js"></script>
-    <script src="../buyer/layout/js/clipboard.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="../buyer/layout/js/bootstrap.min.js"></script>
-    <script src="../buyer/layout/js/bootbox.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="../buyer/layout/css/flags.css" />
-    <style>
-        @import url(//fonts.googleapis.com/css?family=Roboto:400);
- 
-        .navbar-nav .dropdown-menu {
-            margin: 0 !important
-        }
-    </style>
-</head>
-<style>
-    .navbar-nav .dropdown-menu {
-        margin: 0 !important
-    }
- 
-    .theme-light {
-        --color-primary: #0060df;
-        --color-secondary: #ffffff;
-        --color-secondary2: #ecf0f1;
-        --color-accent: #fd6f53;
-        --font-color: #000000;
-        --color-nav: #ffffff;
-        --color-dropdown: #ffffff;
-        --color-card: #ffffff;
-        --color-card2: #d1ecf1;
-        --color-info: #0c5460;
-        --color-backinfo: #d1ecf1;
-        --color-borderinfo: #bee5eb;
- 
-    }
- 
-    .theme-dark {
-        --color-primary: #17ed90;
-        --color-secondary: #353B50;
-        --color-secondary2: #353B50;
-        --color-accent: #12cdea;
-        --font-color: #ffffff;
-        --color-nav: #363947;
-        --color-dropdown: rgba(171, 205, 239, 0.3);
-        --color-card: #262A37;
-        --color-card2: #262A37;
-        --color-info: #4DD0E1;
-        --color-backinfo: #262A37;
-        --color-borderinfo: #262A37;
-    }
- 
-    .them {
- 
-        background: var(--color-secondary);
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
- 
-    .them h1 {
-        color: var(--font-color);
-        font-family: sans-serif;
-    }
- 
-    .card-body {
-        color: var(--font-color);
-    }
- 
-    .them button {
-        color: var(--font-color);
-        background-color: #ffffff;
-        padding: 10px 20px;
-        border: 0;
-        border-radius: 5px;
-    }
- 
-    .navbar.navbar-light .navbar-toggler {
-        color: var(--font-color);
-    }
- 
-    /* The switch - the box around the slider */
-    .switch {
-        position: relative;
-        display: inline-block;
-        width: 60px;
-        height: 34px;
-    }
- 
-    /* Hide default HTML checkbox */
-    .switch input {
-        opacity: 0;
-        width: 0;
-        height: 0;
-    }
- 
-    /* The slider */
-    .slider {
-        position: absolute;
-        cursor: pointer;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: #ccc;
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-    }
- 
-    .slider:before {
-        position: absolute;
-        content: "";
-        height: 40px;
-        width: 40px;
-        left: 0px;
-        bottom: 4px;
-        top: 0;
-        bottom: 0;
-        margin: auto 0;
-        -webkit-transition: 0.4s;
-        transition: 0.4s;
-        box-shadow: 0 0px 15px #2020203d;
-        background: white url('https://i.ibb.co/FxzBYR9/night.png');
-        background-repeat: no-repeat;
-        background-position: center;
-    }
- 
-    input:checked+.slider {
-        background-color: #2196f3;
-    }
- 
-    input:focus+.slider {
-        box-shadow: 0 0 1px #2196f3;
-    }
- 
-    input:checked+.slider:before {
-        -webkit-transform: translateX(24px);
-        -ms-transform: translateX(24px);
-        transform: translateX(24px);
-        background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
-        background-repeat: no-repeat;
-        background-position: center;
-    }
- 
-    /* Rounded sliders */
-    .slider.round {
-        border-radius: 34px;
-    }
- 
-    .slider.round:before {
-        border-radius: 50%;
-    }
-</style>
-<script>
-    function setTheme(themeName) {
-        localStorage.setItem('theme', themeName);
-        document.documentElement.className = themeName;
-    }
- 
-    // function to toggle between light and dark theme
-    function toggleTheme() {
-        if (localStorage.getItem('theme') === 'theme-dark') {
-            setTheme('theme-light');
-        } else {
-            setTheme('theme-dark');
-        }
-    }
- 
-    // Immediately invoked function to set the theme on initial load
-    (function() {
-        if (localStorage.getItem('theme') === 'theme-dark') {
-            setTheme('theme-dark');
-            document.getElementById('slider').checked = false;
-        } else {
-            setTheme('theme-light');
-            document.getElementById('slider').checked = true;
-        }
-    })();
-</script>
-</head>
-<body class="hold-transition sidebar-mini layout-fixed  ">
-    <div class="wrapper">
-        <input type="hidden" id="sr" value="0" c="0" />
-        <input type="hidden" id="cr" value="0" />
-        <input type="hidden" id="tr" value="0" />
-        <input type="hidden" id="ch" value="0" />
-        <input type="hidden" id="sidemob" value="0" />
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light"
-                                                          position:fixed;
-                                                          background-color: var(--color-nav);
-                                                          z-index:1;
-                                                          top:0;
-                                                          left:0;
-                                                          right:0;
-                                                          line-height: 1.5;
-                                                          font-family: 'Lato', sans-serif;
-                                                          font-size: 15px;
-                                                          padding-top: 0.5rem;
-                                                          padding-right: 1rem;
-                                                          padding-bottom: 0.5rem;
-                                                          padding-left: 1rem;
-                                                        ">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-warehouse fa-sm orange-text"></i>
-                    Hosts
-                </a>
-                <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="rdp" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-desktop fa-fw"></i> RDPs <span class="badge badge-primary">38</span></span></a>
-                    <a class="dropdown-item" href="cPanel" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-tools fa-fw"></i> cPanels <span class="badge badge-primary">18443</span></span></a>
-                    <a class="dropdown-item" href="shell" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-file-code fa-fw"></i> Shells <span class="badge badge-primary">2480</span></span></a>
-                    <a class="dropdown-item" href="ssh" style="color: var(--font-color);"><span class="px-2"><i class="fab fa-linux"></i> SSH/WHM <span class="badge badge-primary">128</span></span></a>
-                </div>
-            </li>
- 
-            <li class="nav-item dropdown mr-auto">
-                <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-leaf fa-fw fa-sm text-success" style="margin-right: 4px;"></i>Premium</a>
-                <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="premium_shell" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Premium Shells <span class="badge badge-primary">1170</span></span></a>
-                    <a class="dropdown-item" href="premium_cPanel" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Premium cPanels <span class="badge badge-primary">7294</span></span></a>
-                    <a class="dropdown-item" href="premium_downloads" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Premium Downloads <span class="badge badge-primary">8</span></span></a>
-                </div>
-            </li>
- 
-            <li class="nav-item dropdown mr-auto">
-                <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fab fa-google-play fa-sm text-success"></i>
-                    Send
-                </a>
-                <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="mailer" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-leaf fa-fw"></i> Mailers <span class="badge badge-primary">359</span></span></a>
-                    <a class="dropdown-item" href="smtp" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-envelope fa-fw"></i> SMTPs <span class="badge badge-primary">2602</span></span></a>
-                </div>
-            </li>
- 
- 
-            <li class="nav-item dropdown mr-auto">
-                <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-mail-bulk fa-sm pink-color"></i> Leads
-                </a>
-                <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="leads-5" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-award"></i> 100% Validated Leads <span class="badge badge-primary">0</span></span></a>
-                    <a class="dropdown-item" href="leads-1" style="color: var(--font-color);"><span class="px-2"><i class="fa fa-fire orange-color"></i> Email Only <span class="badge badge-primary">162</span></span></a>
-                    <a class="dropdown-item" href="leads-2" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-passport"></i> Combo Email:Password <span class="badge badge-primary">22</span></span></a>
-                    <a class="dropdown-item" href="leads-3" style="color: var(--font-color);"><span class="px-2"><i class="fab fa-battle-net"></i> Combo Username:Password <span class="badge badge-primary">0</span></span></a>
-                    <a class="dropdown-item" href="leads-4" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-at"></i> Email Access <span class="badge badge-primary">20</span></span></a>
-                    <a class="dropdown-item" href="leads-6" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-mobile-alt"></i> Phone Number Only <span class="badge badge-primary">1085</span></span></a>
-                    <a class="dropdown-item" href="leads-7" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-phone-square"></i> Combo Phone:Password <span class="badge badge-primary">3</span></span></a>
-                    <a class="dropdown-item" href="leads-8" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-inbox"></i> Full Data <span class="badge badge-primary">0</span></span></a>
-                    <a class="dropdown-item" href="leads-9" style="color: var(--font-color);"><span class="px-2"><i class="fab fa-facebook"></i> Social Media Data <span class="badge badge-primary">0</span></span></a>
-                </div>
-            </li>
- 
- 
- 
- 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" role="button" style="color: var(--font-color);" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fab fa-drupal text-primary fa-sm"></i> Requests
-                </a>
-                <div class="dropdown-menu dropdown-menu-left" style="color: var(--font-color); background-color: var(--color-nav);" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="requests" style="color: var(--font-color);"><span class="px-2"><i class="fas fa-user-plus"></i> Buyers Requests <span class="badge badge-primary"> 89</span></span></a>
-                </div>
-            </li>
- 
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="offers" style="color: var(--font-color);"><i class="fas fa-user-secret text-primary fa-sm"></i> Bulk Offers</a>
-            </li>
-        </ul>
- 
-        <ul class="navbar-nav profile">
- 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-bell text-danger"></i> <span class="badge badge-success">0</span></a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
-                    <a class="dropdown-item" href="#" style="color: var(--font-color);">There is no new notifications</a>
-                </div>
-            </li>
- 
-            <li class="nav-item">
-                <a class="nav-link" href="addBalance" style="color: var(--font-color);" role="button" aria-haspopup="true" aria-expanded="false"><span class="badge badge-danger">
-                        0
-                        <span class="px-2"><i class="fa fa-plus"></i></span></span>
-                </a>
-            </li>
- 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Ticket <span class="badge badge-success">0</span></a>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
-                    <a class="dropdown-item" href="orders" style="color: var(--font-color);"><span class="px-2">Report Items</span></a>
-                    <a class="dropdown-item" href="tickets" style="color: var(--font-color);"><span class="px-2">My Tickets <span class="badge badge-success">0</span></span></a>
-                    <a class="dropdown-item" href="reports" style="color: var(--font-color);"><span class="px-2">My Reports <span class="badge badge-success">0</span></span></a>
-                    <a class="dropdown-item" href="OpenTicket" style="color: var(--font-color);"><span class="px-2">New Ticket</span></a>
-                </div>
-            </li>
- 
- 
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" style="color: var(--font-color);" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> hustlersfather <i class="fa fa-user-secret" style="color: var(--font-color);"></i></a>
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="color: var(--font-color); background-color: var(--color-nav);">
-                    <a class="dropdown-item" href="setting" style="color: var(--font-color);"><span class="px-2">Setting <i class="fa fa-cog"></i></span></a>
-                    <a class="dropdown-item" href="seller-profile" style="color: var(--font-color);"><span class="px-2">Profile <i class="fa fa-user"></i></span></a>
-                    <a class="dropdown-item" href="orders" style="color: var(--font-color);"><span class="px-2">My Orders <i class="fa fa-shopping-cart"></i></span></a>
-                    <a class="dropdown-item" href="addBalance" style="color: var(--font-color);"><span class="px-2">Add Balance <i class="fa fa-money-bill-alt"></i></span></a>
-                    <a class="dropdown-item" href="logout" style="color: var(--font-color);"><span class="px-2">Logout <i class="fa fa-door-open"></i></span></a>
-                </div>
-            </li>
- 
-        </ul>
- 
-    </div>
-</nav>
-
-                
-
-
-
-                <li class="nav-item d-none d-sm
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
@@ -377,6 +61,146 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
         }
     </script>
     <script>
+	$(function() {
+		$(".preload").fadeOut(500, function() {
+			$(".content").fadeIn(0);
+		});
+	});
+</script> 
+     <div class="preload">
+<div id="mydiv"><img src="assets/wait.gif" class="ajax-loader"></div>  
+
+  </d<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Main - Admin Panel</title>
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="./assets/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="../buyer/assets/flags.css">
+    <link rel="stylesheet" type="text/css" href="css/tickets.css">
+<script type="text/javascript" src="./assets/jquery.js"></script>
+<script type="text/javascript" src="./assets/bootstrap.js"></script>
+<script type="text/javascript" src="./assets/bootbox.min.js"></script>
+<script type="text/javascript" src="./assets/sorttable.js"></script>
+<font face="Arial">
+    <link href="./assets/style.css" rel="stylesheet">
+		
+<style>
+
+.alert.alert-shadowed {
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    box-shadow: 0 1px 2px rgba(0,0,0,.2);
+}
+
+
+.alert {
+    margin-bottom: 20px;
+    margin-top: 0;
+    color: #fff;
+    border-width: 0;
+    border-left-width: 5px;
+    padding: 10px;
+    border-radius: 0;
+}
+
+.alert.alert-danger {
+    border-color: #df5138;
+    background: #001f3f;
+}
+
+.teddy-text {
+  background: #f2f1ef;
+  padding: 1.2em 1em;
+  border-radius: 5px 5px 0px 0px;
+}   
+
+.teddy-follow {
+  background: #17C0FB;
+  padding: 0.7em 0em 0.7em 0em;
+}
+.teddy-followred {
+  background: #D41010;
+  padding: 0.7em 0em 0.7em 0em;
+}
+</style>
+<style>
+.content {
+	display:none;
+}
+
+</style>
+    <style>
+.sort {
+  .sortable
+}
+.sort th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
+    content: " \25BE" 
+}
+</style>
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-fixed-top ">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#topFixedNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+                    <div class="navbar-brand" onclick="location.href='index.html'" onmouseover="this.style.cursor='pointer'"><b> JeruxSHOP <small><span class="glyphicon glyphicon-refresh"></span></small></b></div>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="topFixedNavbar1">
+         
+                    <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown"><a href="./index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Account  <span class="glyphicon glyphicon-user"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="./account.html">Settings<span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="./logout.html">Logout <span class="glyphicon glyphicon-off pull-right"></span></a></li>
+                                </ul>
+                            </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+    <div id="wrapper">
+    <div id="sidebar-wrapper">
+                     <ul class="sidebar-nav">
+
+                <li class="sidebar-brand"><a href="./index.php"><div class="navbar-brand" onclick="location.href=&#39;index.html&#39;"><font color="white"><b><span class="glyphicon glyphicon-fire"></span> Admin Panel</b></font></div></a></li>
+                <li><a href="https://jerux.to" onclick="window.open(this.href);return false;"><font color="white">Back to Jerux SHOP <span class="glyphicon glyphicon-share-alt"></span></font></a></li>
+
+                <li><font color="white"><b><span class="glyphicon glyphicon-dashboard"></span> Admin Dashboard</b></font></li>
+                    <li><a href="./index.html" style="cursor: pointer;"><span class="glyphicon glyphicon-home"></span> Main</a></li>
+                    <li><a href="./Status.html" style="cursor: pointer;"><span class="glyphicon glyphicon-usd"></span> Financial status</a></li>
+                    <li><a href="./Sales.html" style="cursor: pointer;"><span class="glyphicon glyphicon-shopping-cart"></span> Orders</a></li>
+                    <li><a href="./NewsBuyer.html" style="cursor: pointer;"><span class="glyphicon glyphicon-plus"></span> Add News </a></li>
+                    <li><a href="./Tools.html" style="cursor: pointer;"><span class="glyphicon glyphicon-eye-open"></span> Visualize Tools</a></li>
+                    <li><a href="./Tickets.html" style="cursor: pointer;"><span class="glyphicon glyphicon-time"></span> Pending Tickets <span id="menu_tickets"><span class="label label-danger">1</span></span></a></li>
+                    <li><a href="./Reports.html" style="cursor: pointer;"><span class="glyphicon glyphicon-time"></span> Pending Reports <span id="menu_tickets"><span class="label label-danger">0</span></span></a></li>                
+				<li><a href="./Users.html"><span class="glyphicon glyphicon-user"></span> Users List <span class="label label-info">14</span></a></li>
+                    <li><a href="./WithdrawalRequests.html"><span class="glyphicon glyphicon-credit-card"></span> Withdraw Approval <span class="label label-danger">0</span></a></li>
+                    <li><a href="./Sellers.html"><span class="glyphicon glyphicon-fire"></span> Sellers <span class="label label-info">5</span></a></li>
+                    <li><a href="./Logout.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+					
+            </ul>
+
+
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <b><span id="menu-toggle" onmouseover="this.style.cursor=&#39;pointer&#39;"><span class="glyphicon glyphicon-indent-right"></span></span></b>
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+            <div id="divPage">
+
+    <script>
     var v_aa =0;
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
@@ -405,30 +229,180 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 
   </div>
  	<div class="content">
-<br><br>
+<br><br><script>
 
-<script type="text/javascript">
-    function ajaxinfo(){
-      $.ajax({
-      type:       'GET',
-      url:        'ajaxinfo.html',
-      timeout: 10000 ,
+function deletrdps(id)
+{   var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('processing ..').show();
+	$.ajax({
+	METHOD: 		'GET',
+     url:"./delete.php?id="+id+"&table=rdps",
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+	}});
+}
+function deletshells(id)
+{   var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('processing ..').show();
+	$.ajax({
+	METHOD: 		'GET',
+     url:"./delete.php?id="+id+"&table=stufs",
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+	}});
+}
+function deletcpanels(id)
+{   var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('processing ..').show();
+	$.ajax({
+	METHOD: 		'GET',
+     url:"./delete.php?id="+id+"&table=cpanels",
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+	}});
+}
+function deletmailers(id)
+{   var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('processing ..').show();
+	$.ajax({
+	METHOD: 		'GET',
+     url:"./delete.php?id="+id+"&table=mailers",
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+	}});
+}
+function deletsmtps(id)
+{   var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('processing ..').show();
+	$.ajax({
+	METHOD: 		'GET',
+     url:"./delete.php?id="+id+"&table=smtps",
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+	}});
+}
+function deletleads(id)
+{   var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('processing ..').show();
+	$.ajax({
+	METHOD: 		'GET',
+     url:"./delete.php?id="+id+"&table=leads",
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+	}});
+}
+function deletbanks(id)
+{   var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('processing ..').show();
+	$.ajax({
+	METHOD: 		'GET',
+     url:"./delete.php?id="+id+"&table=banks",
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+	}});
+}
+function deletpremium(id)
+{   var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('processing ..').show();
+	$.ajax({
+	METHOD: 		'GET',
+     url:"./delete.php?id="+id+"&table=accounts",
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+	}});
+}
+function deletscam(id)
+{   var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('processing ..').show();
+	$.ajax({
+	METHOD: 		'GET',
+     url:"./delete.php?id="+id+"&table=scampages",
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+	}});
+}
+function delettuto(id)
+{   var type = $("#shop"+id).attr('type')
+	$("#shop"+id).html('processing ..').show();
+	$.ajax({
+	METHOD: 		'GET',
+     url:"./delete.php?id="+id+"&table=tutorials",
+	success:	function(data)
+	{
+		$("#shop"+id).html(data).show();
+	}});
+}
+</script>
+<div class="alert alert-danger fade in radius-bordered alert-shadowed"><b>Visualize Tools</b></div>
 
-           success: function(data){
-              if (data != '01'){
-                var data = JSON.parse(data);
-                  for (var prop in data) {
-                  $("#"+prop).html(data[prop] ).show();
-                }
-              }
-              else {
-                window.location = "logout.html";
-              }
-           }
-         });
+<center>
+<a href="toolsvis.php?show=rdps"><input type="submit" class="btn btn-danger" value="Rdps"/></a> | 
+<a href="toolsvis.php?show=shells"><input type="submit" class="btn btn-danger" value="Shells"/></a> | 
+<a href="toolsvis.php?show=cpanels"><input type="submit" class="btn btn-danger" value="Cpanels"/></a> | 
+<a href="toolsvis.php?show=mailers"><input type="submit" class="btn btn-danger" value="Mailers"/></a> | 
+<a href="toolsvis.php?show=smtps"><input type="submit" class="btn btn-danger" value="Smtps"/></a> | 
+<a href="toolsvis.php?show=leads"><input type="submit" class="btn btn-danger" value="Leads"/></a> | 
+<a href="toolsvis.php?show=banks"><input type="submit" class="btn btn-danger" value="Banks"/></a> | 
+<a href="toolsvis.php?show=accounts"><input type="submit" class="btn btn-danger" value="Accounts"/> </a>| 
+<a href="toolsvis.php?show=scampages"><input type="submit" class="btn btn-danger" value="Scampages"/> </a>| 
+<a href="toolsvis.php?show=tutorials"><input type="submit" class="btn btn-danger" value="Tutorials"/></a> 
 
-  }
-    setInterval(function(){ajaxinfo()}, 3000);
-
- ajaxinfo();
-	</script>
+</center>
+<br>
+ 
+<table width="100%" id="dataTable" class="table table-striped table-bordered table-condensed sticky-header dataTable no-footer" role="grid" aria-describedby="dataTable_info" style="width: 100%;">        <thead>
+  <thead>
+  <tr>
+  <th>ID</th>
+  <th>Seller</th>
+  <th>Country</th>
+  <th>Site Name</th>
+  <th>Information</th>
+  <th>Open</th>
+  <th>Date added</th>
+  <th>Price</th>
+  <th>Action</th>
+  </tr>
+ </thead>
+<tbody id='tbody2'>
+ <tr class='accounts-tabel'>
+   <th> 132 </th>
+  <th> OMERMAKSUTI </th>
+    <th> American Samoa </th>
+    <th> https://lexoje.al/ </th>
+    <th> dsfds </th>
+	<th>  	</th>
+    <th> 13/05/2020 01:30:46 am </th>
+    <th> 15</th>
+    <th></td>
+	
+	
+    </tr>
+	
+	    
+<a data-toggle="modal" class="btn btn-primary btn-xs" data-target="#myModald132" >
+<font color=white>Open #132 </a></center> <div class="modal fade" id="myModald132" >
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="myModalLabel">
+                                           <font color="black"> Premium/Shop/Dating #132 </font>
+                                            </h4>
+                                        </div>
+                                        <div class="modal-body">
+					<font color="black">			https://lexoje.al/ | dfgsdfgfdgsfd  </font>
+					</div>								
+					<div class="modal-footer">
+<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+</div>
+	    <div id="shop132" type="delete"><a onclick="javascript:deletpremium(132);" class="btn btn-danger btn-xs">remove</a></div>	
+		
