@@ -10,7 +10,7 @@ ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes
    <link rel="stylesheet" href="buyer/layout/css/css/login.css">
 
 
-   <script  src="buyer/dt/dt.responsive/dataTables.responsibe.min.js"></script>
+   <script  src="buyer/dt/dt.responsive/dataTables.responsive.min.js"></script>
   
   
   
