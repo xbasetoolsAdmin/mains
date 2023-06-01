@@ -437,6 +437,4 @@
                 <input type="checkbox" onchange="toggleTheme()" id="slider">
                 <span class="slider round">
                 </span>
-            </label>
-        </div>
     </div>
