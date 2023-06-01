@@ -1,5 +1,5 @@
 <?php
- include "includes/config.php"; 
+ include "header.php"; 
 include "cr";
 ?> 
  <style> 
