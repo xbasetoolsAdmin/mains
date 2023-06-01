@@ -1,10 +1,14 @@
 <?php
- include "header.php"; 
-
-?> 
-   
-  
-
+ob_start();
+session_start();
+date_default_timezone_set('UTC');
+include "header.php";
+if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
+    header("location: login");
+    exit();
+}
+$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+?>
 <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
         <ul>
             <li>We Have Fresh E-mails Lists for Diffrents Countries ( You Can Use it for Spam ). </li>
