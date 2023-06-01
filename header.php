@@ -4,18 +4,18 @@ ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes
 
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="layout/css/bootstrap.min.css">
-<script src="layout/js/jquery-3.4.1.min.js"></script>
-<script src="layout/js/clipboard.min.js"></script>
-<script src="layout/js/bootstrap.min.js"></script>
-<script src="layout/js/bootbox.min.js"></script>
-<link rel="stylesheet" href="layout/css/all.min.css" />
-<link rel="stylesheet" href="layout/css/main.css?v=12.9" />
-<link rel="stylesheet" href="layout/css/util.css" />
+<link rel="stylesheet" href="buyer/layout/css/bootstrap.min.css">
+<script src="buyer/layout/js/jquery-3.4.1.min.js"></script>
+<script src="buyer/layout/js/clipboard.min.js"></script>
+<script src="buyer/layout/js/bootstrap.min.js"></script>
+<script src="buyer/layout/js/bootbox.min.js"></script>
+<link rel="stylesheet" href="buyer/layout/css/all.min.css" />
+<link rel="stylesheet" href="buyer/layout/css/main.css?v=12.9" />
+<link rel="stylesheet" href="buyer/layout/css/util.css" />
 <style>body{padding-top:80px}</style>
 <script src="js/jquery.dataTables.min.js"></script>
-<script src="layout/js/main.js"></script>
-<link rel="stylesheet" type="text/css" href="layout/css/flags.css" />
+<script src="buyer/layout/js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="buyer/layout/css/flags.css" />
 	 
 <script type="text/javascript">
             // Notice how this gets configured before we load Font Awesome
@@ -28,7 +28,7 @@ ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes
             margin:0 !important
             }
         </style>	
-<link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
+<link rel="stylesheet" href="buyer/layout/fonts/iconic/css/material-design-iconic-font.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
 <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
@@ -319,7 +319,7 @@ input:checked + .slider:before {
                                                           padding-bottom: 0.5rem;
                                                           padding-left: 1rem;
                                                         ">
-<a class="navbar-brand" href="main" style="color: var(--font-color);"><img width="40px" src="layout/images/logo.png"> Odin</a>
+<a class="navbar-brand" href="main" style="color: var(--font-color);"><img width="40px" src="buyer/layout/images/logo.png"> Odin</a>
 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 <i class="navbar-toggler-icon"></i>
 
