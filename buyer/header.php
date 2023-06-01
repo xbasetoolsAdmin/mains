@@ -1,14 +1,5 @@
 <?php
-ob_start();
-session_start();
-date_default_timezone_set('UTC');
-include "../includes/config.php";
-
-if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
-    header("location: ../");
-    exit();
-}
-$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
+ob_start(); session_start(); date_default_timezone_set('UTC'); include "includes/config.php"; if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {  header("location: login");  exit();} $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 ?>
 <!doctype html>
 <html>
@@ -32,47 +23,7 @@ $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
 <title>JeruxShop</title>
 </head>
 <style>
-#table {
-  .sortable
-}
-table th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after { 
-    content: " \25BE" 
-}
-
-.label-as-badge {
-    border-radius: 0.5em;
-}
-
-body {
-    padding-top:50px;
-}
-table.floatThead-table {
-    border-top: none;
-    border-bottom: none;
-    background-color: #fff;
-}
-@media (min-width: 768px) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
-
-#mydiv {
-  height: 400px;
-  position: relative;
-}
-.ajax-loader {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto; /* presto! */
-
-}
-
-   
-    
+#table
 
 </style>
 <script type="text/javascript">
