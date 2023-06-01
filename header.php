@@ -396,13 +396,7 @@
                         <a class="dropdown-item" href="addBalance" style="color: var(--font-color);"><span class="px-2">Add Balance <i class="fa fa-money-bill-alt"></i></span></a>
                         <a class="dropdown-item" href="logout" style="color: var(--font-color);"><span class="px-2">Logout <i class="fa fa-door-open"></i></span></a>
                     </div>
-                </li>
- 
-            </ul>
- 
-        </div>
-    </nav>
-    <style>
+              <style>
         .modal-dialog.modal-frame.modal-top.modal-notify.modal-danger .modal-body,
         .modal-dialog.modal-frame.modal-top.modal-offernov.modal-danger .modal-body {
             padding-top: 35px;
