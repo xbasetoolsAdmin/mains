@@ -9,11 +9,11 @@
     <title>Ticket</title>
     <link rel="stylesheet" href="layout/css/bootstrap.min.css">
     
-    <script src="buyef/layoou/js/jquery-3.4.1.min.js"></script>
-    <script src="buyef/layoou/js/clipboard.min.js"></script>
+    <script src="buyef/layout/js/jquery-3.4.1.min.js"></script>
+    <script src="buyef/layout/js/clipboard.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="buyer/layoou/js/bootstrap.min.js"></script>
-    <script src="buyer/layoou/js/bootbox.min.js"></script>
+    <script src="buyer/layout/js/bootstrap.min.js"></script>
+    <script src="buyer/layout/js/bootbox.min.js"></script>
     
     <link rel="stylesheet" type="text/css" href="layout/css/flags.css" />
 
@@ -41,7 +41,7 @@
     </style>
     
     <link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
-    <script src="layout/js/main.js"></script>
+    <script src="buyer/layout/js/main.js"></script>
     <script type="text/javascript">
         // Notice how this gets configured before we load Font Awesome
         window.FontAwesomeConfig = {
