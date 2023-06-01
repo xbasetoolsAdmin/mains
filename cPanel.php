@@ -1,8 +1,9 @@
+     <link rel="stylesheet" href="buyer/layout/css/all.min.css" />
      <link rel="stylesheet" href="buyer/layout/css/main.css?v=12.9" />
      <link rel="stylesheet" href="buyer/layout/css/util.css" />
      <link rel="stylesheet" href="buyer/layout/fonts/iconic/css/material-design-iconic-font.min.css">
      <script src="buyer/layout/js/main.js"></script>
-      <script src="buyer/dt/js/jquery.dataTables.min.js"></script>
+     <script src="buyer/dt/js/jquery.dataTables.min.js"></script>
    
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
@@ -11,20 +12,18 @@
     <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.colVis.min.js"></script>
-
     <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
-    <link rel="stylesheet" href="layout/css/all.min.css" />
     <style>
         body {
             padding-top: 80px
         }
-</style>
-      <script type="text/javascript">
-        // Notice how this gets configured before we load Font Awesome
+   </style>
+<script type="text/javascript">
+        /*Notice how this gets configured before we load Font Awesome*/
         window.FontAwesomeConfig = {
             autoReplaceSvg: false }
-</script>
+ </script>
         <style>
                 @import url(//fonts.googleapis.com/css?family=Roboto:400);
  
