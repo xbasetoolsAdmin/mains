@@ -5,7 +5,7 @@ date_default_timezone_set('UTC');
 include "header.php";
 
 if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
-    header("location: ../");
+    header("location: login");
     exit();
 }
 $usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
