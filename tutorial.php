@@ -4,11 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="alfacoins-site-verification" content="5ef8c2279aa605ef8c2279aa965ef8c2279aacb_ALFAcoins">
-    <meta name="revisit-after" content="2 days">
+    <meta name="alfacoins-site-verification" content=" ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
-    <link rel="shortcut icon" href="../../favicon.ico" />
     <title>Ticket</title>
     <link rel="stylesheet" href="layout/css/bootstrap.min.css">
     <script src="buyef/layoou/js/jquery-3.4.1.min.js"></script>
@@ -18,7 +15,7 @@
     <script src="buyef/layoou/js/bootbox.min.js"></script>
     
     <link rel="stylesheet" type="text/css" href="layout/css/flags.css" />
- 
+
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
@@ -29,28 +26,19 @@
     <script src="js/jquery.dataTables.min.js"></script>
     <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+
  
-    <script async src="//www.googletagmanager.com/gtag/js?id=UA-177092549-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
- 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('set', {
-            '$usrid': 'USER_ID'
-        }); // Set the user ID using signed-in user_id.
-        gtag('config', 'UA-177092549-1');
-    </script>
+
     <link rel="stylesheet" href="layout/css/all.min.css" />
-    <link rel="stylesheet" href="layout/css/main.css?v=12.9" />
+    <link rel="stylesheet" href="layout/css/main.css" />
     <link rel="stylesheet" href="layout/css/util.css" />
     <style>
         body {
             padding-top: 80px
         }
     </style>
+    
     <link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
     <script src="layout/js/main.js"></script>
     <script type="text/javascript">
@@ -59,6 +47,7 @@
             autoReplaceSvg: false
         }
     </script>
+    
     <style>
         @import url(//fonts.googleapis.com/css?family=Roboto:400);
  
@@ -80,7 +69,7 @@
  
     }
  
-    #lead_data_paginate .paginate_button {
+    #dataTables_paginate .paginate_button {
         color: var(--font-color);
  
     }
@@ -92,19 +81,19 @@
  
     }
  
-    #lead_data_filter {
+    #dataTables_filter {
         color: var(--font-color);
     }
  
-    #lead_data_length {
+    #dataTables_length {
         color: var(--font-color);
     }
  
-    #lead_data_paginate {
+    #dataTables_paginate {
         color: var(--font-color);
     }
  
-    #lead_data_info {
+    #dataTables_info {
         color: var(--font-color);
     }
 </style>
