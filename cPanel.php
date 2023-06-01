@@ -1,5 +1,8 @@
-
-
+     <link rel="stylesheet" href="buyer/layout/css/main.css?v=12.9" />
+     <link rel="stylesheet" href="buyer/layout/css/util.css" />
+     <link rel="stylesheet" href="buyer/layout/fonts/iconic/css/material-design-iconic-font.min.css">
+     <script src="buyer/layout/js/main.js"></script>
+      <script src="buyer/dt/js/jquery.dataTables.min.js"></script>
    
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
@@ -8,36 +11,29 @@
     <script src="https://cdn.datatables.net/responsive/2.2.6/js/dataTables.responsive.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.4/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.6.4/js/buttons.colVis.min.js"></script>
-    <script src="js/jquery.dataTables.min.js"></script>
+
     <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
- 
-
     <link rel="stylesheet" href="layout/css/all.min.css" />
-    <link rel="stylesheet" href="layout/css/main.css?v=12.9" />
-    <link rel="stylesheet" href="layout/css/util.css" />
     <style>
         body {
             padding-top: 80px
         }
-    </style>
-    <link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
-    <script src="layout/js/main.js"></script>
-    <script type="text/javascript">
+</style>
+      <script type="text/javascript">
         // Notice how this gets configured before we load Font Awesome
         window.FontAwesomeConfig = {
-            autoReplaceSvg: false
-        }
-    </script>
-    <style>
-        @import url(//fonts.googleapis.com/css?family=Roboto:400);
+            autoReplaceSvg: false }
+</script>
+        <style>
+                @import url(//fonts.googleapis.com/css?family=Roboto:400);
  
         .navbar-nav .dropdown-menu {
             margin: 0 !important
         }
-    </style>
-</head>
-<style>
+ </style>
+
+ <style>
     .display td {
         background: var(--color-card);
         color: var(--font-color);
@@ -78,9 +74,8 @@
         color: var(--font-color);
     }
 </style>
- 
 <body class="them">
-    <style>
+<style>
         .navbar-nav .dropdown-menu {
             margin: 0 !important
         }
@@ -199,25 +194,14 @@
             box-shadow: 0 0 1px #2196f3;
         }
  
-        input:checked+.slider:before {
-            -webkit-transform: translateX(24px);
-            -ms-transform: translateX(24px);
-            transform: translateX(24px);
-            background: white url('https://i.ibb.co/7JfqXxB/sunny.png');
-            background-repeat: no-repeat;
-            background-position: center;
-        }
+ input:checked+.slider:before {            -webkit-transform: translateX(24px);           -ms-transform: translateX(24px);            transform: translateX(24px);           background: white url('https://i.ibb.co/7JfqXxB/sunny.png');  background-repeat: no-repeat;   background-position: center; }
  
         /* Rounded sliders */
-        .slider.round {
-            border-radius: 34px;
-        }
+.slider.round { border-radius: 34px; }
  
-        .slider.round:before {
-            border-radius: 50%;
-        }
-    </style>
-    <script>
+.slider.round:before {border-radius: 50%; }
+</style>
+<script>
         function setTheme(themeName) {
             localStorage.setItem('theme', themeName);
             document.documentElement.className = themeName;
@@ -231,7 +215,6 @@
                 setTheme('theme-dark');
             }
         }
- 
         // Immediately invoked function to set the theme on initial load
         (function() {
             if (localStorage.getItem('theme') === 'theme-dark') {
@@ -242,7 +225,7 @@
                 document.getElementById('slider').checked = true;
             }
         })();
-    </script>
+</script>
     <nav class="navbar navbar-expand-xl navbar  navbar-light " style="
                                                           position:fixed;
                                                           background-color: var(--color-nav);
@@ -402,6 +385,7 @@
             background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADwAAAA8CAYAAAA6/NlyAAAAAXNSR0IArs4c6QAAA3hJREFUaAXlm8+K00Acx7MiCIJH/yw+gA9g25O49SL4AO3Bp1jw5NvktC+wF88qevK4BU97EmzxUBCEolK/n5gp3W6TTJPfpNPNF37MNsl85/vN/DaTmU6PknC4K+pniqeKJ3k8UnkvDxXJzzy+q/yaxxeVHxW/FNHjgRSeKt4rFoplzaAuHHDBGR2eS9G54reirsmienDCTRt7xwsp+KAoEmt9nLaGitZxrBbPFNaGfPloGw2t4JVamSt8xYW6Dg1oCYo3Yv+rCGViV160oMkcd8SYKnYV1Nb1aEOjCe6L5ZOiLfF120EjWhuBu3YIZt1NQmujnk5F4MgOpURzLfAwOBSTmzp3fpDxuI/pabxpqOoz2r2HLAb0GMbZKlNV5/Hg9XJypguryA7lPF5KMdTZQzHjqxNPhWhzIuAruOl1eNqKEx1tSh5rfbxdw7mOxCq4qS68ZTjKS1YVvilu559vWvFHhh4rZrdyZ69Vmpgdj8fJbDZLJpNJ0uv1cnr/gjrUhQMuI+ANjyuwftQ0bbL6Erp0mM/ny8Fg4M3LtdRxgMtKl3jwmIHVxYXChFy94/Rmpa/pTbNUhstKV+4Rr8lLQ9KlUvJKLyG8yvQ2s9SBy1Jb7jV5a0yapfF6apaZLjLLcWtd4sNrmJUMHyM+1xibTjH82Zh01TNlhsrOhdKTe00uAzZQmN6+KW+sDa/JD2PSVQ873m29yf+1Q9VDzfEYlHi1G5LKBBWZbtEsHbFwb1oYDwr1ZiF/2bnCSg1OBE/pfr9/bWx26UxJL3ONPISOLKUvQza0LZUxSKyjpdTGa/vDEr25rddbMM0Q3O6Lx3rqFvU+x6UrRKQY7tyrZecmD9FODy8uLizTmilwNj0kraNcAJhOp5aGVwsAGD5VmJBrWWbJSgWT9zrzWepQF47RaGSiKfeGx6Szi3gzmX/HHbihwBser4B9UJYpFBNX4R6vTn3VQnez0SymnrHQMsRYGTr1dSk34ljRqS/EMd2pLQ8YBp3a1PLfcqCpo8gtHkZFHKkTX6fs3MY0blKnth66rKCnU0VRGu37ONrQaA4eZDFtWAu2fXj9zjFkxTBOo8F7t926gTp/83Kyzzcy2kZD6xiqxTYnHLRFm3vHiRSwNSjkz3hoIzo8lCKWUlg/YtGs7tObunDAZfpDLbfEI15zsEIY3U/x/gHHc/G1zltnAgAAAABJRU5ErkJggg==);
         }
     </style>
+   </head>
     <div class="d-flex flex-row-reverse mt-0">
         <div class="p-2">
             <label id="switch" class="switch">
@@ -411,6 +395,7 @@
             </label>
         </div>
     </div>
+   
     <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
         <ul>
             <li>We Have Fresh E-mails Lists for Diffrents Countries ( You Can Use it for Spam ). </li>
