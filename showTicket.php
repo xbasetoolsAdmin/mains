@@ -1,37 +1,22 @@
-<?php
-ob_start();
-session_start();
-date_default_timezone_set('UTC');
-include "includes/config.php";
-
-if (!isset($_SESSION['sname']) and !isset($_SESSION['spass'])) {
-    header("location: ../");
-    exit();
-}
-$usrid = mysqli_real_escape_string($dbcon, $_SESSION['sname']);
-$id = mysqli_real_escape_string($dbcon, $_GET['id']);
-?>
 <!DOCTYPE html>
 <html>
  
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="alfacoins-site-verification" content="5ef8c2279aa605ef8c2279aa965ef8c2279aacb_ALFAcoins">
-    <meta name="revisit-after" content="2 days">
+    <meta name="alfacoins-site-verification" content=" ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="/cdn-cgi/apps/head/AGN3NmUziwZfMV-TNTe1kdyeR2Y.js"></script>
-    <link rel="shortcut icon" href="../../favicon.ico" />
     <title>Ticket</title>
     <link rel="stylesheet" href="layout/css/bootstrap.min.css">
+    
     <script src="buyef/layoou/js/jquery-3.4.1.min.js"></script>
     <script src="buyef/layoou/js/clipboard.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="buyef/layoou/js/bootstrap.min.js"></script>
-    <script src="buyef/layoou/js/bootbox.min.js"></script>
+    <script src="buyer/layoou/js/bootstrap.min.js"></script>
+    <script src="buyer/layoou/js/bootbox.min.js"></script>
     
     <link rel="stylesheet" type="text/css" href="layout/css/flags.css" />
- 
+
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.6/css/responsive.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
@@ -42,28 +27,19 @@ $id = mysqli_real_escape_string($dbcon, $_GET['id']);
     <script src="js/jquery.dataTables.min.js"></script>
     <link href="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/js/mdb.min.js"></script>
+
+
  
-    <script async src="//www.googletagmanager.com/gtag/js?id=UA-177092549-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
- 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-        gtag('set', {
-            '$usrid': 'USER_ID'
-        }); // Set the user ID using signed-in user_id.
-        gtag('config', 'UA-177092549-1');
-    </script>
+
     <link rel="stylesheet" href="layout/css/all.min.css" />
-    <link rel="stylesheet" href="layout/css/main.css?v=12.9" />
+    <link rel="stylesheet" href="layout/css/main.css" />
     <link rel="stylesheet" href="layout/css/util.css" />
     <style>
         body {
             padding-top: 80px
         }
     </style>
+    
     <link rel="stylesheet" href="layout/fonts/iconic/css/material-design-iconic-font.min.css">
     <script src="layout/js/main.js"></script>
     <script type="text/javascript">
@@ -72,6 +48,7 @@ $id = mysqli_real_escape_string($dbcon, $_GET['id']);
             autoReplaceSvg: false
         }
     </script>
+    
     <style>
         @import url(//fonts.googleapis.com/css?family=Roboto:400);
  
@@ -93,7 +70,7 @@ $id = mysqli_real_escape_string($dbcon, $_GET['id']);
  
     }
  
-    #lead_data_paginate .paginate_button {
+    #dataTables_paginate .paginate_button {
         color: var(--font-color);
  
     }
@@ -105,19 +82,19 @@ $id = mysqli_real_escape_string($dbcon, $_GET['id']);
  
     }
  
-    #lead_data_filter {
+    #dataTables_filter {
         color: var(--font-color);
     }
  
-    #lead_data_length {
+    #dataTables_length {
         color: var(--font-color);
     }
  
-    #lead_data_paginate {
+    #dataTables_paginate {
         color: var(--font-color);
     }
  
-    #lead_data_info {
+    #dataTables_info {
         color: var(--font-color);
     }
 </style>
@@ -260,7 +237,17 @@ $id = mysqli_real_escape_string($dbcon, $_GET['id']);
             border-radius: 50%;
         }
     </style>
+    
+    
+    
+    <!————-min nab————->
+    
+    
+        
     <script>
+                           
+                           
+                           
         function setTheme(themeName) {
             localStorage.setItem('theme', themeName);
             document.documentElement.className = themeName;
@@ -453,7 +440,15 @@ $id = mysqli_real_escape_string($dbcon, $_GET['id']);
                 </span>
             </label>
         </div>
-    </div>
+        </div>
+    
+    
+    
+    
+    <!————-rdps———>
+    
+    
+    
     <div class="alert alert-info text-left" role="alert" style="margin: 15px;">
         <ul>
             <li>We Have Fresh E-mails Lists for Diffrents Countries ( You Can Use it for Spam ). </li>
@@ -558,154 +553,8 @@ $id = mysqli_real_escape_string($dbcon, $_GET['id']);
                     </div>
                 </div>
             </div>
- 
         </div>
     </div>
- 
-    <script>
-        $(document).ready(function() {
-            var webID;
-            load_data();
- 
-            function load_data(myarray) {
-                $('#lead_data').DataTable({
-                    "processing": true,
-                    "serverSide": true,
-                    "responsive": true,
-                    "scrollX": true,
-                    "order": [],
-                    "lengthMenu": [
-                        [10, 25, 50, 100, 500, 10000],
-                        [10, 25, 50, 100, 500, "All"]
-                    ],
-                    "columnDefs": [{
-                        "targets": [0],
-                        "visible": false
-                    }],
- 
-                    "ajax": {
-                        url: "divPage32.html",
-                        type: "POST",
-                        data: {
-                            data_filter: myarray,
-                            type: document.getElementById('type').value,
-                            draw: 'draw',
-                            row: 'start',
-                            rowperpage: 'length',
-                            columnIndex: 'order',
-                            columnName: 'columns',
-                            columnSortOrder: 'order',
-                            searchValue: 'search'
-                        }
-                    },
-                    "columns": [{
-                            "data": 0
-                        },
-                        {
-                            "data": 1
-                        },
-                        {
-                            "data": 2
-                        },
-                        {
-                            "data": 3
-                        },
-                        {
-                            "data": 4
-                        },
-                        {
-                            "data": 5
-                        },
-                        {
-                            "data": 6
-                        },
-                        {
-                            "data": 7
-                        },
-                        {
-                            "data": 8
-                        },
-                        {
-                            "data": 9
-                        }
-                    ],
- 
-                    "pageLength": 500
-                });
-            }
- 
-            $(document).on('change', '.form-control', function() {
-                $('#lead_data').DataTable().destroy();
-                var country = $('#country').val();
-                var description = $('#infos').val();
-                var seller1 = $('#seller').val();
-                $idseller = seller1.split("Seller");
-                var seller = $idseller[1];
-                var myarray = {};
- 
-                myarray[0] = country;
-                myarray[1] = description;
-                myarray[2] = seller;
- 
-                if (country != '' || description != '' || seller != '') {
- 
-                    load_data(myarray);
-                } else {
-                    load_data();
-                }
-            });
- 
- 
-        });
- 
-        function buythistool(id) {
-            $('#modalConfirmBuy').modal('show');
-            webID = id;
-        }
- 
-        function confirmbye(id) {
-            id = webID;
-            $.ajax({
-                method: "GET",
-                url: "buytool.php?id=" + id + "&t=leads",
-                dataType: "text",
-                success: function(data) {
-                    if (data.match("buy")) {
-                        let lastid = data.split("buy,")[1];
-                        $("#lead" + id).html(`<button onclick=openitem(${lastid}) class="btn btn-success btn-sm">Order ${'#'+lastid}</button>`).show();
- 
-                    } else {
-                        if (data.match("deleted")) {
- 
-                            $("#lead" + id).html('Already sold / Deleted').show();
- 
-                        } else {
-                            $('#modalCoupon').modal('show');
-                        }
- 
- 
-                    }
-                },
-            });
-        }
- 
-        function openitem(order) {
- 
- 
-            $.ajax({
-                type: 'GET',
-                url: 'showOrder' + order,
-                success: function(data) {
-                    $("#myModalHeader").text('Order #' + order);
-                    $("#modelbody").append(data);
-                    $('#myModal').modal();
- 
- 
-                }
-            });
- 
-        }
-    </script>
 </body>
  
 </html>
