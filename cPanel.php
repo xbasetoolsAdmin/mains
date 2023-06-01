@@ -1,5 +1,7 @@
-
-
+<?php
+ include "includes/config.php"; 
+include "cr";
+?> 
  <style> 
     .display td {
         background: var(--color-card);
