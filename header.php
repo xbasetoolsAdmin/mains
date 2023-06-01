@@ -10,8 +10,7 @@
 <style> @import url(//fonts.googleapis.com/css?family=Roboto:400); .navbar-nav .dropdown-menu { margin: 0 !important   }</style> <head> <meta charset="utf-8">
             <title>XbaseTools-Shop</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><body class="them" 
-<link rel="stylesheet" type="text/css" href="buyer/layout/css/theme_colors.css">   
-  </head>  
+<link rel="stylesheet" type="text/css" href="buyer/layout/css/theme_colors.css">  
       <script>
         function setTheme(themeName) {
             localStorage.setItem('theme', themeName);
