@@ -65,7 +65,6 @@
             margin: 0 !important
         }
     </style>
-</head>
 <style>
     .display td {
         background: var(--color-card);
